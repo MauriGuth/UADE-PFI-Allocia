@@ -1,0 +1,27 @@
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+% Comando para iniciar la sección de anexos en el índice
+\newcommand{\initappendix}{%
+  \addcontentsline{toc}{chapter}{Anexo}%
+}
+
+% Comando para cada anexo individual
+\newcommand{\anexo}[1]{%
+  \refstepcounter{chapter}%
+  \chapter*{Anexo \thechapter: #1}%
+  \addcontentsline{toc}{section}{Anexo \thechapter: #1}%
+  \markboth{Anexo \thechapter: #1}{}%
+}
+
+\initappendix
+
+% Anexos. En la entrega final el cronograma no va: se quita su \input y los
+% demás anexos se renumeran solos (todas las menciones usan \ref).
+% \input{chapters/appendix/diagrams.tex}            % Cronograma (solo entregas parciales)
+\input{chapters/appendix/wireframes.tex}            % Wireframes
+\input{chapters/appendix/user_research.tex}         % Encuesta
+\input{chapters/appendix/interviews.tex}
+\input{chapters/appendix/personas.tex}
+\input{chapters/appendix/test_cases.tex}
+\input{chapters/appendix/usability_protocol.tex}

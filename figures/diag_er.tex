@@ -1,0 +1,12 @@
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[node distance=1cm and 0.8cm,box/.style={draw,rounded corners,fill=teal!7,text width=4.4cm,align=left,inner sep=8pt,font=\small},arr/.style={-{Stealth},thick}]
+\node[box] (users) {\textbf{users}\\id (PK)\\name, email\\passwordHash\\versión de sesión\\preferencia de alertas\\aceptación de privacidad};
+\node[box,right=of users] (inst) {\textbf{instruments}\\ticker (PK), name\\assetClass, sector, region\\currency, refPrice};
+\node[box,below=1.4cm of users,xshift=2.6cm] (pos) {\textbf{positions}\\id (PK)\\userId (FK, obligatorio)\\ticker (FK a instruments)\\quantity (cifrada)\\createdAt};
+\node[box,right=0.8cm of pos,text width=5.2cm,fill=orange!8] (otras) {\textbf{Otras entidades}\\ejecuciones regionales\\informes públicos por activo\\alertas por usuario\\dispositivos\\outbox de entrega push};
+\draw[arr] (users.south)--node[left,font=\scriptsize]{1 a N; cascada}(pos.north west);
+\draw[arr] (inst.south)--node[right,font=\scriptsize]{1 a N}(pos.north east);
+\node[below=0.5cm of pos,text width=10.5cm,align=left,font=\footnotesize] {La clave foránea exige un propietario existente. La eliminación de un usuario elimina sus posiciones en la misma operación de base de datos.};
+\end{tikzpicture}
+\caption{Modelo de persistencia y propietario de posiciones. Fuente: elaboración propia.}\label{fig:diag-er}
+\end{figure}

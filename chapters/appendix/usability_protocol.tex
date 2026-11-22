@@ -1,0 +1,60 @@
+\anexo{Protocolo de evaluación con usuarios}\label{annex:protocolo-usuarios}
+
+Este protocolo se aplicó entre el 21 y el 23 de octubre de 2026; los resultados se presentan al final del anexo y se analizan en la Subsección~\ref{sec:pruebas-usabilidad}. Propone una evaluación exploratoria con cinco personas del público objetivo, ajenas al equipo y al tutor. De cada participante se registran experiencia previa, dispositivo, versión evaluada y un código anónimo (U01--U05). Al comenzar se explica la finalidad académica y se pide consentimiento para tomar notas; grabar la sesión exige un consentimiento aparte. La persona puede abandonar en cualquier momento sin consecuencias.
+
+\textbf{Preparación.} El moderador comprueba que el servidor responde y usa cuentas de prueba, sin nombres, correos ni carteras personales. Lee cada tarea en voz alta sin indicar dónde hacer clic. Si ayuda, anota en qué consistió la ayuda y marca la tarea como asistida. Un silencio o un clic no se anotan como comprensión. Al terminar, elimina la cuenta de prueba si la persona no completó esa tarea.
+
+\textbf{Tareas para leer al participante.} Las cantidades y los activos son solo ejemplos para la prueba y no constituyen una propuesta de inversión.
+\begin{enumerate}
+\item Crear una cuenta ficticia e ingresar. Cargar 2 AAPL, 0,1 BTC y 100 XLE. Corregir AAPL a 3 y comprobar que el cambio se conserva al volver a entrar.
+\item Consultar el análisis e indicar cuál es la mayor posición y qué peso representa. Explicar qué interpreta del indicador de concentración.
+\item Abrir la explicación relacionada con energía. Indicar qué condición la activa, qué datos utiliza y de dónde proviene el contexto. Mostrar en pantalla la evidencia que respalda la respuesta.
+\item Identificar una señal externa y una de demostración. Explicar la diferencia entre fecha del dato y fecha de consulta. Abrir los escenarios con fuentes y decir si lo que se muestra es un pronóstico o una condición posible con su fuente.
+\item Eliminar BTC, cerrar y abrir la sesión y, finalmente, eliminar la cuenta y sus posiciones mediante la confirmación prevista.
+\end{enumerate}
+
+\textbf{Registro por tarea.} Por cada participante se completa una ficha con: código; fecha; dispositivo; inicio y fin; resultado (éxito sin ayuda, éxito con ayuda o tarea no completada); errores observados; ayuda brindada; respuesta literal; comentario posterior. Una ficha vacía es solo el formulario y no cuenta como sesión.
+
+\textbf{Criterios de análisis.} La tarea 3 se considera comprendida si la persona identifica sin ayuda la condición de exposición energética superior al 5\,\% junto con un evento relacionado, y reconoce la fuente local de demostración. El umbral exploratorio es cuatro de cinco participantes. Para las demás tareas se informan por separado éxito, tiempo, errores y ayuda. Todos los participantes se mantienen en el denominador, cualquiera sea su resultado; los abandonos y los registros incompletos se explican. Con cinco personas, los resultados describen la experiencia de uso: no admiten generalización estadística ni dicen nada sobre rendimiento financiero.
+
+\textbf{Cierre.} Al final se pregunta qué parte resultó confusa, qué información faltó y qué decisiones cree la persona que la herramienta puede apoyar y cuáles no. Las respuestas se anotan con sus palabras antes de sintetizarlas. Cada hallazgo se traduce en un cambio concreto y en una nueva comprobación.
+
+\section*{Resultados}
+La Tabla~\ref{tab:sesiones-participantes} identifica las sesiones y la Tabla~\ref{tab:sesiones-matriz} el resultado de cada tarea por participante, con las abreviaturas S (sin ayuda), A (con ayuda) y N (no completada). Como en el servicio publicado no se activó la regla de exposición energética, la tarea 3 se evaluó sobre la observación de posición dominante y el criterio de comprensión pasó a ser identificar sin ayuda la condición del 25\,\% y su origen en la propia cartera. Los escenarios con fuentes no estaban disponibles y esa parte de la tarea 4 no se evaluó. El registro completo, con horas, errores, ayuda y respuestas literales, está en \texttt{evidence/2026-10-sesiones-usuarios/sesiones\_usuarios.csv}.
+
+\begin{table}[ht]
+\centering\small\renewcommand{\arraystretch}{1.15}
+\caption{Sesiones realizadas. Fuente: registro de las sesiones.}\label{tab:sesiones-participantes}
+\begin{tabular}{llllll}\hline
+\textbf{Código} & \textbf{Fecha} & \textbf{Modalidad} & \textbf{Dispositivo} & \textbf{Segmento} & \textbf{Duración}\\\hline
+U01 & 21/10/2026 & presencial & web (notebook) & activo & 23 min\\
+U02 & 21/10/2026 & videollamada & app Android & activo & 25 min\\
+U03 & 22/10/2026 & presencial & web (notebook) & activo & 25 min\\
+U04 & 22/10/2026 & presencial & app iOS & ocasional & 41 min\\
+U05 & 23/10/2026 & videollamada & web (teléfono) & principiante & 50 min\\\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering\small\renewcommand{\arraystretch}{1.15}
+\caption{Resultado por tarea y participante. Fuente: registro de las sesiones.}\label{tab:sesiones-matriz}
+\begin{tabular}{lccccc}\hline
+\textbf{Tarea} & \textbf{U01} & \textbf{U02} & \textbf{U03} & \textbf{U04} & \textbf{U05}\\\hline
+1. Cuenta, carga y edición & S & S & A & A & A\\
+2. Mayor posición y concentración & S & S & S & A & A\\
+3. Explicar una observación & S & A & S & A & N\\
+4. Fuentes y fechas & A & S & A & N & N\\
+5. Eliminar posición y baja de cuenta & S & A & S & A & N\\\hline
+\end{tabular}
+\end{table}
+
+Respuestas literales en la tarea 3, que decide el criterio de comprensión:
+\begin{itemize}
+\item U01 (sin ayuda): \enquote{Este es por peso de una posición. Dice que si supera el 25\,\%, lo marca. No habla de una noticia sobre Bitcoin.}
+\item U02 (con ayuda): \enquote{Es porque tengo más del veinticinco por ciento en una sola cosa. No porque el precio haya caído ahora.}
+\item U03 (sin ayuda): \enquote{La regla salta arriba de 25\,\% en un activo, y el porcentaje se calcula con la cartera que armé. Esto no es una orden de vender.}
+\item U04 (con ayuda): \enquote{Entonces no es que bajó Bitcoin. Es que tengo mucho de la misma cosa, más de 25\,\%. Está calculado con mi cartera.}
+\item U05 (no completada): \enquote{Dice veinticinco por ciento, pero no sé si es lo que tengo que vender o el máximo que puedo comprar.}
+\end{itemize}
+
+Respuestas de cierre: U01, \enquote{lo más confuso fueron las fechas; la parte de concentración se entiende mejor cuando abrís la explicación}; U02, \enquote{lo que me desconcertó fue que la advertencia parecía de mercado y era de mi cartera}; U03, \enquote{me gustó ver el motivo del aviso; la parte de escenarios necesita dejar más claro cuándo no hay un informe}; U04, \enquote{cargar se puede; los términos de Riesgo me cuestan, y las fechas también}; U05, \enquote{para ver cuánto tengo está bueno; para entender esas alertas necesitaría que me lo expliquen más fácil}.

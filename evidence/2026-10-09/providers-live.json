@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-09T13:17:13.920Z",
+  "databaseAccess": false,
+  "notificationsSent": false,
+  "results": [
+    {
+      "ticker": "AAPL",
+      "quoteAvailable": true,
+      "quoteAsOf": "2026-10-08T20:00:00.000Z",
+      "sourceCount": 24,
+      "sourceScopes": [
+        "global",
+        "asset"
+      ],
+      "missing": [],
+      "generation": "analysis",
+      "model": "claude-sonnet-5-5",
+      "usage": {
+        "inputTokens": 8281,
+        "outputTokens": 1687
+      },
+      "groundedFactCount": 6,
+      "scenarioCount": 3
+    },
+    {
+      "ticker": "BTC",
+      "quoteAvailable": true,
+      "quoteAsOf": "2026-10-09T13:16:05.000Z",
+      "sourceCount": 24,
+      "sourceScopes": [
+        "global",
+        "crypto"
+      ],
+      "missing": [],
+      "generation": "analysis",
+      "model": "claude-sonnet-5-5",
+      "usage": {
+        "inputTokens": 8767,
+        "outputTokens": 1827
+      },
+      "groundedFactCount": 6,
+      "scenarioCount": 3
+    }
+  ]
+}

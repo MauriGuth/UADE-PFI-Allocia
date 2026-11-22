@@ -1,0 +1,222 @@
+\chapter{Descripción}\label{chap:descripcion}
+
+La investigación con usuarios aporta indicios sobre dificultades de seguimiento e interpretación de inversiones. Con esos indicios se delimitan el problema, la solución y sus requerimientos. La sección distingue lo relevado de las hipótesis de diseño y de lo que no llegó a validarse.
+
+\section{Investigación con usuarios}\label{sec:user-research}
+
+El relevamiento combina una encuesta y entrevistas semiestructuradas. La encuesta aporta resultados agregados; las entrevistas exploran prácticas y motivos. La consulta al tutor se considera orientación académica y queda excluida de la muestra de usuarios para evitar el sesgo derivado de su participación en el Proyecto.
+
+\subsection{Encuesta}\label{subsec:encuesta}
+
+El formulario \textit{Encuesta sobre análisis y gestión de inversiones} reúne 190 respuestas entre el 24 de mayo y el 14 de agosto de 2026. Su difusión comprende redes sociales, grupos vinculados con finanzas y contactos directos. El muestreo es no probabilístico por conveniencia: los resultados describen a los participantes y no estiman la demanda del conjunto de inversores argentinos. El Anexo~\ref{annex:user-research} reúne el cuestionario aplicado y las frecuencias documentadas.
+
+\subsubsection{Perfil y límites de la muestra}
+
+La Figura~\ref{fig:encuesta-perfil} muestra que la muestra reúne inversores activos, personas con seguimiento ocasional y personas que todavía no invierten. El segmento activo comprende 85 participantes, mientras que 48 no invierten. Los tres grupos se tratan por separado, porque no comparten experiencia de uso ni necesidades.
+
+La edad se concentra entre 18 y 34 años (135 de 190 participantes). La encuesta no releva ubicación geográfica, y sus frecuencias marginales no indican cuántos inversores activos operan en varias plataformas. El contexto argentino proviene del diseño del Proyecto y de las menciones de instrumentos locales, no de una residencia relevada.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{figures/encuesta_perfil}
+\caption{Perfil de los participantes (N=190). Fuente: elaboración propia.}\label{fig:encuesta-perfil}
+\end{figure}
+
+\subsubsection{Seguimiento y dificultades}
+
+Las formas de seguimiento incluyen aplicaciones de cada plataforma y planillas propias. La preferencia por una visión consolidada y las dificultades de interpretación orientan el diseño hacia una carga única y un resumen común. La pregunta sobre activos mezcla tenencias actuales e interés futuro; por eso sus respuestas se leen como indicio y no como composición real de las carteras.
+
+La Figura~\ref{fig:encuesta-dificultades} compara las dificultades sin repetir todas las distribuciones del anexo. La consolidación y el tiempo de investigación destacan junto con la comprensión de la diversificación y la exposición. Estas respuestas justifican estudiar el problema; si el prototipo lo resuelve es una pregunta de la evaluación.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{figures/encuesta_dificultades}
+\caption{Dificultades de análisis y seguimiento (N=190). Fuente: elaboración propia.}\label{fig:encuesta-dificultades}
+\end{figure}
+
+\subsubsection{Prioridades e interés en la propuesta}
+
+La Figura~\ref{fig:encuesta-funcionalidades} presenta las prioridades declaradas. La vista consolidada, el análisis de exposición y la explicación de observaciones orientan el núcleo funcional. Las preguntas de selección múltiple admiten hasta tres opciones; sus porcentajes se calculan sobre los 190 participantes, por lo que no suman 100\,\%.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{figures/encuesta_funcionalidades}
+\caption{Prioridades funcionales declaradas (N=190). Fuente: elaboración propia.}\label{fig:encuesta-funcionalidades}
+\end{figure}
+
+La pregunta sobre interés describe expresamente una plataforma web. La Figura~\ref{fig:encuesta-interes} muestra una concentración de respuestas en niveles altos y una preferencia por acceso gratuito con funciones pagas. Ese interés es declarado: la adopción, el pago y la valoración de una aplicación móvil quedan por medir.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{figures/encuesta_interes}
+\caption{Interés en la plataforma web y disposición a pagar (N=190). Fuente: elaboración propia.}\label{fig:encuesta-interes}
+\end{figure}
+
+Existen solapamientos entre las preguntas 13 y 14 sobre explicación, entre las preguntas 6 y 15 sobre herramientas y entre las preguntas 11 y 13 sobre señales. Se interpretan como perspectivas complementarias del mismo tema, no como corroboraciones independientes. El 60,0\,\% que asigna importancia alta a la explicación y el 46,3\,\% que la selecciona entre tres funciones prioritarias responden consignas diferentes.
+
+Los porcentajes desagregados por actividad inversora y las combinaciones de activos solo pueden auditarse con registros individuales. Las tablas agregadas no reconstruyen esos cruces, por lo que no se presentan como resultados verificados.
+
+\subsubsection{Lectura cualitativa y consecuencias para el diseño}
+
+La pregunta 16 es abierta: \enquote{¿Qué sentís que le falta a las herramientas que usás hoy para analizar mejor tu portafolio?}. De las 190 respuestas, 163 son sustantivas y 27 no aportan contenido (guiones, \enquote{no sé} o \enquote{no uso}). El Anexo~\ref{annex:user-research} las transcribe completas en la Tabla~\ref{tab:encuesta-abierta} y resume su codificación temática en la Tabla~\ref{tab:encuesta-temas}; una respuesta puede corresponder a más de un tema. Los temas más frecuentes son el contexto argentino, es decir, la inflación, el tipo de cambio y los instrumentos locales (46 respuestas); la consolidación e integración entre plataformas (39); las noticias, las alertas y el efecto del contexto sobre la cartera (34), y la carga y actualización automáticas (23). Siguen el lenguaje accesible (18), la exposición real y la composición de los fondos (18), los criptoactivos (18) y la explicación de las recomendaciones (14). Un participante lo resume así: \enquote{Tengo cuenta en Balanz en IOL y en Lemon y cada uno me muestra sus números pero nunca veo el cuadro completo}; otro pide \enquote{entender el razonamiento detrás} de lo que se le sugiere. La codificación es propia y exploratoria: la hizo el equipo con reglas de palabras clave revisadas respuesta por respuesta, sin un segundo codificador.
+
+De allí derivan tres decisiones: una vista común de posiciones, indicadores con definiciones visibles y evidencia vinculada a cada observación. La ganancia ajustada por inflación y la conexión automática con los intermediarios, que varias respuestas piden, quedan fuera del alcance. Si esas decisiones mejoran la comprensión se evalúa con tareas concretas, no con el interés declarado en la encuesta.
+
+\subsection{Entrevistas}\label{subsec:entrevistas}
+
+Se entrevistó a tres inversores minoristas ajenos al equipo y a la tutoría: Tadeo Pinque, Fabricio Sabattoli y Octavio Antunes. Las conversaciones se realizaron el 22 de octubre de 2026 por videollamada, con la guía de cinco preguntas del Anexo~\ref{annex:entrevistas}, donde figuran los perfiles; las transcripciones completas están en los Anexos~\ref{annex:entrevista-tadeo}, \ref{annex:entrevista-fabricio} y~\ref{annex:entrevista-octavio}. Los párrafos siguientes resumen cada conversación y citan sus pasajes centrales.
+
+Tadeo Pinque sigue acciones y ETFs desde la aplicación con la que compra y, a fin de mes, usa una herramienta de IA \enquote{para analizar los resultados y validar en qué podría mejorar}. Intenta concentrarse en una plataforma, pero termina usando varias porque hay acciones que \enquote{no se pueden comprar desde Argentina} o criptomonedas que no están en ciertos brokers. Su última compra, una acción de semiconductores tras una caída, se apoyó en análisis de mercado y chats con IA; le hubiera gustado que la misma plataforma le diera información sobre la empresa antes de decidir. Las opiniones de otros inversores que muestran algunas plataformas las toma \enquote{como un parámetro}, pero las contrasta con su propia investigación. A la herramienta ideal le pide que le indique cómo reequilibrar la cartera según su estilo: si tiene muchas acciones vinculadas a IA, que le sugiera incorporar otro tipo de empresas para que \enquote{en caso de que el mercado castigue fuerte no tenga mucha pérdida}. Ese pedido corresponde a la concentración sectorial y a los escenarios adversos del diseño; la sugerencia de instrumentos concretos queda fuera del alcance informativo.
+
+Fabricio Sabattoli tiene casi todas sus inversiones en Balanz y el resto en Binance, y consolida en Yahoo Finance, donde \enquote{bonos, letras o fondos} locales no se pueden cargar. Se informa en X y Yahoo Finance y usa Claude como apoyo; no siente que le falte información. Nunca recibió una recomendación formal, pero observa que muchos posts en X \enquote{indirectamente se inclinan hacia una recomendación}, que tiende a aceptar cuando refuerzan su posición, y advierte que quien publica una recomendación \enquote{ya tomó una posición previa} y el efecto \enquote{ya esté desencadenado en el precio}. A la herramienta ideal le pediría el sentimiento sobre un activo para \enquote{ver ambos lados de la moneda}. Su aporte específico es la dificultad de representar instrumentos locales en consolidadores globales y la demanda de contexto con fuentes contrastables, que orienta la presentación de señales con procedencia.
+
+Octavio Antunes describe un seguimiento \enquote{bastante manual}: aplicaciones de cada broker (Interactive Brokers, Binance y un broker local), Yahoo Finance, Google Finance y TradingView para precios y noticias, y un Excel para registrar lo invertido. Su problema principal es la dispersión: cada aplicación muestra su propio rendimiento y \enquote{ninguna me permite entender fácilmente cómo está distribuida toda mi cartera}; calcular qué porcentaje tiene en acciones, ETFs o cripto lo hace a mano. En su última decisión, aumentar la exposición al mercado estadounidense con un ETF del S\&P 500, analizó rendimiento histórico, noticias y tasas, pero le faltó saber \enquote{si estaba demasiado concentrado en determinados sectores o mercados} y una comparación de escenarios sobre cómo la compra modificaría la diversificación. Las alertas que recibió le resultaron demasiado generales: un aviso de caída del 5\,\% no explica si la causa es un resultado de la empresa, una noticia política o el mercado general, por lo que las usa solo como punto de partida. Confiaría más en una recomendación si pudiera \enquote{entender claramente qué información se utilizó para generarla, qué riesgo considera y cómo se relaciona con mi cartera particular}. Pide integrar todas sus inversiones sin transferir activos, analizar composición y concentración, relacionar acontecimientos económicos y políticos con sus tenencias y avisar solo cuando ocurra algo relevante. Rechaza que la herramienta compre o venda sin su autorización, que prometa rendimientos garantizados o que recomiende sin explicar fundamentos: busca \enquote{tomar decisiones más informadas} sin que la herramienta reemplace su criterio. Esta entrevista es la que describe con más precisión el problema que el Proyecto delimita y coincide, punto por punto, con RF2, RF4, RF5, RF6, RF8, RF12 y RNF8.
+
+La síntesis de las tres conversaciones muestra tres temas recurrentes. Primero, la cartera está repartida entre varias plataformas en los tres casos y la consolidación es manual (Yahoo Finance, Excel) o inexistente. Segundo, los tres desconfían de las recomendaciones sin fundamento: Fabricio por el interés previo de quien recomienda, Tadeo porque valida con investigación propia y Octavio porque las alertas no explican la causa; los tres piden entender qué datos y qué riesgo hay detrás de una sugerencia. Tercero, la IA ya forma parte de su rutina como apoyo de lectura (Tadeo y Fabricio), no como decisor. Las diferencias también informan el diseño: Tadeo pide sugerencias de reequilibrio, Fabricio sentimiento con ambos lados y Octavio composición, concentración y contexto; los dos últimos pedidos están en el alcance, el primero solo en su parte descriptiva. Tres entrevistas por conveniencia no alcanzan saturación temática, pero la coincidencia de los tres en dispersión y en explicabilidad respalda las decisiones de carga única, exposición calculada y evidencia por observación. No se sabe si los entrevistados respondieron la encuesta, por lo que los dos instrumentos no se tratan como independientes.
+
+\subsection{Personas usuarias}\label{subsec:user-persona}
+
+Se definen tres arquetipos de diseño: inversor activo, inversor con seguimiento ocasional y persona interesada en comenzar. Las Figuras~\ref{fig:persona-activo}, \ref{fig:persona-ocasional} y~\ref{fig:persona-principiante}, reunidas en el Anexo~\ref{annex:personas}, distinguen la base empírica de las hipótesis. Los nombres y retratos esquemáticos son ficticios; ciudad, profesión, ingresos y combinaciones de activos figuran como supuestos, no como datos relevados.
+
+Martín representa el seguimiento activo y la necesidad de inspeccionar exposiciones; Clara representa la revisión ocasional y la lectura de un resumen comprensible; Alex representa el aprendizaje inicial y la necesidad de comprender términos antes de analizar una cartera de ejemplo. Estas personas guían los escenarios de evaluación. Las frecuencias de las categorías de inversión justifican los tres segmentos; los comportamientos particulares de cada arquetipo son hipótesis de diseño.
+
+\subsection{Análisis FODA}\label{subsec:foda}
+
+La Figura~\ref{fig:foda} relaciona decisiones internas y condiciones externas después de presentar los resultados de la encuesta. La valoración es cualitativa y corresponde al diseño del Proyecto.
+\input{figures/foda.tex}
+
+La integración de información y la evidencia inspeccionable son las fortalezas de diseño. La carga manual, el catálogo acotado y la combinación de señales en vivo con datos de demostración son las debilidades del prototipo. El interés declarado en la encuesta abre una oportunidad de investigación; la demanda comercial queda por verificar. La dependencia de proveedores, la competencia de herramientas existentes y el encuadre normativo sin resolver son las amenazas que condicionan su evolución.
+
+\section{Problema identificado}\label{sec:problema-identificado}
+
+El inversor minorista que utiliza varias fuentes debe reunir sus posiciones e interpretar información de naturaleza diferente para comprender su exposición. Las herramientas relevadas resuelven partes de esa tarea, mientras que las respuestas de la encuesta señalan dificultades de consolidación, tiempo y comprensión. La falta de un vínculo visible entre datos, contexto y observaciones puede dificultar la evaluación crítica de una sugerencia. La Figura~\ref{fig:problema-cifras} reúne las frecuencias de la encuesta que describen esa situación y la respuesta de diseño que propone el Proyecto.
+\input{figures/problema_cifras.tex}
+
+El problema delimitado es el esfuerzo de consolidación e interpretación de la cartera. Que lo experimente toda persona inversora, o que una explicación automatizada mejore sus resultados financieros, son cuestiones que el Proyecto no aborda.
+
+\section{Necesidad que busca resolver el Proyecto}\label{sec:necesidad}
+
+La necesidad consiste en disponer de una vista común que muestre composición y exposición, relacione señales con las posiciones y permita inspeccionar la evidencia de cada observación. La decisión corresponde al usuario; la herramienta organiza información y muestra las condiciones de sus reglas.
+
+Las entrevistas muestran con qué sustitutos se cubre hoy esa necesidad (Subsubsección~\ref{subsec:entrevistas}): una planilla o un sitio de seguimiento general como Yahoo Finance para consolidar manualmente las posiciones, la aplicación del intermediario para cada cuenta y herramientas de IA de propósito general para leer noticias o revisar la cartera. Ninguno de esos sustitutos ofrece, por sí solo, una composición común de activos de distintas plataformas con la regla y la fuente de cada observación a la vista; esa es la tarea que Allocia propone resolver. La comparación proviene del relato de dos entrevistados, no de una evaluación de cada herramienta.
+
+\section{Solución propuesta}\label{sec:solucion}
+
+Allocia organiza un catálogo de instrumentos, posiciones ingresadas manualmente, métricas de composición y un motor de observaciones explicables. El usuario identifica cada instrumento por su ticker, un símbolo de mercado como AAPL, y registra su cantidad. El sistema calcula el valor con el precio del instrumento (el de referencia del catálogo o, en el servicio publicado, la cotización verificada) y deriva pesos y exposiciones. Ese conjunto acotado de funciones constituye el producto mínimo viable (MVP): la versión más reducida que permite evaluar si la propuesta resulta útil.
+
+La plataforma ofrece dos clientes sobre la misma cuenta y la misma API: la aplicación web, para computadoras y para teléfonos sin la aplicación instalada, y la aplicación móvil nativa, orientada al uso cotidiano desde el teléfono. El repositorio contiene ambos clientes. Los dos incorporan registro, inicio y cierre de sesión y envío de la credencial a la API; su recorrido integrado se verifica en la Sección~\ref{chap:pruebas}. El cliente móvil responde a un hábito relevado: 86 de 190 participantes (45,3\,\%) siguen sus inversiones con aplicaciones, sea la de cada plataforma o una de seguimiento (Subsubsección~\ref{subsec:encuesta}). Como la encuesta preguntó por una plataforma web, se mantienen ambos clientes en lugar de reemplazar la web por la aplicación móvil. La Figura~\ref{fig:flujo-valor} resume el recorrido desde las posiciones dispersas en varias plataformas hasta la observación explicable.
+\input{figures/flujo_valor.tex}
+
+Las observaciones muestran la condición activada y su evidencia; cuando intervienen datos locales de demostración, esa condición se indica. El sistema también genera informes por activo con un modelo de lenguaje restringido a fuentes públicas citadas, con los controles de la Subsección~\ref{sec:seguridad}. Allocia no pronostica rendimientos ni ejecuta operaciones.
+
+\section{Modelo de negocio}\label{sec:modelo-negocio}
+
+El modelo de negocio describe cómo Allocia podría sostenerse más allá del Proyecto académico. La Figura~\ref{fig:canvas} lo resume con el lienzo de modelo de negocio \parencite{Osterwalder2010}; los párrafos siguientes detallan los bloques que dependen de la investigación con usuarios y del relevamiento de proveedores.
+\input{figures/canvas.tex}
+
+Los segmentos son los tres arquetipos de la Subsubsección~\ref{subsec:user-persona}: inversores activos con posiciones en varias plataformas, inversores de seguimiento ocasional y personas que quieren empezar. La propuesta de valor para los tres es una única vista de la cartera con exposición y concentración calculadas, contexto fechado y observaciones que muestran su regla y su fuente. Para el inversor activo, el valor está en el tiempo que ahorra la consolidación y en la alerta temprana; para el ocasional, en un resumen comprensible; para quien empieza, en las definiciones visibles y en el límite claro entre información y recomendación.
+
+El ingreso previsto es una suscripción freemium. El plan gratuito admite una cartera de hasta diez posiciones con composición, concentración y observaciones básicas; el plan Pro agrega posiciones ilimitadas, informes por activo con fuentes, alertas, seguimiento de activos no poseídos y exportación. La encuesta respalda esa estructura: el 50,0\,\% de los participantes usaría la herramienta solo si tiene una versión gratuita con funciones pagas, el 25,8\,\% pagaría una suscripción mensual, el 15,8\,\% la usaría solo si es gratis y el 8,4\,\% no la usaría (Anexo~\ref{annex:user-research}). Esas respuestas expresan intención, no pago efectivo. El precio de referencia del plan Pro es 6 dólares por mes, por debajo del plan inicial de Sharesight (9,33 dólares) y del plan anual de Kubera (unos 20,8 dólares por mes) y en el rango de CoinStats Premium \parencite{SharesightPricing,KuberaPricing,CoinStatsPricing}.
+
+Los canales son la aplicación web, las tiendas de aplicaciones y las comunidades de finanzas personales donde se difundió la encuesta. La relación con el cliente es de autoservicio, con ayuda contextual, correo transaccional y un aviso permanente sobre el alcance informativo del producto. Los socios clave son los proveedores de datos, de infraestructura y del modelo de lenguaje; varios de ellos condicionan el uso comercial: Finnhub ofrece el plan gratuito solo para uso personal, FRED pide consentimiento escrito para uso comercial y Vercel reserva el plan gratuito a proyectos no comerciales \parencite{FinnhubPricing,FredTerms,VercelPricing}. Un servicio pago necesita los planes correspondientes, que la Subsección~\ref{sec:viabilidad} incorpora a los costos.
+
+Dos restricciones delimitan el modelo. La primera es legal: Allocia no está inscripta como agente ante la CNV, por lo que no puede prestar asesoramiento habitual y profesional ni ejecutar operaciones (Subsubsección~\ref{subsec:marco-normativo}); el plan Pro vende análisis e información, no consejo personalizado. La segunda es tributaria: el precio se expresa sin IVA, cuya alícuota general es del 21\,\% \parencite{LeyIVA}, y la forma societaria condiciona el régimen: una sociedad tributa en el régimen general, mientras que el monotributo solo alcanza a personas humanas \parencite{LeyMonotributo}.
+
+\section{Viabilidad económico-financiera}\label{sec:viabilidad}
+
+La viabilidad se evalúa con un flujo de fondos mensual a 36 meses, en dólares y sin IVA, con tres escenarios y las herramientas de valor actual neto (VAN), tasa interna de retorno (TIR), período de recupero y punto de equilibrio. El cálculo se reproduce con el script \texttt{scripts/viabilidad.py} del repositorio del Proyecto. La Tabla~\ref{tab:supuestos} reúne los supuestos; los precios provienen de las páginas oficiales de los proveedores, consultadas el 22 de octubre de 2026 \parencite{RailwayPricing,VercelPricing,ExpoPricing,FinnhubPricing,CoinGeckoPricing,ResendPricing,AppleDeveloper,GooglePlayConsole,AnthropicPricing}.
+
+\begin{table}[ht]
+\centering\small\renewcommand{\arraystretch}{1.15}
+\caption{Supuestos del flujo de fondos. Fuente: elaboración propia a partir de las páginas oficiales de los proveedores.}\label{tab:supuestos}
+\begin{tabular}{>{\raggedright\arraybackslash}p{6.4cm}>{\raggedright\arraybackslash}p{7.2cm}}\hline
+\textbf{Concepto} & \textbf{Valor}\\\hline
+Inversión inicial & 10\,324 USD: desarrollo del MVP (dos personas, ocho meses, 40 horas mensuales a 15 USD la hora), cuentas de Apple (99 USD) y Google Play (25 USD), marca y asesoramiento legal (600 USD).\\
+Costos fijos mensuales & 517 USD: Railway (40), Vercel Pro (20), Expo Starter (19), datos de mercado Finnhub (50), Apple prorrateado (8), contador y legal (80), mantenimiento y soporte (20 horas a 15 USD).\\
+Costos escalonados & Resend Pro (20 USD) a partir de 3\,000 usuarios registrados; CoinGecko Analyst (129 USD) a partir de 300 usuarios Pro.\\
+Costo variable & 1 USD por usuario Pro y mes (informes con el modelo de lenguaje, unos 30 por mes a 0,03 USD, más infraestructura) y 0,02 USD por usuario registrado.\\
+Ingreso & 6 USD por usuario Pro y mes.\\
+Escenario pesimista & 150 registros por mes; conversión a Pro del 2\,\%; baja mensual del 6\,\%; marketing 150 USD.\\
+Escenario base & 300 registros por mes; conversión del 4\,\%; baja del 5\,\%; marketing 200 USD.\\
+Escenario optimista & 600 registros por mes; conversión del 6\,\%; baja del 4\,\%; marketing 300 USD.\\
+Tasa de descuento & 20\,\% anual (1,53\,\% mensual).\\
+Simplificaciones & Sin impuesto a las ganancias ni ingresos brutos; sin remuneración de los fundadores más allá del mantenimiento; abandono del 3\,\% mensual de usuarios registrados.\\\hline
+\end{tabular}
+\end{table}
+
+La conversión supuesta es una fracción de la intención declarada: el 25,8\,\% que dice que pagaría se reduce a entre el 2\,\% y el 6\,\% de los registrados, en línea con la diferencia habitual entre intención y pago. La Tabla~\ref{tab:resultados-viabilidad} presenta los resultados y la Figura~\ref{fig:flujo-caja} el flujo de caja acumulado.
+
+\begin{table}[ht]
+\centering\small\renewcommand{\arraystretch}{1.15}
+\caption{Resultados a 36 meses por escenario. Fuente: elaboración propia.}\label{tab:resultados-viabilidad}
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.6cm}rrr}\hline
+\textbf{Indicador} & \textbf{Pesimista} & \textbf{Base} & \textbf{Optimista}\\\hline
+Punto de equilibrio mensual (usuarios Pro) & 133 & 143 & 163\\
+Usuarios Pro en el mes 36 & 45 & 202 & 693\\
+Ingreso mensual en el mes 36 (USD) & 268 & 1\,213 & 4\,158\\
+Costo mensual en el mes 36 (USD) & 798 & 1\,073 & 1\,926\\
+Primer mes con flujo operativo positivo & no alcanza & 25 & 7\\
+Período de recupero de la inversión & no alcanza & más de 36 meses & 21 meses\\
+VAN a 36 meses, 20\,\% anual (USD) & $-25\,829$ & $-15\,300$ & $16\,284$\\
+TIR anual & no existe & negativa & 87,8\,\%\\\hline
+\end{tabular}
+\end{table}
+\input{figures/flujo_caja.tex}
+
+El punto de equilibrio operativo está entre 133 y 163 usuarios Pro, según el gasto de marketing: con una contribución de 5 dólares por usuario, esa cantidad cubre los costos fijos. El escenario pesimista no lo alcanza: la combinación de pocos registros y baja conversión estabiliza la base paga en unos 50 usuarios. El escenario base cruza el equilibrio operativo en el mes 25, pero no recupera la inversión inicial dentro de los 36 meses. El escenario optimista recupera la inversión en el mes 21 y obtiene un VAN positivo con una TIR del 87,8\,\% anual.
+
+La sensibilidad al precio es alta. Con un plan Pro de 9 dólares, cercano a Sharesight, el punto de equilibrio del escenario base baja a 90 usuarios y el VAN se acerca a cero ($-5\,003$ USD), mientras que el escenario optimista recupera la inversión en el mes 14. En sentido contrario, un plan comercial de datos de mercado más caro que el supuesto (el plan para empresas de Finnhub no publica precio) desplaza el equilibrio hacia arriba.
+
+La conclusión es que el producto es viable como negocio solo si la adquisición y la conversión se aproximan al escenario optimista o si el precio se ubica en el rango de los competidores. Esas dos variables no se conocen: la encuesta mide intención y la aplicación no se ofreció al público. Por eso, validar la disposición a pagar con usuarios reales, con una lista de espera y un plan Pro de prueba, es la primera actividad del plan de negocio después del cierre académico. Mientras tanto, el prototipo opera con costos cercanos a cero sobre los planes gratuitos, que alcanzan para el uso del equipo y para las sesiones de evaluación.
+
+\section{Requerimientos funcionales}\label{sec:req-funcionales}
+
+Los doce requerimientos funcionales se identifican de RF1 a RF12 y cada uno se formula como un comportamiento verificable del sistema:
+\begin{enumerate}[label=RF\arabic*.,leftmargin=*]
+\item El sistema debe permitir el registro y el inicio de sesión, y asociar las posiciones a la cuenta autenticada.
+\item El sistema debe permitir cargar, editar y eliminar posiciones propias mediante ticker de catálogo y cantidad positiva, rechazando entradas inválidas.
+\item El sistema debe clasificar las posiciones por clase, sector, región y moneda según el catálogo y mostrar el origen de esa clasificación.
+\item El sistema debe calcular el valor de la cartera, pesos, exposiciones, HHI y número efectivo de posiciones, y tratar explícitamente una cartera vacía.
+\item El sistema debe presentar contexto geopolítico y señales emergentes con fuente, fecha y condición de dato en vivo o de demostración por componente.
+\item El sistema debe generar observaciones que incluyan regla, métricas y evidencia, y permitan inspeccionar su fundamento.
+\item El sistema debe ofrecer el flujo de gestión y análisis de posiciones desde el cliente web y desde el cliente móvil, con una misma cuenta y los mismos contratos de API, y documentar las diferencias de funciones entre ambos clientes.
+\item El sistema debe mostrar escenarios como simulaciones con supuestos visibles, sin presentarlos como predicciones.
+\item El sistema debe permitir solicitar la eliminación de la cuenta y de sus posiciones mediante una confirmación explícita, informando el alcance de la eliminación.
+\item El sistema debe informar finalidad, datos tratados, conservación y canales de ejercicio de derechos antes de registrar una cuenta, y registrar el consentimiento cuando corresponda.
+\item El sistema debe generar informes por activo con un modelo de lenguaje a partir de un conjunto delimitado de fuentes públicas, validar su esquema y la coincidencia literal de cada cita con su fuente, y abstenerse cuando falten datos o las fuentes no estén vigentes, sin enviar identidad ni cantidades al proveedor.
+\item El sistema debe separar los análisis de la cartera de las oportunidades sobre activos no poseídos, permitir seguir activos sin modificar tenencias y configurar alertas independientes de escenarios alcistas respaldados, informando cobertura, fechas, condiciones y riesgos sin atribuir probabilidades no calculadas.
+\end{enumerate}
+
+\section{Requerimientos no funcionales}\label{sec:req-no-funcionales}
+
+Los siguientes umbrales son criterios de aceptación propuestos para el prototipo; cada evaluación registra entorno, procedimiento y resultados.
+\begin{enumerate}[label=RNF\arabic*.,leftmargin=*]
+\item El sistema debe presentar la interfaz en español, definir las métricas en lenguaje accesible y permitir que al menos cuatro de cinco participantes de una evaluación exploratoria identifiquen la causa de una observación sin ayuda. Ese tamaño de evaluación no permite generalización estadística.
+\item El sistema debe producir pesos con error absoluto máximo de $10^{-6}$ frente a un cálculo independiente antes del redondeo, para carteras de prueba con valor positivo.
+\item El sistema debe responder al análisis de hasta 100 posiciones en menos de dos segundos en el percentil 95 de 30 consultas con caché disponible, en un entorno documentado y sin incluir latencia de proveedores externos.
+\item El sistema debe rechazar todas las solicitudes sin autenticación a datos privados y todas las modificaciones sobre posiciones ajenas en las pruebas de dos cuentas.
+\item El sistema debe almacenar contraseñas mediante hash adaptativo, usar HTTPS en despliegues remotos y mantener secretos fuera del repositorio; debe documentar los controles de cifrado en reposo y copias de seguridad del proveedor.
+\item El sistema debe mantener separados catálogo, posiciones, señales y observaciones, para permitir pruebas independientes de los cálculos y reglas.
+\item El sistema debe identificar fallos o antigüedad de las fuentes y conservar la procedencia individual de los datos cuando combine proveedores y respaldo local.
+\item El sistema debe limitarse al análisis informativo y a la presentación de evidencia, manteniendo las decisiones y operaciones financieras bajo control del usuario y fuera del flujo del prototipo.
+\item El sistema debe contemplar minimización, acceso, rectificación y supresión de datos personales conforme al marco normativo aplicable, con evidencia verificable de los procedimientos.
+\item El sistema debe indicar en la interfaz qué contenidos provienen del motor de reglas y cuáles fueron redactados por un modelo de lenguaje, y presentar ambos como apoyo informativo y no como asesoramiento de inversión.
+\end{enumerate}
+
+Los requerimientos no funcionales se corresponden con las características de una IA confiable \parencite{NIST2023airmf}: validez y fiabilidad (RNF2, RNF3 y RNF6), seguridad y resiliencia (RNF4, RNF5 y RNF7), explicabilidad e interpretabilidad (RNF1 y RNF10), privacidad (RNF9) y responsabilidad con supervisión humana (RNF8). La Subsección~\ref{sec:seguridad} detalla los controles asociados y su estado.
+
+\section{Casos de uso principales}\label{sec:casos-uso}
+
+La Figura~\ref{fig:casos-uso} presenta las interacciones previstas. La autenticación es precondición de las operaciones privadas y disponer de posiciones lo es del análisis; las posiciones guardadas no se vuelven a cargar en cada consulta del resumen.
+\input{figures/diag_casos_uso.tex}
+
+Los casos comprenden gestión de posiciones (CU01), resumen (CU02), concentración (CU03), señales (CU04), explicación (CU05), escenarios (CU06), detalle de activo (CU07), registro e inicio de sesión (CU08) y baja de cuenta (CU09). CU09 se implementa con reautenticación, confirmación, eliminación de posiciones y cuenta e invalidación de las sesiones anteriores. La Subsección~\ref{sec:validacion-publicada} presenta su verificación desde la web y el cliente HTTP móvil; la recepción push y la interacción en teléfonos físicos se validan por separado.
+
+\section{Módulos del sistema}\label{sec:modulos}
+
+La separación modular organiza responsabilidades y permite vincular cada requisito con su implementación o validación:
+\begin{itemize}[nosep]
+\item \textbf{Identidad y privacidad.} Registro, autenticación, autorización y ciclo de vida de la cuenta (RF1, RF9 y RF10).
+\item \textbf{Catálogo y portafolio.} Clasificación y gestión de posiciones por propietario (RF2 y RF3).
+\item \textbf{Análisis estructural.} Valores de referencia, pesos, exposiciones y concentración (RF4).
+\item \textbf{Fuentes externas.} Normalización, procedencia, antigüedad y respaldo de señales (RF5).
+\item \textbf{Observaciones.} Reglas deterministas y evidencia asociada; escenarios con supuestos explícitos (RF6 y RF8).
+\item \textbf{Informes de análisis.} Redacción con modelo de lenguaje sobre fuentes públicas, con validación de esquema y de citas y abstención ante datos insuficientes (RF11).
+\item \textbf{Presentación.} Cliente web y cliente móvil con contratos comunes (RF7).
+\end{itemize}

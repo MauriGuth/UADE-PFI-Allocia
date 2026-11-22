@@ -1,0 +1,39 @@
+% Esquema: de lo implementado a la siguiente etapa. Las columnas resumen la
+% Tabla del estado funcional y la sección de prioridades de mejora; la tercera
+% columna son líneas de trabajo propuestas, no resultados.
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\scriptsize,
+  col/.style={draw,rounded corners,text width=4.55cm,inner sep=5pt,anchor=north west,minimum height=7.5cm},
+  hd/.style={font=\footnotesize\bfseries,anchor=north west},
+  arr/.style={-{Stealth},thick,black!55}]
+\node[col,fill=green!7,draw=green!45!black] (a) at (0,0) {};
+\node[hd] at (0.15,-0.12) {Implementado y probado};
+\node[anchor=north west,text width=4.25cm] at (0.15,-0.75) {%
+$\bullet$ Cuentas, recuperación de acceso y baja de cuenta.\\[2pt]
+$\bullet$ Carga manual de posiciones; composición, pesos, HHI y posiciones efectivas.\\[2pt]
+$\bullet$ Observaciones con regla, umbral y evidencia.\\[2pt]
+$\bullet$ Cotizaciones fechadas del catálogo (34 instrumentos).\\[2pt]
+$\bullet$ Índice GPR, señales cripto y mercados de predicción en vivo, con procedencia.\\[2pt]
+$\bullet$ Informes por activo con modelo de lenguaje y citas validadas.\\[2pt]
+$\bullet$ Cliente web y cliente móvil sobre la misma cuenta y API.};
+\node[col,fill=orange!8,draw=orange!70!black] (b) at (5.15,0) {};
+\node[hd] at (5.3,-0.12) {Implementado en parte};
+\node[anchor=north west,text width=4.25cm] at (5.3,-0.75) {%
+$\bullet$ Comprensión de las observaciones: clara para inversores activos, insuficiente para perfiles sin experiencia.\\[2pt]
+$\bullet$ Cobertura de cotizaciones y señales limitada a los proveedores accesibles.\\[2pt]
+$\bullet$ Notificaciones push: recepción confirmada en iPhone y Android; sin recepción en el navegador.\\[2pt]
+$\bullet$ Paridad completa entre web y móvil.};
+\node[col,fill=black!3,draw=black!55,dashed] (c) at (10.3,0) {};
+\node[hd] at (10.45,-0.12) {Evolución propuesta};
+\node[anchor=north west,text width=4.25cm] at (10.45,-0.75) {%
+$\bullet$ Repetición de la evaluación con perfiles ocasional y principiante.\\[2pt]
+$\bullet$ Más fuentes y cobertura de activos, con acceso autorizado a los mercados.\\[2pt]
+$\bullet$ Nuevas señales de eventos.\\[2pt]
+$\bullet$ Descomposición de fondos y medidas de riesgo adicionales (volatilidad, correlación).\\[2pt]
+$\bullet$ Monitoreo más avanzado: calendarios regionales y causa de cada fallo.};
+\draw[arr] (a.east) -- (b.west);
+\draw[arr] (b.east) -- (c.west);
+\node[draw,rounded corners,fill=red!5,draw=red!50!black,text width=14.7cm,align=center,inner sep=4pt,anchor=north west] at (0,-7.8) {Fuera del alcance del Proyecto: ejecución de operaciones, conexión operativa con intermediarios y asesoramiento personalizado.};
+\end{tikzpicture}
+\caption{De lo implementado a la evolución propuesta. Fuente: elaboración propia.}\label{fig:evolucion}
+\end{figure}

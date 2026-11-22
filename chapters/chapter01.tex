@@ -1,0 +1,37 @@
+\chapter{Introducción}\label{chap:introduccion}
+
+La distribución entre clases de activos y sus relaciones condiciona el análisis de una cartera: la cantidad de instrumentos, por sí sola, dice poco sobre la diversificación \parencite{Markowitz1952,SECAssetAllocation}. El riesgo geopolítico y los activos digitales agregan fuentes de información y riesgos diferentes \parencite{CaldaraIacoviello2022,Schar2021}. Consultar cartera, noticias y señales en herramientas separadas dificulta integrar esa información.
+
+El Proyecto Final de Ingeniería en Informática (en adelante, el Proyecto) aborda ese problema con Allocia, una plataforma de análisis de portafolios multiactivo con observaciones explicables. La inteligencia artificial (IA) se organiza en dos capas separadas: un motor determinista de reglas explícitas, que calcula las métricas y genera las observaciones, y una capa de análisis con un modelo de lenguaje, restringida a fuentes públicas citadas y sujeta a validación.
+
+Allocia separa tres capas de información: las posiciones ingresadas por el usuario, las métricas calculadas sobre esas posiciones y las señales externas. Un motor de reglas relaciona las capas y produce observaciones con su evidencia a la vista. La capa de análisis con modelo de lenguaje, separada del cálculo, redacta informes por activo sobre fuentes públicas delimitadas. La explicación permite revisar qué condición activa una observación o qué fuente respalda una afirmación, pero no certifica la exactitud de una predicción ni la conveniencia de una inversión.
+
+\section{Objetivo}\label{sec:objetivo}
+
+El objetivo general del Proyecto consiste en desarrollar Allocia, una plataforma de análisis de portafolios multiactivo que vincule la composición de la cartera con contexto geopolítico y señales emergentes y presente observaciones cuyo fundamento pueda inspeccionarse. La plataforma se ofrece en dos clientes que comparten API y cuenta: una aplicación web, accesible desde una computadora o desde el navegador de un teléfono, y una aplicación móvil nativa para iOS y Android.
+
+Los objetivos específicos se formulan como metas de validación, cada una con su criterio de aceptación:
+\begin{itemize}
+\item Calcular pesos, exposiciones e índice de concentración para carteras del catálogo, con una diferencia máxima de $10^{-6}$ en pesos respecto de un cálculo independiente, antes del redondeo de presentación.
+\item Incorporar una fuente de contexto geopolítico y una de señales emergentes, identificando su origen, fecha y condición de dato en vivo o de demostración en todos los registros mostrados.
+\item Generar observaciones que incluyan en el 100\,\% de los casos la regla aplicada, las métricas utilizadas y la evidencia de contexto cuando corresponda.
+\item Ofrecer el flujo completo de carga, edición, eliminación y análisis de posiciones desde los dos clientes, web y móvil, sobre la misma cuenta, y registrar en una matriz de paridad las diferencias de funciones entre ambos.
+\item Verificar el funcionamiento con casos de prueba vinculados a los requerimientos y evaluar la comprensión de las observaciones con tareas de usuario definidas previamente.
+\item Incorporar al diseño la protección de los datos personales y los límites del uso informativo de las observaciones, con pruebas de aislamiento entre cuentas y un procedimiento de eliminación de datos.
+\end{itemize}
+
+\section{Alcance}\label{sec:alcance}
+
+La plataforma se orienta al inversor minorista argentino y presenta su interfaz en español. La propuesta inicial comprometía una plataforma web; el alcance vigente suma un segundo cliente. La aplicación web se usa desde una computadora o desde el navegador de un teléfono, sin instalación. La aplicación móvil, desarrollada con React Native y Expo para iOS y Android, es la forma prevista de uso en el teléfono. El cliente móvil amplía el compromiso original, y ambos clientes consumen los mismos contratos de la API. La carga de posiciones es manual y se limita a los instrumentos del catálogo: acciones, fondos cotizados (ETFs), criptomonedas y stablecoins. Las pruebas no cubren todos los dispositivos.
+
+El núcleo comprende la composición por clase, sector, región y moneda, la concentración por posición y las observaciones basadas en reglas. La clasificación de un ETF proviene del catálogo; sus tenencias subyacentes no se descomponen. En desarrollo y en las pruebas locales los valores se calculan con los precios de referencia del catálogo; en el servicio publicado se usan cotizaciones de proveedores externos con su fecha, y la valuación se rechaza si falta una cotización verificable. Esos valores no representan rendimientos históricos ni suponen una latencia de cotización garantizada. La información fundamental se limita a la caracterización disponible de cada instrumento.
+
+El diseño contempla contexto geopolítico y señales cripto y de mercados de predicción. El sistema combina consultas externas (señales cripto, cotizaciones, noticias y series macroeconómicas oficiales) con datos locales de demostración, identificados por componente y ausentes del servicio publicado. El acceso web autenticado se verifica en una ejecución local de extremo a extremo y sobre el servicio publicado. El índice de riesgo geopolítico se consulta en vivo desde la planilla diaria que publican sus autores.
+
+El sistema tiene finalidad informativa y de apoyo al análisis. Quedan fuera del alcance la ejecución de operaciones, la conexión operativa con intermediarios, la optimización de carteras y la determinación de idoneidad financiera del usuario. El encuadre normativo de un eventual servicio público requeriría una evaluación propia.
+
+\section{Estructura del documento}\label{sec:estructura-documento}
+
+El Proyecto comprende siete secciones. Esta Sección~\ref{chap:introduccion} presenta el problema, el objetivo y el alcance. Luego, la Sección~\ref{chap:antecedentes} reúne el marco teórico y el estado del arte, y la Sección~\ref{chap:descripcion} expone la investigación con usuarios, el problema, la solución, el modelo de negocio y los requerimientos. La Sección~\ref{chap:metodologia} detalla la organización del trabajo, el diseño, la arquitectura y la implementación, y la Sección~\ref{chap:pruebas} documenta la evaluación técnica y la evaluación con usuarios. Por último, la Sección~\ref{chap:discusion} interpreta los resultados y sus límites, y la Sección~\ref{chap:conclusiones} contrasta los objetivos con lo obtenido.
+
+Los anexos reúnen las pantallas y los wireframes (Anexo~\ref{annex:wireframes}), la encuesta (Anexo~\ref{annex:user-research}), la guía y las transcripciones de las entrevistas (Anexos~\ref{annex:entrevistas} a~\ref{annex:entrevista-octavio}), las personas usuarias (Anexo~\ref{annex:personas}), los casos de prueba (Anexo~\ref{annex:casos-prueba}) y el protocolo de evaluación con usuarios (Anexo~\ref{annex:protocolo-usuarios}).

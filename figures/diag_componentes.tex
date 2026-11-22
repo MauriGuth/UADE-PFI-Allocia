@@ -1,0 +1,20 @@
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[node distance=0.8cm and 0.7cm,box/.style={draw,rounded corners,fill=blue!6,text width=4.2cm,align=center,minimum height=1cm,font=\footnotesize},arr/.style={-{Stealth},thick}]
+\node[box] (clients) {Web: Next.js (Vercel)\\Móvil: React Native / Expo};
+\node[box,right=1.6cm of clients] (api) {API NestJS (Railway)\\Autenticación y lógica\\de negocio; proceso\\de análisis};
+\node[box,right=of api,fill=purple!8] (llm) {Anthropic\\Modelo de lenguaje para\\los informes por activo};
+\node[box,below=of clients,fill=teal!8] (db) {PostgreSQL\\Usuarios, catálogo\\y posiciones};
+\node[box,below=of api,fill=teal!8] (caché) {Caché Redis\\Alternativa en memoria fuera de producción};
+\node[box,below=of llm,fill=orange!8] (prov) {Fuentes de análisis\\Finnhub, CoinGecko,\\FRED y noticias};
+\node[box,below=of db,fill=orange!8] (live) {Consultas externas\\Alternative.me, CoinGecko, DefiLlama,\\Polymarket e índice GPR (planilla diaria)};
+\node[box,below=of caché,fill=orange!8] (local) {Datos locales de demostración\\(solo en desarrollo; no se publican)};
+\draw[arr] (clients)--node[above,font=\scriptsize]{JSON / token}(api);
+\draw[arr] (api)--(llm);
+\draw[arr] (api)--(db);
+\draw[arr] (api)--(caché);
+\draw[arr] (live)--(caché);
+\draw[arr] (local)--(caché);
+\draw[arr] (prov)--(llm);
+\end{tikzpicture}
+\caption{Componentes y procedencia de las señales. Fuente: elaboración propia.}\label{fig:diag-componentes}
+\end{figure}

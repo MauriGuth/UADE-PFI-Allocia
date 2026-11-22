@@ -1,0 +1,26 @@
+% Cruz de Porter: cinco fuerzas competitivas de la propuesta.
+\begin{figure}[ht]
+	\centering
+	\resizebox{0.97\textwidth}{!}{\begin{tikzpicture}[
+		font=\footnotesize,
+		fuerza/.style={draw=black!50, rounded corners=3pt, fill=blue!8, text width=4.4cm, align=center, inner sep=7pt},
+		centro/.style={draw=black!60, rounded corners=3pt, fill=orange!12, text width=4.6cm, align=center, inner sep=8pt},
+		nivel/.style={font=\scriptsize\bfseries, text=black!55},
+		flecha/.style={-{Stealth[length=2.5mm]}, thick, black!60}
+	]
+		\node[centro] (rival) at (0,0) {\textbf{Rivalidad competitiva}\\[1pt]{\scriptsize Herramientas con diferentes alcances de seguimiento y análisis}\\[1pt]};
+		\node[nivel, below=1pt of rival.south] {};
+
+		\node[fuerza] (entrantes) at (0,2.5) {\textbf{Amenaza de nuevos entrantes}\\[1pt]{\scriptsize Barrera baja para trackers simples; fintechs y brokers pueden sumar funciones similares}\\[1pt]{\bfseries\scriptsize Nivel: medio-alto}};
+		\node[fuerza] (sustitutos) at (0,-2.5) {\textbf{Amenaza de sustitutos}\\[1pt]{\scriptsize Planillas propias, apps de cada broker o exchange, comunidades y redes sociales}\\[1pt]{\bfseries\scriptsize Nivel: alto}};
+		\node[fuerza] (proveedores) at (-5.6,0) {\textbf{Poder de los proveedores}\\[1pt]{\scriptsize Proveedores externos de datos de mercado y señales: límites de uso y cambios de costo}\\[1pt]{\bfseries\scriptsize Nivel: medio}};
+		\node[fuerza] (clientes) at (5.6,0) {\textbf{Poder de los clientes}\\[1pt]{\scriptsize Inversores minoristas con bajo costo de cambio y alta sensibilidad al precio}\\[1pt]{\bfseries\scriptsize Nivel: medio-alto}};
+
+		\draw[flecha] (entrantes) -- (rival);
+		\draw[flecha] (sustitutos) -- (rival);
+		\draw[flecha] (proveedores) -- (rival);
+		\draw[flecha] (clientes) -- (rival);
+	\end{tikzpicture}}
+	\caption{Cinco fuerzas competitivas. Fuente: elaboración propia.}
+	\label{fig:porter}
+\end{figure}

@@ -1,0 +1,202 @@
+{
+  "executedAt": "2026-10-13T12:57:52.317Z",
+  "browser": "Chromium 141.0.7390.37",
+  "target": "http://localhost:3000",
+  "provocados": [
+    "[A] error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[A] error: Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "[C] error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[A] error: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "results": [
+    {
+      "id": "UI01",
+      "title": "Ruta privada redirige al acceso conservando el destino",
+      "status": "PASS",
+      "ms": 348,
+      "detail": "http://localhost:3000/login?next=%2Fcartera"
+    },
+    {
+      "id": "UI02",
+      "title": "Registro con consentimiento abre cartera vacía",
+      "status": "PASS",
+      "ms": 955,
+      "detail": {
+        "httpOnly": true,
+        "sameSite": "Strict"
+      }
+    },
+    {
+      "id": "UI03",
+      "title": "Carga, edición y persistencia tras recargar",
+      "status": "PASS",
+      "ms": 1713,
+      "detail": {
+        "AAPL": 3,
+        "BTC": 0.1,
+        "XLE": 100
+      }
+    },
+    {
+      "id": "UI04",
+      "title": "Resumen y Riesgo: observación con regla, datos y fuente visibles",
+      "status": "PASS",
+      "ms": 821,
+      "detail": "regla y fuente visibles"
+    },
+    {
+      "id": "UI04b",
+      "title": "Escenarios: sin rendimientos supuestos cuando no hay evidencia",
+      "status": "PASS",
+      "ms": 267,
+      "detail": "el selector de escenario adverso fue reemplazado por escenarios con fuentes"
+    },
+    {
+      "id": "UI05",
+      "title": "Sin desborde horizontal en 390, 768 y 1440 px en todas las pantallas",
+      "status": "PASS",
+      "ms": 18578,
+      "detail": "9 pantallas × 3 anchos"
+    },
+    {
+      "id": "UI06",
+      "title": "Eliminar posición con confirmación",
+      "status": "PASS",
+      "ms": 820,
+      "detail": [
+        "AAPL",
+        "XLE"
+      ]
+    },
+    {
+      "id": "UI07",
+      "title": "Cerrar sesión, error de login y nuevo acceso",
+      "status": "PASS",
+      "ms": 2066,
+      "detail": "revocación (401) + error + reingreso"
+    },
+    {
+      "id": "X01",
+      "title": "Aislamiento: otra cuenta no ve ni modifica posiciones ajenas",
+      "status": "PASS",
+      "ms": 913,
+      "detail": {
+        "patch": 404,
+        "delete": 404
+      }
+    },
+    {
+      "id": "X02",
+      "title": "CSRF: mutaciones con cookie sin origen o con origen ajeno rechazadas",
+      "status": "PASS",
+      "ms": 21,
+      "detail": {
+        "origenAjeno": 403,
+        "sinOrigen": 403
+      }
+    },
+    {
+      "id": "X03",
+      "title": "El proxy exige sesión y sólo expone rutas permitidas",
+      "status": "PASS",
+      "ms": 22,
+      "detail": {
+        "sinSesion": 401,
+        "rutaNoPermitida": 404
+      }
+    },
+    {
+      "id": "X04",
+      "title": "Validación de entradas: ticker inexistente, cantidad cero, negativa y letras",
+      "status": "PASS",
+      "ms": 489,
+      "detail": {
+        "estadosApi": [
+          400,
+          400,
+          400,
+          400
+        ]
+      }
+    },
+    {
+      "id": "X05",
+      "title": "Señales: cada componente muestra fuente y origen (demostración/en vivo)",
+      "status": "PASS",
+      "ms": 381,
+      "detail": "procedencia visible"
+    },
+    {
+      "id": "X06",
+      "title": "El login tolera espacios y mayúsculas en el correo",
+      "status": "PASS",
+      "ms": 822,
+      "detail": "ok"
+    },
+    {
+      "id": "X07",
+      "title": "Exportación de datos propios y cuenta compartida con la API",
+      "status": "PASS",
+      "ms": 21,
+      "detail": {
+        "posiciones": 2
+      }
+    },
+    {
+      "id": "X08",
+      "title": "Detalle de activo y ruta inexistente sin errores",
+      "status": "PASS",
+      "ms": 1042,
+      "detail": {
+        "estadoNoExiste": 200
+      }
+    },
+    {
+      "id": "X09",
+      "title": "Recorrido de todas las pantallas sin errores de consola (escritorio, tablet, móvil)",
+      "status": "PASS",
+      "ms": 47264,
+      "detail": "30 cargas"
+    },
+    {
+      "id": "X11",
+      "title": "Baja con contraseña incorrecta: muestra el error y conserva la sesión",
+      "status": "PASS",
+      "ms": 4493,
+      "detail": {
+        "url": "http://localhost:3000/account",
+        "cookies": [
+          "allocia_token"
+        ],
+        "alerts": "Contraseña incorrecta"
+      }
+    },
+    {
+      "id": "UI08",
+      "title": "Baja de cuenta: confirmación, sesión cerrada y acceso posterior rechazado",
+      "status": "PASS",
+      "ms": 1216,
+      "detail": {
+        "tokenAnterior": 401,
+        "loginPosterior": "rechazado"
+      }
+    },
+    {
+      "id": "X10",
+      "title": "La baja no afecta a otra cuenta",
+      "status": "PASS",
+      "ms": 777,
+      "detail": "cuenta B eliminada"
+    },
+    {
+      "id": "UI09",
+      "title": "Sin errores JavaScript ni de consola durante todo el recorrido",
+      "status": "PASS",
+      "ms": 0
+    }
+  ],
+  "problems": []
+}

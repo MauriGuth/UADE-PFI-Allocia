@@ -1,0 +1,22 @@
+Para: PFI_Inf_Docentes@uade.edu.ar
+CC: <correo UADE de Mauricio>; <correo UADE de Máximo>; <correo del tutor Leonardo Javier Prieto>
+Asunto: [EXX PFI - YYY Curso 551221 - Huentelaf - Rosso][Entrega de videos - PFI 2026]
+   (reemplazar EXX por el código de entrega y YYY por el código de la comisión, como en el ejemplo "E90 PFI - MAR")
+
+Adjuntos:
+  01 - Problema investigacion y propuesta.mp4
+  02 - Arquitectura implementacion y pruebas.mp4
+  03 - Allocia explicada.mp4
+  Entrega_videos_enlaces.pdf   (con los enlaces a los mismos videos en YouTube oculto o Google Drive con acceso por enlace)
+
+Cuerpo:
+Buenas tardes,
+
+Adjuntamos los tres videos del Proyecto Final de Ingeniería "Análisis de portafolios multiactivo con riesgo geopolítico y recomendaciones explicables mediante IA" (Allocia), de Mauricio Huentelaf y Máximo Rosso, con tutoría de Leonardo Javier Prieto. El orden sugerido de visualización es el numerado en los nombres de archivo: 01 problema, investigación y propuesta; 02 arquitectura, implementación y pruebas; 03 el producto explicado de principio a fin.
+
+Los mismos videos están publicados en modo oculto, con acceso directo por enlace sin necesidad de solicitar permiso; los enlaces figuran en el documento adjunto.
+
+Quedamos a disposición ante cualquier consulta.
+
+Saludos cordiales,
+Mauricio Huentelaf y Máximo Rosso

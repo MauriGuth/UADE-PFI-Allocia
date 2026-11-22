@@ -1,0 +1,164 @@
+{
+  "executedAt": "2026-10-13T13:41:23.912Z",
+  "browser": "Chromium 141.0.7390.37",
+  "target": "http://localhost:3000",
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "id": "E01",
+      "title": "Página de privacidad accesible sin sesión, con su contenido y sin errores de consola",
+      "status": "PASS",
+      "ms": 322,
+      "detail": {
+        "estado": 200,
+        "caracteres": 2108
+      }
+    },
+    {
+      "id": "E02",
+      "title": "Modo mantenimiento: páginas y API responden 503 y la privacidad sigue disponible",
+      "status": "PASS",
+      "ms": 318,
+      "detail": {
+        "login": 503,
+        "api": 503,
+        "privacidad": 200
+      }
+    },
+    {
+      "id": "E03",
+      "title": "Sesión vencida: aviso en el login y retorno al acceso con una cookie inválida",
+      "status": "PASS",
+      "ms": 407,
+      "detail": "http://localhost:3000/login?expired=1"
+    },
+    {
+      "id": "E04",
+      "title": "Límite de solicitudes: tras 20 intentos de acceso la web informa sin romperse",
+      "status": "PASS",
+      "ms": 7359,
+      "detail": "Demasiadas solicitudes. Intentá más tarde."
+    },
+    {
+      "id": "E05",
+      "title": "Mostrar y ocultar la contraseña funciona y se anuncia al lector de pantalla",
+      "status": "PASS",
+      "ms": 441,
+      "detail": "ok"
+    },
+    {
+      "id": "E07",
+      "title": "Cabeceras de seguridad de la web (CSP con nonce, sin caché, tipo de contenido, marcos)",
+      "status": "PASS",
+      "ms": 39,
+      "detail": {
+        "csp": "default-src 'self'; script-src 'self' 'nonce-NDJiNjMzNWItOTUwMy00MTAwLWI4NzItN2U3OGRlYWE5ODRm' 'strict-dynamic' ; style-…"
+      }
+    },
+    {
+      "id": "E15",
+      "title": "Un nombre con HTML se muestra como texto y no ejecuta código",
+      "status": "PASS",
+      "ms": 1728,
+      "detail": "texto escapado"
+    },
+    {
+      "id": "E14",
+      "title": "Redirección tras el login: respeta rutas internas y rechaza destinos externos",
+      "status": "PASS",
+      "ms": 11416,
+      "detail": {
+        "interno": "http://localhost:3000/cartera"
+      }
+    },
+    {
+      "id": "E12",
+      "title": "Cerrar sesión en una pestaña invalida la otra pestaña",
+      "status": "PASS",
+      "ms": 3295,
+      "detail": "ok"
+    },
+    {
+      "id": "E09",
+      "title": "Cartera: ordenar por cantidad cambia el orden de las filas",
+      "status": "PASS",
+      "ms": 2437,
+      "detail": {
+        "antes": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "opciones": [
+          "Orden original",
+          "Símbolo (A a Z)",
+          "Mayor valor",
+          "Mayor cantidad",
+          "Mayor participación"
+        ],
+        "ordenes": {
+          "Orden original": [
+            "AAPL",
+            "MSFT",
+            "NVDA"
+          ],
+          "Símbolo (A a Z)": [
+            "AAPL",
+            "MSFT",
+            "NVDA"
+          ],
+          "Mayor valor": [
+            "MSFT",
+            "NVDA",
+            "AAPL"
+          ],
+          "Mayor cantidad": [
+            "MSFT",
+            "NVDA",
+            "AAPL"
+          ],
+          "Mayor participación": [
+            "MSFT",
+            "NVDA",
+            "AAPL"
+          ]
+        }
+      }
+    },
+    {
+      "id": "E08",
+      "title": "Sin conexión: la web informa el error y se recupera al volver",
+      "status": "PASS",
+      "ms": 640,
+      "detail": "error informado, dato intacto"
+    },
+    {
+      "id": "E10",
+      "title": "Acceso sólo con teclado: el orden de tabulación llega al botón y Enter inicia sesión",
+      "status": "PASS",
+      "ms": 1037,
+      "detail": {
+        "foco": "BODY"
+      }
+    },
+    {
+      "id": "E06",
+      "title": "Accesibilidad (axe-core, WCAG 2.1 A/AA): sin violaciones graves ni críticas en 12 pantallas × 2 anchos",
+      "status": "PASS",
+      "ms": 31495,
+      "detail": {
+        "totalViolaciones": 0,
+        "reglas": {}
+      }
+    },
+    {
+      "id": "E16",
+      "title": "Limpieza: la cuenta de pruebas se elimina",
+      "status": "PASS",
+      "ms": 764,
+      "detail": "ok"
+    }
+  ]
+}

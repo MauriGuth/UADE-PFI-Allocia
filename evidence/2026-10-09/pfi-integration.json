@@ -1,0 +1,85 @@
+{
+  "executedAt": "2026-10-09T13:30:17.822Z",
+  "node": "v24.11.1",
+  "scope": "HTTP NestJS, PostgreSQL real, Redis real, proveedores externos con respaldo local; sin mocks",
+  "total": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "id": "IT01",
+      "title": "Registro HTTP de dos cuentas persistidas y contraseña hasheada",
+      "status": "PASS"
+    },
+    {
+      "id": "IT02",
+      "title": "Login válido y rechazo de credenciales incorrectas",
+      "status": "PASS"
+    },
+    {
+      "id": "IT03",
+      "title": "Rutas privadas rechazan token ausente, inválido y vencido",
+      "status": "PASS"
+    },
+    {
+      "id": "IT04",
+      "title": "DTO HTTP rechaza cantidad cero, ticker desconocido y registro inválido",
+      "status": "PASS"
+    },
+    {
+      "id": "IT05",
+      "title": "CRUD HTTP persiste la cantidad cifrada en PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "id": "IT06",
+      "title": "Otra cuenta no lee, edita ni elimina posiciones ajenas",
+      "status": "PASS"
+    },
+    {
+      "id": "IT07",
+      "title": "Análisis HTTP coincide con precios persistidos",
+      "status": "PASS"
+    },
+    {
+      "id": "IT08",
+      "title": "Observaciones HTTP incluyen regla y procedencia individual",
+      "status": "PASS"
+    },
+    {
+      "id": "IT09",
+      "title": "Redis real conserva respuesta de señales y TTL",
+      "status": "PASS"
+    },
+    {
+      "id": "IT10",
+      "title": "FK rechaza posiciones sin propietario o con usuario inexistente",
+      "status": "PASS"
+    },
+    {
+      "id": "IT11",
+      "title": "Eliminación HTTP de posición persistida",
+      "status": "PASS"
+    },
+    {
+      "id": "IT12",
+      "title": "Baja exige contraseña y elimina cuenta y posiciones",
+      "status": "PASS"
+    },
+    {
+      "id": "IT13",
+      "title": "Token previo de cuenta borrada queda inutilizable",
+      "status": "PASS"
+    },
+    {
+      "id": "IT14",
+      "title": "30 consultas de análisis y observaciones con 100 posiciones reales",
+      "status": "PASS"
+    },
+    {
+      "id": "IT15",
+      "title": "Limpieza de segunda cuenta sin afectar cuenta demo",
+      "status": "PASS"
+    }
+  ]
+}

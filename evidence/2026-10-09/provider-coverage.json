@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-09T13:30:49Z",
+  "results": [
+    {
+      "symbol": "GGAL",
+      "http": 200,
+      "positivePrice": true,
+      "timestamp": 1791552628
+    },
+    {
+      "symbol": "SAP.DE",
+      "http": 403
+    },
+    {
+      "symbol": "7203.T",
+      "http": 403
+    },
+    {
+      "symbol": "0700.HK",
+      "http": 403
+    },
+    {
+      "symbol": "BARC.L",
+      "http": 403
+    },
+    {
+      "symbol": "GGAL.BA",
+      "http": 403
+    }
+  ]
+}

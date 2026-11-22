@@ -1,0 +1,1919 @@
+{
+ "Video1": {
+  "id": "Video1",
+  "file": "01 - Problema investigacion y propuesta",
+  "title": "Video 1 · Problema, investigación y propuesta",
+  "scenes": [
+   {
+    "n": 1,
+    "cls": "title",
+    "body": "<img class='logo' src='ASSET:allocia_logo.png'><div class='kicker'>Proyecto Final de Ingeniería en Informática · UADE · 2026</div><h1>Análisis de portafolios multiactivo con riesgo geopolítico y recomendaciones explicables mediante IA</h1><div class='sub'>Video 1 de 3 · Problema, investigación y propuesta</div><div class='meta'>Mauricio Huentelaf y Máximo Rosso · Tutor: Leonardo Javier Prieto</div>",
+    "say": "Somos Mauricio Huentelaf y Máximo Rosso, y este es el primero de tres videos sobre nuestro Proyecto Final: Allocia, una plataforma de análisis de portafolios multiactivo con riesgo geopolítico y observaciones explicables mediante inteligencia artificial. Acá contamos el problema, la investigación con usuarios, la propuesta y el modelo de negocio. El segundo video cubre arquitectura, implementación y pruebas; el tercero explica el producto de punta a punta.",
+    "audio": "audio/Video1_01.mp3",
+    "duration": 26.81,
+    "blocks": [
+     {
+      "type": "logo"
+     },
+     {
+      "type": "kicker",
+      "text": "Proyecto Final de Ingeniería en Informática · UADE · 2026"
+     },
+     {
+      "type": "h1",
+      "text": "Análisis de portafolios multiactivo con riesgo geopolítico y recomendaciones explicables mediante IA",
+      "small": false
+     },
+     {
+      "type": "sub",
+      "text": "Video 1 de 3 · Problema, investigación y propuesta"
+     },
+     {
+      "type": "meta",
+      "text": "Mauricio Huentelaf y Máximo Rosso · Tutor: Leonardo Javier Prieto"
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "cls": "",
+    "body": "<div class='kicker'>El problema</div><h1>Carteras repartidas, datos sin explicación</h1><div class='cols'><div class='col w40'><ul class=''><li>Broker + exchange + planilla</li><li>Ninguna app muestra la cartera completa</li><li>Alertas que no dicen por qué</li></ul></div><div class='col'><div class='img card'><img src='ASSET:encuesta_dificultades-1.png'></div></div></div>",
+    "say": "El problema es concreto. Un inversor minorista argentino tiene acciones y CEDEARs en un broker, criptomonedas en un exchange y el resto en una planilla. Cada aplicación muestra su propio rendimiento, pero ninguna muestra la cartera completa ni cuánto depende de un sector, una región o una moneda. Y las alertas avisan que algo cayó, pero no explican por qué. En la encuesta, las dificultades más marcadas fueron la visión consolidada, entender la diversificación y la exposición real, y la falta de tiempo para investigar.",
+    "audio": "audio/Video1_02.mp3",
+    "duration": 31.82,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "El problema"
+     },
+     {
+      "type": "h1",
+      "text": "Carteras repartidas, datos sin explicación",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 40,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": false,
+          "items": [
+           "Broker + exchange + planilla",
+           "Ninguna app muestra la cartera completa",
+           "Alertas que no dicen por qué"
+          ]
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "encuesta_dificultades-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "cls": "",
+    "body": "<div class='kicker'>Investigación con usuarios</div><h1>190 encuestas y 3 entrevistas</h1><div class='stats' style='grid-template-columns:repeat(3,1fr)'><div class='stat'><b>190</b><span>respuestas; 85 inversores activos</span></div><div class='stat'><b>60 %</b><span>quiere que la IA explique sus observaciones</span></div><div class='stat'><b>3</b><span>entrevistas transcriptas (Anexo D)</span></div></div><div class='quote' style='margin-top:44px'>«Confiaría más en una recomendación si entendiera qué información usó y cómo se relaciona con mi cartera.»<small>Octavio Antunes, entrevistado</small></div>",
+    "say": "Para validarlo hicimos una encuesta con ciento noventa respuestas, con ochenta y cinco inversores activos, y tres entrevistas en profundidad con inversores independientes, transcriptas completas en el anexo. Los tres tienen la cartera repartida en varias plataformas y los tres desconfían de las recomendaciones sin fundamento. Octavio lo resumió así: confiaría mucho más en una recomendación si pudiera entender qué información se usó, qué riesgo considera y cómo se relaciona con su cartera. Esa frase guía el diseño de Allocia.",
+    "audio": "audio/Video1_03.mp3",
+    "duration": 30.0,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Investigación con usuarios"
+     },
+     {
+      "type": "h1",
+      "text": "190 encuestas y 3 entrevistas",
+      "small": false
+     },
+     {
+      "type": "stats",
+      "items": [
+       {
+        "big": "190",
+        "small": "respuestas; 85 inversores activos"
+       },
+       {
+        "big": "60 %",
+        "small": "quiere que la IA explique sus observaciones"
+       },
+       {
+        "big": "3",
+        "small": "entrevistas transcriptas (Anexo D)"
+       }
+      ],
+      "cols": 3
+     },
+     {
+      "type": "quote",
+      "text": "«Confiaría más en una recomendación si entendiera qué información usó y cómo se relaciona con mi cartera.»",
+      "by": "Octavio Antunes, entrevistado"
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "cls": "",
+    "body": "<div class='kicker'>Estado del arte</div><h1>Qué cubre cada herramienta</h1><table class='cmp'><tr><th></th><th>Tradicional + cripto</th><th>Composición</th><th>Contexto geopolítico</th><th>Señales</th><th>Explica</th></tr>\n<tr><td>Morningstar</td><td class='n'>–</td><td class='y'>sí</td><td class='n'>–</td><td class='n'>–</td><td class='p'>parcial</td></tr>\n<tr><td>Sharesight / Empower</td><td class='p'>parcial</td><td class='p'>parcial</td><td class='n'>–</td><td class='n'>–</td><td class='n'>–</td></tr>\n<tr><td>Kubera</td><td class='y'>sí</td><td class='p'>parcial</td><td class='n'>–</td><td class='p'>parcial</td><td class='n'>–</td></tr>\n<tr><td>CoinStats / DeFiLlama</td><td class='n'>solo cripto</td><td class='p'>parcial</td><td class='n'>–</td><td class='y'>sí</td><td class='n'>–</td></tr>\n<tr class='hl'><td>Allocia</td><td>sí</td><td>sí</td><td>sí</td><td>sí</td><td>regla + datos + fuente</td></tr></table><p class='big' style='margin-top:26px'>Diferencial: un solo flujo, de la cartera a la observación explicada.</p>",
+    "say": "Relevamos las herramientas existentes. Morningstar descompone muy bien una cartera tradicional, pero sin cripto ni contexto geopolítico. Sharesight y Empower consolidan rendimiento, sin señales ni explicación. Kubera une activos tradicionales y cripto, pero no explica observaciones. CoinStats y DeFiLlama cubren solo cripto. Ninguna documenta el flujo completo, de la composición multiactivo a una observación con su regla, sus datos y su fuente. Ese es el diferencial de Allocia.",
+    "audio": "audio/Video1_04.mp3",
+    "duration": 31.25,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Estado del arte"
+     },
+     {
+      "type": "h1",
+      "text": "Qué cubre cada herramienta",
+      "small": false
+     },
+     {
+      "type": "table",
+      "rows": [
+       {
+        "cells": [
+         {
+          "text": "",
+          "head": true,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "Tradicional + cripto",
+          "head": true,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "Composición",
+          "head": true,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "Contexto geopolítico",
+          "head": true,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "Señales",
+          "head": true,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "Explica",
+          "head": true,
+          "cls": "",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Morningstar",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "y",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Sharesight / Empower",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Kubera",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "y",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "CoinStats / DeFiLlama",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "solo cripto",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "parcial",
+          "head": false,
+          "cls": "p",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "y",
+          "left": false
+         },
+         {
+          "text": "–",
+          "head": false,
+          "cls": "n",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Allocia",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "sí",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "regla + datos + fuente",
+          "head": false,
+          "cls": "",
+          "left": false
+         }
+        ],
+        "hl": true
+       }
+      ]
+     },
+     {
+      "type": "take",
+      "text": "Diferencial: un solo flujo, de la cartera a la observación explicada."
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "cls": "",
+    "body": "<div class='kicker'>La propuesta</div><h1>Cinco pasos</h1><div class='img card' style='flex:1'><img src='ASSET:fig_flujo_valor-1.png'></div>",
+    "say": "La propuesta tiene cinco pasos. Uno: el inversor con posiciones repartidas. Dos: una carga única, ticker y cantidad, desde la web o el teléfono. Tres: la integración, con el catálogo que clasifica cada instrumento, cotizaciones con fecha y señales con su procedencia. Cuatro: el análisis, con pesos, exposiciones e índice de concentración. Cinco: la observación explicable, con la regla que la activó, las métricas y la evidencia. El usuario decide; la herramienta no opera ni recomienda.",
+    "audio": "audio/Video1_05.mp3",
+    "duration": 33.67,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "La propuesta"
+     },
+     {
+      "type": "h1",
+      "text": "Cinco pasos",
+      "small": false
+     },
+     {
+      "type": "image",
+      "src": "fig_flujo_valor-1.png",
+      "card": true,
+      "phone": false,
+      "fill": true
+     }
+    ]
+   },
+   {
+    "n": 6,
+    "cls": "",
+    "body": "<div class='kicker'>Alcance</div><h1>Web y móvil, una misma cuenta</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:w-01-resumen.png'></div></div><div class='col'><div class='img phone'><img src='ASSET:ez-01-resumen.png'></div></div></div>",
+    "say": "La propuesta original comprometía una plataforma web. La mantuvimos y sumamos una aplicación móvil nativa, porque casi la mitad de los encuestados sigue sus inversiones desde el teléfono. Hoy Allocia tiene dos clientes sobre la misma cuenta y la misma API: la web, para computadora o navegador del teléfono sin instalar nada, y la app para iOS y Android. Lo que se carga en uno aparece en el otro.",
+    "audio": "audio/Video1_06.mp3",
+    "duration": 23.47,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Alcance"
+     },
+     {
+      "type": "h1",
+      "text": "Web y móvil, una misma cuenta",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "w-01-resumen.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "ez-01-resumen.png",
+          "card": false,
+          "phone": true,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 7,
+    "cls": "",
+    "body": "<div class='kicker'>Requerimientos</div><h1>12 funcionales · 10 no funcionales</h1><div class='cols'><div class='col w40'><ul class='tight'><li>Cuenta y posiciones propias</li><li>Composición y concentración</li><li>Señales con fuente y fecha</li><li>Observaciones con evidencia</li><li>Solo informa: nunca opera</li></ul></div><div class='col'><div class='img card'><img src='ASSET:fig_diag_casos_uso-1.png'></div></div></div>",
+    "say": "La investigación se tradujo en doce requerimientos funcionales y diez no funcionales, redactados como «el sistema debe» y con criterio de aceptación. Los centrales: cuenta propia con posiciones aisladas; composición e índice de concentración; señales con fuente, fecha y condición; observaciones con regla, métricas y evidencia; informes por activo con citas validadas; y baja de cuenta con exportación. Un requerimiento fija el límite: Allocia informa y explica, nunca opera ni promete rendimientos.",
+    "audio": "audio/Video1_07.mp3",
+    "duration": 30.48,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Requerimientos"
+     },
+     {
+      "type": "h1",
+      "text": "12 funcionales · 10 no funcionales",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 40,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Cuenta y posiciones propias",
+           "Composición y concentración",
+           "Señales con fuente y fecha",
+           "Observaciones con evidencia",
+           "Solo informa: nunca opera"
+          ]
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "fig_diag_casos_uso-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 8,
+    "cls": "",
+    "body": "<div class='kicker'>Modelo de negocio</div><h1>Freemium · Plan Pro 6 USD/mes</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:fig_canvas-1.png'></div></div><div class='col'><div class='stats' style='grid-template-columns:repeat(1,1fr)'><div class='stat'><b>50 %</b><span>solo con versión gratuita + funciones pagas</span></div><div class='stat'><b>25,8 %</b><span>pagaría suscripción mensual</span></div></div></div></div>",
+    "say": "El modelo de negocio es freemium. El plan gratuito admite hasta diez posiciones con composición y observaciones básicas; el plan Pro, de seis dólares por mes, agrega posiciones ilimitadas, informes con fuentes, alertas y exportación. La encuesta lo respalda: la mitad usaría la herramienta solo si tiene versión gratuita con funciones pagas y uno de cada cuatro pagaría una suscripción. El límite legal es claro: Allocia vende análisis, no asesoramiento.",
+    "audio": "audio/Video1_08.mp3",
+    "duration": 27.94,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Modelo de negocio"
+     },
+     {
+      "type": "h1",
+      "text": "Freemium · Plan Pro 6 USD/mes",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "fig_canvas-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "stats",
+          "items": [
+           {
+            "big": "50 %",
+            "small": "solo con versión gratuita + funciones pagas"
+           },
+           {
+            "big": "25,8 %",
+            "small": "pagaría suscripción mensual"
+           }
+          ],
+          "cols": 2
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 9,
+    "cls": "",
+    "body": "<div class='kicker'>Viabilidad</div><h1>Tres escenarios a 36 meses</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:fig_flujo_caja-1.png'></div></div><div class='col'><div class='stats' style='grid-template-columns:repeat(1,1fr)'><div class='stat'><b>133–163</b><span>usuarios Pro para el equilibrio</span></div><div class='stat'><b>mes 21</b><span>recupero en el escenario optimista</span></div><div class='stat'><b>87,8 %</b><span>TIR anual optimista</span></div></div></div></div>",
+    "say": "Para la viabilidad armamos un flujo de fondos a treinta y seis meses con precios reales. Inversión inicial: unos diez mil trescientos dólares; costos fijos: quinientos diecisiete por mes más marketing. El punto de equilibrio está entre ciento treinta y tres y ciento sesenta y tres usuarios Pro. El pesimista no lo alcanza; el base llega al equilibrio operativo en el mes veinticinco; el optimista recupera la inversión en el mes veintiuno, con VAN positivo y una TIR del ochenta y siete por ciento. Es viable si la conversión se acerca al optimista, y eso se valida con usuarios reales.",
+    "audio": "audio/Video1_09.mp3",
+    "duration": 34.9,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Viabilidad"
+     },
+     {
+      "type": "h1",
+      "text": "Tres escenarios a 36 meses",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "fig_flujo_caja-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "stats",
+          "items": [
+           {
+            "big": "133–163",
+            "small": "usuarios Pro para el equilibrio"
+           },
+           {
+            "big": "mes 21",
+            "small": "recupero en el escenario optimista"
+           },
+           {
+            "big": "87,8 %",
+            "small": "TIR anual optimista"
+           }
+          ],
+          "cols": 3
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 10,
+    "cls": "title",
+    "body": "<img class='logo' src='ASSET:allocia_logo.png'><div class='kicker'>Cierre del video 1</div><h1>Un problema real, una propuesta acotada</h1><div class='sub'>Video 2: arquitectura, reglas, IA, seguridad y pruebas.</div><div class='meta'>MauriGuth/allocia · MauriGuth/UADE_PFI</div>",
+    "say": "Hasta acá, el problema, la investigación y la propuesta. Allocia no promete predecir el mercado: promete que cada observación se pueda entender y verificar. En el segundo video mostramos cómo está construida: arquitectura, motor de reglas, capa de inteligencia artificial, seguridad y pruebas. Gracias por ver.",
+    "audio": "audio/Video1_10.mp3",
+    "duration": 20.14,
+    "blocks": [
+     {
+      "type": "logo"
+     },
+     {
+      "type": "kicker",
+      "text": "Cierre del video 1"
+     },
+     {
+      "type": "h1",
+      "text": "Un problema real, una propuesta acotada",
+      "small": false
+     },
+     {
+      "type": "sub",
+      "text": "Video 2: arquitectura, reglas, IA, seguridad y pruebas."
+     },
+     {
+      "type": "meta",
+      "text": "MauriGuth/allocia · MauriGuth/UADE_PFI"
+     }
+    ]
+   }
+  ],
+  "total": 295.5
+ },
+ "Video2": {
+  "id": "Video2",
+  "file": "02 - Arquitectura implementacion y pruebas",
+  "title": "Video 2 · Arquitectura, implementación y pruebas",
+  "scenes": [
+   {
+    "n": 1,
+    "cls": "title",
+    "body": "<img class='logo' src='ASSET:allocia_logo.png'><div class='kicker'>Proyecto Final de Ingeniería en Informática · UADE · 2026</div><h1>Allocia: cómo está construida</h1><div class='sub'>Video 2 de 3 · Arquitectura, implementación y pruebas</div><div class='meta'>Mauricio Huentelaf y Máximo Rosso · Tutor: Leonardo Javier Prieto</div>",
+    "say": "Este es el segundo video de nuestro Proyecto Final. En el primero contamos el problema y la propuesta. Acá mostramos cómo está construida Allocia: arquitectura, recorrido de los datos, motor de reglas, capa de inteligencia artificial, seguridad, metodología y las pruebas que respaldan los resultados.",
+    "audio": "audio/Video2_01.mp3",
+    "duration": 18.46,
+    "blocks": [
+     {
+      "type": "logo"
+     },
+     {
+      "type": "kicker",
+      "text": "Proyecto Final de Ingeniería en Informática · UADE · 2026"
+     },
+     {
+      "type": "h1",
+      "text": "Allocia: cómo está construida",
+      "small": false
+     },
+     {
+      "type": "sub",
+      "text": "Video 2 de 3 · Arquitectura, implementación y pruebas"
+     },
+     {
+      "type": "meta",
+      "text": "Mauricio Huentelaf y Máximo Rosso · Tutor: Leonardo Javier Prieto"
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "cls": "",
+    "body": "<div class='kicker'>Arquitectura</div><h1>Una API, dos clientes, una base</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:fig_diag_componentes-1.png'></div></div><div class='col'><ul class='tight'><li>NestJS + PostgreSQL + Redis</li><li>Next.js (web) · Expo (móvil)</li><li>TypeScript en todo</li><li>Railway y Vercel</li></ul></div></div>",
+    "say": "La arquitectura es simple a propósito. Una API en NestJS concentra la lógica: catálogo, cálculo, reglas, señales e informes; persiste en PostgreSQL y usa Redis como caché. Sobre ella hay dos clientes: la web en Next.js, en Vercel, y la app móvil en React Native con Expo. TypeScript en los tres componentes permite compartir contratos y trabajar con un solo lenguaje. La API y la base corren en Railway, con los secretos fuera del repositorio.",
+    "audio": "audio/Video2_02.mp3",
+    "duration": 30.05,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Arquitectura"
+     },
+     {
+      "type": "h1",
+      "text": "Una API, dos clientes, una base",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "fig_diag_componentes-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "NestJS + PostgreSQL + Redis",
+           "Next.js (web) · Expo (móvil)",
+           "TypeScript en todo",
+           "Railway y Vercel"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "cls": "",
+    "body": "<div class='kicker'>Recorrido de la información</div><h1>Fuente, fecha y estado en cada dato</h1><div class='img card' style='flex:1'><img src='ASSET:fig_flujo_informacion-1.png'></div>",
+    "say": "Este es el recorrido de la información. A la izquierda, las fuentes externas: Finnhub, CoinGecko, Alternative me, FRED, DefiLlama y Polymarket. Todas responden en vivo en el servicio publicado, y desde el veintitrés de octubre también el índice de riesgo geopolítico GPR, que se lee de la planilla diaria que publican sus autores. La API normaliza cada dato con su fuente, la fecha del dato y la fecha de consulta, lo guarda en caché quince minutos y lo entrega al motor de reglas y a los clientes.",
+    "audio": "audio/Video2_03.mp3",
+    "duration": 30.24,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Recorrido de la información"
+     },
+     {
+      "type": "h1",
+      "text": "Fuente, fecha y estado en cada dato",
+      "small": false
+     },
+     {
+      "type": "image",
+      "src": "fig_flujo_informacion-1.png",
+      "card": true,
+      "phone": false,
+      "fill": true
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "cls": "",
+    "body": "<div class='kicker'>Motor de reglas</div><h1>Observaciones con evidencia</h1><div class='cols'><div class='col w55'><table class='cmp'><tr><th>Indicador</th><th>Umbral</th></tr><tr><td>HHI alto</td><td>&gt; 2 500</td></tr><tr><td>Mayor posición</td><td>&gt; 25 %</td></tr><tr><td>Tres mayores</td><td>&gt; 60 %</td></tr><tr><td>Cripto</td><td>&gt; 25 % · &gt; 40 %</td></tr><tr><td>Sector</td><td>&gt; 35 %</td></tr></table><p class='big' style='margin-top:26px'>Regla + métricas + señal. Sin modelo de lenguaje.</p></div><div class='col'><div class='img phone'><img src='ASSET:ez-04-riesgo-evidencia.png'></div></div></div>",
+    "say": "El corazón de Allocia es un motor de reglas determinista en TypeScript, sin modelo de lenguaje. Las condiciones están declaradas: el índice HHI es alto por encima de dos mil quinientos; una posición que supera el veinticinco por ciento genera una observación; la exposición cripto pasa a atención arriba del veinticinco y a alerta arriba del cuarenta. Cada observación guarda la regla, las métricas y la señal que la activaron. Por eso el usuario puede abrir «por qué esta observación» y ver qué dato y qué umbral la produjeron.",
+    "audio": "audio/Video2_04.mp3",
+    "duration": 30.55,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Motor de reglas"
+     },
+     {
+      "type": "h1",
+      "text": "Observaciones con evidencia",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "table",
+          "rows": [
+           {
+            "cells": [
+             {
+              "text": "Indicador",
+              "head": true,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "Umbral",
+              "head": true,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "HHI alto",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "> 2 500",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "Mayor posición",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "> 25 %",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "Tres mayores",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "> 60 %",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "Cripto",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "> 25 % · > 40 %",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "Sector",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "> 35 %",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           }
+          ]
+         },
+         {
+          "type": "take",
+          "text": "Regla + métricas + señal. Sin modelo de lenguaje."
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "ez-04-riesgo-evidencia.png",
+          "card": false,
+          "phone": true,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "cls": "",
+    "body": "<div class='kicker'>Capa de IA</div><h1>Informes con fuentes citadas</h1><div class='cols'><div class='col w55'><div class='img card'><img src='ASSET:a-08-informe.png'></div></div><div class='col'><ul class='tight'><li>Solo datos públicos del activo</li><li>Noticias = contenido no confiable</li><li>Citas validadas literalmente</li><li>Sin datos, se abstiene</li></ul></div></div>",
+    "say": "La segunda capa sí usa un modelo de lenguaje, con límites estrictos. Redacta informes por activo a partir de un snapshot público: noticias, cotización e indicadores. Nunca recibe la cartera ni la identidad del usuario. Los titulares se marcan como contenido no confiable, porque son el vector típico de la inyección indirecta de prompts. La salida se valida con un esquema y cada cita debe coincidir literalmente con su fuente; si falta evidencia, el informe se abstiene. Y el modelo no tiene funciones para operar. El motor explica; el modelo solo redacta sobre fuentes citadas.",
+    "audio": "audio/Video2_05.mp3",
+    "duration": 35.98,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Capa de IA"
+     },
+     {
+      "type": "h1",
+      "text": "Informes con fuentes citadas",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "a-08-informe.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Solo datos públicos del activo",
+           "Noticias = contenido no confiable",
+           "Citas validadas literalmente",
+           "Sin datos, se abstiene"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 6,
+    "cls": "",
+    "body": "<div class='kicker'>Seguridad y marco legal</div><h1>Controles aplicados</h1><div class='cols'><div class='col w55'><ul class='tight'><li>JWT revocable · cookie HttpOnly</li><li>bcrypt · AES-256-GCM · HTTPS</li><li>Posiciones aisladas por usuario</li><li>Exportación y baja (Ley 25.326)</li></ul></div><div class='col'><ul class='tight'><li>No es agente CNV: no asesora ni opera</li><li>Prompt injection: OWASP y NIST</li><li>Pendiente: auditoría externa</li></ul></div></div>",
+    "say": "En seguridad: JWT con emisor, audiencia, vencimiento y versión revocable; cookie HttpOnly en la web y almacenamiento seguro en el móvil; contraseñas con bcrypt, cantidades cifradas, HTTPS y límites de solicitudes; posiciones aisladas por propietario en la base. En lo legal, el aviso de privacidad, el consentimiento, la exportación y la baja de cuenta responden a la Ley veinticinco mil trescientos veintiséis, y Allocia no es agente ante la CNV: no asesora ni opera. Lo pendiente también está escrito: auditoría externa, responsable de datos y plazos de conservación.",
+    "audio": "audio/Video2_06.mp3",
+    "duration": 37.1,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Seguridad y marco legal"
+     },
+     {
+      "type": "h1",
+      "text": "Controles aplicados",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "JWT revocable · cookie HttpOnly",
+           "bcrypt · AES-256-GCM · HTTPS",
+           "Posiciones aisladas por usuario",
+           "Exportación y baja (Ley 25.326)"
+          ]
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "No es agente CNV: no asesora ni opera",
+           "Prompt injection: OWASP y NIST",
+           "Pendiente: auditoría externa"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 7,
+    "cls": "",
+    "body": "<div class='kicker'>Metodología</div><h1>Scrum + Kanban · sprints de 2 semanas</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:fig_kanban-1.png'></div></div><div class='col'><ul class='tight'><li>Historias ligadas a requerimientos</li><li>GitHub Projects</li><li>16 sprints hechos, 4 por venir</li></ul></div></div>",
+    "say": "Trabajamos con Scrum adaptado a un equipo de dos, con un tablero Kanban en GitHub Projects. Sprints de dos semanas con un objetivo y un incremento revisable; el tutor participa en cada hito. Una tarea está terminada cuando sus pruebas pasan en integración continua, el otro integrante revisó la solicitud y el informe está actualizado. Dieciséis sprints ejecutados, cuatro hasta la defensa.",
+    "audio": "audio/Video2_07.mp3",
+    "duration": 23.66,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Metodología"
+     },
+     {
+      "type": "h1",
+      "text": "Scrum + Kanban · sprints de 2 semanas",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "fig_kanban-1.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Historias ligadas a requerimientos",
+           "GitHub Projects",
+           "16 sprints hechos, 4 por venir"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 8,
+    "cls": "",
+    "body": "<div class='kicker'>Pruebas</div><h1>Resultados que se pueden rehacer</h1><div class='cols'><div class='col w55'><div class='stats' style='grid-template-columns:repeat(2,1fr)'><div class='stat'><b>62</b><span>comprobaciones de servicios, integración e IA</span></div><div class='stat'><b>33 + 27</b><span>unitarias y Playwright</span></div><div class='stat'><b>14</b><span>web: privacidad y accesibilidad</span></div><div class='stat'><b>3</b><span>defectos corregidos</span></div></div></div><div class='col'><table class='cmp'><tr><th>Pos.</th><th>Valor</th><th>Peso</th><th>Peso²</th></tr><tr><td>A</td><td>20</td><td>0,20</td><td>400</td></tr><tr><td>B</td><td>60</td><td>0,60</td><td>3 600</td></tr><tr><td>C</td><td>20</td><td>0,20</td><td>400</td></tr><tr class='hl'><td>Total</td><td>100</td><td>1,00</td><td>HHI 4 400</td></tr></table><p class='big' style='margin-top:26px'>Concentración alta · B pesa 60 % &gt; 25 %</p></div></div>",
+    "say": "Las pruebas: sesenta y dos comprobaciones de servicios, integración, seguridad e inteligencia artificial; treinta y tres unitarias; veintisiete de Playwright sobre la web y catorce adicionales de privacidad, sesión y accesibilidad. Detectaron y corrigieron tres defectos. El ejemplo que mejor muestra el valor: una cartera de tres posiciones con pesos veinte, sesenta y veinte por ciento. El HHI da cuatro mil cuatrocientos y el motor emite dos observaciones: concentración alta y posición dominante. Cualquiera puede rehacer la cuenta y comprobar que la observación sale de sus datos y de un umbral declarado.",
+    "audio": "audio/Video2_08.mp3",
+    "duration": 35.78,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Pruebas"
+     },
+     {
+      "type": "h1",
+      "text": "Resultados que se pueden rehacer",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "stats",
+          "items": [
+           {
+            "big": "62",
+            "small": "comprobaciones de servicios, integración e IA"
+           },
+           {
+            "big": "33 + 27",
+            "small": "unitarias y Playwright"
+           },
+           {
+            "big": "14",
+            "small": "web: privacidad y accesibilidad"
+           },
+           {
+            "big": "3",
+            "small": "defectos corregidos"
+           }
+          ],
+          "cols": 4
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "table",
+          "rows": [
+           {
+            "cells": [
+             {
+              "text": "Pos.",
+              "head": true,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "Valor",
+              "head": true,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "Peso",
+              "head": true,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "Peso²",
+              "head": true,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "A",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "20",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "0,20",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "400",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "B",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "60",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "0,60",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "3 600",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "C",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "20",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "0,20",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "400",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": false
+           },
+           {
+            "cells": [
+             {
+              "text": "Total",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "100",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "1,00",
+              "head": false,
+              "cls": "",
+              "left": false
+             },
+             {
+              "text": "HHI 4 400",
+              "head": false,
+              "cls": "",
+              "left": false
+             }
+            ],
+            "hl": true
+           }
+          ]
+         },
+         {
+          "type": "take",
+          "text": "Concentración alta · B pesa 60 % > 25 %"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 9,
+    "cls": "",
+    "body": "<div class='kicker'>Objetivos y resultados</div><h1>Cumplido en el núcleo, parcial en dos frentes</h1><table class='cmp'><tr><th style='text-align:left'>Objetivo</th><th>Resultado</th></tr>\n<tr><td>Plataforma web y móvil que explique</td><td class='y'>cumplido</td></tr><tr><td>Cálculo con error &lt; 10⁻⁶</td><td class='y'>cumplido</td></tr><tr><td>Contexto y señales con fuente</td><td class='y'>cumplido: seis señales en vivo</td></tr><tr><td>Observaciones con evidencia</td><td class='y'>cumplido</td></tr><tr><td>Evaluación con usuarios</td><td class='p'>5 sesiones: 2 de 5 sin ayuda · 8 cambios desplegados</td></tr><tr><td>Protección de datos</td><td class='y'>cumplido en lo probado</td></tr></table>",
+    "say": "Contrastamos cada objetivo con su evidencia. El objetivo general está cumplido en el núcleo: una cartera cargada desde cualquiera de los dos clientes se mide y produce observaciones explicables; el cálculo coincide con la verificación manual; la protección de datos está probada. Cinco personas probaron la aplicación con tareas reales: los inversores activos explicaron una observación sin ayuda; los perfiles sin experiencia necesitaron orientación, y de ahí salen ocho cambios de presentación, ya desplegados. Lo que no probamos no lo afirmamos: ni rentabilidad, ni predicción, ni asesoramiento.",
+    "audio": "audio/Video2_09.mp3",
+    "duration": 34.75,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Objetivos y resultados"
+     },
+     {
+      "type": "h1",
+      "text": "Cumplido en el núcleo, parcial en dos frentes",
+      "small": false
+     },
+     {
+      "type": "table",
+      "rows": [
+       {
+        "cells": [
+         {
+          "text": "Objetivo",
+          "head": true,
+          "cls": "",
+          "left": true
+         },
+         {
+          "text": "Resultado",
+          "head": true,
+          "cls": "",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Plataforma web y móvil que explique",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "cumplido",
+          "head": false,
+          "cls": "y",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Cálculo con error < 10⁻⁶",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "cumplido",
+          "head": false,
+          "cls": "y",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Contexto y señales con fuente",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "cumplido: seis señales en vivo",
+          "head": false,
+          "cls": "y",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Observaciones con evidencia",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "cumplido",
+          "head": false,
+          "cls": "y",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Evaluación con usuarios",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "5 sesiones: 2 de 5 sin ayuda · 8 cambios desplegados",
+          "head": false,
+          "cls": "p",
+          "left": false
+         }
+        ],
+        "hl": false
+       },
+       {
+        "cells": [
+         {
+          "text": "Protección de datos",
+          "head": false,
+          "cls": "",
+          "left": false
+         },
+         {
+          "text": "cumplido en lo probado",
+          "head": false,
+          "cls": "y",
+          "left": false
+         }
+        ],
+        "hl": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 10,
+    "cls": "title",
+    "body": "<img class='logo' src='ASSET:allocia_logo.png'><div class='kicker'>Cierre del video 2</div><h1>Operativo, probado, con límites explícitos</h1><div class='sub'>Próximo: segunda ronda con usuarios · push en navegador · validar disposición a pagar.</div><div class='meta'>MauriGuth/allocia · MauriGuth/UADE_PFI</div>",
+    "say": "En resumen: un sistema en producción, con pruebas reproducibles y límites explícitos. Próximos pasos: una segunda ronda con usuarios sobre los cambios ya desplegados, las notificaciones en el navegador y la validación de la disposición a pagar. En el tercer video mostramos el producto como lo ve un usuario. Gracias.",
+    "audio": "audio/Video2_10.mp3",
+    "duration": 19.85,
+    "blocks": [
+     {
+      "type": "logo"
+     },
+     {
+      "type": "kicker",
+      "text": "Cierre del video 2"
+     },
+     {
+      "type": "h1",
+      "text": "Operativo, probado, con límites explícitos",
+      "small": false
+     },
+     {
+      "type": "sub",
+      "text": "Próximo: segunda ronda con usuarios · push en navegador · validar disposición a pagar."
+     },
+     {
+      "type": "meta",
+      "text": "MauriGuth/allocia · MauriGuth/UADE_PFI"
+     }
+    ]
+   }
+  ],
+  "total": 300.2
+ },
+ "Video3": {
+  "id": "Video3",
+  "file": "03 - Allocia explicada",
+  "title": "Video 3 · Allocia explicada",
+  "scenes": [
+   {
+    "n": 1,
+    "cls": "title",
+    "body": "<img class='logo' src='ASSET:allocia_logo.png'><div class='kicker'>Allocia · Inteligencia para tu cartera</div><h1>¿Qué es Allocia?</h1><div class='sub'>Video 3 de 3 · El producto, de principio a fin</div><div class='meta'>Mauricio Huentelaf y Máximo Rosso · UADE</div>",
+    "say": "Este video explica Allocia de principio a fin, sin tecnicismos. Allocia es una herramienta para inversores minoristas que tienen acciones, CEDEARs, fondos cotizados y criptomonedas repartidos en varias plataformas, y que quieren entender su cartera completa: cómo está compuesta, de qué depende y qué está pasando afuera que pueda afectarla. Y, sobre todo, que cada observación venga con su explicación.",
+    "audio": "audio/Video3_01.mp3",
+    "duration": 24.43,
+    "blocks": [
+     {
+      "type": "logo"
+     },
+     {
+      "type": "kicker",
+      "text": "Allocia · Inteligencia para tu cartera"
+     },
+     {
+      "type": "h1",
+      "text": "¿Qué es Allocia?",
+      "small": false
+     },
+     {
+      "type": "sub",
+      "text": "Video 3 de 3 · El producto, de principio a fin"
+     },
+     {
+      "type": "meta",
+      "text": "Mauricio Huentelaf y Máximo Rosso · UADE"
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "cls": "",
+    "body": "<div class='kicker'>El punto de partida</div><h1>Una cartera en tres lugares</h1><div class='cols'><div class='col w55'><div class='quote'>«Ninguna app me permite entender cómo está distribuida toda mi cartera.»<small>Octavio Antunes</small></div><div class='quote'>«Me avisa que cayó 5 %, pero no por qué.»<small>Octavio Antunes</small></div></div><div class='col'><ul class=''><li>Broker internacional</li><li>Exchange cripto</li><li>Broker local</li><li>Excel para juntar todo</li></ul></div></div>",
+    "say": "El punto de partida es una situación muy común. Octavio, uno de los inversores que entrevistamos, tiene acciones y fondos en un broker internacional, criptomonedas en un exchange y bonos en un broker local. Para saber qué porcentaje tiene en cada cosa, lo calcula a mano en un Excel. Y cuando una aplicación le avisa que una acción cayó cinco por ciento, no le dice si fue por un resultado de la empresa, una noticia política o el mercado en general. Allocia nace para resolver exactamente eso.",
+    "audio": "audio/Video3_02.mp3",
+    "duration": 29.69,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "El punto de partida"
+     },
+     {
+      "type": "h1",
+      "text": "Una cartera en tres lugares",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "quote",
+          "text": "«Ninguna app me permite entender cómo está distribuida toda mi cartera.»",
+          "by": "Octavio Antunes"
+         },
+         {
+          "type": "quote",
+          "text": "«Me avisa que cayó 5 %, pero no por qué.»",
+          "by": "Octavio Antunes"
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": false,
+          "items": [
+           "Broker internacional",
+           "Exchange cripto",
+           "Broker local",
+           "Excel para juntar todo"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "cls": "",
+    "body": "<div class='kicker'>Qué hace Allocia</div><h1>Cargar · integrar · medir · explicar · decidir</h1><div class='img card' style='flex:1'><img src='ASSET:fig_flujo_valor-1.png'></div>",
+    "say": "Allocia hace cinco cosas, en orden. Primero, le cargás tus posiciones: el símbolo del activo y la cantidad. No hace falta mover la plata ni conectar cuentas. Segundo, integra: reconoce cada instrumento, lo clasifica por clase, sector, región y moneda, y le pone precio con la fecha de la cotización. Tercero, mide: calcula cuánto pesa cada posición y qué tan concentrada está la cartera. Cuarto, explica: genera observaciones y cada una muestra qué regla la disparó y con qué datos. Quinto, vos decidís. Allocia nunca compra ni vende por vos.",
+    "audio": "audio/Video3_03.mp3",
+    "duration": 37.61,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Qué hace Allocia"
+     },
+     {
+      "type": "h1",
+      "text": "Cargar · integrar · medir · explicar · decidir",
+      "small": false
+     },
+     {
+      "type": "image",
+      "src": "fig_flujo_valor-1.png",
+      "card": true,
+      "phone": false,
+      "fill": true
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "cls": "",
+    "body": "<div class='kicker'>1 · Cartera</div><h1>Ticker y cantidad, nada más</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:w-02-cartera.png'></div></div><div class='col'><ul class='tight'><li>Se clasifica sola</li><li>Precio con fecha</li><li>Editar o borrar</li></ul></div></div>",
+    "say": "Así se ve la pantalla de cartera en la web. Escribís el ticker, por ejemplo AAPL o BTC, indicás la cantidad y listo. Allocia clasifica el activo automáticamente: si es una acción, un fondo cotizado, una cripto o una stablecoin; de qué sector y de qué región es; en qué moneda cotiza. Podés editar o borrar cualquier posición y los pesos se recalculan al momento. La cotización viene de proveedores externos con su fecha visible, para que sepas qué tan actual es el dato.",
+    "audio": "audio/Video3_04.mp3",
+    "duration": 29.21,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "1 · Cartera"
+     },
+     {
+      "type": "h1",
+      "text": "Ticker y cantidad, nada más",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "w-02-cartera.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Se clasifica sola",
+           "Precio con fecha",
+           "Editar o borrar"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "cls": "",
+    "body": "<div class='kicker'>2 · Resumen</div><h1>Tu cartera completa</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:w-01-resumen.png'></div></div><div class='col'><ul class='tight'><li>Valor y distribución</li><li>Posiciones efectivas</li><li>Definiciones a un clic</li></ul></div></div>",
+    "say": "El resumen muestra la cartera completa: el valor total, cómo se reparte por clase, sector y región, y el nivel de concentración. Ese nivel sale de un índice que usan los analistas, pero lo traducimos: te dice cuántas posiciones efectivas tenés en realidad. Si tenés diez activos pero uno pesa el sesenta por ciento, la cartera se comporta como si tuviera dos. Cada métrica tiene su definición a un clic, pensada para alguien que recién empieza.",
+    "audio": "audio/Video3_05.mp3",
+    "duration": 27.38,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "2 · Resumen"
+     },
+     {
+      "type": "h1",
+      "text": "Tu cartera completa",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "w-01-resumen.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Valor y distribución",
+           "Posiciones efectivas",
+           "Definiciones a un clic"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 6,
+    "cls": "",
+    "body": "<div class='kicker'>3 · Riesgo</div><h1>Cada observación responde «¿por qué?»</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:w-03-riesgo.png'></div></div><div class='col'><div class='img phone'><img src='ASSET:ez-04-riesgo-evidencia.png'></div></div></div><p class='big' style='margin-top:26px'>Dato de tu cartera + señal externa + regla.</p>",
+    "say": "Esta es la pantalla de riesgo, el corazón de Allocia. Cada observación tiene una prioridad y un botón: «por qué esta observación». Al abrirlo ves tres cosas: el dato de tu cartera que la activó, por ejemplo que una posición pesa el sesenta por ciento; la señal externa, si la hubo; y la regla aplicada, con su umbral. Podés verificarlo vos mismo. Esto responde a lo que nos dijeron los tres entrevistados: confían en una sugerencia cuando entienden de dónde sale.",
+    "audio": "audio/Video3_06.mp3",
+    "duration": 28.25,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "3 · Riesgo"
+     },
+     {
+      "type": "h1",
+      "text": "Cada observación responde «¿por qué?»",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "w-03-riesgo.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "ez-04-riesgo-evidencia.png",
+          "card": false,
+          "phone": true,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "take",
+      "text": "Dato de tu cartera + señal externa + regla."
+     }
+    ]
+   },
+   {
+    "n": 7,
+    "cls": "",
+    "body": "<div class='kicker'>4 · Señales</div><h1>Lo que pasa afuera, con fuente y fecha</h1><div class='cols'><div class='col w60'><div class='img card'><img src='ASSET:w-04-senales.png'></div></div><div class='col'><ul class='tight'><li>Noticias y geopolítica</li><li>Sentimiento cripto y DeFi</li><li>Mercados de predicción</li></ul></div></div>",
+    "say": "La pantalla de señales reúne el contexto externo: noticias y eventos geopolíticos, el sentimiento del mercado cripto, la dominancia de bitcoin, el valor bloqueado en finanzas descentralizadas y las probabilidades que asignan los mercados de predicción a eventos como una suba de tasas o un conflicto. Cada señal muestra su fuente y su fecha. No son predicciones: son contexto para leer tu cartera con más información.",
+    "audio": "audio/Video3_07.mp3",
+    "duration": 24.17,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "4 · Señales"
+     },
+     {
+      "type": "h1",
+      "text": "Lo que pasa afuera, con fuente y fecha",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 60,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "w-04-senales.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "bullets",
+          "tight": true,
+          "items": [
+           "Noticias y geopolítica",
+           "Sentimiento cripto y DeFi",
+           "Mercados de predicción"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 8,
+    "cls": "",
+    "body": "<div class='kicker'>5 · Informes y alertas</div><h1>Fuentes citadas o nada</h1><div class='cols'><div class='col w55'><div class='img card'><img src='ASSET:a-08-informe.png'></div></div><div class='col'><div class='img card'><img src='ASSET:a-07-alertas.png'></div></div></div>",
+    "say": "Para cada activo podés pedir un informe. Lo redacta un modelo de lenguaje, pero con una condición: solo puede usar noticias y datos públicos, y cada frase con un dato tiene que citar su fuente de forma literal. Si no hay evidencia suficiente, el informe lo dice en vez de inventar. También podés seguir activos que no tenés y recibir alertas cuando aparece un escenario respaldado por fuentes, sin mezclarlos con tu cartera.",
+    "audio": "audio/Video3_08.mp3",
+    "duration": 25.08,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "5 · Informes y alertas"
+     },
+     {
+      "type": "h1",
+      "text": "Fuentes citadas o nada",
+      "small": false
+     },
+     {
+      "type": "cols",
+      "cols": [
+       {
+        "w": 55,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "a-08-informe.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       },
+       {
+        "w": null,
+        "blocks": [
+         {
+          "type": "image",
+          "src": "a-07-alertas.png",
+          "card": true,
+          "phone": false,
+          "fill": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 9,
+    "cls": "",
+    "body": "<div class='kicker'>En el teléfono</div><h1>Misma cuenta, misma cartera</h1><div class='phones'><img src='ASSET:ez-01-resumen.png'><img src='ASSET:ez-03-riesgo.png'><img src='ASSET:ez-06-ajustes.png'></div>",
+    "say": "Todo esto también está en la aplicación móvil para iOS y Android. Es la misma cuenta y los mismos datos: lo que cargás en la computadora aparece en el teléfono y al revés. La app se desbloquea con Face ID o huella, y desde ajustes podés exportar tus datos o dar de baja la cuenta con una confirmación. Lo que borrás, se borra.",
+    "audio": "audio/Video3_09.mp3",
+    "duration": 20.18,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "En el teléfono"
+     },
+     {
+      "type": "h1",
+      "text": "Misma cuenta, misma cartera",
+      "small": false
+     },
+     {
+      "type": "phones",
+      "srcs": [
+       "ez-01-resumen.png",
+       "ez-03-riesgo.png",
+       "ez-06-ajustes.png"
+      ]
+     }
+    ]
+   },
+   {
+    "n": 10,
+    "cls": "",
+    "body": "<div class='kicker'>Lo que no hace</div><h1>Informa y explica; no opera ni promete</h1><div class='steps'><div class='step'><b>No compra ni vende</b></div><div class='step'><b>No promete rendimientos</b></div><div class='step'><b>No reemplaza tu criterio</b></div><div class='step'><b>No entrena con tus datos</b></div></div><p class='big' style='margin-top:26px'>Probada con cinco usuarios: lo más valorado, ver el motivo de cada aviso.</p>",
+    "say": "Y es importante decir qué no hace. Allocia no compra ni vende, nunca. No promete rendimientos: las señales son contexto, no predicciones. No reemplaza tu criterio ni es asesoramiento financiero. Y el modelo de lenguaje nunca recibe tu identidad ni tus cantidades. Hoy Allocia está en producción y ya la probaron cinco personas con tareas reales: lo que más valoraron fue poder ver el motivo de cada aviso, y lo que pidieron, explicaciones más simples para quien recién empieza. Esos cambios ya están en camino. Eso es Allocia: inteligencia para tu cartera, con cada observación explicada. Gracias.",
+    "audio": "audio/Video3_10.mp3",
+    "duration": 38.9,
+    "blocks": [
+     {
+      "type": "kicker",
+      "text": "Lo que no hace"
+     },
+     {
+      "type": "h1",
+      "text": "Informa y explica; no opera ni promete",
+      "small": false
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "head": "No compra ni vende",
+        "text": ""
+       },
+       {
+        "head": "No promete rendimientos",
+        "text": ""
+       },
+       {
+        "head": "No reemplaza tu criterio",
+        "text": ""
+       },
+       {
+        "head": "No entrena con tus datos",
+        "text": ""
+       }
+      ]
+     },
+     {
+      "type": "take",
+      "text": "Probada con cinco usuarios: lo más valorado, ver el motivo de cada aviso."
+     }
+    ]
+   }
+  ],
+  "total": 289.7
+ }
+}

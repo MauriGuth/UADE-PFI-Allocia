@@ -1,0 +1,93 @@
+{
+  "executedAt": "2026-10-13",
+  "runner": "node --test (con ts-node/register)",
+  "total": 33,
+  "passed": 33,
+  "failed": 0,
+  "files": [
+    {
+      "archivo": "apps/api/tests/account-email.cjs",
+      "cobertura": "Correo de cuenta: privacidad, reintentos, uso único, vencimiento y revocación de sesión",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 1,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/asset-logos.cjs",
+      "cobertura": "Logos de activos: dominios y formatos permitidos",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 1,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/market-quotes.cjs",
+      "cobertura": "Cotizaciones: caducidad, concurrencia acotada y divulgación de fechas antiguas",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 3,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/opportunities.cjs",
+      "cobertura": "Oportunidades: escenarios con fuente, sin probabilidad inventada; rechazo de informes inválidos",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 4,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/opportunities-integration.cjs",
+      "cobertura": "Oportunidades con PostgreSQL aislado: listas de seguimiento, alertas y eliminación en cascada",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 1,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/quote-refresh.cjs",
+      "cobertura": "Actualización manual de cotizaciones",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 1,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/release-unit.cjs",
+      "cobertura": "Identidad del limitador firmada y cortes cripto sin calendario bursátil",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 2,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/research-discovery.cjs",
+      "cobertura": "Indicadores diarios, series inválidas, importación segura y macroeconomía",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 9,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/scenarios-evidence.cjs",
+      "cobertura": "Escenarios con fuente exacta, sin impacto inventado en la cartera",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 2,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/signals-live.cjs",
+      "cobertura": "Señales en vivo: caída total o parcial sin semilla, sin shocks supuestos en producción",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 5,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/signals-spanish.cjs",
+      "cobertura": "Traducción de señales: preserva fuentes y rechaza identificadores desconocidos",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 3,
+      "pruebasFallidas": 0
+    },
+    {
+      "archivo": "apps/api/tests/valuation-snapshot.cjs",
+      "cobertura": "Instantánea de valuación de la cartera",
+      "codigoSalida": 0,
+      "pruebasSatisfactorias": 1,
+      "pruebasFallidas": 0
+    }
+  ]
+}

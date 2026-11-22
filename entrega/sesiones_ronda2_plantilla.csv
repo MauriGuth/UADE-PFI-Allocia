@@ -1,0 +1,13 @@
+codigo,fecha,modalidad,dispositivo,segmento,experiencia_previa,tarea,inicio,fin,resultado,errores_observados,ayuda_brindada,respuesta_literal,comentario_posterior
+U06,,presencial,web (notebook),ocasional,,2,,,,,,,
+U06,,presencial,web (notebook),ocasional,,3,,,,,,,
+U06,,presencial,web (notebook),ocasional,,4,,,,,,,
+U06,,presencial,web (notebook),ocasional,,cierre,,,No aplica (cierre),No aplica,"Preguntas de cierre, sin indicaciones",,
+U07,,videollamada,app Android,principiante,,2,,,,,,,
+U07,,videollamada,app Android,principiante,,3,,,,,,,
+U07,,videollamada,app Android,principiante,,4,,,,,,,
+U07,,videollamada,app Android,principiante,,cierre,,,No aplica (cierre),No aplica,"Preguntas de cierre, sin indicaciones",,
+U08,,presencial,web (teléfono),principiante,,2,,,,,,,
+U08,,presencial,web (teléfono),principiante,,3,,,,,,,
+U08,,presencial,web (teléfono),principiante,,4,,,,,,,
+U08,,presencial,web (teléfono),principiante,,cierre,,,No aplica (cierre),No aplica,"Preguntas de cierre, sin indicaciones",,

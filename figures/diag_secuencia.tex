@@ -1,0 +1,39 @@
+% Diagrama de secuencia del flujo principal (carga y análisis del portafolio).
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[
+		font=\small,
+		actor/.style={draw=black!60, rounded corners=2pt, fill=blue!8, minimum height=0.75cm, minimum width=2.2cm, align=center},
+		vida/.style={black!45, dashed},
+		msg/.style={-{Stealth[length=2.3mm]}, thick, black!75},
+		ret/.style={-{Stealth[length=2.3mm]}, thick, black!45, dashed},
+		mtext/.style={font=\scriptsize, midway, above, align=center},
+		act/.style={draw=black!50, fill=blue!15, minimum width=0.18cm, inner sep=0pt}
+	]
+		% Actores
+		\node[actor] (usuario) {Usuario};
+		\node[actor, right=2.1cm of usuario] (app) {App móvil};
+		\node[actor, right=2.5cm of app] (api) {API};
+		\node[actor, right=2.4cm of api] (fuentes) {Caché /\\fuentes ext.};
+
+		% Líneas de vida
+		\foreach \a in {usuario, app, api, fuentes}
+			\draw[vida] (\a.south) -- ++(0, -7.5);
+
+		% Mensajes
+		\draw[msg] ($(usuario.south)+(0,-0.5)$) -- node[mtext] {carga activos\\(ticker, cantidad)} ($(app.south)+(0,-0.5)$);
+		\draw[msg] ($(app.south)+(0,-1.15)$) -- node[mtext] {POST /portfolio/positions} ($(api.south)+(0,-1.15)$);
+		\node[font=\scriptsize, anchor=west, align=left, text=black!60] at ($(api.south)+(0.15,-1.62)$) {valida y clasifica\\contra el catálogo};
+		\draw[ret] ($(api.south)+(0,-2.1)$) -- node[mtext] {posición clasificada} ($(app.south)+(0,-2.1)$);
+
+		\draw[msg] ($(usuario.south)+(0,-2.8)$) -- node[mtext] {abre el panel} ($(app.south)+(0,-2.8)$);
+		\draw[msg] ($(app.south)+(0,-3.45)$) -- node[mtext] {GET /analysis · /signals\\· /observations} ($(api.south)+(0,-3.45)$);
+		\draw[msg] ($(api.south)+(0,-4.35)$) -- node[mtext] {señales (caché o\\proveedor en vivo)} ($(fuentes.south)+(0,-4.35)$);
+		\draw[ret] ($(fuentes.south)+(0,-5.0)$) -- node[mtext] {snapshot de señales} ($(api.south)+(0,-5.0)$);
+		\node[font=\scriptsize, anchor=west, align=left, text=black!60] at ($(api.south)+(0.15,-5.5)$) {motor de reglas:\\observaciones + evidencia};
+		\draw[ret] ($(api.south)+(0,-6.1)$) -- node[mtext] {métricas, señales y\\observaciones explicables} ($(app.south)+(0,-6.1)$);
+		\draw[ret] ($(app.south)+(0,-6.8)$) -- node[mtext] {panel con\\trazabilidad} ($(usuario.south)+(0,-6.8)$);
+	\end{tikzpicture}
+	\caption{Flujo de consulta del análisis. Fuente: elaboración propia.}
+	\label{fig:diag-secuencia}
+\end{figure}

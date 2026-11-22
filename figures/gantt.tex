@@ -1,0 +1,68 @@
+% Diagrama de Gantt del Proyecto Final de Ingeniería.
+% Cronograma de marzo a diciembre de 2026 con desglose semanal: cada mes se
+% divide en 4 columnas (40 slots en total), de modo que las barras pueden
+% comenzar y terminar en semanas concretas y no en meses enteros.
+% Alineado con el cronograma oficial de la cátedra de PFI:
+%   - 25/04: entrega de la propuesta de tema        -> semana 8.
+%   - 13/06: entrega del avance del 25 %            -> semana 14.
+%   - 22/08: exposición del avance del 50 %         -> semana 24.
+%   - 24/10: entrega del informe escrito (75 %)     -> semana 32.
+%   - 09-14/12: defensa del PFI (llamado regular)   -> semana 38.
+% Los grupos (\ganttgroup) reúnen los ítems a evaluar en cada una de las
+% entregas restantes (50 %, 75 % y final), según la devolución del avance
+% del 25 %. Ajustar barras e hitos a medida que avance el proyecto.
+\begin{figure}[ht]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{ganttchart}[
+			x unit=0.45cm,
+			hgrid,
+			vgrid={*3{draw=none}, dotted},
+			bar/.append style={fill=NavyBlue!60},
+			bar height=0.6,
+			bar label font=\small,
+			group label font=\small\bfseries,
+			title label font=\small,
+			milestone/.append style={fill=BrickRed},
+			milestone label font=\footnotesize\itshape,
+			milestone left shift=-0.5,
+			milestone right shift=-0.5,
+			y unit title=0.55cm,
+			y unit chart=0.6cm
+			]{1}{40}
+			\gantttitle{2026}{40} \\
+			\gantttitle{Mar}{4}\gantttitle{Abr}{4}\gantttitle{May}{4}\gantttitle{Jun}{4}\gantttitle{Jul}{4}\gantttitle{Ago}{4}\gantttitle{Sep}{4}\gantttitle{Oct}{4}\gantttitle{Nov}{4}\gantttitle{Dic}{4} \\
+
+			% Etapas generales (semanas 1-40)
+			\ganttbar{Propuesta de tema}{1}{8} \\
+			\ganttbar{Marco teórico y Estado del Arte}{5}{18} \\
+			\ganttbar{User Research (encuesta y entrevistas)}{9}{22} \\
+			\ganttbar{Redacción del documento}{5}{34} \\
+			\ganttmilestone{Propuesta de tema (25/4)}{8} \\
+			\ganttmilestone{Avance 25\% (13/6)}{14} \\
+
+			% Ítems a evaluar en el avance del 50 % (22/8)
+			\ganttgroup{Ítems del avance 50\%}{13}{24} \\
+			\ganttbar{Diseño y arquitectura del sistema}{13}{20} \\
+			\ganttbar{Metodología de desarrollo (Sec. 4)}{15}{22} \\
+			\ganttbar{Cierre del User Research (Sec. 3.1)}{17}{23} \\
+			\ganttmilestone{Avance 50\% (22/8)}{24} \\
+
+			% Ítems a evaluar en el avance del 75 % (24/10)
+			\ganttgroup{Ítems del avance 75\%}{21}{32} \\
+			\ganttbar{Desarrollo del prototipo (MVP)}{21}{30} \\
+			\ganttbar{Integración de fuentes de datos}{25}{31} \\
+			\ganttbar{Pruebas y validación (Sec. 5)}{27}{32} \\
+			\ganttmilestone{Avance 75\% (24/10)}{32} \\
+
+			% Ítems de la entrega final y defensa
+			\ganttgroup{Ítems de la entrega final}{33}{39} \\
+			\ganttbar{Discusión y conclusiones (Secs. 6 y 7)}{33}{35} \\
+			\ganttbar{Resumen, abstract y correcciones finales}{34}{37} \\
+			\ganttbar{Preparación de la defensa}{36}{39} \\
+			\ganttmilestone{Defensa (9--14/12)}{38}
+		\end{ganttchart}%
+	}
+	\caption{Diagrama de Gantt con el cronograma del proyecto. Fuente: elaboración propia.}
+	\label{fig:gantt}
+\end{figure}

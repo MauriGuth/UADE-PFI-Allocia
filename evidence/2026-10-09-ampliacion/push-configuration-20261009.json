@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-09T16:58:34.987803+00:00",
+  "expoTokenProjectAccess": true,
+  "expoPushSecurityEnabled": true,
+  "androidFirebaseProject": "allocia-mobile-2026",
+  "androidFcmV1Assigned": true,
+  "androidSigningConfigured": true,
+  "iosApnsAssigned": true,
+  "apiPushEnabledConfigured": true,
+  "workerPushEnabledConfigured": true,
+  "physicalDeliveryVerified": false,
+  "distributionBuildGenerated": false,
+  "workerRuntime": {
+    "pushEnabled": true,
+    "tokenPresent": true,
+    "devices": 0,
+    "outbox": []
+  }
+}

@@ -1,0 +1,46 @@
+% Paleta de colores del sistema de diseño de Allocia.
+\definecolor{AllociaNavy}{HTML}{091426}
+\definecolor{AllociaNavyCont}{HTML}{1E293B}
+\definecolor{AllociaIndigo}{HTML}{4B41E1}
+\definecolor{AllociaLavanda}{HTML}{E2DFFF}
+\definecolor{AllociaSurface}{HTML}{F7F9FB}
+\definecolor{AllociaCard}{HTML}{FFFFFF}
+\definecolor{AllociaInk}{HTML}{191C1E}
+\definecolor{AllociaBorde}{HTML}{E0E3E5}
+\definecolor{AllociaError}{HTML}{BA1A1A}
+\definecolor{AllociaErrorCont}{HTML}{FFDAD6}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[
+		font=\footnotesize,
+		sw/.style={rounded corners=3pt, minimum width=2.35cm, minimum height=1.35cm, draw=black!25, thick},
+		lbl/.style={align=center, text=black!75, font=\scriptsize}
+	]
+		% Fila 1: colores de marca
+		\node[sw, fill=AllociaNavy] (c1) at (0,0) {};
+		\node[sw, fill=AllociaNavyCont] (c2) at (2.75,0) {};
+		\node[sw, fill=AllociaIndigo] (c3) at (5.5,0) {};
+		\node[sw, fill=AllociaLavanda] (c4) at (8.25,0) {};
+		\node[sw, fill=AllociaError] (c5) at (11.0,0) {};
+		\node[lbl, below=1pt of c1] {Primario\\\texttt{\#091426}};
+		\node[lbl, below=1pt of c2] {Contenedor primario\\\texttt{\#1E293B}};
+		\node[lbl, below=1pt of c3] {Secundario (índigo)\\\texttt{\#4B41E1}};
+		\node[lbl, below=1pt of c4] {Secundario fijo\\\texttt{\#E2DFFF}};
+		\node[lbl, below=1pt of c5] {Error / alerta\\\texttt{\#BA1A1A}};
+
+		% Fila 2: superficies y tinta
+		\node[sw, fill=AllociaSurface] (d1) at (0,-2.4) {};
+		\node[sw, fill=AllociaCard] (d2) at (2.75,-2.4) {};
+		\node[sw, fill=AllociaBorde] (d3) at (5.5,-2.4) {};
+		\node[sw, fill=AllociaInk] (d4) at (8.25,-2.4) {};
+		\node[sw, fill=AllociaErrorCont] (d5) at (11.0,-2.4) {};
+		\node[lbl, below=1pt of d1] {Superficie\\\texttt{\#F7F9FB}};
+		\node[lbl, below=1pt of d2] {Tarjetas\\\texttt{\#FFFFFF}};
+		\node[lbl, below=1pt of d3] {Bordes\\\texttt{\#E0E3E5}};
+		\node[lbl, below=1pt of d4] {Tinta (texto)\\\texttt{\#191C1E}};
+		\node[lbl, below=1pt of d5] {Contenedor de error\\\texttt{\#FFDAD6}};
+	\end{tikzpicture}
+	\caption{Paleta del sistema de diseño. Fuente: elaboración propia.}
+	\label{fig:allocia-paleta}
+\end{figure}

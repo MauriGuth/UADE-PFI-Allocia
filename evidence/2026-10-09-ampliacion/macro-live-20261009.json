@@ -1,0 +1,37 @@
+{
+  "retrievedAt": "2026-10-09T17:21:17.841Z",
+  "observations": [
+    {
+      "date": "2026-10-07",
+      "value": 3.88,
+      "series": "DFF",
+      "unit": "porcentaje anual",
+      "source": "https://fred.stlouisfed.org/series/DFF"
+    },
+    {
+      "date": "2026-10-07",
+      "value": 4.77,
+      "series": "DGS2",
+      "unit": "porcentaje anual",
+      "source": "https://fred.stlouisfed.org/series/DGS2"
+    },
+    {
+      "date": "2026-10-07",
+      "value": 5.28,
+      "series": "DGS10",
+      "unit": "porcentaje anual",
+      "source": "https://fred.stlouisfed.org/series/DGS10"
+    },
+    {
+      "date": "2026-08-01",
+      "value": 334.131,
+      "series": "CPIAUCSL",
+      "unit": "índice 1982–1984=100, desestacionalizado",
+      "source": "https://fred.stlouisfed.org/series/CPIAUCSL"
+    }
+  ],
+  "missing": [],
+  "inflationYoyPct": 3.353016322755642,
+  "yieldSpread10y2yPp": 0.5100000000000007,
+  "notice": "Contexto de EE. UU. publicado por FRED (Federal Reserve/BLS). Fechas de observación, no cotizaciones en tiempo real. Series revisables; inflación interanual calculada sobre CPI desestacionalizado. Diferencial 10–2 años en puntos porcentuales sólo con la misma fecha. No representa toda la macroeconomía mundial."
+}

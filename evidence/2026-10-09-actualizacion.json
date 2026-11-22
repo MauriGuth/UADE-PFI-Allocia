@@ -1,0 +1,67 @@
+{
+  "cutoff": "2026-10-09",
+  "appRevisions": {
+    "api": "8768e5300051fcb43767d65540758239753771c2",
+    "clients": "015e7b670477a4a12f429d8e9fd780ae2703856b"
+  },
+  "ci": [
+    "https://github.com/MauriGuth/allocia/actions/runs/37966053840",
+    "https://github.com/MauriGuth/allocia/actions/runs/37970447522"
+  ],
+  "evidence": [
+    {
+      "source": "demo/docs/evidence/activation-smoke-passed-20261009.json",
+      "sourceSha256": "109bbfadc0ac9e79b870788194a00bb6ec1872457d94d7689159981ba02a6291",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/activation-smoke-passed-20261009.json",
+      "copySha256": "4c741e5310a9cb310014df79196528104ed1e0cf82fae47155fb71f159a29536"
+    },
+    {
+      "source": "demo/docs/evidence/activation-alerts-passed-20261009.json",
+      "sourceSha256": "0c6263804a92749ce672d895e247b3ad7be686b23f6e30aefa15a7b9b59eb619",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/activation-alerts-passed-20261009.json",
+      "copySha256": "2c836fca1c276be589c8b520fc5a49caefa9131d08ce962378bdcf9eaa5831a0"
+    },
+    {
+      "source": "demo/docs/evidence/catalog-coverage-20261009.json",
+      "sourceSha256": "94ade68e0e6dc65158f7ea11c4fa21eaea7b239d3ff3476d846578d00852d1ca",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/catalog-coverage-20261009.json",
+      "copySha256": "94ade68e0e6dc65158f7ea11c4fa21eaea7b239d3ff3476d846578d00852d1ca"
+    },
+    {
+      "source": "demo/docs/evidence/mail-real-delivery-20261009.json",
+      "sourceSha256": "9560a71b0c9bcac37994d0e08a471fd9236d6d0d8e25a0977671db6611567ec3",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/mail-real-delivery-20261009.json",
+      "copySha256": "07dec4abe214e1d523dd1e05ac89be8173a8e769600f6fedcaba643440437ab7"
+    },
+    {
+      "source": "demo/docs/evidence/shared-account-production-20261009.json",
+      "sourceSha256": "accbdef4c105904bb5d2b6bc534cc208af8d9427881d73c6476f0234c6c7ce25",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/shared-account-production-20261009.json",
+      "copySha256": "accbdef4c105904bb5d2b6bc534cc208af8d9427881d73c6476f0234c6c7ce25"
+    },
+    {
+      "source": "demo/docs/evidence/push-configuration-20261009.json",
+      "sourceSha256": "02fc9838d1f9f529392993a00a07238d939703932eae0de9c947ad896239ccdf",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/push-configuration-20261009.json",
+      "copySha256": "bfeff6f3f909e1ebb35a480f1adb132f601be553af0559ed005900e7d7ea936c"
+    },
+    {
+      "source": "demo/docs/evidence/production-hardening-20261009.json",
+      "sourceSha256": "17f3ccc4e026007b60e630da4603c942637f7d01e2a3e65fb0839f4c4705b7e6",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/production-hardening-20261009.json",
+      "copySha256": "32914be9f34214da134b6502ecec15c9539cabfd8ab619ec16c4f9c292488e6f"
+    },
+    {
+      "source": "demo/docs/evidence/analysis-macro-live-20261009.json",
+      "sourceSha256": "d8b7183ad56dbcae6297e6f824302e3baefcdae290aefddcbee9247d79c2ea9f",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/analysis-macro-live-20261009.json",
+      "copySha256": "ae0a5430d53339c1f4966d85fc86cd73bc78ffe8f359f7248c2622e2605e8f99"
+    },
+    {
+      "source": "demo/docs/evidence/macro-live-20261009.json",
+      "sourceSha256": "b863c5aa0e78d2cb9e198549f204558f675a04b29a0e69f3a05c13094eca47b1",
+      "sanitizedCopy": "evidence/2026-10-09-ampliacion/macro-live-20261009.json",
+      "copySha256": "b38eeb2cbe2cd1ee7049d671bcaf15ce6fbae15b5cd3405bbe4e56a3df96e72e"
+    }
+  ]
+}

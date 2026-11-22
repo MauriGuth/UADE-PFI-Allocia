@@ -1,0 +1,11 @@
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[cu/.style={draw,ellipse,fill=blue!6,text width=5.4cm,align=center,font=\small,inner sep=4pt},line/.style={black!55}]
+\node at (0,0) (actor) {Usuario};
+\draw (0,0.6) circle (0.18);\draw (0,0.42)--(0,0.1);\draw (-0.25,0.3)--(0.25,0.3);
+\foreach \y/\name/\txt in {4/cu8/{CU08: Registro e inicio de sesión},3/cu1/{CU01: Gestión de posiciones},2/cu2/{CU02: Resumen y composición},1/cu3/{CU03: Concentración},0/cu4/{CU04: Contexto y señales},-1/cu5/{CU05: Observaciones y evidencia},-2/cu6/{CU06: Escenarios},-3/cu7/{CU07: Detalle por activo},-4/cu9/{CU09: Baja de cuenta}}{
+\node[cu] (\name) at (6,\y) {\txt};\draw[line] (actor.east)--(\name.west);}
+\draw[rounded corners] (2.8,-4.6) rectangle (9.2,4.6);
+\node[fill=white] at (6,4.6) {Allocia};
+\end{tikzpicture}
+\caption{Casos de uso previstos. Fuente: elaboración propia.}\label{fig:casos-uso}
+\end{figure}

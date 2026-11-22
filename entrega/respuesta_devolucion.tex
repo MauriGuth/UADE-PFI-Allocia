@@ -1,0 +1,130 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[spanish,es-noquoting]{babel}
+\usepackage{lmodern}\usepackage[margin=2cm]{geometry}\usepackage{longtable,array,booktabs}
+\usepackage{xcolor}\usepackage[hidelinks]{hyperref}\usepackage{enumitem}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\ok}{\textcolor{green!45!black}{Resuelto}}
+\newcommand{\parc}{\textcolor{orange!80!black}{Parcial}}
+\newcommand{\pend}{\textcolor{red!70!black}{Pendiente (autores)}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Respuesta a la devolución del avance del 50\,\%}\\[6pt]
+{\large Análisis de portafolios multiactivo con riesgo geopolítico y recomendaciones explicables mediante IA (Allocia)}\\[4pt]
+Huentelaf, Mauricio y Rosso, Máximo --- Tutor: Prieto, Leonardo Javier --- 22 de octubre de 2026
+\end{center}
+
+Este documento acompaña la reentrega. Cada observación de la cátedra y cada punto del tutor se asocia con el cambio realizado y con su ubicación en el informe (numeración de la versión del 22 de octubre de 2026). Los estados son: \ok{} (aplicado en el informe o en la aplicación), \parc{} (aplicado en parte, con el motivo) y \pend{} (requiere material que sólo los autores pueden producir; no se sustituyó por contenido inventado).
+
+\section*{A. Observaciones de la cátedra}
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{3.4cm}}
+\toprule
+\textbf{N.º} & \textbf{Observación} & \textbf{Cambio realizado} & \textbf{Ubicación / estado}\\\midrule
+\endhead
+\multicolumn{4}{l}{\textit{Estructura}}\\
+1 & Marco teórico sin agrupación por afinidad & Se agrupa en análisis de portafolios, contexto externo, activos digitales y señales, y fundamentos informáticos de la explicación. & Sección 2.1; \ok\\
+2 & Definición de IA explicable fuera del marco teórico & Se traslada al marco teórico junto con la distinción transparencia / explicabilidad / interpretabilidad del NIST. & Sección 2.1.4; \ok\\
+3 & Análisis de Polymarket como plataforma en el marco teórico & Se traslada al estado del arte; el marco teórico conserva sólo el concepto de mercados de predicción. & Secciones 2.1.3 y 2.2.1; \ok\\
+4 & Entrevistas 1/2/3 como subsecciones & Se presentan como perfiles en el anexo y como síntesis en el cuerpo. & Sección 3.1.2 y Anexo D; \ok\\
+5 & Terminología «capítulo» (incl. Gantt, Anexo A, «el presente capítulo») & Se unifica «sección» en todo el informe; el cronograma se referencia como Anexo A sin remisiones desde el cuerpo. & Todo el informe; \ok\\
+6 & Anexos C/D/E vacíos en el índice & Se excluyen del documento y del índice; los anexos se renumeran A--G. & Anexos; \ok\\
+7 & Transcripciones de entrevistas & Las tres entrevistas (22/10/2026, videollamada) se transcriben completas con fecha, hora, entrevistador y duración; las síntesis de 3.1.2 citan pasajes textuales. & Sección 3.1.2 y Anexo D; \ok\\
+8 & Entrevista al tutor no admitida & Se retira de la muestra y se reemplaza por la entrevista a Octavio Antunes, inversor minorista ajeno al equipo, con su análisis en 3.1.2. & Secciones 3.1, 3.1.2 y 4.14; \ok\\
+9 & Plataforma web comprometida en la propuesta & Se conservan ambos clientes: web (computadora y navegador del teléfono) y móvil nativa, sobre la misma cuenta y API. El cambio respecto de la propuesta queda documentado. & Secciones 1.1, 1.2, 3.4, 4.2, 6.4 y Tabla 6.I; \ok\\
+\multicolumn{4}{l}{\textit{Carátula e índices}}\\
+10 & Encabezado «ALLOCIA» & El encabezado usa el título abreviado del trabajo. & main.tex; \ok\\
+11 & Orden de autores no alfabético & Huentelaf antes de Rosso en ambas carátulas y en el encabezado. & Carátulas; \ok\\
+\multicolumn{4}{l}{\textit{Formato}}\\
+12 & Saltos forzados y flotantes [H] & Se usan [ht] y barreras de flotantes; sin páginas con contenido aislado. & Secciones 3 y 4; \ok\\
+13 & Títulos en mayúsculas iniciales & Títulos en estilo oración. & Todo el informe; \ok\\
+14 & Tablas 2.I y F.I sin fuente & Se agrega la fuente a todas las tablas. & Tablas; \ok\\
+15 & Figura 3.4 citada antes que 3.3 & Las figuras se citan en orden de aparición (3.1 a 3.8). & Sección 3.1; \ok\\
+\multicolumn{4}{l}{\textit{Redacción}}\\
+16 & Tiempos verbales mezclados & Se unifica el presente; el cuestionario conserva su redacción histórica. & Todo el informe; \ok\\
+17 & Doble espacio en la portada & Corregido. & chapters/title.tex; \ok\\
+18 & Frases metatextuales («El presente capítulo…», «puede formularse de la siguiente manera», «La presente sección cierra…») & Eliminadas; cada sección inicia con contenido. & Todo el informe; \ok\\
+19 & Viñetas del FODA sin punto final & Puntuación uniforme. & Figura 3.5; \ok\\
+20 & Gráficos de la encuesta con punto decimal & Cuatro gráficos regenerados con coma decimal desde un script reproducible. & Figuras 3.1 a 3.4; scripts/; \ok\\
+21 & Comillas no unificadas & Comillas angulares «» en todo el informe. & Todo el informe; \ok\\
+22 & Fórmulas repetidas, conectores idénticos en las síntesis de entrevistas & Redacción revisada; síntesis reescritas sin plantilla común. & Secciones 3.1.2 y 3.4; \ok\\
+23 & «cache», «renombración», «carácter asistivo» & Se reemplazan por «caché», «cambio de nombre» y «apoyo al análisis». & Todo el informe; \ok\\
+24 & «Proyecto» / «proyecto» & Se define «el Proyecto» una vez y se usa con mayúscula cuando refiere al trabajo. & Sección 1; \ok\\
+25 & Definir «inteligencia artificial (IA)» una sola vez & Se define en la introducción y luego se usa la sigla. & Sección 1; \ok\\
+26 & Tabla 2.I, fila Propuesta sin aclaración & La fila se rotula «Allocia (estado actual)» y resume el estado de la Tabla 6.I, con la nota «no valida la utilidad del sistema para el usuario». & Tabla 2.I; \ok\\
+27 & Listas del Anexo F sin oración introductoria & Cada lista se introduce con una oración. & Anexo F; \ok\\
+28 & Frases sueltas en 3.1.2 & Integradas en párrafos. & Sección 3.1; \ok\\
+29 & Términos de dominio sin explicar (CEDEARs, ADRs, stablecoins, tokens de gobernanza, on-chain, CCL/MEP, FCI, MACD, HHI, TVL, Fear \& Greed, dominancia BTC) & Todos definidos en el marco teórico, con fuente oficial cuando existe; RSI, MACD y bandas de Bollinger se explican en la sección de implementación. & Sección 2.1; \ok\\
+30 & Epígrafes largos (Figs. 3.5, 4.1--4.3; Tablas 2.I y F.I) & Epígrafes breves; las explicaciones pasan al cuerpo. & Figuras y tablas; \ok\\
+31 & Sección 1.4 debe nombrar el trabajo & «El Proyecto Final de Ingeniería comprende siete secciones…». & Sección 1.4; \ok\\
+32 & Referencias manuales a secciones & Todas las remisiones usan referencias automáticas. & Todo el informe; \ok\\
+33 & «en evaluación / se prevé» y remisiones al Gantt en el cuerpo & Eliminadas; los estados se expresan en la Tabla 6.I. & Secciones 4.9 y 6.4; \ok\\
+34 & Redundancia entre 3.2 y 3.3 & Problema y necesidad se diferencian y acortan. & Secciones 3.2 y 3.3; \ok\\
+35 & Solapamiento P13/P14 de la encuesta & Se reconoce expresamente, junto con los solapamientos P6/P15 y P11/P13. & Sección 3.1.1; \ok\\
+36 & FODA usa datos de la encuesta antes de presentarla & El FODA se ubica después de la investigación con usuarios. & Sección 3.1.4; \ok\\
+37 & 3.1.1.x duplica la distribución del Anexo F & El cuerpo conserva lecturas y gráficos; el anexo conserva el cuestionario y las frecuencias. & Sección 3.1.1 y Anexo C; \ok\\
+\multicolumn{4}{l}{\textit{Marco teórico e hilo conductor}}\\
+38 & Definiciones precisas (criptomoneda, stablecoin, token de gobernanza, señales emergentes en positivo) & Redactadas con fuentes (Schär, Reserva Federal, CoinGecko, Alternative.me). & Sección 2.1.3; \ok\\
+39 & Marco legal como objetivo y RNF (Ley 25.326, Ley 26.831/CNV) & Objetivo específico de protección de datos; RF9, RF10, RNF8 a RNF10; artículos citados y Normas CNV sobre asesoramiento. & Secciones 1.1, 3.6, 4.12; \ok\\
+40 & Perímetro de alcance en 1.2 (plataformas, carga manual, destinatarios, idioma, mercado) & Alcance explícito y alineado con el MVP. & Sección 1.2; \ok\\
+41 & Variables medibles (criterios de éxito, valores de RNF, indicador de la hipótesis del MVP, umbrales) & Criterios de aceptación en objetivos y RNF; umbrales en Tabla 4.I; indicador «4 de 5 participantes» para el MVP. & Secciones 1.1, 3.6, 4.2, 4.13; \ok\\
+42 & Conclusión del estado del arte & Sección propia, con comparación por herramienta (qué resuelve / qué no / diferencial). & Secciones 2.2.2 y 2.2.5; \ok\\
+\multicolumn{4}{l}{\textit{Entrevistas y personas}}\\
+43 & Guía solapada con la encuesta; conclusiones repetidas; inconsistencias & Síntesis por entrevista reescritas desde las transcripciones, con citas textuales y temas recurrentes; las inconsistencias anteriores desaparecen al disponer del registro completo. & Sección 3.1.2 y Anexo D; \ok\\
+44 & Persona usuaria como figura; al menos tres; representatividad & Tres fichas visuales (activo, ocasional, principiante) con base empírica separada de hipótesis; discusión de representatividad (44,7\,\% activos, 25,2\,\% no invierten, sin geografía). & Sección 3.1.3 y Anexo E; \ok\\
+\multicolumn{4}{l}{\textit{Fuentes}}\\
+45 & Citas faltantes en introducción, multiactivo, macro, cripto & Citas agregadas (Markowitz, SEC, Caldara e Iacoviello, Schär, Reserva Federal, CFA Institute, WEF). & Secciones 1 y 2.1; \ok\\
+46 & «Graham y Dodd (1934)» narrativo y sin ISBN & Se retira la cita a una edición no identificada; la definición de análisis fundamental se respalda con la SEC. & Sección 2.1.1; \ok\\
+47 & Tsang y Yang 2026 sin DOI / preprint & Se agrega el DOI de arXiv, se declara su condición de preprint y se complementa con Wolfers y Zitzewitz (revisado por pares). & Sección 2.2.1 y bibliografía; \ok\\
+48 & Bibliografía no uniforme & Formato ISO 690 autor-año uniforme: «[En línea]», puntuación y «Consultado el». & Bibliografía; \ok\\
+\multicolumn{4}{l}{\textit{Planificación, requerimientos y tecnologías}}\\
+49 & Remisiones al cronograma en el cuerpo; Anexo A sin título & Anexo A titulado «Cronograma»; sin remisiones desde el cuerpo. & Anexo A; \ok\\
+50 & Requerimientos «No cumple» & Todos los RF y RNF se redactan «El sistema debe…», en positivo y verificables; cada módulo remite a sus RF. & Secciones 3.5 a 3.8; \ok\\
+51 & Riesgo de prompt injection y mitigaciones & Sección dedicada: contenido externo marcado como no confiable, instrucción de sistema restringida, salida validada por esquema y código determinista, modelo sin funciones de escritura, decisión en la persona; fuentes OWASP, NIST y Greshake et al. & Sección 4.12 y Tabla 4.II; \ok\\
+52 & Autenticación, autorización, hash, cifrado, secretos & Documentados con su estado (JWT, bcrypt, AES-256-GCM, cookies, Railway). & Sección 4.12 y Tabla 4.II; \ok\\
+53 & Ley 25.326, consentimiento, finalidad; baja de cuenta en casos de uso, módulos y wireframe & Artículos citados; CU09 (baja de cuenta), módulo de identidad y privacidad y pantallas de privacidad y baja en el Anexo B; baja implementada y probada en web y móvil. & Secciones 3.7, 3.8, 4.12; Anexo B; \ok\\
+\bottomrule
+\end{longtable}
+
+\section*{B. Puntos del tutor}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{8.0cm}>{\raggedright\arraybackslash}p{3.3cm}}
+\toprule
+\textbf{N.º} & \textbf{Punto} & \textbf{Cambio realizado} & \textbf{Ubicación / estado}\\\midrule
+\endhead
+T1 & Alcance web y móvil coherente; cambio documentado; implementado / parcial / futuro & Ambos clientes forman parte del alcance con una misma cuenta; objetivos, alcance, solución, RF7, MVP, arquitectura y discusión se alinean; la Tabla 6.I separa implementado, parcial y previsto. & Secciones 1.1, 1.2, 3.4, 3.5, 4.2, 4.5, 6.4; \ok\\
+T2 & Pruebas que demuestren valor: qué se prueba, resultados esperados, verificación de cálculos, cómo ayudan las observaciones, umbrales, limitaciones & Casos CP01--CP05 con resultado esperado y obtenido; reconstrucción manual del cálculo de CP03 (Tabla 5.I) y lectura de la observación resultante; umbrales en Tabla 4.I; la Tabla 5.IV resume, por aspecto, qué se esperaba, cómo se verificó y qué falta; limitaciones por sección. Cinco sesiones de comprensión con usuarios (21 a 23/10) con resultados por tarea, respuestas literales y ocho cambios derivados, implementados y desplegados en web y móvil (Sección 5.9, Tablas 5.II y 5.III, Anexo G). & Secciones 5.3, 5.3.1, 5.4, 5.9; \ok\\
+T3 & User Research completo: entrevistas válidas, transcripciones, tres personas & Tres entrevistas a inversores independientes con transcripción completa y análisis individual y conjunto; tres personas como figuras con base empírica; representatividad discutida; el tutor queda fuera de la muestra. & Secciones 3.1.2, 3.1.3; Anexos D y E; \ok\\
+T4 & Benchmarks con CFA (gestión de portafolios y asignación de activos), WEF 2026, IOSCO PD788 y NIST AI RMF; comparación con herramientas & Las cinco fuentes se leyeron y se citan con entradas bibliográficas completas (URL, fecha de consulta, DOI/ISBN cuando existen): CFA en 2.1.1 (proceso de gestión, asignación estratégica, límites de la optimización media-varianza, rebalanceo); WEF en 2.1.2, 2.1.3 y Figura 2.2 (ranking de riesgos 2026, riesgos para la Argentina, proyección de stablecoins); IOSCO en 2.1.4, 2.2.4, 2.2.5, 4.12 y 6.1 (casos de uso, riesgos de explicabilidad, dependencia de terceros, sesgo de automatización); NIST AI RMF en 2.1.4, 3.6 y 4.12 (características de IA confiable, funciones gobernar / mapear / medir / gestionar) y perfil de IA generativa (prompt injection). Comparación por herramienta en 2.2.2, con los sustitutos que declaran los entrevistados y la fila de Allocia actualizada en la Tabla 2.I; evidencia académica sobre robo-advising (D'Acunto et al., 2019) en 2.2.4; indicadores técnicos (RSI, MACD, Bollinger) definidos en 2.1.1.5. & Secciones 2.1, 2.2, 3.6, 4.12, 6.1; bibliografía; \ok\\
+T5 & Infografías: inversor con activos dispersos → integración → observación explicable; flujo de información desde fuentes externas; tendencias (IA, datos, riesgo geopolítico, señales) con fuentes y como escenarios; implementado vs. futuro & Figura 3.6 (el problema del inversor con activos en varias plataformas, con las frecuencias de la encuesta), Figura 3.7 (de los activos dispersos a la observación explicable), Figura 4.12 (recorrido de la información con estado de cada componente: en vivo, demostración, sin prueba registrada, previsto) y Figura 2.2 (cuatro tendencias con sus fuentes, rotuladas como percepciones y escenarios). Figura 6.1 (de lo implementado a la siguiente etapa propuesta) y Tabla 6.I distinguen implementado, parcial y previsto. & Secciones 2.2.4, 3.2, 3.4, 4.11, 6.4, 6.5; \ok\\
+T6 & Seguridad y aspectos legales: autenticación, permisos por cartera, contraseñas, datos personales, baja, prompt injection; aplicado / pendiente / límites; encuadre normativo & Sección 4.12 reescrita con artículos de la Ley 25.326, Ley 26.831 y Normas CNV (agentes asesores), OWASP, NIST y Greshake et al.; Tabla 4.II con cada control y su estado (aplicado, parcial, pendiente), incluidas la transferencia a proveedores del exterior y la inscripción de la base ante la autoridad de control como pendientes. & Sección 4.12 y Tabla 4.II; \ok\\
+T7 & Reordenar según la devolución y marcar lo corregido; RF/RNF claros y verificables; marco teórico con XAI, conceptos financieros y tecnológicos & Este documento registra cada corrección y su ubicación; RF1--RF12 y RNF1--RNF10 con criterios verificables; el marco teórico cubre portafolios y asignación de activos, contexto externo, activos digitales y señales, e IA explicable. & Todo el informe; \ok\\
+\bottomrule
+\end{longtable}
+
+\section*{B bis. Rúbrica del informe final: puntos cubiertos el 22 de octubre}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{8.0cm}>{\raggedright\arraybackslash}p{3.3cm}}
+\toprule
+\textbf{N.º} & \textbf{Criterio de la rúbrica} & \textbf{Cambio realizado} & \textbf{Ubicación / estado}\\\midrule
+\endhead
+R1 & Modelo de negocio (3,33 puntos) & Sección nueva con lienzo de Osterwalder y Pigneur, segmentos (tres personas), propuesta de valor, canales, ingresos freemium con precio de referencia y respaldo de la encuesta (P17), socios y restricciones de licencia, encuadre legal y tributario (IVA, monotributo). & Sección 3.5 y Figura 3.7; \ok\\
+R2 & Viabilidad económico-financiera (3,33 puntos) & Flujo de fondos a 36 meses con tres escenarios (pesimista, base, optimista), VAN al 20\,\%, TIR, período de recupero y punto de equilibrio; precios verificados en páginas oficiales el 22/10; sensibilidad al precio; script reproducible \texttt{scripts/viabilidad.py}. & Sección 3.6, Tablas 3.I y 3.II, Figura 3.8; \ok\\
+R3 & Metodología de desarrollo (Scrum y Kanban) & Sección 4.1 con eventos, artefactos, definición de terminado, tablero en GitHub Projects (Figura 4.1), nueve historias de usuario ligadas a RF (Tabla 4.I) y tabla de sprints de dos semanas reconstruida desde los hitos de la cátedra y el historial de los repositorios (Tabla 4.II). & Sección 4.1; \ok\\
+R4 & Conclusiones ligadas a los objetivos & Conclusiones reescritas: fila del objetivo general en la Tabla 7.I, aportes, limitaciones y trabajo futuro; se retira la crónica de revisiones (que permanece en la Sección 5). & Sección 7; \ok\\
+R5 & Señales en producción (TVL y Polymarket) & Consulta registrada al servicio publicado el 22/10: DefiLlama y Polymarket responden con fecha y procedencia; el índice GPR es la única fuente sin integración en vivo. Tabla 6.I, Figura 4.11 y Sección 6.4 corregidas. & evidence/2026-10-22-senales-produccion; \ok\\
+R6 & Citas y referencias (DOI) & Los 15 DOI de la bibliografía se verificaron contra Crossref y DataCite el 22/10 (todos resuelven); las URL de las entradas nuevas responden (IOSCO devuelve 403 a clientes automáticos pero abre en navegador). & Bibliografía; \ok\\
+R7 & Redacción impersonal y sin marcas de texto generado & Revisión de estilo de todos los capítulos y anexos: se eliminan las salvedades repetidas al cierre de cada párrafo, muletillas y lenguaje vago; se conserva una aclaración de límite por sección. & Todo el informe; \ok\\
+\bottomrule
+\end{longtable}
+
+\section*{C. Pendientes que requieren a los autores}
+\begin{itemize}[nosep]
+\item Exportación original de la encuesta con respuestas individuales, para verificar cruces y respuestas abiertas (Sección 3.1.1).
+\item Reunión con el tutor para mostrar la aplicación (web y móvil), las pruebas y la organización del informe, y práctica de la exposición oral.
+\end{itemize}
+
+\section*{D. Preparación de la reunión con el tutor}
+\begin{enumerate}[nosep]
+\item Demostración en vivo: registro de cuenta en la web, carga de tres posiciones, lectura de la observación de concentración y de su evidencia, misma cuenta abierta en la aplicación móvil, escenarios con fuentes y baja de cuenta.
+\item Pruebas: ejecución de la suite de servicios e integración y del recorrido Playwright; lectura de la Tabla 5.I con el cálculo manual.
+\item Informe: recorrido por el índice, las Figuras 2.2, 3.6, 3.7, 4.8, 4.9, 4.12 y 6.1 y las Tablas 4.II, 5.II, 6.I y 7.I; lista de pendientes de la Sección C.
+\end{enumerate}
+\end{document}

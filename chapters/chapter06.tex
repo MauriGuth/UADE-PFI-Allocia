@@ -1,0 +1,94 @@
+\chapter{Discusión}\label{chap:discusion}
+
+Las pruebas distinguen tres resultados: corrección del núcleo de cálculo en casos controlados, integración de los flujos de cuenta y cartera con persistencia real, y operación de funciones seleccionadas en el despliegue publicado. La ampliación del 9 de octubre agrega entrega real de correo, análisis con Anthropic, contexto macroeconómico y uso de una misma cuenta desde web y cliente móvil. Lo que prueban son comportamientos concretos; la utilidad para el inversor y el cumplimiento de todos los requisitos se discuten en las secciones siguientes.
+
+\section{Interpretación de los resultados}\label{sec:interpretacion}
+
+La coincidencia con cálculos independientes respalda la aritmética de pesos, exposiciones y concentración en las carteras seleccionadas, y la integración confirma persistencia, autorización y presentación. Esa corrección es aritmética: la calidad económica de los precios y la suficiencia del HHI como descripción del riesgo son cuestiones distintas, porque la concentración por posiciones omite correlaciones, volatilidad y la exposición indirecta de los fondos a sus activos subyacentes.
+
+La cuenta compartida resuelve una necesidad del acceso multiplataforma: los datos pertenecen al usuario y no al dispositivo. Las modificaciones cruzadas verifican que ambos clientes operan sobre la misma persistencia, y la separación entre cookie web y token móvil adapta la autenticación a cada plataforma sobre una única cuenta. La actualización periódica da continuidad al uso, con un intervalo entre la escritura y su visualización en otra pantalla; se trata de sincronización diferida, no de edición colaborativa instantánea.
+
+La explicabilidad tiene una cara técnica, la posibilidad de inspeccionar reglas, datos, fechas y citas, y una cara humana, la comprensión. Los reguladores de valores advierten que una respuesta convincente de IA generativa puede inducir una confianza indebida en su exactitud, y un experimento muestra que los inversores minoristas siguen las sugerencias de una herramienta de IA como las de una persona \parencite{IOSCO2025ai,OSC2024ai}; el mismo riesgo aparece cuando un contenido erróneo se presenta con tono seguro en decisiones de consecuencia \parencite{NIST2024genai}. Las sesiones con participantes midieron ese efecto: los tres inversores activos leyeron la regla y la evidencia y dos de ellos explicaron la observación sin ayuda, mientras que la persona de seguimiento ocasional y la principiante la interpretaron primero como una alerta de mercado y necesitaron orientación para encontrar el umbral (Subsección~\ref{sec:pruebas-usabilidad}). La explicación es inspeccionable, pero no reemplaza una presentación más simple para quien no maneja el vocabulario; de ahí los cambios de rótulos, colores y glosario implementados y desplegados el 23 de octubre (Tabla~\ref{tab:sesiones-cambios}). La corrección de evidencia omitida y de procedencia mal etiquetada mejora la cara técnica y queda cubierta por pruebas de regresión. Una cita válida, sin embargo, puede acompañar una inferencia equivocada: los controles de esquema y de correspondencia literal no cubren la revisión semántica ni la validación financiera.
+
+El correo real y la invalidación de sesiones verifican la recuperación de acceso. La recepción en una casilla real supera la prueba con transporte simulado, aunque mide un envío y no la entregabilidad general. Las credenciales push configuradas dejan listo el servicio de envío; la recepción se confirmó en equipos físicos iPhone y Android (Subsubsección~\ref{sec:confirmacion-fisica}), mientras que el push del navegador y la apertura en distintos estados de la aplicación no se probaron.
+
+\section{Aportes del sistema desarrollado}\label{sec:aportes}
+
+El aporte técnico central es una secuencia inspeccionable de posiciones, pesos, exposiciones, reglas y evidencias, compartida por web y móvil a través de una API y PostgreSQL. La gestión de cuenta, la protección de posiciones por propietario y la eliminación de datos se verifican desde ambos clientes. Los registros automatizados permiten repetir entradas y contrastar resultados, además de la demostración manual.
+
+El sistema reúne composición multiactivo, cotizaciones fechadas y noticias en un mismo flujo. La ampliación incorpora indicadores diarios calculados y series macroeconómicas oficiales estadounidenses. El modelo de lenguaje recibe un conjunto delimitado de fuentes públicas y produce escenarios condicionales sujetos a validación. La separación entre cálculo determinista y redacción evita delegar al modelo la aritmética de la cartera, aunque no los errores de interpretación.
+
+El seguimiento entre informes mantiene comparables activo, fuente, moneda y fecha. Cuando falta respaldo, el protocolo informa que un apartado no está disponible. Esa abstención es verificable y preferible a completar cifras sin respaldo; también deja a la vista qué componentes del protocolo de análisis siguen sin implementar o validar, de modo que un apartado presente en la interfaz no cuenta por sí mismo como capacidad resuelta.
+
+La comparación con el estado del arte describe una intención de diferenciación, no una superioridad medida: los ensayos no comparan rentabilidad, idoneidad de recomendaciones ni precisión predictiva con plataformas comerciales. El modelo de lenguaje es externo: Allocia no entrena un modelo propio ni aprende de sus usuarios.
+
+\section{Limitaciones de la evidencia}\label{sec:limitaciones-encontradas}
+
+La encuesta usa una muestra de conveniencia con situaciones heterogéneas frente a la inversión. Sus frecuencias agregadas no reconstruyen cruces individuales ni respaldan todos los atributos de las personas usuarias, y la falta de ubicación relevada debilita la fundamentación geográfica. Los perfiles orientan el diseño con sus atributos hipotéticos señalados como tales.
+
+Las tres entrevistas se hicieron por conveniencia entre contactos de los autores y no alcanzan saturación temática; sus transcripciones permiten auditar las interpretaciones de la Subsubsección~\ref{subsec:entrevistas}. Las necesidades relevadas justifican el problema, no la utilidad del producto, que se evalúa en las sesiones de comprensión de la Subsección~\ref{sec:pruebas-usabilidad}; las pruebas del equipo en sus propios teléfonos no reemplazan a esos participantes independientes. Las cinco sesiones también son una muestra de conveniencia, moderada por un integrante del equipo: describen cinco experiencias y no permiten generalizar; la clasificación de una respuesta como «sin ayuda» depende del criterio del moderador registrado en cada ficha.
+
+La medición de rendimiento corresponde a un equipo, una versión y una base aislada; la carrera de ocho escrituras verifica un caso de concurrencia, no carga sostenida. Las pruebas remotas cubren flujos seleccionados, sin incidentes distribuidos ni ataques sistemáticos. El ensayo de restauración de una copia cifrada no mide tiempos de recuperación del servicio, y falta una auditoría independiente de seguridad.
+
+La cobertura de precios se limita al catálogo y a los símbolos accesibles con las credenciales utilizadas: las 34 cotizaciones obtenidas corresponden a un momento y a esas plazas, no a todas las bolsas ni a una disponibilidad permanente. Los históricos cripto disponibles cubren parte del mercado, y los rechazos del proveedor restringen históricos bursátiles y otras plazas. Los indicadores diarios carecen de velas intradiarias y de volumen validado, insuficientes para evaluar una estrategia. Las series de FRED cubren Estados Unidos, con su frecuencia y su retraso de publicación.
+
+El despliegue corresponde a un prototipo académico para uso del equipo. Ese volumen reduce la demanda, pero no modifica las cuotas ni los derechos de acceso de los proveedores. El protocolo físico se completó en Android e iOS, con biometría y notificaciones. No se probaron el push del navegador ni el disparo previo a la apertura, y persisten diferencias de vistas y exportación entre clientes.
+
+\section{Alcance comprometido y resultado disponible}\label{sec:alcance-vs-resultado}
+
+La propuesta comprometía una plataforma web. El resultado disponible conserva la aplicación web y agrega la aplicación móvil; ambas operan sobre la misma cuenta y los mismos contratos del servidor para registro, gestión de posiciones, métricas, observaciones, informes y preferencias. La prueba cruzada y el ensayo público verifican persistencia y aislamiento. La matriz de paridad registra las diferencias entre clientes; compartir la API no vuelve equivalentes las funciones. La Tabla~\ref{tab:estado-funcional} resume el estado de cada función frente a lo comprometido.
+
+\begin{table}[ht]
+\centering\small\renewcommand{\arraystretch}{1.15}
+\caption{Estado de las funciones frente al alcance comprometido. Fuente: elaboración propia.}\label{tab:estado-funcional}
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{6.3cm}}\hline
+\textbf{Función} & \textbf{Estado} & \textbf{Evidencia y límite}\\\hline
+Cuentas: registro, ingreso, cierre, recuperación y verificación de correo & Implementada & Subsecciones~\ref{sec:pruebas-funcionales} y~\ref{sec:validacion-publicada}; entrega real por Resend en el caso probado.\\
+Posiciones propias: alta, edición, baja y aislamiento por propietario & Implementada & Casos de servicios e integración; dos cuentas en PostgreSQL aislado.\\
+Composición, pesos, HHI y posiciones efectivas & Implementada & CP01--CP05 e IT07; error menor a $10^{-6}$.\\
+Observaciones con regla y evidencia & Implementada & CP12--CP16; comprensión evaluada con cinco participantes (Subsección~\ref{sec:pruebas-usabilidad}).\\
+Cliente web (computadora y navegador del teléfono) & Implementada & Recorrido Playwright y reverificación del 13 de octubre; solo Chromium.\\
+Aplicación móvil iOS y Android & Implementada & Empaquetado EAS, protocolo físico completado y dos participantes de las sesiones la usaron en Android e iOS.\\
+Cotizaciones externas fechadas (Finnhub, CoinGecko) & Implementada & 34 instrumentos del catálogo en el momento registrado; sin cobertura global.\\
+Señales cripto en vivo (Fear \& Greed, dominancia BTC) & Implementada & IT08 con proveedores reales; procedencia por componente.\\
+TVL y mercados de predicción en vivo & Implementada & Consulta registrada al servicio publicado el 22/10: DefiLlama y Polymarket responden con fecha y procedencia (evidence/2026-10-22-senales-produccion).\\
+Índice GPR en vivo & Implementada & Planilla diaria de Caldara e Iacoviello consultada desde la API; verificación en producción el 23/10 (GPR 176, elevado); RF5 cubierto en todas sus señales.\\
+Informes por activo con modelo de lenguaje y escenarios con fuentes & Implementada & Ejecuciones reales AAPL y BTC; abstención ante datos insuficientes.\\
+Baja de cuenta, exportación y consentimiento & Implementada & Web y cliente HTTP móvil; defecto X11 corregido.\\
+Notificaciones push & Parcial & Recepción confirmada en iPhone y Android (Subsubsección~\ref{sec:confirmacion-fisica}); sin recepción en el navegador.\\
+Paridad completa entre web y móvil & Parcial & Diferencias registradas en la matriz de paridad.\\
+Evaluación de comprensión con participantes & Realizada; criterio no alcanzado & Cinco sesiones del 21 al 23/10 (Subsección~\ref{sec:pruebas-usabilidad}); dos de cinco explican la observación sin ayuda; los ocho cambios derivados están implementados y desplegados en web y móvil.\\
+Entrevistas con transcripción (tres participantes independientes) & Implementada & Conversaciones del 22/10 con transcripción completa en los Anexos~\ref{annex:entrevista-tadeo} a~\ref{annex:entrevista-octavio}.\\
+Descomposición de fondos y medidas de riesgo adicionales & Prevista & Fuera del MVP.\\\hline
+\end{tabular}
+\end{table}
+
+La recuperación y la verificación de correo operan en el caso real probado. La baja elimina los datos activos relacionados e invalida el acceso previo. El cifrado de cantidades, los hashes de contraseña, las cookies protegidas y la validación de propietario son controles implementados; el cumplimiento legal completo y la ausencia de vulnerabilidades dependen además de la infraestructura, la retención de copias y los procedimientos de derechos, que la Tabla~\ref{tab:controles} detalla.
+
+La capa de IA integra noticias, cotizaciones, investigación técnica y contexto macroeconómico; las ejecuciones reales verifican conexión y controles de salida para activos seleccionados. Faltan en el protocolo una estrategia cuantitativa completa, probabilidades calibradas, una puntuación validada y niveles operativos contrastados. Esas carencias se suman a la cobertura de proveedores y piden trabajo metodológico, no solo un texto de instrucciones más extenso para el modelo.
+
+Las señales locales de demostración están deshabilitadas en producción. Una consulta al servicio publicado el 22 de octubre devuelve, con fecha y procedencia por componente, Fear \& Greed (Alternative.me), dominancia de BTC (CoinGecko), TVL (DefiLlama), cinco mercados de Polymarket y seis noticias de Finnhub; desde el 23 de octubre también el índice GPR en vivo (176, elevado), con lo que RF5 queda cubierto en todas sus señales y las reglas de contexto se activan en producción. Los registros productivos confirman el disparo previo al cierre de EE.UU. y dos cortes de cripto; el disparo previo a la apertura no se observó.
+
+\section{Prioridades de mejora}\label{sec:posibles-mejoras}
+
+La Figura~\ref{fig:evolucion} separa lo implementado, lo parcial y la evolución que se propone; esta última es un conjunto de líneas de trabajo y no un resultado. Las prioridades se detallan a continuación.
+\input{figures/evolucion.tex}
+
+La prioridad de investigación es repetir la evaluación, con los ocho cambios ya desplegados (Tabla~\ref{tab:sesiones-cambios}), con participantes de los segmentos ocasional y principiante, que son los que no alcanzaron el criterio de comprensión. La prioridad técnica es cerrar las diferencias de paridad, completar las señales requeridas con procedencia individual, observar la ejecución automática y probar los flujos nativos y las notificaciones en equipos físicos. La ampliación de fuentes depende de un acceso autorizado a los mercados e históricos necesarios y de una política de actualización acorde con sus cupos. Cada incorporación debe registrar fecha, unidad, fuente y tratamiento de indisponibilidad.
+
+La validación financiera supone definir metodología, conjuntos históricos y criterios antes de evaluar puntuaciones o niveles de operación, con evaluación fuera de la muestra usada para ajustar parámetros. Como evolución pueden incorporarse la descomposición de fondos y medidas de riesgo adicionales. La ejecución de operaciones y la conexión operativa con intermediarios quedan fuera del alcance informativo del Proyecto.
+
+
+\section{Oportunidades de mejora y criterios de cierre}\label{sec:oportunidades-mejora}
+
+El protocolo físico de ambos sistemas está confirmado (Subsubsección~\ref{sec:confirmacion-fisica}) y debe repetirse ante cambios que afecten los flujos nativos. La revisión de presentación incorpora identidad por activo, jerarquía entre precio unitario y valor de posición, estados de carga consistentes y separación entre resumen y detalle técnico (Subsubsección~\ref{sec:refinamiento-legibilidad}). Una nueva evaluación con participantes permitiría revisar estas decisiones y las leyendas de los gráficos.
+
+Para mejorar la claridad se propone un estado de mercado por instrumento, basado en calendario y proveedor, junto con un resumen de cobertura y demoras. La ampliación de calendarios regionales debe incluir feriados, cierres anticipados y cambios horarios. La instantánea privada de valuación ya permite reutilizar un resultado durante su ventana de vigencia en una instancia de API; extenderla a múltiples réplicas pediría coordinación adicional.
+
+El estado por activo ya distingue recepción, procesamiento y finalización de las solicitudes manuales. Queda como mejora precisar la causa de cada fallo, separando cuotas de fuentes faltantes, y agregar filtros de relevancia para las noticias de la cartera; ambas propuestas están por diseñar y probar. El glosario contextual de RSI, SMA, MACD y volatilidad sí forma parte de la revisión de legibilidad.
+
+Cerrar la validación exige una evaluación humana independiente y criterios de aceptación por requisito. Los datos globales y las probabilidades dependen de accesos y validaciones adicionales, por lo que un porcentaje global de completitud carecería de base.
+
+La revisión posterior a las pruebas físicas aplica una jerarquía visual entre cantidades, precios unitarios y valores de posición, controles de mayor tamaño, estados de carga diferenciados y ayuda contextual para términos técnicos. El objetivo es reducir el esfuerzo de interpretación sin perder fechas, limitaciones de cobertura ni fuentes. La revisión técnica responsive detecta desbordamientos; la comprensión por personas de distintas edades se contrasta en las sesiones con participantes, porque ampliar tipografías o simplificar la disposición no la asegura.
+
+La exploración de oportunidades extiende el análisis a activos no poseídos, sin convertir la lista de seguimiento en tenencias. Su utilidad propuesta es facilitar la revisión de alternativas con condiciones y fuentes; un escenario alcista es una hipótesis condicional, no una probabilidad de ganancia. El universo configurado, el acceso a proveedores y el límite diario acotan la cobertura. Una evaluación con participantes debería verificar si distinguen una alerta informativa de una recomendación de compra y si identifican los escenarios contrarios antes de decidir.

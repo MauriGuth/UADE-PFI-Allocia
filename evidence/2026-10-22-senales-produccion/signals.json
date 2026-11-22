@@ -1,0 +1,125 @@
+{
+ "snapshotDate": "2026-10-22T22:35:51.517Z",
+ "origen": "fuentes externas",
+ "provenance": {
+  "geo": {
+   "source": "Finnhub; GPR no disponible",
+   "origin": "externo",
+   "dataDate": "2026-10-22T20:11:55.000Z",
+   "fetchedAt": "2026-10-22T22:35:51.517Z"
+  },
+  "fearGreed": {
+   "source": "Alternative.me",
+   "origin": "externo",
+   "dataDate": "2026-10-22T00:00:00.000Z",
+   "fetchedAt": "2026-10-22T22:35:51.517Z"
+  },
+  "btcDominance": {
+   "source": "CoinGecko",
+   "origin": "externo",
+   "dataDate": "2026-10-22T22:32:42.000Z",
+   "fetchedAt": "2026-10-22T22:35:51.517Z"
+  },
+  "defi": {
+   "source": "DefiLlama",
+   "origin": "externo",
+   "dataDate": "2026-10-22T00:00:00.000Z",
+   "fetchedAt": "2026-10-22T22:35:51.517Z"
+  },
+  "predictionMarkets": {
+   "source": "Polymarket",
+   "origin": "externo",
+   "dataDate": "2026-10-22T22:32:05.052Z",
+   "fetchedAt": "2026-10-22T22:35:51.517Z"
+  }
+ },
+ "geo": {
+  "gprIndex": null,
+  "gprLevel": "no disponible",
+  "tendencia": "no disponible",
+  "eventos": [
+   {
+    "titulo": "Una lección del póker dice que no hay que retirarse de Meta tras la caída posterior a sus resultados. Por qué",
+    "descripcion": "El laboratorio interno de IA de Meta no recibe suficiente reconocimiento en Wall Street.",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T20:11:55.000Z · https://www.cnbc.com/investingclub/2026/10/22/meta-stock-why-were-staying-bullish-after-the-post-earnings-sell-off.html"
+   },
+   {
+    "titulo": "La tormenta perfecta detrás del desplome del Nasdaq, y algunos puntos positivos del mercado",
+    "descripcion": "Cada día hábil, el Investing Club publica el Homestretch: una actualización vespertina con medidas concretas, justo a tiempo para la última hora de operaciones.",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T18:23:05.000Z · https://www.cnbc.com/investingclub/2026/10/22/perfect-storm-behind-the-nasdaqs-rout-plus-some-bright-spots-in-the-market.html"
+   },
+   {
+    "titulo": "Egipto pide conversaciones sobre Yemen mientras el parlamento evalúa apoyo militar a Arabia Saudita - Reuters",
+    "descripcion": "Egipto pide conversaciones sobre Yemen mientras el parlamento evalúa apoyo militar a Arabia Saudita. Reuters",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T18:09:35.000Z · https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSjlqS1owcXdLQnhHZnV3Q3FSWUU4OXhFTkpxV1E3dVdnU1pEak1sSENZRnN5cEs1dE5YREx5NnZsODFFWm01T1FNMC0wVXF0dWhkTUl5MTZaRHhJcVVRNkdyVnh5ZFJKam9xMHYxMG42R3F3WDdyQ1lsSDBPTmJVMVJLSmhYeFRnamp1aVRWYmY0RlcwdmVibkZ2cWl6S21QS1JEOUt5UWd3M2RpTld2eVhFTjJ5bmpjX1RZX3BuaGNUZUU?oc=5"
+   },
+   {
+    "titulo": "Las ventas de Gucci vuelven a caer, nuevo golpe al plan de recuperación de Kering - Reuters",
+    "descripcion": "Las ventas de Gucci vuelven a caer, nuevo golpe al plan de recuperación de Kering. Reuters",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T17:37:45.000Z · https://news.google.com/rss/articles/CBMi1gFBVV95cUxQanFCUlp6TWQxSndQajRmbDh4enluVk1XX2Rfc0VUeGd3bDlaQXVkcDRGLTk5LThSTk1OQS01RkZGSEV5RHVXZUxvY3lRQ2tMN1NSSHlVZnU3cGlXMkJ2Y0QxSnRsaF9mV0NldDRzNkRPQ3kxSlF5Yjl0dzlITDNzc3FYSjFEVkpVSVZFWFJCZXJzZW9fQ29LcThRQXNZbnlfb2NpcXRXVmZwZUY4OXhOYUdLeDA3cl9IelJhc2JvdV9sYlRBeVBMcG5BX3pHVUdyRzJJVGhR?oc=5"
+   },
+   {
+    "titulo": "Volvemos a entrar en la operación de IA con nuestra primera compra de centros de datos en semanas",
+    "descripcion": "La acción también recibe una mejora de recomendación, con la expectativa de un repunte próximo.",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T17:28:19.000Z · https://www.cnbc.com/investingclub/2026/10/22/were-dipping-back-into-the-data-center-trade-with-small-buy.html"
+   },
+   {
+    "titulo": "Un regulador de EE. UU. investiga operaciones sospechosas con petróleo de Irán, según un funcionario - Reuters",
+    "descripcion": "Un regulador de EE. UU. investiga operaciones sospechosas con petróleo de Irán, según un funcionario. Reuters",
+    "regiones": [],
+    "sectores": [],
+    "impacto": "no evaluado",
+    "fuente": "2026-10-22T16:30:32.000Z · https://news.google.com/rss/articles/CBMiuAFBVV95cUxPem1fOEZ2aU10cDBTVHhDUXFuN3ZTU1l3ZXR4dkpMUUNCazJDMEk4V0UxT01nZ2tNckxuTllmYXhNeUlhSTQzbzg5dHN2aVNjMUpnNnU0T2FJWmNtTGZ4ZTg0UXNjRFhReHlDbThZalczOHdVZFBKLU9pVEp3YTBTS096QUdKVm4tbTdlQzJSYWQ5eGhDZ05FSjJJWFhNYkt2dHZERzg1Zmltc2xKUkd1UjBXUEpTdjNC?oc=5"
+   }
+  ]
+ },
+ "emerging": {
+  "fearGreedIndex": 68,
+  "fearGreedLabel": "Codicia",
+  "btcDominance": 59.5,
+  "defiTvlUsd": 89912176025,
+  "tendenciaCripto": "no disponible",
+  "predictionMarkets": [
+   {
+    "pregunta": "¿No habrá cambios en las tasas de interés de la Fed después de la reunión de octubre de 2026?",
+    "probabilidad": 0.935,
+    "fuente": "Polymarket · precio implícito de «Sí», no probabilidad calibrada · 2026-10-22T22:32:05.052Z · https://polymarket.com/market/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031"
+   },
+   {
+    "pregunta": "¿La Fed subirá las tasas de interés 50 puntos básicos o más después de la reunión de octubre de 2026?",
+    "probabilidad": 0.0035,
+    "fuente": "Polymarket · precio implícito de «Sí», no probabilidad calibrada · 2026-10-22T22:32:05.052Z · https://polymarket.com/market/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033"
+   },
+   {
+    "pregunta": "¿El alto el fuego entre EE. UU. e Irán continuará hasta el 22 de octubre?",
+    "probabilidad": 0.9825,
+    "fuente": "Polymarket · precio implícito de «Sí», no probabilidad calibrada · 2026-10-22T22:32:05.052Z · https://polymarket.com/market/us-x-iran-ceasefire-continues-through-october-22"
+   },
+   {
+    "pregunta": "¿La Fed subirá las tasas de interés 25 puntos básicos después de la reunión de octubre de 2026?",
+    "probabilidad": 0.055,
+    "fuente": "Polymarket · precio implícito de «Sí», no probabilidad calibrada · 2026-10-22T22:32:05.052Z · https://polymarket.com/market/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
+   },
+   {
+    "pregunta": "¿El alto el fuego entre EE. UU. e Irán continuará hasta el 24 de octubre?",
+    "probabilidad": 0.915,
+    "fuente": "Polymarket · precio implícito de «Sí», no probabilidad calibrada · 2026-10-22T22:32:05.052Z · https://polymarket.com/market/us-x-iran-ceasefire-continues-through-october-24"
+   }
+  ]
+ }
+}

@@ -1,0 +1,72 @@
+{
+  "cutoff": "2026-10-13",
+  "appRevision": {
+    "repo": "MauriGuth/allocia",
+    "commit": "79233ed5203f6ffc456174174d39f13e8f23d5cb",
+    "fecha": "2026-10-10",
+    "correccion": {
+      "commit": "3bd9d56",
+      "pullRequest": "https://github.com/MauriGuth/allocia/pull/2"
+    }
+  },
+  "entorno": {
+    "sistema": "Linux 6.18 x86_64",
+    "node": "v22.22.0",
+    "postgresql": "16.15",
+    "redis": "7.0.15",
+    "navegador": "Chromium 141.0.7390.37",
+    "playwright": "1.62.1",
+    "nota": "Distinto del entorno del 8 de octubre (macOS ARM64, Node 24.11.1, PostgreSQL 18.6, Redis 8.2.1): las latencias no son comparables."
+  },
+  "alcance": "Reverificación local y aislada. No consulta proveedores externos, no usa el servicio publicado ni dispositivos móviles; no incluye participantes humanos.",
+  "evidence": [
+    {
+      "copy": "evidence/2026-10-13-reverificacion/README.txt",
+      "sha256": "7f26f0841f9486e53e8df0a3040ad9575d14fd686d48d4e1934e87a02d4a2e42"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/integracion.json",
+      "sha256": "4a6e0ce18d21ed067ab26c8c4bf8e7396a8c33a540c5d3992f5362d3fb0c6cf3"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/pruebas-unitarias.json",
+      "sha256": "ba82851cd93414929510e6557bb1170263ae9badbacbf101d3daf1821c419fc8"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/seguridad-ia-programacion.json",
+      "sha256": "e17c291ec1362e858b7c0c090dc42773ee5eaa8e1c112ecabfe5cdb052c76aa5"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/servicios.json",
+      "sha256": "a7e49881bea166d67e9d0f6d0057d43f41f3eebf7a5383517710ac0080ed80cc"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/suite-playwright-repositorio.json",
+      "sha256": "93461930ce3ef474e0215bcebf9847d7f216bb4fa8f6cec8de93348241f872c1"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web-previo-a-la-correccion.json",
+      "sha256": "4681b0ba16000b46258b81ce16636b4967ec277d5d986548b23c9453711a0a42"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web-verification.cjs",
+      "sha256": "73c363acb8034a71e73d052058f90c51ecc0ac82b27a5d5c6df6c22a2b9e1df4"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web.json",
+      "sha256": "02263b3930cae6337dae48249d08ed245e8b97463dc7d2df3bf7b693ee7f5ad6"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web-extra.json",
+      "sha256": "4402600f9db2388e7ff4cd62cecbdb3956b0bd85648bea5152611acd6a967e72"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web-extra-previo-a-la-correccion.json",
+      "sha256": "31415ebb286ea5932500052f261960fd81dbc4cda61723ecc6d9dd6daacbdb3c"
+    },
+    {
+      "copy": "evidence/2026-10-13-reverificacion/web-extra-verification.cjs",
+      "sha256": "71650993f967d9f66439c4f0721abdf8656e58914c362cb9fcb362e8b268d8b2"
+    }
+  ]
+}

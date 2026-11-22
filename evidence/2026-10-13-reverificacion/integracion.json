@@ -1,0 +1,199 @@
+{
+  "executedAt": "2026-10-13T12:35:47.642Z",
+  "node": "v22.22.0",
+  "database": "PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit",
+  "scope": "HTTP NestJS, PostgreSQL real, Redis real, proveedores externos con respaldo local; sin mocks",
+  "total": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "id": "IT01",
+      "title": "Registro HTTP de dos cuentas persistidas y contraseña hasheada",
+      "status": "PASS"
+    },
+    {
+      "id": "IT02",
+      "title": "Login válido y rechazo de credenciales incorrectas",
+      "status": "PASS"
+    },
+    {
+      "id": "IT03",
+      "title": "Rutas privadas rechazan token ausente, inválido y vencido",
+      "status": "PASS",
+      "detail": "12 solicitudes rechazadas"
+    },
+    {
+      "id": "IT04",
+      "title": "DTO HTTP rechaza cantidad cero, ticker desconocido y registro inválido",
+      "status": "PASS"
+    },
+    {
+      "id": "IT05",
+      "title": "CRUD HTTP persiste la cantidad cifrada en PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "id": "IT06",
+      "title": "Otra cuenta no lee, edita ni elimina posiciones ajenas",
+      "status": "PASS"
+    },
+    {
+      "id": "IT07",
+      "title": "Análisis HTTP coincide con precios persistidos",
+      "status": "PASS"
+    },
+    {
+      "id": "IT08",
+      "title": "Observaciones HTTP incluyen regla y procedencia individual",
+      "status": "PASS",
+      "detail": {
+        "origen": "snapshot local",
+        "provenance": {
+          "geo": {
+            "source": "Ejemplo local de contexto",
+            "origin": "demostración",
+            "dataDate": "2026-08-14"
+          },
+          "fearGreed": {
+            "source": "Ejemplo local Fear & Greed",
+            "origin": "demostración",
+            "dataDate": "2026-08-14"
+          },
+          "btcDominance": {
+            "source": "Ejemplo local de dominancia",
+            "origin": "demostración",
+            "dataDate": "2026-08-14"
+          },
+          "defi": {
+            "source": "Ejemplo local TVL",
+            "origin": "demostración",
+            "dataDate": "2026-08-14"
+          },
+          "predictionMarkets": {
+            "source": "Ejemplos locales de mercados",
+            "origin": "demostración",
+            "dataDate": "2026-08-14"
+          }
+        }
+      }
+    },
+    {
+      "id": "IT09",
+      "title": "Redis real conserva respuesta de señales y TTL",
+      "status": "PASS",
+      "detail": {
+        "ttl": 900
+      }
+    },
+    {
+      "id": "IT10",
+      "title": "FK rechaza posiciones sin propietario o con usuario inexistente",
+      "status": "PASS"
+    },
+    {
+      "id": "IT11",
+      "title": "Eliminación HTTP de posición persistida",
+      "status": "PASS"
+    },
+    {
+      "id": "IT12",
+      "title": "Baja exige contraseña y elimina cuenta y posiciones",
+      "status": "PASS"
+    },
+    {
+      "id": "IT13",
+      "title": "Token previo de cuenta borrada queda inutilizable",
+      "status": "PASS"
+    },
+    {
+      "id": "IT14",
+      "title": "30 consultas de análisis y observaciones con 100 posiciones reales",
+      "status": "PASS",
+      "detail": {
+        "environment": "localhost; PostgreSQL real; Redis caliente; ejecución secuencial; sin latencia de proveedor; 100 posiciones sintéticas",
+        "/analysis": {
+          "n": 30,
+          "p95Ms": 10.727738000000045,
+          "minMs": 5.731152999999722,
+          "maxMs": 11.089392000000316,
+          "samplesMs": [
+            10.190270999999939,
+            9.242357999999967,
+            9.482254999999896,
+            10.727738000000045,
+            11.089392000000316,
+            8.826297999999952,
+            7.878622000000178,
+            8.30781399999978,
+            7.9165109999999,
+            6.981578000000354,
+            7.273547000000235,
+            7.566334999999981,
+            8.161454999999933,
+            9.689378999999917,
+            7.358564999999999,
+            8.99692899999991,
+            6.894706999999926,
+            6.62546599999996,
+            5.735823999999866,
+            6.767083000000184,
+            6.36424500000021,
+            6.433588999999756,
+            6.4496180000001,
+            6.454878999999892,
+            6.501396999999997,
+            5.731152999999722,
+            6.61758299999974,
+            9.074001999999837,
+            6.4070590000001175,
+            7.385312999999769
+          ]
+        },
+        "/observations": {
+          "n": 30,
+          "p95Ms": 8.594201999999768,
+          "minMs": 5.062924000000294,
+          "maxMs": 10.1242400000001,
+          "samplesMs": [
+            7.363934999999856,
+            6.485459999999875,
+            7.19981000000007,
+            7.859926999999971,
+            6.292041000000154,
+            7.151766999999836,
+            7.957574000000022,
+            7.805304999999862,
+            10.1242400000001,
+            7.9642109999999775,
+            7.385260000000017,
+            7.241829999999936,
+            6.322392000000036,
+            5.938850000000002,
+            5.8289059999997335,
+            5.936707999999726,
+            5.933414999999968,
+            5.919949000000088,
+            6.208415000000059,
+            6.620629000000008,
+            7.15059999999994,
+            8.594201999999768,
+            6.70952299999999,
+            6.3135199999996985,
+            7.07730599999968,
+            5.509585999999672,
+            5.889243999999962,
+            5.062924000000294,
+            5.1028739999997015,
+            5.076379999999972
+          ]
+        }
+      }
+    },
+    {
+      "id": "IT15",
+      "title": "Limpieza de segunda cuenta sin afectar cuenta demo",
+      "status": "PASS"
+    }
+  ]
+}

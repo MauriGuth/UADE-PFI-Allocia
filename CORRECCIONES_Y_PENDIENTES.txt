@@ -1,0 +1,324 @@
+CORRECCIONES DEL AVANCE DEL 50 % — actualizado el 9 de octubre de 2026
+
+ALCANCE DE ESTA REVISIÓN
+Se corrigen el informe LaTeX, la carátula de biblioteca, diagramas, tablas,
+gráficos de encuesta y anexos. Se contrasta la descripción con el código
+presente en demo. La primera revisión no modifica el producto. La ampliación posterior corrige
+el producto y ejecuta validación local; no altera el despliegue remoto. La revisión
+no acredita pruebas de usuario, entrevistas nuevas ni controles de producción.
+
+CAMBIOS APLICADOS
+1. Marco teórico: agrupación por afinidad; inclusión de IA explicable y reglas;
+   definición de instrumentos, contexto, criptoactivos, señales y HHI.
+2. Estado del arte: Polymarket pasa al relevamiento de plataformas; cierre
+   titulado al final; fuentes públicas de productos; sin afirmaciones de
+   inexistencia de funciones basadas solamente en documentación incompleta.
+3. FODA: traslado después de la investigación con usuarios, lenguaje moderado,
+   puntuación uniforme y distinción entre interés declarado y demanda validada.
+4. Introducción y alcance: acceso web como compromiso original, móvil como
+   complemento; idioma, destinatarios, carga manual y limitaciones explícitos.
+   No se inventa una autorización del cambio de alcance.
+5. Objetivos y RF/RNF: identificación, fórmula «El sistema debe», redacción
+   positiva, criterios de aceptación medibles y distinción entre metas y logros.
+6. Investigación: retiro del tutor de la muestra; dos resúmenes provisionales
+   independientes, sin citas inventadas ni conclusiones atribuidas a tres usuarios.
+7. Encuesta: cuestionario y 81 filas de frecuencias conservados sin cambios.
+   Se explican sesgo, ausencia de ubicación, solapamientos y diferencias entre
+   tenencias reales e interés por activos. Se retiran cruces no auditables con
+   datos agregados y afirmaciones no verificables sobre respuestas abiertas.
+8. Personas usuarias: tres fichas visuales con retratos esquemáticos y tareas;
+   separación expresa entre base empírica, atributos ficticios e hipótesis.
+9. Anexos: exclusión de anexos vacíos C/D/E originales; separación de encuesta,
+   entrevistas y personas. Renumeración automática y cronograma correctamente
+   titulado, sin remisiones al Gantt en el cuerpo.
+10. Secciones 5, 6 y 7 desarrolladas y activadas: pruebas con evidencia real,
+    discusión crítica y conclusiones del avance. Nuevo anexo F de 21 casos.
+    Se distinguen servicios con dobles de integración HTTP/persistencia y usuarios.
+11. Portadas y encabezado: Huentelaf antes de Rosso; corrección del doble espacio;
+    encabezado derivado del título. El PDF original de biblioteca se conserva;
+    main.tex incluye cover/caratula_corregida.pdf.
+12. Redacción: presente, títulos en estilo oración, comillas angulares,
+    terminología «sección», eliminación de repeticiones y frases metatextuales.
+    El cuestionario conserva su redacción histórica.
+13. Gráficos: cuatro PDFs regenerados desde las frecuencias del anexo, coma
+    decimal, orden de primera mención y script reproducible en scripts/.
+14. Tablas y epígrafes: fuentes explícitas, captions breves, notas metodológicas
+    fuera de captions; alcance del Proyecto identificado como esperado.
+15. Referencias: limpieza de bibliografía de ejemplo; DOI de Tsang y Yang;
+    estado de preprint contrastado con arXiv y página del autor, y complemento
+    de literatura revisada por pares. Fuentes oficiales para dominio, privacidad
+    y mercado de capitales; normalización de citas y fechas de consulta.
+16. Graham y Dodd: se retira la cita a una edición no identificada y se respalda
+    la definición de análisis fundamental con la SEC. No se asigna a la edición
+    de 1934 el ISBN de una reedición que no consta como consultada.
+17. Arquitectura: diagramas funcional, técnico, datos y casos de uso actualizados;
+    usuarios y propietario de posiciones incorporados; la versión ampliada
+    implementa FK obligatoria y eliminación en cascada, probadas en PostgreSQL.
+18. Implementación: motor determinista identificado, umbrales y condiciones
+    documentados. La ampliación incorpora Anthropic y dos análisis reales,
+    diferenciados del cálculo determinista y sin atribuir capacidad predictiva.
+19. Fuentes: consultas cripto diferenciadas de los datos locales de demostración;
+    señalización del problema de marcar todo el conjunto como «en vivo» cuando
+    sólo una consulta externa tiene éxito.
+20. Seguridad y privacidad: controles encontrados en código y brechas documentados;
+    baja de cuenta incorporada al diseño, casos de uso, requisitos y wireframe;
+    criterios ante incorporación futura de un LLM y prompt injection.
+21. Maquetación: referencias automáticas, bibliografía y listas regeneradas;
+    corrección de altura del encabezado, flotantes y páginas con contenido aislado.
+22. Coherencia entre secciones: la introducción, el alcance, el marco teórico y las
+    secciones 4.5, 4.7, 4.9 y 4.10 distinguen el motor determinista de la capa de
+    informes con modelo de lenguaje y describen cotizaciones externas y despliegue
+    publicado. Se agregan RF11 y el módulo de informes de análisis.
+23. Diagramas funcional, de componentes y de datos actualizados (Anthropic, fuentes
+    de análisis, Vercel/Railway, alertas, informes, dispositivos y outbox).
+24. Se explican RSI, MACD y bandas de Bollinger; se corrige la institución del
+    informe NISTIR y se agrega el ISSN de Porter; la portada usa el mismo formato
+    de LU que la carátula de biblioteca; las tablas del Anexo F tienen epígrafe y
+    fuente numerados; se conservan sin cambios las plantillas de los anexos D/E originales (no se incluyen en el build).
+
+25. Reverificación del 13 de octubre (Sección 5.16, Anexo F y evidence/2026-10-13-reverificacion/):
+    servicios 21/21, integración 15/15, seguridad/IA/programación 23/23, pruebas
+    unitarias 33/33, recorrido web 21/21 y Playwright 27/27 sobre Allocia
+    (revisión 79233ed y corrección 3bd9d56). CP15 se actualiza (ya no hay escenarios con
+    variaciones fijas), se reemplaza el recorrido web obsoleto (pfi-browser.cjs) y la
+    figura 5.1 muestra la interfaz vigente.
+    Defecto X11, detectado y corregido en la web: una contraseña incorrecta en la baja de
+    cuenta cerraba la sesión. Pendiente de revisión por los autores: el Anexo G
+    (protocolo con usuarios) todavía pide «cambiar al escenario adverso», pestaña que la
+    web ya no tiene.
+
+EVIDENCIA QUE FALTA PARA CERRAR LA DEVOLUCIÓN
+A. Transcripciones originales completas de Fabricio Sabattoli y Tadeo Pinque,
+   con fecha, modalidad y consentimiento/documentación de uso del testimonio.
+B. Tercera entrevista a un participante independiente, en reemplazo del tutor.
+   Se incluye una propuesta de profundización de la guía, no una entrevista falsa.
+C. Exportación original de la encuesta con respuestas individuales y pregunta
+   abierta. Las tablas agregadas no permiten verificar cruces, coincidencia de
+   atributos, citas ni el número de respuestas abiertas sustantivas.
+D. Si se decide abandonar el acceso web, acuerdo formal sobre modificación de
+   alcance. Esta revisión mantiene el compromiso web y no supone tal acuerdo.
+
+ESTADO TÉCNICO ACTUAL
+- Revisiones contrastadas: API 8768e53 y clientes 015e7b6 (ver evidence/2026-10-09-actualizacion.json).
+- API y web compilan; TypeScript móvil y paquetes iOS/Android correctos.
+- Regresión: 21 casos de servicios, 15 integración, 17 seguridad/IA/programación,
+  3 pruebas de publicación/correo, 7 utilidades web y 2 recorridos de navegador.
+  Las unidades tienen distinto alcance y no se suman como porcentaje de cobertura.
+- Recuperación y verificación con Resend probadas con transporte controlado.
+  La clave responde; falta autorizar un remitente con dominio verificado.
+- Dos análisis reales AAPL/BTC con Anthropic, Finnhub y CoinGecko correctos.
+  Cinco símbolos globales responden 403; no hay cobertura global acreditada.
+- Copia cifrada de Railway restaurada; migración ensayada con 23 posiciones
+  conservadas. TLS de PostgreSQL verificado. No se aplica aún la migración remota.
+- Política identifica a Mauricio Huentelaf y Maximo Rosso con sus correos UADE.
+- PDF recompilado (ver entrega/README.txt para el número de páginas vigente), sin referencias indefinidas.
+- Evidencia saneada versionada en evidence/. Resultados completos locales.
+
+PENDIENTES QUE NO SE PUEDEN INVENTAR
+- Sesiones humanas del protocolo, transcripciones y entrevista independiente.
+- Microdatos originales de encuesta para contrastar cruces y respuestas abiertas.
+- Remitente de correo autorizado, cobertura y calendarios completos por región.
+- Push en dispositivos físicos y credenciales de notificaciones.
+- Validación completa del despliegue, carga, pentest y revisión legal del servicio.
+
+HISTORIAL
+La evaluación del 8 de octubre registra 21 servicios, 15 integración y nueve
+comprobaciones web, luego 17 de seguridad/IA/programación. El P95 local con
+100 posiciones y 30 consultas es 2,26 ms para análisis y 2,89 ms para observaciones.
+Esos tiempos pertenecen a la versión inicial con caché caliente y no se extrapolan
+a la versión del 9 de octubre, al nuevo cliente web ni a los proveedores remotos.
+
+ACTUALIZACIÓN DEL 20 DE OCTUBRE DE 2026 (devolución del tutor, correo con 7 puntos y 5 fuentes)
+26. Alcance: web y móvil como dos clientes de la misma plataforma, cuenta y API (decisión
+    de los autores). Objetivos, alcance, solución, RF7, MVP, pantallas y discusión
+    alineados; Tabla 6.I separa implementado, parcial y previsto.
+27. Fuentes del tutor leídas e incorporadas: CFA2026portfolio, CFA2026allocation,
+    WEF2026risks (ISBN 978-2-940631-60-5), IOSCO2025ai (CR/01/2025), NIST2023airmf
+    (DOI 10.6028/NIST.AI.100-1), NIST2024genai (DOI 10.6028/NIST.AI.600-1), OWASP2025llm,
+    Greshake2023indirect (DOI 10.1145/3605764.3623985), CNV2018rg731.
+28. Infografías nuevas: figures/tendencias.tex (Fig. 2.2), figures/flujo_valor.tex
+    (Fig. 3.6), figures/flujo_informacion.tex (Fig. 4.12). Librería TikZ patterns.
+29. Sección 5.3.1 y Tabla 5.I: reconstrucción manual de CP03 y lectura de la observación.
+30. Sección 4.12 y Tabla 4.II: controles de seguridad, privacidad e IA con estado;
+    artículos de la Ley 25.326; Normas CNV sobre asesoramiento; prompt injection
+    con OWASP, NIST y Greshake et al.; funciones del AI RMF.
+31. RNF10 y correspondencia RNF–características de IA confiable (NIST).
+32. Sección 2.2.2: comparación por herramienta (qué resuelve, qué no, diferencial).
+    Sección 2.2.4: tendencias del entorno. Discusión 6.1: sesgo de automatización.
+33. entrega/respuesta_devolucion.pdf: tabla observación → cambio → ubicación → estado.
+Siguen pendientes (sólo los autores): transcripciones, tercera entrevista, microdatos
+de la encuesta, sesiones con participantes, reunión con el tutor y práctica oral.
+
+ACTUALIZACIÓN POSTERIOR DEL 20 DE OCTUBRE DE 2026 (revisión del resto de los puntos de la devolución)
+34. Tabla 5.II (Sección 5.10): qué se esperaba, cómo se verificó y qué falta por aspecto (cálculo,
+    umbrales, trazabilidad, procedencia, protección de datos, informes con modelo, utilidad para el usuario).
+    Conclusiones y 5.10 incorporan la reverificación del 13 de octubre.
+35. Tabla 2.I: la fila del Proyecto pasa a «Allocia (estado actual)», alineada con la Tabla 6.I.
+    Sección 2.2.2: sustitutos que declaran los entrevistados (planilla o sitio de seguimiento, app del
+    intermediario, IA de propósito general). Sección 2.2.4: evidencia académica sobre robo-advising
+    (D'Acunto, Prabhala y Rossi, 2019; entrada sin fecha de consulta: verificar el DOI antes de entregar).
+36. Sección 2.1.1.5: definiciones de RSI, MACD, bandas de Bollinger y volatilidad en el marco teórico
+    (antes estaban en la Sección 5.8.3).
+37. Infografías nuevas: figures/problema_cifras.tex (Fig. 3.6, frecuencias de la encuesta) y
+    figures/evolucion.tex (Fig. 6.1, implementado / parcial / evolución propuesta). La Fig. 3.6 anterior pasa a
+    3.7. La Fig. 2.2, panel A, deja de mostrar barras sin valor.
+38. Tabla 4.II y Sección 4.12: transferencia internacional a proveedores del exterior (Vercel, Railway,
+    Resend, Anthropic) e inscripción de la base ante la autoridad de control, como pendientes a analizar
+    con asesoramiento legal.
+39. Anexo B: secciones implementadas y baja de cuenta; Anexo G: tarea 4 sin la pestaña de escenario adverso.
+40. IOSCO CR/01/2025 contrastado con el PDF (marzo de 2025). El 60 % no es «el 60 % de los casos de las
+    gestoras de activos»: es el porcentaje de los 30 reguladores y organismos autorreguladores encuestados
+    que observan robo-advising y gestión de activos en su jurisdicción (comunicación con clientes 66,7 %,
+    trading algorítmico 63,3 %, análisis de sentimiento 43,3 %, investigación 40,0 %). Se corrige la
+    Figura 2.2 (panel A) y la Sección 2.2.4. «Seguir una sugerencia de IA tanto como la de una persona» es
+    un estudio de la Comisión de Valores de Ontario recogido por IOSCO, no una conclusión de IOSCO; la
+    «tendencia hacia asesoramiento personalizado» la señalan algunos encuestados. Se retira «inversión pasiva,
+    big data y robo-advisers», que no figura en el informe.
+41. NIST AI 100-1 y AI 600-1 contrastados con los PDF: se confirman la distinción transparencia / explicabilidad /
+    interpretabilidad, las características de IA confiable, las cuatro funciones, la descripción de la inyección de
+    prompts (directa e indirecta), el red-teaming y la confabulación en decisiones de consecuencia. Se precisa la
+    definición de interpretabilidad en la Sección 2.1.4.
+42. WEF Global Risks Report 2026 contrastado por los autores con el PDF oficial (no se pudo abrir desde el entorno
+    de trabajo; resultado recibido por mensaje): más de 1.300 expertos (p. 6); 18 %, 14 %, 8 %, 7 % y 7 % en la
+    Figura 2 (p. 8); compras acumuladas de stablecoins desde economías en desarrollo de 173 mil millones de USD
+    en octubre de 2025 y proyección de 1,22 billones a fines de 2028 (p. 28); cinco riesgos de la Argentina en la
+    Tabla C.2 (p. 82, Executive Opinion Survey 2025); 21.ª edición, enero de 2026, ISBN 978-2-940631-60-5.
+    Falta confirmar la frase de la Sección 2.1.2 sobre los «mayores ascensos» de los riesgos económicos a dos años.
+43. Verificados por los autores contra las fuentes originales (resultado recibido por mensaje): las dos lecturas del
+    CFA (etapas del proceso de gestión, enfoque de portafolio, asignación estratégica en dos pasos, límites de la
+    optimización media-varianza, rebalanceo y bandas); los «mayores ascensos» de los riesgos económicos a dos años
+    en el WEF (desaceleración +8, inflación +8, burbujas de activos +7 posiciones; pp. 9 y 16-17); y los datos de
+    D'Acunto et al. (RFS 32(5), págs. 1983-2020, publicado en línea el 4 de abril de 2019). Se matiza en la Sección
+    2.1.1.2 que la asignación estratégica es «uno de los aspectos más importantes, posiblemente el más importante».
+Sin pendientes de verificación bibliográfica de las fuentes del tutor.
+
+ACTUALIZACIÓN POSTERIOR (revisión contra la rúbrica del PFI)
+44. Metodología (Sección 4.1): Scrum con sprints y tablero Kanban, con su justificación (requerimientos que
+    se precisan, entregas de avance, equipo de dos personas). Confirmar con los autores la duración de los
+    sprints y las herramientas, que no se especifican en el texto.
+45. Justificación tecnológica (Sección 4.9): razón concreta de cada tecnología según la arquitectura.
+46. Marco teórico: nueva Sección 2.1.5 «Fundamentos tecnológicos» (REST, modelo relacional, JWT, hash adaptativo,
+    AES-GCM, caché y TTL, modelos de lenguaje e inyección de instrucciones) con sus fuentes (Fielding 2000,
+    Codd 1970, RFC 7519, Provos y Mazières 1999, NIST SP 800-38D, Vaswani et al. 2017; entradas cargadas de
+    memoria, verificar DOI y datos). Se retiran del marco teórico las decisiones de diseño, que pasan a la
+    Sección 4.4 («Diseño del sistema»). Scrum Guide 2020 y Anderson 2010 en la bibliografía.
+47. Conclusiones: Tabla 7.I con el resultado y la evidencia de cada objetivo específico.
+48. Coherencia: TVL (DefiLlama) y mercados de predicción (Polymarket) se describen según el código y la matriz de
+    paridad (consulta en vivo, sin prueba registrada con proveedores reales); el GPR figura como no disponible.
+    Se ajustan las Figuras 4.2 y 4.12, la Tabla 6.I y la Sección 4.9. Se agregan capturas del cliente web
+    (Figuras 4.8 y 4.9). Pendiente de verificar en el servicio publicado que esas consultas funcionan.
+49. Se retiran las capturas del prototipo móvil de la Sección 4.8 (que ahora describe el cliente web) y se borran
+    los archivos figures/pantallas/ez-*.png; el Anexo B remite a las pantallas del cliente web.
+50. Anexo B: se reemplazan los wireframes en formato móvil por capturas del cliente web (acceso y registro, política
+    de privacidad, cuenta con baja, desglose, detalle por activo, alertas, informe y ajustes), tomadas con la versión
+    actual de la aplicación y una cuenta de demostración; se eliminan los archivos de wireframes no utilizados
+    y los dos wireframes móviles de la Sección 4.7, que se retiran junto con la mención a Stitch). No se incluye la página de inicio por su ilustración de demostración.
+51. Se reincorporan los wireframes móviles y las capturas del prototipo móvil, con foco en la web: Figura 4.7
+    (wireframes originales, con la aclaración de que la simulación de escenarios se reemplazó por escenarios con
+    fuentes), Figuras 4.10 y 4.11 (capturas móviles) y Anexo B «Pantallas y wireframes de Allocia» (pantallas web y
+    wireframes del diseño original). Esto reemplaza lo indicado en los ítems 49 y 50 sobre su retiro.
+Pendiente: modelo de negocio y viabilidad económico-financiera (no se incorporan por decisión de los autores).
+
+ACTUALIZACIÓN DEL 22 DE OCTUBRE DE 2026 (rúbrica del informe final)
+34. Sección 3.5 Modelo de negocio (lienzo, figures/canvas.tex) y 3.6 Viabilidad
+    económico-financiera (tres escenarios, VAN/TIR/recupero/punto de equilibrio,
+    figures/flujo_caja.tex, scripts/viabilidad.py; precios oficiales del 22/10 en biblio.bib).
+35. Sección 4.1: Scrum + Kanban con eventos, artefactos, GitHub Projects (figures/kanban.tex),
+    historias de usuario (Tabla 4.I) y sprints de dos semanas (Tabla 4.II). Los objetivos por
+    sprint se reconstruyen desde hitos de la cátedra y el historial de los repositorios.
+36. Conclusiones reescritas y ligadas al objetivo general (fila nueva en la Tabla 7.I);
+    la crónica de revisiones queda en la Sección 5.
+37. Señales en producción: TVL (DefiLlama) y Polymarket responden en vivo (consulta
+    registrada en evidence/2026-10-22-senales-produccion); sólo GPR sigue sin fuente.
+38. DOI de toda la bibliografía verificados (Crossref/DataCite). URL nuevas responden.
+39. Revisión de estilo de todo el informe (salvedades repetidas, muletillas, lenguaje vago).
+Pendientes que siguen a cargo de los autores: transcripciones, tercera entrevista, microdatos
+de la encuesta, sesiones con participantes; confirmar fechas de los sprints 1 a 10.
+40. Entrevistas (22/10/2026, videollamada): Tadeo Pinque, Fabricio Sabattoli y Octavio Antunes
+    (reemplaza al tutor). Transcripciones completas en el Anexo D; análisis individual y
+    conjunto en 3.1.2; Tabla 6.I, Kanban, sprints y conclusiones actualizados.
+    Pendientes: sesiones con participantes; microdatos de la encuesta.
+41. Sesiones de comprensión con cinco participantes (21 a 23/10/2026): Sección 5.9 con
+    resultados por tarea, respuestas literales, criterio 2 de 5 (no alcanzado) y ocho cambios
+    derivados para el sprint 17; Anexo G con tablas; registro en evidence/2026-10-sesiones-usuarios.
+    Tabla 6.I, conclusiones, resumen, abstract, Kanban, sprints y videos 2 y 3 actualizados.
+    Pendiente: aplicar los cambios y repetir la evaluación (sprint 18).
+42. Ocho cambios derivados de las sesiones implementados en web y móvil (Allocia a0d28c0, 23/10):
+    rótulos de fechas, etiqueta cartera/contexto y regla visible, concentración en lenguaje llano,
+    Editar visible y duplicados → editar, cantidad en unidades, cerrar sesión separado de la baja con
+    exportación previa, estado vacío de escenarios con «Solicitar análisis», confirmaciones persistentes.
+    Web desplegada en allocia.com.ar; builds internos EAS lanzados. Pendiente: repetir la evaluación (sprint 18).
+43. Índice GPR en vivo (Allocia 3e55128, 23/10): la API lee la planilla diaria de Caldara e
+    Iacoviello (media móvil de 30 días, nivel y tendencia, caché 6 h). Verificado en producción:
+    GPR 176, elevado (evidence/2026-10-23-gpr-produccion). RF5 cubierto en todas sus señales.
+    Tabla 6.I, 7.I, Fig. 4.11, 2.2, Kanban, sprints, resumen, abstract y video 2 actualizados.
+    Plantilla para la segunda ronda de usuarios en entrega/sesiones_ronda2_*.
+
+
+CORRECCIONES DE LA DEVOLUCIÓN DEL 90 % — aplicadas el 21 de noviembre de 2026
+
+Devolución de Nicolás Monzón: aprobado con correcciones.
+
+ESTRUCTURA
+1. Párrafo introductorio antes del primer subnivel en 2.1.1, 2.1.3 y 4.5.
+2. 5.3 y 5.4 sin subnivel único: su contenido pasó al nivel superior.
+3. Datos de tendencias (Foro Económico Mundial, stablecoins) trasladados del
+   marco teórico a 2.2.4 Tendencias del entorno.
+4. Terminología: Sección (un número), Subsección (dos) y Subsubsección (tres o
+   más) en todas las referencias cruzadas.
+5. Anexo C: transcripción de las 190 respuestas a la pregunta abierta y tabla de
+   temas; la lectura cualitativa de 3.1.1 se apoya en ellas. Fuente: planilla de
+   respuestas del formulario. Reproducible con
+   scripts/codificar_respuestas_abiertas.py sobre
+   evidence/2026-08-encuesta/pregunta16_respuestas.txt.
+6. Cada entrevista en su anexo (E, F y G); guía y perfiles en el D.
+7. Marco normativo (Leyes 25.326 y 26.831, Normas de la CNV) como 2.1.6; la
+   4.11 remite a él.
+8. Método de validación unificado en 5.1 (se quitó 4.13).
+
+CARÁTULA
+9. Título nuevo: «Allocia: análisis de portafolios multiactivo con riesgo
+   geopolítico y observaciones explicables». PENDIENTE DE LOS AUTORES: pedir la
+   carátula de biblioteca con el título nuevo (cover/caratula_corregida.pdf
+   conserva el anterior) y confirmarlo con el tutor.
+
+REDACCIÓN
+10. 3.7 sin definición de requerimiento; secciones de un solo párrafo
+    desarrolladas o integradas (1.3, 1.4, 2.2.5, 3.3, 4.3, 4.14, 4.15, 5.8.1,
+    5.8.5, 6.6.1, 6.6.2, 2.1.1.4 y 2.1.1.5); oraciones sueltas integradas.
+11. Todas las figuras y tablas referenciadas por su número.
+12. «El Proyecto» en lugar de «el informe» y del nombre largo.
+13. Términos explicados: optimización media-varianza, robo-advising, efecto
+    disposición, persecución de tendencias, stops y SMA.
+14. Epígrafes sin explicaciones (Tabla de resultados por tarea, Figuras B.1,
+    2.2 y 6.1).
+15. Sin relato de entregas ni devoluciones en el cuerpo (4.1, tabla de sprints;
+    se quitó Acompañamiento académico). El cronograma del Anexo A los conserva.
+16. Redacción de versión final: sin «pendiente», «todavía» ni «sprint 18». La
+    segunda ronda de evaluación con usuarios figura como trabajo futuro.
+17. «Inicio de sesión», «panel» e «IA» unificados.
+
+MARCO TEÓRICO, HILO CONDUCTOR Y FUENTES
+18. Integridad referencial redefinida en 2.1.5.
+19. Sin remisiones del Alcance y del Estado del arte a la Tabla 6.I ni a 4.11,
+    5.8 y 5.9; MVP y CNV definidos antes de usarse; exclusión del tutor dicha
+    una sola vez; los análisis con datos de encuesta y entrevistas pasaron a la
+    Sección 3 (3.3 y 3.4).
+20. Citas nuevas: Rhoades 1993, Woerheide y Persson 1992, Laakso y Taagepera
+    1979, Murphy 1999, Wilder 1978, Appel 2005, Bollinger 2001, Hayes-Roth 1985
+    y el estudio de la Comisión de Valores de Ontario (2024).
+21. Sin nombrar el documento fuente en la prosa; cita parentética de
+    Osterwalder y Pigneur; CFA citada una vez en 2.1.1.2.
+22. Identificadores: ISBN de Anderson 2010; ISBN de las actas y URL de Provos y
+    Mazières 1999 (no tiene DOI); ISBN de las actas publicadas y URL de
+    Vaswani et al. 2017 en lugar del DOI de arXiv.
+
+CONCLUSIONES
+23. Índice GPR unificado como consultado en vivo (en producción desde el
+    23/10): Figura 6.1, tabla comparativa del estado del arte y tabla de sprints.
+
+PENDIENTES QUE SOLO LOS AUTORES PUEDEN CUBRIR
+- Carátula de biblioteca con el título nuevo.
+- Segunda ronda de evaluación con perfiles ocasional y principiante, si se
+  quiere incorporar antes de la defensa.
+

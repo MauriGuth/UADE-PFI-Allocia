@@ -1,0 +1,201 @@
+\anexo{Casos de prueba y evidencia técnica}\label{annex:casos-prueba}
+
+Las matrices de este anexo provienen de la reverificación del 13 de octubre de 2026, descrita en la Subsubsección~\ref{sec:reverificacion-octubre13}. La Tabla~\ref{tab:casos-ejecutados} reúne los casos CP, que ejecutan los servicios reales con repositorios, caché y respuestas externas simulados. Cada identificador coincide con el registro JSON y el programa indicados en la Subsección~\ref{sec:entorno-pruebas}. \enquote{Satisfactorio} significa únicamente que pasan todas las comprobaciones de ese caso; la aceptación del requisito completo es una conclusión aparte. En la ejecución del 8 de octubre, la primera pasada detecta tres defectos y la repetición posterior a las correcciones satisface los 21 casos; la reverificación los satisface en una sola pasada.
+
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}}
+\caption{Casos técnicos ejecutados y resultados. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-ejecutados}\\
+\hline
+\textbf{Caso / Req.} & \textbf{Entrada} & \textbf{Resultado esperado} & \textbf{Resultado obtenido} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Caso / Req.} & \textbf{Entrada} & \textbf{Resultado esperado} & \textbf{Resultado obtenido} \\
+\hline
+\endhead
+\hline
+\endfoot
+CP01\newline RF4/\allowbreak RNF2 & Sin posiciones. & Valor, HHI y número efectivo 0; sin dominante. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP02\newline RF4/\allowbreak RNF2 & 2 unidades a precio 10. & Valor 20; peso 1; HHI 10000; número efectivo 1. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP03\newline RF3/\allowbreak RF4/\allowbreak RNF2 & Cantidades 2/3/4; precios 10/20/5. & Pesos 0,2/0,6/0,2; HHI 4400; número efectivo 2,3; Global 0,8. & \textbf{Satisfactorio}. Coincide dentro de tolerancia en pesos; sumas de grupos iguales a 1. \\ \hline
+CP04\newline RF4 & Cuatro pesos 0,25. & HHI 2500, moderado; número efectivo 4. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP05\newline RF4 & Diez pesos 0,1. & HHI 1000, bajo. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP06\newline RF2 & Alta 2; suma 3; edición a 7; baja. & Cantidades 5 y 7; lista final vacía. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP07\newline RF2 & Ticker desconocido; cantidades 0, -1 y NaN. & Excepciones con estado 400. & \textbf{Satisfactorio}. Rechaza todas las entradas ensayadas. \\ \hline
+CP08\newline RNF4 & Dos propietarios, mismo ticker. & Lecturas separadas; edición y baja ajenas rechazadas. & \textbf{Satisfactorio}. Excepciones 404; cantidad original conservada. \\ \hline
+CP09\newline RF1/\allowbreak RNF5 & Correo con espacios y mayúsculas; contraseña; alta repetida. & Normalización; hash bcrypt factor 12; inicio de sesión válido; rechazos 401 y 409. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP10\newline RNF4 & Token ausente, inválido y vencido. & Guard rechaza los tres con estado 401. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP11\newline RF1 & Token firmado para usuario 2. & Guard acepta y asigna identificador 2. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP12\newline RF6 & Análisis vacío. & Lista de observaciones vacía. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP13\newline RF6 & Mayor posición de 25 y 26 por ciento. & No activar y activar conc-top, respectivamente. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP14\newline RF6 & Cripto de 25, 40 y 41 por ciento. & Sin exp-cripto; atención; alerta. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP15\newline RF8 & Mitad acciones y mitad cripto, sin evidencia reciente. & Escenarios y escenarios con fuentes vacíos; sin rendimientos supuestos. & \textbf{Satisfactorio}. Coincide; sustituye la comprobación de impactos fijos del 8 de octubre. \\ \hline
+CP16\newline RF6 & Cartera con tecnología, cripto y energía. & Todas las observaciones generadas incluyen evidencia de tipo regla. & \textbf{Satisfactorio}. Se incorpora la regla; pasa la repetición. \\ \hline
+CP17\newline RF5/\allowbreak RNF7 & Ambos proveedores fallan. & Conservar el conjunto local sin cambios. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP18\newline RF5 & Fear \& Greed 22; dominancia 61,25. & Actualizar a 22 y 61,3; traducir Miedo extremo. & \textbf{Satisfactorio}. Coincide. \\ \hline
+CP19\newline RF5/\allowbreak RNF7 & Alternative.me responde; CoinGecko falla. & Evitar origen global en vivo al conservar componentes locales. & \textbf{Satisfactorio}. Origen mixto y procedencia por componente. \\ \hline
+CP20\newline RF5/\allowbreak RNF7 & Fear \& Greed 999; CoinGecko falla. & Descartar 999 y conservar respaldo 34. & \textbf{Satisfactorio}. Descarta 999 y conserva 34. \\ \hline
+CP21\newline RNF7 & Dos lecturas consecutivas; fallos externos. & Solo dos llamadas externas en total; TTL solicitado 900 s. & \textbf{Satisfactorio}. Coincide; no prueba expiración real. \\ \hline
+\end{longtable}
+\endgroup
+
+Todas las entradas son sintéticas y las huellas del código quedan guardadas en el registro JSON. Los casos CP usan dobles de prueba; las Tablas~\ref{tab:casos-integracion} a~\ref{tab:casos-playwright} cubren HTTP con persistencia real, el recorrido web automatizado, seguridad y pruebas unitarias adicionales. Todas las filas provienen de ejecuciones automatizadas.
+
+\Needspace{8\baselineskip}
+\section*{Integración HTTP y persistencia real}
+La Tabla~\ref{tab:casos-integracion} lista los casos IT, ejecutados por HTTP contra PostgreSQL y Redis reales.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.67\textwidth}p{0.12\textwidth}}
+\caption{Casos de integración HTTP con persistencia real. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-integracion}\\
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endfirsthead
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endhead
+IT01 & Registro HTTP de dos cuentas persistidas y contraseña hasheada & Pasa \\\hline
+IT02 & Inicio de sesión válido y rechazo de credenciales incorrectas & Pasa \\\hline
+IT03 & Rutas privadas rechazan token ausente, inválido y vencido & Pasa \\\hline
+IT04 & DTO HTTP rechaza cantidad cero, ticker desconocido y registro inválido & Pasa \\\hline
+IT05 & CRUD HTTP persiste la cantidad cifrada en PostgreSQL & Pasa \\\hline
+IT06 & Otra cuenta no lee, edita ni elimina posiciones ajenas & Pasa \\\hline
+IT07 & Análisis HTTP coincide con precios persistidos & Pasa \\\hline
+IT08 & Observaciones HTTP incluyen regla y procedencia individual & Pasa \\\hline
+IT09 & Redis real conserva respuesta de señales y TTL & Pasa \\\hline
+IT10 & FK rechaza posiciones sin propietario o con usuario inexistente & Pasa \\\hline
+IT11 & Eliminación HTTP de posición persistida & Pasa \\\hline
+IT12 & Baja exige contraseña y elimina cuenta y posiciones & Pasa \\\hline
+IT13 & Token previo de cuenta borrada queda inutilizable & Pasa \\\hline
+IT14 & 30 consultas de análisis y observaciones con 100 posiciones reales & Pasa \\\hline
+IT15 & Limpieza de segunda cuenta sin afectar cuenta demo & Pasa \\\hline
+\end{longtable}
+
+\section*{Recorrido web automatizado}
+La Tabla~\ref{tab:casos-web} reúne los casos UI y X del recorrido de navegador sobre la interfaz vigente.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.67\textwidth}p{0.12\textwidth}}
+\caption{Casos del recorrido web automatizado sobre la interfaz vigente. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-web}\\
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endfirsthead
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endhead
+UI01 & Ruta privada redirige al acceso conservando el destino & Pasa \\\hline
+UI02 & Registro con consentimiento abre cartera vacía y emite la cookie de sesión HttpOnly y SameSite estricta & Pasa \\\hline
+UI03 & Carga de AAPL, BTC y XLE, edición de AAPL y persistencia tras recargar & Pasa \\\hline
+UI04 & Resumen y Riesgo: observación de energía con regla, datos y fuente visibles & Pasa \\\hline
+UI04b & Escenarios sin rendimientos supuestos cuando falta evidencia & Pasa \\\hline
+UI05 & Sin desborde horizontal en nueve pantallas con 390, 768 y 1440 px & Pasa \\\hline
+UI06 & Eliminar posición con confirmación & Pasa \\\hline
+UI07 & Cerrar sesión, revocar el token anterior, error de inicio de sesión y nuevo acceso & Pasa \\\hline
+UI08 & Baja de cuenta: formulario validado, sesión cerrada y acceso posterior rechazado & Pasa \\\hline
+UI09 & Sin errores de página ni de consola inesperados durante el recorrido & Pasa \\\hline
+X01 & Otra cuenta no ve ni modifica posiciones ajenas & Pasa \\\hline
+X02 & Mutaciones con origen ausente o ajeno rechazadas & Pasa \\\hline
+X03 & El proxy exige sesión y solo expone rutas permitidas & Pasa \\\hline
+X04 & Ticker inexistente, cantidad cero, negativa o con letras rechazados & Pasa \\\hline
+X05 & Señales con fuente, fecha y origen visibles & Pasa \\\hline
+X06 & El inicio de sesión tolera espacios y mayúsculas en el correo & Pasa \\\hline
+X07 & Exportación de las posiciones propias & Pasa \\\hline
+X08 & Detalle de activo y ruta inexistente sin errores & Pasa \\\hline
+X09 & Treinta cargas de pantallas en tres anchos sin errores de consola & Pasa \\\hline
+X10 & La baja de una cuenta no afecta a otra & Pasa \\\hline
+X11 & Contraseña incorrecta en la baja muestra el error y conserva la sesión; falla en la primera pasada y pasa tras la corrección & Pasa \\\hline
+\end{longtable}
+
+\Needspace{12\baselineskip}
+\section*{Comprobaciones web adicionales}
+La Tabla~\ref{tab:casos-web-extra} detalla las comprobaciones sobre aspectos que el recorrido principal no abarca.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.67\textwidth}p{0.12\textwidth}}
+\caption{Comprobaciones web adicionales. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-web-extra}\\
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endfirsthead
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endhead
+E01 & Página de privacidad accesible sin sesión, con su contenido y sin errores de consola & Pasa \\\hline
+E02 & Modo mantenimiento: las páginas y la API responden 503 y la privacidad sigue disponible & Pasa \\\hline
+E03 & Sesión vencida: aviso en el acceso y retorno al acceso con una cookie inválida & Pasa \\\hline
+E04 & Tras 20 intentos de acceso, la web informa el límite de solicitudes sin romperse & Pasa \\\hline
+E05 & Mostrar y ocultar la contraseña funciona y se anuncia al lector de pantalla & Pasa \\\hline
+E06 & Accesibilidad con axe-core (WCAG 2.1 A y AA): sin violaciones graves ni críticas en 12 pantallas y dos anchos; falla en la primera pasada y pasa tras la corrección & Pasa \\\hline
+E07 & Cabeceras de seguridad: CSP con nonce, sin caché, tipo de contenido y marcos & Pasa \\\hline
+E08 & Sin conexión, la web informa el error, conserva el dato y se recupera al volver & Pasa \\\hline
+E09 & Cartera: ordenar por cantidad cambia el orden de las filas & Pasa \\\hline
+E10 & Acceso solo con teclado: el orden de tabulación llega al botón y Enter inicia sesión & Pasa \\\hline
+E12 & Cerrar sesión en una pestaña invalida la otra & Pasa \\\hline
+E14 & Redirección tras el acceso: respeta rutas internas y rechaza destinos externos & Pasa \\\hline
+E15 & Un nombre con HTML se muestra como texto y no ejecuta código & Pasa \\\hline
+E16 & La cuenta de pruebas se elimina al finalizar & Pasa \\\hline
+\end{longtable}
+
+\section*{Seguridad, IA y programación regional}
+Los casos de la Tabla~\ref{tab:casos-seguridad} se ejecutan en local, con HTTP, PostgreSQL y Redis aislados; las fuentes externas y el modelo se simulan.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.67\textwidth}p{0.12\textwidth}}
+\caption{Casos de seguridad, IA y programación regional. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-seguridad}\\
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endfirsthead
+\hline
+\textbf{Caso} & \textbf{Comprobación} & \textbf{Estado}\\\hline\endhead
+SEC01 & Contraseña mínima, consentimiento y alta de cuentas & Pasa \\\hline
+SEC02 & Cookie web HttpOnly y SameSite sin token en el cuerpo & Pasa \\\hline
+SEC03 & Rechazo de mutaciones con origen ausente o ajeno & Pasa \\\hline
+SEC04 & Cifrado autenticado y aleatorio de cantidades & Pasa \\\hline
+SEC05 & Aislamiento de lectura, edición y baja por propietario & Pasa \\\hline
+SEC06 & Ocho acumulaciones concurrentes sin pérdida & Pasa \\\hline
+SEC07 & Rechazo de campos extra, exceso y precisión inválida & Pasa \\\hline
+SEC08 & Revocación de token y cookie al cerrar sesión & Pasa \\\hline
+SEC09 & Cabeceras, no-cache e identificador de solicitud & Pasa \\\hline
+AI01 & Rechazo de citas e identificadores no suministrados & Pasa \\\hline
+AI02 & Filtro de antigüedad, futuro, URL y HTML externo & Pasa \\\hline
+AI03 & Abstención sin cotización y sin llamada al modelo & Pasa \\\hline
+SCH01 & DST, cierre anticipado, feriado sin sesión y cripto & Pasa \\\hline
+SCH02 & Idempotencia, alerta por tenencia y datos mínimos a IA & Pasa \\\hline
+SCH03 & Lectura aislada y retiro de consentimiento de alertas & Pasa \\\hline
+SCH04 & Solicitud manual con sesión, solo con tenencias propias y deduplicada por hora & Pasa \\\hline
+SCH08 & Estado por activo visible solo para quien lo solicita: cola, éxito y fallo & Pasa \\\hline
+SCH07 & Último informe visible; el push manual omite el silencio solo para el solicitante & Pasa \\\hline
+SEC12 & Estado global sin símbolos de solicitudes privadas & Pasa \\\hline
+SCH05 & Fallo de una fuente sin bloquear otros activos; reintento sin duplicar & Pasa \\\hline
+PUSH01 & Reinicio ambiguo sin reenvío; fallo de recibos sin interrumpir la limpieza & Pasa \\\hline
+SEC10 & Exportación legible y baja de posiciones, alertas y dispositivos & Pasa \\\hline
+SEC11 & Rate limit de autenticación con Retry-After & Pasa \\\hline
+\end{longtable}
+
+\Needspace{12\baselineskip}
+\section*{Pruebas unitarias y de integración adicionales}
+Los doce conjuntos de la Tabla~\ref{tab:casos-unitarios} pertenecen a la API y se ejecutan con el ejecutor de pruebas de Node.js. Cada fila indica cuántas pruebas tiene el conjunto; todas pasan.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.50\textwidth}r}
+\caption{Pruebas unitarias y de integración adicionales. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-unitarios}\\
+\hline
+\textbf{Conjunto} & \textbf{Cobertura} & \textbf{Pruebas}\\\hline\endfirsthead
+\hline
+\textbf{Conjunto} & \textbf{Cobertura} & \textbf{Pruebas}\\\hline\endhead
+Correo de cuenta & Privacidad, reintentos, uso único, vencimiento y revocación de sesión & 1 \\\hline
+Logos de activos & Dominios y formatos permitidos & 1 \\\hline
+Cotizaciones de mercado & Caducidad, concurrencia acotada y fechas antiguas informadas & 3 \\\hline
+Oportunidades & Con fuente y sin probabilidad inventada; informes inválidos rechazados & 4 \\\hline
+Oportunidades (integración) & PostgreSQL aislado: seguimiento, alertas y eliminación en cascada & 1 \\\hline
+Actualización de cotizaciones & Consulta manual al proveedor & 1 \\\hline
+Publicación & Identidad firmada del limitador y cortes cripto sin calendario bursátil & 2 \\\hline
+Investigación y descubrimiento & Indicadores diarios, series inválidas, importación segura y macroeconomía & 9 \\\hline
+Evidencia de escenarios & Escenarios con fuente exacta, sin impacto inventado en la cartera & 2 \\\hline
+Señales en vivo & Caída total o parcial sin semilla y sin shocks supuestos en producción & 5 \\\hline
+Señales en español & Traducción que conserva las fuentes y rechaza identificadores desconocidos & 3 \\\hline
+Instantánea de valuación & Aislamiento, vigencia, modificación de cantidades y eliminación ante fallo & 1 \\\hline
+\end{longtable}
+
+\Needspace{12\baselineskip}
+\section*{Suite Playwright}
+Sin ajustes, la suite solo pasa 4 de 26 pruebas. La Tabla~\ref{tab:casos-playwright} muestra el resultado después de actualizar los textos y selectores que habían quedado desactualizados y de agregar la prueba de baja con contraseña incorrecta.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}}
+\caption{Suite Playwright. Fuente: elaboración propia a partir del registro automatizado.}\label{tab:casos-playwright}\\
+\hline
+\textbf{Conjunto} & \textbf{Pruebas} & \textbf{Satisf.}\\\hline\endfirsthead
+\hline
+\textbf{Conjunto} & \textbf{Pruebas} & \textbf{Satisf.}\\\hline\endhead
+Flujos de la aplicación & 17 & 17 \\\hline
+Consola del navegador & 4 & 4 \\\hline
+Publicación & 1 & 1 \\\hline
+Claridad visual & 1 & 1 \\\hline
+Oportunidades & 1 & 1 \\\hline
+Cuenta compartida & 1 & 1 \\\hline
+Correo de la cuenta & 1 & 1 \\\hline
+Baja con contraseña incorrecta & 1 & 1 \\\hline
+\end{longtable}

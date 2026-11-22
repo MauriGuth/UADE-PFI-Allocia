@@ -1,0 +1,68 @@
+{
+  "executedAt": "2026-10-13",
+  "scope": "Suite Playwright de apps/web/e2e contra next start, API, PostgreSQL y Redis aislados; en serie y con el limitador reiniciado entre archivos.",
+  "revision": "3bd9d56 (corrección de la baja con contraseña incorrecta y actualización de textos y selectores)",
+  "sinAjustes": {
+    "revision": "79233ed",
+    "total": 26,
+    "passed": 4,
+    "failed": 22,
+    "causa": "El selector getByLabel(\"Contraseña\") coincide con el campo y con el botón «Mostrar contraseña» (modo estricto), varios tests dependen de variables de entorno y ocho buscan textos anteriores."
+  },
+  "conCorreccion": {
+    "total": 27,
+    "passed": 27,
+    "failed": 0
+  },
+  "archivos": [
+    {
+      "archivo": "app.spec.ts",
+      "total": 17,
+      "passed": 17,
+      "failed": 0
+    },
+    {
+      "archivo": "console.spec.ts",
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "archivo": "release.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "archivo": "visual-clarity.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "archivo": "opportunities.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "archivo": "shared-account.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "archivo": "account-email.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "archivo": "account-wrong-password.spec.ts",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  ],
+  "nota": "Las ocho fallas iniciales de app.spec.ts y console.spec.ts correspondían a textos y selectores desactualizados. El spec nuevo falla sin la corrección y la satisface con ella."
+}

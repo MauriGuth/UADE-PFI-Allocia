@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-09T15:43:07.662Z",
+  "commit": "03f0a0a3e35e22437d42596b594593f2af9cccb5",
+  "results": [
+    {
+      "label": "API activa con commit verificado",
+      "pass": true
+    },
+    {
+      "label": "Registro y autenticación de dos cuentas temporales",
+      "pass": true
+    },
+    {
+      "label": "Alta de posición",
+      "pass": true
+    },
+    {
+      "label": "Búsqueda externa CoinGecko",
+      "pass": true
+    },
+    {
+      "label": "Importación respaldada por cotización real",
+      "pass": true
+    },
+    {
+      "label": "Alta de cripto importada",
+      "pass": true
+    },
+    {
+      "label": "Valuación real acciones y cripto",
+      "pass": true
+    },
+    {
+      "label": "Aislamiento de lectura",
+      "pass": true
+    },
+    {
+      "label": "Aislamiento de escritura",
+      "pass": true
+    },
+    {
+      "label": "Edición propia",
+      "pass": true
+    },
+    {
+      "label": "Cola de análisis propia",
+      "pass": true
+    },
+    {
+      "label": "Solicitud repetida deduplicada",
+      "pass": true
+    },
+    {
+      "label": "Worker procesa informes de las dos posiciones",
+      "pass": true
+    },
+    {
+      "label": "IA con escenarios y fuentes verificadas",
+      "pass": true
+    },
+    {
+      "label": "Investigación técnica/fundamental incluida",
+      "pass": true
+    },
+    {
+      "label": "Eliminación de cuenta temporal",
+      "pass": true
+    },
+    {
+      "label": "Eliminación de cuenta temporal",
+      "pass": true
+    }
+  ]
+}

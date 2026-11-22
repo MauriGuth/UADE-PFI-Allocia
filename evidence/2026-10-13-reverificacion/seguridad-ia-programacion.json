@@ -1,0 +1,123 @@
+{
+  "executedAt": "2026-10-13T12:37:13.771Z",
+  "scope": "HTTP/PostgreSQL/Redis reales aislados; fuentes y modelo simulados para scheduler y grounding; sin envíos push ni llamadas Anthropic reales",
+  "total": 23,
+  "passed": 23,
+  "results": [
+    {
+      "id": "SEC01",
+      "title": "Contraseña breve y falta de consentimiento rechazadas; dos cuentas registradas",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC02",
+      "title": "Cookie HttpOnly SameSite sin token en JSON para navegador",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC03",
+      "title": "CSRF: mutaciones sin Origin y con origen ajeno rechazadas",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC04",
+      "title": "Cantidades cifradas y autenticadas en PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC05",
+      "title": "Aislamiento de propietario: cartera, edición y baja",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC06",
+      "title": "Acumulaciones concurrentes no pierden actualizaciones",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC07",
+      "title": "Campos extra, precisión y cantidades enormes rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC08",
+      "title": "Logout revoca Bearer y cookie emitidos anteriormente",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC09",
+      "title": "Cabeceras de seguridad y privacidad presentes",
+      "status": "PASS"
+    },
+    {
+      "id": "AI01",
+      "title": "Citas inexistentes, inventadas y análisis incompletos rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "AI02",
+      "title": "Fuentes viejas, futuras, URL insegura y HTML se filtran",
+      "status": "PASS"
+    },
+    {
+      "id": "AI03",
+      "title": "Sin cotización no se invoca Anthropic ni se generan escenarios",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH01",
+      "title": "Calendario respeta DST, sesiones, cierres anticipados y cripto",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH02",
+      "title": "Job idempotente guarda informe y alerta una sola vez",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH03",
+      "title": "Lectura de alerta aislada y baja del consentimiento",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH04",
+      "title": "Solicitud manual requiere sesión, sólo usa tenencias propias y deduplica por hora",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH08",
+      "title": "Estado por activo pertenece al solicitante y distingue cola, éxito y fallo",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH07",
+      "title": "Último informe visible y push manual sólo omite el silencio para quien lo pidió",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC12",
+      "title": "Estado global no revela símbolos de solicitudes privadas",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH05",
+      "title": "Fallo de una fuente no bloquea otros activos y se reintenta sin duplicar",
+      "status": "PASS"
+    },
+    {
+      "id": "PUSH01",
+      "title": "Reinicio ambiguo no reenvía; fallo de recibos no interrumpe limpieza",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC10",
+      "title": "Exportación legible y baja de posiciones, alertas y dispositivos",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC11",
+      "title": "Límite de autenticación aplica 429 con Retry-After",
+      "status": "PASS"
+    }
+  ]
+}

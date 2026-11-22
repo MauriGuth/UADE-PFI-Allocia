@@ -1,0 +1,26 @@
+% Infografía: del inversor con activos dispersos a la observación explicable.
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  stp/.style={draw,rounded corners,align=center,text width=2.2cm,minimum height=1.9cm,inner sep=4pt,fill=blue!5},
+  src/.style={draw,rounded corners,align=center,text width=1.9cm,minimum height=0.6cm,inner sep=2pt,fill=black!4,font=\scriptsize},
+  note/.style={align=center,text width=2.6cm,font=\scriptsize,text=black!70},
+  arr/.style={-{Stealth},thick}]
+\node[stp] (s1) {\textbf{1. Inversor}\\Posiciones repartidas en varias plataformas};
+\node[stp,right=0.26cm of s1] (s2) {\textbf{2. Carga}\\Ticker y cantidad en Allocia (web o móvil)};
+\node[stp,right=0.26cm of s2,fill=orange!8] (s3) {\textbf{3. Integración}\\Catálogo, cotizaciones fechadas y señales con procedencia};
+\node[stp,right=0.26cm of s3] (s4) {\textbf{4. Análisis}\\Pesos, exposiciones, HHI y posiciones efectivas};
+\node[stp,right=0.26cm of s4,fill=green!8] (s5) {\textbf{5. Observación}\\Regla + métricas + evidencia};
+\foreach \a/\b in {s1/s2,s2/s3,s3/s4,s4/s5}\draw[arr] (\a)--(\b);
+% Orígenes dispersos que alimentan la carga
+\node[src,above=0.95cm of s1] (p2) {Intermediario local};
+\node[src,left=0.15cm of p2,xshift=-0.1cm] (p1) {Exchange cripto};
+\node[src,right=0.15cm of p2,xshift=0.1cm] (p3) {Planilla propia};
+\foreach \p in {p1,p2,p3}\draw[arr,black!50] (\p.south)--(s1.north);
+% Qué recibe el usuario
+\node[note,below=0.35cm of s5] (u) {El usuario revisa la condición activada y decide; la herramienta no opera ni recomienda comprar o vender.};
+\node[note,below=0.35cm of s3] (n3) {Cada dato conserva fuente, fecha y condición (en vivo o demostración).};
+\node[note,below=0.35cm of s1] (n1) {Situación descripta en la encuesta y en las entrevistas.};
+\end{tikzpicture}
+\caption{De los activos dispersos a la observación explicable. Fuente: elaboración propia.}\label{fig:flujo-valor}
+\end{figure}

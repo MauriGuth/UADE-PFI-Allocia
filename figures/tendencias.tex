@@ -1,0 +1,54 @@
+% Infografía: cuatro tendencias del entorno con sus fuentes. Los valores son
+% percepciones o proyecciones de los informes citados, no hechos futuros.
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\scriptsize,
+  panel/.style={draw=black!40,rounded corners,fill=white,minimum width=7.6cm,minimum height=6.7cm,anchor=north west},
+  ttl/.style={font=\footnotesize\bfseries,anchor=north west},
+  par/.style={anchor=north west,text width=7.1cm},
+  lab/.style={anchor=east,text width=3.1cm,align=right,font=\scriptsize},
+  val/.style={anchor=west,font=\scriptsize},
+  src/.style={anchor=south west,font=\tiny,text=black!65,text width=7.1cm}]
+%% Panel A: IA en el análisis de inversiones
+\node[panel] (A) at (0,0) {};
+\node[ttl] at (0.25,-0.15) {A. IA en el análisis de inversiones};
+\node[par] at (0.25,-0.65) {Usos de IA observados por 30 reguladores de valores (\% que los observa; encuesta de 2024):};
+\begin{scope}[shift={(0.25,0)}]
+\foreach \y/\n/\v/\t in {-1.8/Comunicación con los clientes/66.7/66{,}7, -2.4/Trading algorítmico/63.3/63{,}3, -3.0/Asesoramiento automatizado y gestión de activos/60.0/60{,}0, -3.6/Análisis de sentimiento/43.3/43{,}3, -4.2/Investigación de inversiones/40.0/40{,}0}{
+  \node[lab] at (3.15,\y) {\n};\fill[blue!45] (3.25,\y-0.14) rectangle ({3.25+\v*0.045},\y+0.14);\node[val] at ({3.3+\v*0.045},\y) {\t\,\%};}
+\end{scope}
+\node[par] at (0.25,-4.75) {Riesgos más citados: explicabilidad e interpretabilidad, alucinaciones, dependencia de terceros y sesgo de automatización. Los resultados son indicativos, no exhaustivos.};
+\node[src] at (0.25,-6.55) {Fuente: \parencite{IOSCO2025ai}.};
+%% Panel B: disponibilidad de datos
+\node[panel] (B) at (8.3,0) {};
+\node[ttl] at (8.55,-0.15) {B. Disponibilidad de datos públicos};
+\node[par] at (8.55,-0.65) {Fuentes consultadas por el prototipo y fecha que informan:\\[3pt]
+$\bullet$ Cotizaciones de acciones (Finnhub): fecha de cierre.\\
+$\bullet$ Precios y dominancia cripto (CoinGecko): fecha del proveedor.\\
+$\bullet$ Sentimiento cripto (Alternative.me): valor diario.\\
+$\bullet$ Series macro oficiales (FRED): frecuencia y retraso propios.\\
+$\bullet$ Riesgo geopolítico (GPR): planilla diaria publicada por sus autores.};
+\node[par] at (8.55,-4.2) {Las interfaces públicas entregan datos con fecha, pero imponen cuotas y rechazan símbolos fuera de cobertura. Disponible no equivale a completo ni a tiempo real.};
+\node[src] at (8.55,-6.55) {Fuentes: \parencite{CoinGeckoGlobal,AlternativeFNG,FREDCPI,CaldaraIacoviello2022}.};
+%% Panel C: riesgo geopolítico
+\node[panel] (C) at (0,-7.1) {};
+\node[ttl] at (0.25,-7.25) {C. Monitoreo del riesgo geopolítico};
+\node[par] at (0.25,-7.75) {Riesgo con mayor probabilidad de causar una crisis material en 2026 (\% de expertos encuestados):};
+\begin{scope}[shift={(0.25,-7.1)}]
+\foreach \y/\n/\v/\w in {-1.8/Confrontación geoeconómica/18/3.0, -2.45/Conflicto armado entre Estados/14/2.33, -3.0/Clima extremo/8/1.33, -3.5/Polarización social/7/1.17, -4.0/Desinformación/7/1.17}{
+  \node[lab] at (3.15,\y) {\n};\fill[red!55] (3.25,\y-0.15) rectangle (3.25+\w,\y+0.15);\node[val] at (3.3+\w,\y) {\v\,\%};}
+\end{scope}
+\node[par] at (0.25,-11.5) {El índice GPR mide la intensidad geopolítica a partir de prensa; Allocia consulta en vivo su versión diaria (media móvil de 30 días) y la trata como contexto, no como predicción.};
+\node[src] at (0.25,-13.65) {Fuentes: \parencite{WEF2026risks,CaldaraIacoviello2022}. Percepciones de más de 1\,300 expertos; no son probabilidades calculadas.};
+%% Panel D: señales emergentes
+\node[panel] (D) at (8.3,-7.1) {};
+\node[ttl] at (8.55,-7.25) {D. Señales emergentes};
+\node[par] at (8.55,-7.75) {Compras acumuladas de stablecoins desde economías en desarrollo (miles de millones de USD):};
+\begin{scope}[shift={(8.55,-7.1)}]
+\node[lab] at (3.15,-1.85) {Octubre de 2025 (observado)};\fill[purple!45] (3.25,-2.0) rectangle (3.75,-1.7);\node[val] at (3.8,-1.85) {173};
+\node[lab] at (3.15,-2.6) {Fin de 2028 (proyección)};\pattern[pattern=north east lines,pattern color=purple!70] (3.25,-2.75) rectangle (6.55,-2.45);\draw[purple!70] (3.25,-2.75) rectangle (6.55,-2.45);\node[val] at (6.6,-2.6) {1\,220};
+\end{scope}
+\node[par] at (8.55,-10.25) {Sentimiento cripto (Fear \& Greed), dominancia de BTC y probabilidades implícitas de mercados de predicción se incorporan como contexto, con fuente y fecha. Ninguna anticipa rentabilidad.};
+\node[src] at (8.55,-13.65) {Fuentes: \parencite{WEF2026risks,WolfersZitzewitz2004,AlternativeFNG}. La barra rayada es un escenario del informe, no un dato observado.};
+\end{tikzpicture}
+\caption{Tendencias del entorno según las fuentes citadas. Fuente: elaboración propia.}\label{fig:tendencias}
+\end{figure}

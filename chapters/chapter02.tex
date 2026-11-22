@@ -1,0 +1,138 @@
+\chapter{Antecedentes}\label{chap:antecedentes}
+
+Los antecedentes vinculan los conceptos financieros necesarios para interpretar una cartera con los fundamentos informáticos de la solución. El estado del arte contrasta las capacidades documentadas de herramientas existentes y delimita el aporte esperado del Proyecto.
+
+\section{Marco teórico}\label{sec:marco-teorico}
+
+Los conceptos se agrupan por su función en el análisis: estructura de la cartera, contexto externo, activos digitales, mecanismos de explicación, fundamentos tecnológicos y marco normativo. Cada grupo define los términos que las secciones posteriores utilizan.
+
+\subsection{Análisis de portafolios}\label{subsec:portafolios-diversificacion}
+
+El análisis de una cartera parte de su estructura: qué instrumentos la integran, cómo se reparte el capital entre ellos y cuánto depende el conjunto de unas pocas posiciones. Se presentan, en ese orden, la diversificación en carteras multiactivo, el proceso de asignación de activos, las medidas de concentración y exposición que calcula Allocia y las dos perspectivas de análisis de un instrumento, la fundamental y la técnica.
+
+\subsubsection{Diversificación y carteras multiactivo}\label{subsec:portafolios-multiactivo}
+
+Un portafolio es un conjunto de posiciones en instrumentos de inversión. Una cartera multiactivo combina clases distintas, como acciones, fondos y criptoactivos. La asignación distribuye el capital entre esas clases, mientras que la diversificación busca evitar que el resultado dependa de una única exposición. La teoría de portafolios considera rendimientos, variabilidad y relaciones entre activos \parencite{Markowitz1952}; el análisis de esas relaciones importa más que el recuento de posiciones o sectores \parencite{SECAssetAllocation}. La literatura profesional prefiere el enfoque de portafolio a la selección aislada de títulos, porque la diversificación permite reducir el riesgo sin sacrificar necesariamente el retorno esperado \parencite{CFA2026portfolio}.
+
+Un ETF es un fondo cuyas participaciones se negocian en bolsa. Puede concentrarse en un sector o índice; un ETF en cartera, por lo tanto, no es sinónimo de diversificación. En el contexto argentino, los Certificados de Depósito Argentinos (CEDEARs) representan valores extranjeros, mientras que los American Depositary Receipts (ADRs) son certificados negociados en Estados Unidos que representan acciones de emisores extranjeros. Los fondos comunes de inversión (FCI) reúnen aportes administrados conforme a un reglamento de gestión \parencite{CNVCedears,SECADR,Ley24083}.
+
+Las denominaciones dólar MEP y contado con liquidación (CCL) identifican operatorias bursátiles de conversión a través de valores negociables, con liquidación local o en el exterior, respectivamente. Se mencionan porque forman parte del contexto de los participantes de la encuesta; el prototipo no las implementa. La moneda de denominación de un instrumento, además, es solo una parte de su exposición económica \parencite{BYMAGlosario}.
+
+\subsubsection{Asignación de activos y proceso de gestión}\label{subsec:asignacion-activos}
+
+El proceso de gestión de portafolios comprende la comprensión de las necesidades del inversor, la redacción de una declaración de política de inversión, la asignación de activos, el análisis de títulos, la construcción del portafolio, su monitoreo y rebalanceo, y la medición y el reporte del desempeño \parencite{CFA2026portfolio}. De esas etapas, el Proyecto se concentra en el monitoreo y el reporte de una cartera ya construida.
+
+La asignación estratégica de activos se considera uno de los aspectos más importantes de ese proceso, posiblemente el más importante, y se articula en dos pasos: fijar exposiciones de largo plazo a clases de activos o factores de riesgo y seleccionar los instrumentos que las implementan. La optimización media-varianza, que busca los pesos que maximizan el rendimiento esperado de la cartera para un nivel dado de variabilidad \parencite{Markowitz1952}, presenta limitaciones documentadas, entre ellas su sensibilidad a los datos de entrada y su tendencia a producir asignaciones concentradas en pocos activos. El rebalanceo disciplinado, a su vez, ha tendido a reducir el riesgo, con bandas cuyo ancho depende de los costos de transacción, la tolerancia al riesgo y la correlación de cada activo con el resto de la cartera \parencite{CFA2026allocation}.
+
+\subsubsection{Concentración y exposición}\label{subsec:hhi}
+
+La exposición es la proporción del valor de la cartera asociada a una categoría, como sector, región, moneda o clase de activo. Con pesos $w_i$ cuya suma es uno, el índice de Herfindahl--Hirschman \parencite{Rhoades1993}, que también se emplea para medir la diversificación de carteras \parencite{WoerheidePersson1992}, se calcula en el prototipo como $HHI=10\,000\sum_i w_i^2$. Su máximo es 10\,000 para una sola posición; para $n$ posiciones equiponderadas es $10\,000/n$. El número efectivo de posiciones, que expresa cuántas posiciones de igual peso producirían la misma concentración \parencite{LaaksoTaagepera1979}, es $N_{\mathrm{ef}}=10\,000/HHI$ para carteras de valor positivo.
+
+El índice mide concentración de pesos; la volatilidad, la correlación y la pérdida esperada quedan fuera de su alcance. Los cortes de severidad del prototipo son convenciones operativas del motor, sin validación financiera. Una exposición elevada señala dependencia de una categoría; la decisión de rebalancear corresponde al usuario.
+
+\subsubsection{Análisis fundamental e indicadores técnicos}\label{subsec:analisis-fundamental}\label{subsubsec:indicadores-tecnicos}
+
+El análisis fundamental examina información económica y financiera del emisor, como actividad, ingresos, resultados, endeudamiento y riesgos. Los estados financieros y los informes periódicos permiten contextualizar el precio de una acción \parencite{SEC10K}. En un fondo, también interesa su política de inversión y la composición de sus tenencias. Esta perspectiva difiere de la clasificación estática por sector o región, que es lo que aporta el catálogo del prototipo, sin llegar a una valuación fundamental completa.
+
+Los indicadores técnicos, en cambio, se calculan sobre la serie histórica de precios de un instrumento \parencite{Murphy1999}. Una media móvil simple (SMA) promedia el precio de cierre de las últimas jornadas; la media móvil exponencial pondera más los datos recientes. El índice de fuerza relativa (RSI) compara la magnitud de las subas y las bajas recientes \parencite{Wilder1978}. El indicador de convergencia y divergencia de medias móviles (MACD) es la diferencia entre dos medias móviles exponenciales de distinto plazo \parencite{Appel2005}. Las bandas de Bollinger son una envolvente de dos desvíos estándar alrededor de una media móvil \parencite{Bollinger2001}, y la volatilidad describe la dispersión de los rendimientos. Todos resumen el comportamiento pasado del precio: su lectura exige una serie suficiente y actualizada, y ninguno anticipa por sí solo un rendimiento futuro. En Allocia se utilizan solo como contexto de los informes por activo, con su fecha y su fuente.
+
+\subsection{Contexto externo}\label{subsec:riesgo-geopolitico}
+
+El riesgo geopolítico comprende amenazas y hechos asociados con guerras, terrorismo y tensiones entre Estados. El Geopolitical Risk Index (GPR) aproxima su intensidad según la presencia de contenidos relacionados en la prensa. Es un índice de intensidad, distinto de una probabilidad de pérdida para una cartera individual \parencite{CaldaraIacoviello2022}.
+
+El contexto macroeconómico incluye inflación, actividad, tasas de interés y condiciones financieras. La política monetaria influye sobre las condiciones de financiamiento y las decisiones de gasto e inversión \parencite{FedMonetary}. La relación entre un evento de contexto y la exposición de una cartera se plantea como hipótesis de interpretación, no como estimación causal del efecto sobre los precios.
+
+\subsection{Activos digitales y señales emergentes}\label{subsec:cripto}
+
+Los activos digitales incorporan a la cartera instrumentos cuyas reglas de emisión, custodia y valuación difieren de las de los activos tradicionales, y su ecosistema produce indicadores propios. Primero se definen los instrumentos y servicios que el Proyecto considera; después, los indicadores y los mercados de predicción que se utilizan como señales.
+
+\subsubsection{Criptomonedas, stablecoins y finanzas descentralizadas}
+
+Una criptomoneda es un activo digital cuya titularidad y transferencias se registran con mecanismos criptográficos en una red de registro distribuido. En redes como Bitcoin, la validación no depende de un emisor central, aunque esa propiedad varía entre tokens: algunas stablecoins dependen de emisores y reservas centralizadas. Una stablecoin busca mantener una referencia de valor y aun así puede perder la paridad. Los tokens de gobernanza otorgan facultades de participación en decisiones de un protocolo \parencite{Schar2021,FedBlockchain}.
+
+Las finanzas descentralizadas (DeFi) utilizan contratos inteligentes para ejecutar servicios como intercambio, préstamos o provisión de liquidez. Los datos \textit{on-chain} son registros observables en la cadena de bloques. El valor total bloqueado (TVL) aproxima el valor de los activos depositados en contratos de protocolos; su variación puede reflejar tanto entradas o salidas como cambios de precio. Web3 designa aquí, en sentido amplio, las aplicaciones basadas en estas infraestructuras \parencite{Schar2021}.
+
+\subsubsection{Indicadores y mercados de predicción}\label{subsec:senales-emergentes}\label{subsec:prediction-markets}
+
+El Proyecto denomina señales emergentes a indicadores de actividad, composición o expectativas obtenidos del ecosistema cripto y de mercados de eventos. La dominancia de Bitcoin (BTC) representa su participación en la capitalización del universo de criptoactivos considerado por un proveedor. Fear \& Greed es un indicador compuesto de sentimiento, cuya lectura depende de la metodología del proveedor. Ninguno sirve por sí solo para proyectar una rentabilidad futura \parencite{CoinGeckoGlobal,AlternativeFNG}.
+
+Los mercados de predicción negocian contratos cuyo pago depende de un evento. Sus precios agregan expectativas de los participantes y, bajo ciertas condiciones, se interpretan como probabilidades implícitas. La liquidez, los incentivos y las reglas de resolución limitan esa interpretación \parencite{WolfersZitzewitz2004}.
+
+\subsection{Fundamentos informáticos de la explicación}\label{subsec:ia-explicable}
+
+La IA explicable estudia cómo hacer comprensibles los resultados de un sistema y las razones que los sustentan. La interpretación debe corresponder al mecanismo que produce la salida, ser significativa para el destinatario y expresar los límites del sistema \parencite{Arrieta2020,NIST8312}. En la gestión de riesgos de IA se distinguen la transparencia (qué ocurrió), la explicabilidad (cómo se produjo la salida) y la interpretabilidad (por qué se tomó una decisión y qué significa en su contexto para el usuario); los sistemas explicables se depuran, documentan y auditan con mayor facilidad \parencite{NIST2023airmf}. Los reguladores de valores identifican la dificultad de explicar los modelos de lenguaje, sus respuestas incorrectas pero convincentes y la dependencia de proveedores externos entre los riesgos más citados del uso de IA en servicios de inversión \parencite{IOSCO2025ai}.
+
+Un motor de reglas representa conocimiento como condiciones y consecuencias \parencite{HayesRoth1985}. Por ejemplo, si el peso de una posición supera un umbral, genera una observación y registra el peso y el umbral utilizados. La regla puede inspeccionarse directamente. El motor no aprende parámetros de ejemplos y es distinto de un modelo generativo. La explicación se apoya en esa inspección y no en atribuir razonamiento a un texto generado; el texto de un modelo de lenguaje carece de esa propiedad y necesita controles adicionales, como la validación de esquema y de citas.
+
+Una observación explicable distingue datos, reglas e interpretación, e informa cuando una entrada es de demostración, está desactualizada o falta. Que una explicación sea visible es independiente de que la regla sea financieramente válida: la corrección del cálculo y la utilidad de la interpretación se evalúan por separado.
+
+\subsection{Fundamentos tecnológicos}\label{subsec:fundamentos-tecnologicos}
+
+Una interfaz de programación de aplicaciones (API) de estilo REST expone recursos identificados por direcciones y los intercambia en representaciones como JSON, sin guardar estado entre solicitudes \parencite{Fielding2000}. En un modelo relacional los datos se organizan en tablas vinculadas por claves \parencite{Codd1970}. Una clave foránea es un atributo cuyo valor debe coincidir con la clave de un registro existente en otra tabla. La integridad referencial es la garantía de que no existan referencias a registros inexistentes: el gestor de base de datos la mantiene rechazando las operaciones que la violarían o aplicando una acción declarada, como la eliminación en cascada, que borra los registros dependientes cuando se elimina el registro referenciado. Un token web JSON (JWT) es una credencial firmada que transporta afirmaciones, como el emisor, la audiencia y el vencimiento, y cuya firma puede verificarse sin consultar al emisor \parencite{RFC7519}.
+
+La protección de las contraseñas se basa en funciones de resumen (\textit{hash}) adaptativas, que incorporan un valor aleatorio propio de cada contraseña (sal) y un costo configurable que encarece los intentos de adivinación; bcrypt es un ejemplo \parencite{ProvosMazieres1999}. El cifrado autenticado AES-GCM protege la confidencialidad de un dato y detecta su alteración con una etiqueta de autenticación, y necesita un vector de inicialización distinto en cada cifrado \parencite{Dworkin2007}. Una caché guarda una copia temporal de una respuesta durante un tiempo de vida (TTL); ese plazo define cuánto tiempo se reutiliza la copia, con independencia de la antigüedad del dato original.
+
+Los modelos de lenguaje de gran escala se basan en la arquitectura Transformer \parencite{Vaswani2017} y generan texto según el contexto que reciben. Pueden producir contenido erróneo expresado con seguridad, denominado confabulación, y son vulnerables a la inyección de instrucciones, en la que un texto externo procesado por el modelo contiene órdenes que alteran su comportamiento \parencite{NIST2024genai,Greshake2023indirect}.
+
+\subsection{Marco normativo}\label{subsec:marco-normativo}
+
+Dos regímenes argentinos condicionan una herramienta que trata datos de personas y presenta información sobre inversiones: el de protección de datos personales y el del mercado de capitales. La Ley 25.326 alcanza a los datos que identifican o permiten identificar a una persona, como el nombre, el correo y las posiciones vinculadas a una cuenta. Exige que los datos sean adecuados, pertinentes y no excesivos respecto de la finalidad (artículo 4), consentimiento libre, expreso e informado (artículo 5), información previa al titular (artículo 6), medidas técnicas y organizativas de seguridad y confidencialidad (artículos 9 y 10), condiciones para la transferencia internacional (artículo 12) y los derechos de acceso, rectificación y supresión (artículos 14 y 16); prevé además la inscripción de las bases de datos ante la autoridad de control (artículos 3 y 21) \parencite{Ley25326}. Las tenencias de inversión requieren confidencialidad, aunque no integran la categoría legal de datos sensibles del artículo 2.
+
+La Ley 26.831 establece como principios la protección de los inversores y la prevención de abusos, y faculta a la Comisión Nacional de Valores (CNV) a fijar normas de registro y acreditación para quienes brindan asesoramiento al público inversor \parencite{Ley26831}. Las Normas de la CNV reservan el asesoramiento habitual y profesional, la gestión de órdenes y la administración de carteras a agentes inscriptos, y les exigen conocer el perfil de riesgo del cliente, comunicar en lenguaje comprensible y verificar la congruencia entre el consejo y ese perfil \parencite{CNV2018rg731}.
+
+\section{Estado del arte}\label{sec:estado-del-arte}
+
+El relevamiento compara herramientas de análisis de cartera, seguimiento patrimonial y analítica cripto sobre la base de su documentación pública, sin auditar cada producto. Cuando una función no aparece en las fuentes consultadas, se registra como no documentada.
+
+\subsection{Herramientas y soluciones existentes}\label{sec:soluciones-existentes}
+
+Morningstar Portfolio X-Ray presenta la distribución por activos, sectores, regiones y estilos, y su documentación describe funciones de interpretación del portafolio, que aquí se registran tal como aparecen, sin asumir que provengan de IA generativa \parencite{MorningstarXRay}. Empower ofrece agregación y seguimiento patrimonial, y Sharesight se centra en rendimiento, dividendos e informes de inversiones \parencite{EmpowerTools,SharesightFeatures}.
+
+Kubera integra diferentes clases de activos, cuentas y posiciones cripto y DeFi en una vista patrimonial \parencite{KuberaFeatures}. CoinStats concentra sus funciones en carteras y billeteras cripto, mientras que DeFiLlama publica métricas de protocolos, entre ellas TVL \parencite{CoinStatsFeatures,DefiLlamaMethodology}. Estas diferencias de propósito pesan en la comparación: una fuente de datos de protocolos y un gestor de carteras persiguen objetivos distintos.
+
+Polymarket es una plataforma de mercados de predicción basada en infraestructura blockchain. Un estudio de la elección presidencial estadounidense de 2024 examina su actividad y organización de mercado \parencite{TsangYang2026}. Esa referencia es un preprint, por lo que se usa solo para ese caso y se complementa con literatura revisada por pares sobre mercados de predicción \parencite{WolfersZitzewitz2004}.
+
+La Tabla~\ref{tab:comparativa-soa} resume la cobertura documentada de cada herramienta y, en la última fila, la de Allocia.
+\input{tables/comparativa_soa.tex}
+
+\subsection{Limitaciones y oportunidad de integración}\label{sec:limitaciones-soluciones}
+
+Las herramientas relevadas tienen propósitos distintos: profundizar el análisis de activos tradicionales, consolidar patrimonio o describir el ecosistema cripto. La comparación por herramienta, según su documentación pública, es la siguiente:
+\begin{itemize}
+\item \textbf{Morningstar Portfolio X-Ray} resuelve la descomposición de carteras tradicionales por activos, sectores, regiones y estilos; no documenta criptoactivos ni contexto geopolítico. Allocia incorpora criptoactivos y stablecoins en la misma composición.
+\item \textbf{Empower} y \textbf{Sharesight} resuelven la agregación patrimonial y el rendimiento con dividendos e informes; su documentación omite señales externas y explicación de observaciones. Allocia relaciona cada observación con reglas y evidencia.
+\item \textbf{Kubera} resuelve la vista patrimonial unificada de activos tradicionales, cripto y DeFi, sin mención de contexto geopolítico ni de explicabilidad. Allocia agrega contexto externo con procedencia y fecha.
+\item \textbf{CoinStats} y \textbf{DeFiLlama} resuelven el seguimiento cripto y las métricas de protocolos; no cubren activos tradicionales ni la cartera combinada. Allocia parte de la cartera multiactivo y usa esas métricas como señales.
+\end{itemize}
+El diferencial de diseño de Allocia es un flujo único desde la composición multiactivo hasta la observación con evidencia, en español y orientado a instrumentos accesibles desde la Argentina. Las fuentes consultadas no documentan un flujo que una composición multiactivo, contexto geopolítico y señales de eventos con la evidencia de cada observación. Esa ausencia delimita una oportunidad de diseño; la afirmación se limita a la documentación consultada.
+
+La accesibilidad también depende de factores que exceden la disponibilidad de datos: comprensión de las métricas, carga manual, cobertura de instrumentos y costo de uso. El Proyecto prioriza un flujo acotado y explicaciones visibles para el usuario minorista, cuya necesidad concreta se examina en la investigación con usuarios.
+
+\subsection{Análisis de las fuerzas competitivas}\label{subsec:porter}
+
+El modelo de las cinco fuerzas organiza una lectura cualitativa del entorno \parencite{Porter1979}. La Figura~\ref{fig:porter} resume una valoración propia y cualitativa, ajena a cualquier medición de cuotas de mercado.
+\input{figures/porter.tex}
+
+La disponibilidad de herramientas de desarrollo reduce las barreras de entrada, aunque integrar datos heterogéneos demanda mantenimiento. Los proveedores pueden modificar las condiciones de acceso, y los usuarios pueden recurrir a planillas y aplicaciones de intermediarios como sustitutos. La competencia se da tanto en agregación patrimonial como en funciones de análisis. Estas condiciones justifican un diseño modular, el registro de la procedencia de cada fuente y un alcance de producto acotado.
+
+\subsection{Tendencias del entorno}\label{subsec:tendencias}
+
+La Figura~\ref{fig:tendencias} reúne cuatro tendencias que enmarcan el Proyecto: la incorporación de IA en el análisis de inversiones, la disponibilidad de datos públicos con fecha, el monitoreo del riesgo geopolítico y las señales emergentes del ecosistema cripto. Cada panel indica su fuente. Los valores corresponden a percepciones de expertos o a proyecciones, es decir, a escenarios y no a hechos futuros.
+\input{figures/tendencias.tex}
+
+Los usos de IA que los reguladores de valores más observan en los participantes del mercado son la comunicación con clientes, el trading algorítmico y el asesoramiento automatizado de inversiones (\textit{robo-advising}) junto con la gestión de activos; siguen el análisis de sentimiento y la investigación de inversiones (panel A). Algunos reguladores señalan un desplazamiento hacia un asesoramiento más personalizado para inversores minoristas, con la posible incorporación de interfaces conversacionales. También advierten sobre el sesgo de automatización: la IA generativa puede producir respuestas convincentes que llevan a confiar indebidamente en su exactitud y a seguir sus consejos \parencite{IOSCO2025ai}. Un experimento con inversores minoristas no halla diferencias estadísticamente significativas en el grado en que siguen una sugerencia según provenga de una persona, de una herramienta de IA o de una combinación de ambas \parencite{OSC2024ai}. Esa advertencia motiva que Allocia presente las observaciones como apoyo a la decisión, con su regla y su evidencia visibles, y deje la decisión en el usuario.
+
+En el plano geopolítico, la confrontación geoeconómica es el riesgo que más expertos consideran capaz de desencadenar una crisis material en 2026, seguida por el conflicto armado entre Estados (panel C); los riesgos económicos, entre ellos la recesión, la inflación y el estallido de burbujas de activos, registran los mayores ascensos en el horizonte de dos años. Para la Argentina, los ejecutivos consultados ubican entre los cinco riesgos principales la insuficiencia de servicios públicos, la falta de oportunidades económicas, la recesión, la desigualdad y la polarización social \parencite{WEF2026risks}. En el ecosistema cripto, los flujos hacia stablecoins atadas a monedas extranjeras pueden debilitar los sistemas financieros de economías emergentes con monedas débiles, y las compras acumuladas desde economías en desarrollo se multiplicarían por siete entre octubre de 2025 y fines de 2028 según la proyección del panel D \parencite{WEF2026risks}.
+
+Los estudios académicos sobre asesoramiento automatizado muestran efectos concretos y acotados. Un estudio sobre un optimizador de carteras de media-varianza que un bróker de la India ofrece a sus clientes encuentra efectos opuestos según el punto de partida: aumenta la diversificación y reduce la volatilidad de quienes tenían menos de cinco acciones, casi no modifica la diversificación de quienes tenían más de diez y los lleva a operar más, y reduce, sin eliminarlos, sesgos de comportamiento como el efecto disposición, que consiste en vender pronto los activos que subieron y conservar los que bajaron, y la persecución de tendencias, que lleva a comprar lo que subió recientemente \parencite{DAcunto2019robo}. Ese resultado respalda el interés de apoyar la diversificación del inversor minorista, pero corresponde a una herramienta que propone pesos óptimos y simplifica la ejecución de operaciones, algo que Allocia evita (Subsubsección~\ref{subsec:portafolios-diversificacion}): describe la composición y deja la decisión en la persona. Extender esos efectos a Allocia depende de evaluarla con usuarios.
+
+\subsection{Conclusión del estado del arte}\label{sec:diferenciacion}
+
+El aporte esperado de Allocia es relacionar la composición de una cartera con el contexto externo y presentar el fundamento de cada observación en un mismo flujo. La propuesta combina capacidades que el relevamiento encuentra repartidas entre herramientas con objetivos diferentes. Como la comparación documental, por sí sola, no basta para afirmar superioridad financiera ni utilidad del prototipo, la contribución se evalúa con tres criterios:
+\begin{itemize}
+\item la corrección de los cálculos de composición, exposición y concentración;
+\item la posibilidad de seguir cada regla hasta su evidencia;
+\item la comprensión de las explicaciones por parte de las personas usuarias.
+\end{itemize}
+
+Frente al asesoramiento automatizado que describen algunos reguladores \parencite{IOSCO2025ai}, Allocia se ubica entre las herramientas de análisis con la persona en el circuito de decisión. El motor de reglas explica, el modelo de lenguaje redacta sobre fuentes citadas y ninguno de los dos opera ni recomienda comprar o vender.

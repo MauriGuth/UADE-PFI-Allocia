@@ -1,0 +1,148 @@
+{
+  "executedAt": "2026-10-13T12:35:44.183Z",
+  "node": "v22.22.0",
+  "platform": "linux",
+  "arch": "x64",
+  "os": "6.18.44-fc-v114",
+  "scope": "Servicios reales con repositorios, caché y fetch simulados; sin HTTP, PostgreSQL, Redis ni interfaz.",
+  "sourceSha256": {
+    "src/portfolio/portfolio.service.ts": "6ef3babdb7afe1b80fd2a063975b6cb3fe444479c81ac00822dc9a624cfc3c68",
+    "src/analysis/analysis.service.ts": "6c29861ddfb938a24d72c4a3f376f869007823bb8c3446fafde830c556c9f9b1",
+    "src/observations/observations.service.ts": "756222893495a54c6c2f2bd875b21adfee462e8cf545ef72f44ddcace0ec1818",
+    "src/signals/signals.service.ts": "b84ff5f53558928b331ae9304f04918f52fa23632f70cdfa2df55e0658733584",
+    "src/signals/signals.seed.ts": "022c2fd1b8c682caa12a352803daf26f1104d1d72b21a975cab488a47d844a3e",
+    "src/auth/auth.service.ts": "ab6aafd650d22bb6f927303b56bbebee1836253102fc0d02681fe2d78ce9eae2",
+    "src/auth/auth.guard.ts": "4264df9712c14287c0fa40c94815051d18a99bd872d0d4263b9f42345a275c64"
+  },
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "results": [
+    {
+      "id": "CP01",
+      "requirement": "RF4/RNF2",
+      "title": "Cartera vacía: métricas finitas y sin posición dominante",
+      "status": "PASS"
+    },
+    {
+      "id": "CP02",
+      "requirement": "RF4/RNF2",
+      "title": "Una posición: HHI 10000 y número efectivo 1",
+      "status": "PASS"
+    },
+    {
+      "id": "CP03",
+      "requirement": "RF3/RF4/RNF2",
+      "title": "Valores 20/60/20: pesos, grupos, HHI 4400",
+      "status": "PASS"
+    },
+    {
+      "id": "CP04",
+      "requirement": "RF4",
+      "title": "Cuatro pesos iguales: HHI 2500 moderado",
+      "status": "PASS"
+    },
+    {
+      "id": "CP05",
+      "requirement": "RF4",
+      "title": "Diez pesos iguales: HHI 1000 bajo",
+      "status": "PASS"
+    },
+    {
+      "id": "CP06",
+      "requirement": "RF2",
+      "title": "CRUD y acumulación del mismo ticker",
+      "status": "PASS"
+    },
+    {
+      "id": "CP07",
+      "requirement": "RF2",
+      "title": "Ticker desconocido y cantidad no positiva rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "CP08",
+      "requirement": "RNF4",
+      "title": "Dos propietarios: lecturas y modificaciones aisladas en servicio",
+      "status": "PASS"
+    },
+    {
+      "id": "CP09",
+      "requirement": "RF1/RNF5",
+      "title": "Registro normalizado, hash bcrypt y login",
+      "status": "PASS"
+    },
+    {
+      "id": "CP10",
+      "requirement": "RNF4",
+      "title": "Guard: sin token, inválido y vencido rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "CP11",
+      "requirement": "RF1",
+      "title": "Guard: token válido identifica al propietario",
+      "status": "PASS"
+    },
+    {
+      "id": "CP12",
+      "requirement": "RF6",
+      "title": "Sin posiciones no se generan observaciones",
+      "status": "PASS"
+    },
+    {
+      "id": "CP13",
+      "requirement": "RF6",
+      "title": "Umbral de posición: 25 % no dispara; 26 % dispara",
+      "status": "PASS"
+    },
+    {
+      "id": "CP14",
+      "requirement": "RF6",
+      "title": "Exposición cripto: límite 25 % y severidad sobre 40 %",
+      "status": "PASS"
+    },
+    {
+      "id": "CP15",
+      "requirement": "RF8",
+      "title": "No se generan rendimientos supuestos sin evidencia",
+      "status": "PASS"
+    },
+    {
+      "id": "CP16",
+      "requirement": "RF6",
+      "title": "Todas las observaciones generadas explicitan una regla",
+      "status": "PASS"
+    },
+    {
+      "id": "CP17",
+      "requirement": "RF5/RNF7",
+      "title": "Fallo total de proveedores conserva datos locales",
+      "status": "PASS"
+    },
+    {
+      "id": "CP18",
+      "requirement": "RF5",
+      "title": "Éxito de ambos proveedores actualiza dos métricas cripto",
+      "status": "PASS"
+    },
+    {
+      "id": "CP19",
+      "requirement": "RF5/RNF7",
+      "title": "Fallo parcial no debe etiquetar todo el conjunto como en vivo",
+      "status": "PASS"
+    },
+    {
+      "id": "CP20",
+      "requirement": "RF5/RNF7",
+      "title": "Fear & Greed fuera de 0–100 debe descartarse",
+      "status": "PASS"
+    },
+    {
+      "id": "CP21",
+      "requirement": "RNF7",
+      "title": "Segunda consulta usa caché sin nuevas llamadas externas",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+% Infografía: recorrido de la información desde las fuentes externas hasta el usuario,
+% con el estado de cada componente en el prototipo.
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  src/.style={draw,rounded corners,align=left,text width=3.4cm,inner sep=3pt,minimum height=0.55cm},
+  live/.style={src,fill=green!10},
+  demo/.style={src,fill=orange!12},
+  plan/.style={src,fill=black!6,draw=black!50,dashed},
+  unv/.style={src,fill=yellow!18},
+  stage/.style={draw,rounded corners,align=center,text width=3.6cm,inner sep=4pt,minimum height=1.05cm,fill=blue!5},
+  arr/.style={-{Stealth},thick}]
+% Columna 1: fuentes externas
+\node[live] (f1) {Finnhub: cotizaciones y noticias de acciones};
+\node[live,below=0.18cm of f1] (f2) {CoinGecko: precios y dominancia BTC};
+\node[live,below=0.18cm of f2] (f3) {Alternative.me: Fear \& Greed};
+\node[live,below=0.18cm of f3] (f4) {FRED: series macroeconómicas};
+\node[live,below=0.18cm of f4] (f5b) {DefiLlama (TVL) y Polymarket (precios implícitos): consulta registrada el 22/10};
+\node[live,below=0.18cm of f5b] (f5) {Caldara e Iacoviello: índice GPR diario (planilla pública)};
+\node[plan,below=0.18cm of f5] (f6) {Notificaciones push en el navegador: previstas};
+\node[above=0.25cm of f1,font=\footnotesize\bfseries] {Fuentes externas};
+% Columna 2: API
+\node[stage,right=1.0cm of f2,yshift=-0.2cm] (a1) {\textbf{Normalización y procedencia}\\fuente, fecha del dato, fecha de consulta, estado en vivo / demostración};
+\node[stage,below=0.3cm of a1] (a2) {\textbf{Caché de señales}\\Redis, 15 minutos; no prolonga la vigencia del dato};
+\node[stage,below=0.3cm of a2,fill=green!8] (a3) {\textbf{Motor de reglas}\\determinista: pesos, HHI, umbrales de la Tabla~\ref{tab:umbrales}};
+\node[stage,below=0.3cm of a3,fill=purple!8] (a4) {\textbf{Capa de informes con modelo de lenguaje}\\snapshot público, sin cartera; esquema y citas validados};
+\node[above=0.25cm of a1,font=\footnotesize\bfseries] {API (NestJS)};
+% Columna 3: clientes y usuario
+\node[stage,right=1.0cm of a2,text width=2.6cm] (c1) {\textbf{Cliente web}\\computadora o navegador del teléfono};
+\node[stage,below=0.3cm of c1,text width=2.6cm] (c2) {\textbf{Aplicación móvil}\\iOS y Android, misma cuenta};
+\node[draw,rounded corners,align=center,text width=2.6cm,inner sep=4pt,fill=blue!12,below=0.5cm of c2] (u) {\textbf{Usuario}\\observación, evidencia y escenarios con fuentes};
+\node[above=0.25cm of c1,font=\footnotesize\bfseries] {Presentación};
+% Flechas
+\foreach \f in {f1,f2,f3,f4,f5b,f5}\draw[arr,black!60] (\f.east)--(a1.west);
+\draw[arr,black!40,dashed] (f6.east)--(a1.west);
+\draw[arr] (a1)--(a2);\draw[arr] (a2)--(a3);\draw[arr] (a1.east) to[out=0,in=180] (c1.west);
+\draw[arr] (a3.east) to[out=0,in=180] (c2.west);\draw[arr] (a4.east) to[out=0,in=180] (c2.west);
+\draw[arr] (a3.east) to[out=0,in=180] (c1.west);\draw[arr] (a4.east) to[out=0,in=180] (c1.west);
+\draw[arr] (c1)--(c2);\draw[arr] (c2)--(u);
+\draw[arr] (a1.south east) to[out=-60,in=120] (a4.north east);
+% Leyenda
+\node[demo,text width=2.1cm,below=0.55cm of a4] (l2) {Demostración local (solo desarrollo)};
+\node[live,text width=2.1cm,left=0.15cm of l2] (l1) {Consulta externa verificada};
+\node[plan,text width=2.1cm,right=0.15cm of l2] (l3) {Previsto, no implementado};
+\end{tikzpicture}
+\caption{Recorrido de la información desde las fuentes hasta el usuario. Fuente: elaboración propia.}\label{fig:flujo-informacion}
+\end{figure}

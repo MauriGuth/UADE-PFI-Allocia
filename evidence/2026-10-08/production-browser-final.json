@@ -1,0 +1,54 @@
+{
+  "executedAt": "2026-10-09T00:53:03.326Z",
+  "scope": "Automatización técnica Chromium contra Next.js, NestJS, PostgreSQL y Redis; no participantes humanos",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "id": "UI01",
+      "title": "Ruta privada redirige al acceso",
+      "status": "PASS"
+    },
+    {
+      "id": "UI02",
+      "title": "Registro con consentimiento abre cartera vacía",
+      "status": "PASS"
+    },
+    {
+      "id": "UI03",
+      "title": "Carga, edición y persistencia tras recargar",
+      "status": "PASS"
+    },
+    {
+      "id": "UI04",
+      "title": "Dashboard, explicación con regla y fuente, escenarios",
+      "status": "PASS"
+    },
+    {
+      "id": "UI05",
+      "title": "Vista web de 390 px sin desborde horizontal",
+      "status": "PASS"
+    },
+    {
+      "id": "UI06",
+      "title": "Eliminar posición desde pantalla",
+      "status": "PASS"
+    },
+    {
+      "id": "UI07",
+      "title": "Cerrar sesión, error de login y nuevo acceso",
+      "status": "PASS"
+    },
+    {
+      "id": "UI08",
+      "title": "Baja confirmada, sesión cerrada y acceso posterior rechazado",
+      "status": "PASS"
+    },
+    {
+      "id": "UI09",
+      "title": "Sin errores JavaScript durante el recorrido",
+      "status": "PASS"
+    }
+  ]
+}

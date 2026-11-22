@@ -1,0 +1,126 @@
+{
+  "executedAt": "2026-10-09T13:30:20.076Z",
+  "node": "v24.11.1",
+  "platform": "darwin",
+  "arch": "arm64",
+  "scope": "Servicios reales con repositorios, caché y fetch simulados; sin HTTP, PostgreSQL, Redis ni interfaz.",
+  "sourceSha256": {
+    "src/portfolio/portfolio.service.ts": "a15a94e190bf1585789620659cd8844d3601b4aca211c8a356e3c023730ca4c9",
+    "src/analysis/analysis.service.ts": "01f315de2a1df9847430554afa7a9b2b0d66efcb3c3d46e8a781d4d2ca6f36db",
+    "src/observations/observations.service.ts": "3aecadddbb9b57c271aa937b98289d79ab4ac9fac441c68c0bc799e00478d677",
+    "src/signals/signals.service.ts": "168c0c61cf84e3b475bd9b408bada2b154d088e0459f4a95f7d2029e27a01a06",
+    "src/signals/signals.seed.ts": "022c2fd1b8c682caa12a352803daf26f1104d1d72b21a975cab488a47d844a3e",
+    "src/auth/auth.service.ts": "56bc90d338627648edf8bd529b266235dc654cdaca5dcc1bccc9999e6a37980e",
+    "src/auth/auth.guard.ts": "4264df9712c14287c0fa40c94815051d18a99bd872d0d4263b9f42345a275c64"
+  },
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "results": [
+    {
+      "id": "CP01",
+      "title": "Cartera vacía: métricas finitas y sin posición dominante",
+      "status": "PASS"
+    },
+    {
+      "id": "CP02",
+      "title": "Una posición: HHI 10000 y número efectivo 1",
+      "status": "PASS"
+    },
+    {
+      "id": "CP03",
+      "title": "Valores 20/60/20: pesos, grupos, HHI 4400",
+      "status": "PASS"
+    },
+    {
+      "id": "CP04",
+      "title": "Cuatro pesos iguales: HHI 2500 moderado",
+      "status": "PASS"
+    },
+    {
+      "id": "CP05",
+      "title": "Diez pesos iguales: HHI 1000 bajo",
+      "status": "PASS"
+    },
+    {
+      "id": "CP06",
+      "title": "CRUD y acumulación del mismo ticker",
+      "status": "PASS"
+    },
+    {
+      "id": "CP07",
+      "title": "Ticker desconocido y cantidad no positiva rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "CP08",
+      "title": "Dos propietarios: lecturas y modificaciones aisladas en servicio",
+      "status": "PASS"
+    },
+    {
+      "id": "CP09",
+      "title": "Registro normalizado, hash bcrypt y login",
+      "status": "PASS"
+    },
+    {
+      "id": "CP10",
+      "title": "Guard: sin token, inválido y vencido rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "CP11",
+      "title": "Guard: token válido identifica al propietario",
+      "status": "PASS"
+    },
+    {
+      "id": "CP12",
+      "title": "Sin posiciones no se generan observaciones",
+      "status": "PASS"
+    },
+    {
+      "id": "CP13",
+      "title": "Umbral de posición: 25 % no dispara; 26 % dispara",
+      "status": "PASS"
+    },
+    {
+      "id": "CP14",
+      "title": "Exposición cripto: límite 25 % y severidad sobre 40 %",
+      "status": "PASS"
+    },
+    {
+      "id": "CP15",
+      "title": "Escenario 50 % acción y 50 % cripto: 23,5/6,5/-31,5 %",
+      "status": "PASS"
+    },
+    {
+      "id": "CP16",
+      "title": "Todas las observaciones generadas explicitan una regla",
+      "status": "PASS"
+    },
+    {
+      "id": "CP17",
+      "title": "Fallo total de proveedores conserva datos locales",
+      "status": "PASS"
+    },
+    {
+      "id": "CP18",
+      "title": "Éxito de ambos proveedores actualiza dos métricas cripto",
+      "status": "PASS"
+    },
+    {
+      "id": "CP19",
+      "title": "Fallo parcial no debe etiquetar todo el conjunto como en vivo",
+      "status": "PASS"
+    },
+    {
+      "id": "CP20",
+      "title": "Fear & Greed fuera de 0–100 debe descartarse",
+      "status": "PASS"
+    },
+    {
+      "id": "CP21",
+      "title": "Segunda consulta usa caché sin nuevas llamadas externas",
+      "status": "PASS"
+    }
+  ]
+}
