@@ -1,0 +1,24 @@
+{
+  "builds": [
+    {
+      "platform": "android",
+      "id": "8a312f48-efc5-4c3e-9c65-cd338bf9e1a4",
+      "status": "FINISHED",
+      "gitCommitHash": "d58c66599cd2f839ea40f4d7e83ce17506bb89c4",
+      "completedAt": "2026-10-10T23:42:14.516Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/8a312f48-efc5-4c3e-9c65-cd338bf9e1a4",
+      "artifactHttpStatus": 200
+    },
+    {
+      "platform": "ios",
+      "id": "3e5deb95-3fd9-47ae-9bf5-3f89b19fba20",
+      "status": "FINISHED",
+      "gitCommitHash": "d58c66599cd2f839ea40f4d7e83ce17506bb89c4",
+      "completedAt": "2026-10-10T23:38:25.246Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/3e5deb95-3fd9-47ae-9bf5-3f89b19fba20",
+      "artifactHttpStatus": 200
+    }
+  ],
+  "apiCommit": "2174898611fefa93a048635d512a3199627375da",
+  "note": "Mobile source d58c665. Subsequent API-only crypto specificity patch preserves the contract. Physical acceptance of this opportunity feature pending."
+}

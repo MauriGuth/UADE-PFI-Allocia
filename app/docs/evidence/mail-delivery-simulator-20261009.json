@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-09T16:25:01.591Z",
+  "origin": "https://allocia.com.ar",
+  "scope": "Resend real con destinatario simulador; no confirma recepción en casillas o teléfonos personales",
+  "results": [
+    {
+      "label": "Cuenta temporal de simulación creada",
+      "pass": true
+    },
+    {
+      "label": "Solicitud de verificación aceptada",
+      "pass": true
+    },
+    {
+      "label": "Enlace /verify-email usa dominio propio y token en fragmento",
+      "pass": true
+    },
+    {
+      "label": "Remitente verificado de Allocia",
+      "pass": true
+    },
+    {
+      "label": "Verificación consume enlace",
+      "pass": true
+    },
+    {
+      "label": "Enlace de verificación no reutilizable",
+      "pass": true
+    },
+    {
+      "label": "Solicitud de recuperación aceptada",
+      "pass": true
+    },
+    {
+      "label": "Enlace /reset-password usa dominio propio y token en fragmento",
+      "pass": true
+    },
+    {
+      "label": "Remitente verificado de Allocia",
+      "pass": true
+    },
+    {
+      "label": "Cambio de contraseña válido",
+      "pass": true
+    },
+    {
+      "label": "Sesión anterior revocada",
+      "pass": true
+    },
+    {
+      "label": "Contraseña anterior rechazada",
+      "pass": true
+    },
+    {
+      "label": "Nueva contraseña permite acceso",
+      "pass": true
+    },
+    {
+      "label": "Enlace de recuperación no reutilizable",
+      "pass": true
+    },
+    {
+      "label": "Cuenta temporal eliminada",
+      "pass": true
+    }
+  ]
+}

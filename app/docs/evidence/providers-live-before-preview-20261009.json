@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-09T14:38:35.456Z",
+  "databaseAccess": false,
+  "notificationsSent": false,
+  "results": [
+    {
+      "ticker": "AAPL",
+      "quoteAvailable": true,
+      "quoteAsOf": "2026-10-09T14:37:43.000Z",
+      "sourceCount": 24,
+      "sourceScopes": [
+        "global",
+        "asset"
+      ],
+      "missing": [],
+      "generation": "analysis",
+      "model": "claude-sonnet-5-5",
+      "usage": {
+        "inputTokens": 8094,
+        "outputTokens": 1542
+      },
+      "groundedFactCount": 6,
+      "scenarioCount": 3
+    },
+    {
+      "ticker": "BTC",
+      "quoteAvailable": true,
+      "quoteAsOf": "2026-10-09T14:36:59.000Z",
+      "sourceCount": 24,
+      "sourceScopes": [
+        "global",
+        "crypto"
+      ],
+      "missing": [],
+      "generation": "failed",
+      "errorType": "AI_NoObjectGeneratedError"
+    }
+  ]
+}

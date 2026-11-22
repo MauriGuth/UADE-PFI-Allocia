@@ -1,0 +1,286 @@
+ALLOCIA — PREPARACIÓN PARA PRODUCCIÓN
+Última revisión técnica: 9 de octubre de 2026
+
+ARQUITECTURA OPERATIVA
+1. Ejecutar una instancia API y PostgreSQL/Redis administrados con TLS.
+2. Ejecutar `pnpm --filter api migrate:production` como release command antes
+   de iniciar una versión nueva. Nunca activar synchronize en producción.
+3. Ejecutar `pnpm --filter api worker` como proceso separado y permanente.
+   El worker consulta cada 30 segundos, pero crea un solo trabajo por mercado,
+   fecha y fase gracias a una clave única y un advisory lock de PostgreSQL.
+4. Mantener el calendario por bolsa con zona horaria, feriados y cierres
+   anticipados. El worker se bloquea cuando el calendario vence. Cripto se
+   analiza a las 00:00 y 12:00 UTC.
+5. Ejecutar la API y el worker con las mismas variables de entorno y archivos
+   de cobertura. Probar backups cifrados y una restauración antes del alta.
+
+DATOS E IA
+- Las cantidades se cifran con AES-256-GCM y una clave exclusiva del backend.
+  Rotar la clave exige una migración planificada; conservarla en el gestor de
+  secretos y en el procedimiento de recuperación, nunca en Git.
+- El modelo Anthropic recibe sólo el snapshot público del activo y las noticias.
+  No recibe identidad, email, cantidades ni composición del usuario.
+- El esquema de salida exige fuentes conocidas. Las citas deben coincidir de
+  forma literal con el material recuperado. Ante fuente ausente, vieja, URL
+  insegura, modelo sin configurar o validación fallida, el resultado queda como
+  “datos insuficientes” y no crea escenarios ni alertas.
+- El “mega prompt” se adaptó a un prompt de sistema controlado. Se descartaron
+  puntajes, probabilidades y señales técnicas imposibles de respaldar con los
+  datos actuales. La app no opera ni dispara transacciones.
+
+COBERTURA GLOBAL
+“Global” significa una lista explícita de activos y sesiones habilitadas por el
+operador. No equivale a todas las empresas del mundo. Cada región debe tener un
+proveedor autorizado, símbolos probados, divisa correcta, calendario vigente y
+licencia que permita mostrar y almacenar los datos. El ejemplo incluido cubre
+EE.UU., ADR argentinos y cripto; debe ampliarse antes de prometer otras bolsas.
+
+NOTIFICACIONES
+- Las alertas son opt-in y sólo se crean para usuarios que poseen el ticker.
+- La pantalla bloqueada muestra un aviso genérico, sin activo ni cantidad.
+- El outbox deduplica por alerta/dispositivo, limita reintentos y consulta
+  receipts. Un POST de resultado ambiguo no se reenvía para evitar duplicados.
+- PUSH_ENABLED debe permanecer false hasta configurar APNs, FCM, un token de
+  Expo y probar alta, entrega, baja, expiración y DeviceNotRegistered en equipos
+  físicos iOS/Android. Expo Go no valida push remoto de Android.
+
+SEGURIDAD APLICADA
+- Cookie web HttpOnly, SameSite Strict, CSRF por Origin, sesiones revocables,
+  JWT de 12 horas con issuer/audience, contraseñas bcrypt coste 12 y mínimo 12.
+- CORS explícito, CSP en web, Helmet, body de 32 KB, DTO estrictos, rate limit
+  compartido en Redis, errores 5xx genéricos y request IDs sin datos sensibles.
+- FK por propietario, consultas con userId, borrado en cascada, límite de 500
+  posiciones, escritura concurrente serializada y cantidades de hasta 8 decimales.
+- El usuario puede desactivar alertas, exportar sus datos y eliminar la cuenta,
+  posiciones, alertas y dispositivos.
+
+BLOQUEOS INICIALES (ver estado actualizado al final)
+- Cargar secretos reales, sin compartirlos por chat ni archivos versionados.
+- Contratar/verificar licencias y límites de Finnhub/CoinGecko para el uso real.
+- Completar el universo y calendarios de todas las regiones prometidas.
+- Configurar dominio, TLS, Redis TLS, CA de PostgreSQL, proxy de confianza,
+  métricas, alertas operativas, backups y recuperación probada.
+- Probar Anthropic con el modelo contratado y fuentes reales; fijar presupuesto.
+- Probar push en dispositivos y credenciales de las tiendas.
+- Completar la identidad/domicilio/contacto del responsable, contratos con
+  encargados, transferencias internacionales, política final, respuesta a
+  incidentes y solicitudes de titulares. Revisar el encuadre de datos ante AAIP.
+- Obtener revisión profesional del alcance ante CNV antes de usar lenguaje de
+  “recomendación” personalizada. Un aviso de “no asesoramiento” no reemplaza
+  esa revisión.
+- Hacer pentest independiente y pruebas de carga/caos en la infraestructura real.
+
+VERIFICACIÓN LOCAL
+- API/web: auditoría de dependencias productivas sin vulnerabilidades conocidas.
+- Móvil: export iOS/Android y TypeScript correctos. La auditoría de npm conserva
+  avisos altos en herramientas transitivas de Expo/Metro sin versión corregida
+  compatible; revisar nuevamente al actualizar SDK 57 y antes de cada release.
+- 21 pruebas de servicios, 17 pruebas nuevas de seguridad/IA/scheduler y 9 pasos
+  de navegador pasan en el entorno aislado. Las pruebas reales de Finnhub, CoinGecko y Anthropic se completaron el 9/10.
+  Expo Push sigue pendiente de credenciales y dispositivos físicos.
+
+
+INTEGRACIÓN CON EL DESPLIEGUE EXISTENTE — 9/10/2026
+- Base de integración: GitHub main 37a1df3; se conserva la nueva web completa.
+- Rama: integration/production-20261009. El checkout original conserva sus cambios.
+- Railway ya dispone de UADE_PFI, PostgreSQL y Redis. No crear otra base de
+  producción ni inicializar la existente con seed.
+- Respaldo cifrado fuera del repositorio; restauración aislada completada.
+  La migración preservó las 23 cantidades y agregó FK por propietario con CASCADE
+  y NOT NULL. La migración de producción todavía NO fue ejecutada.
+- La credencial PostgreSQL se rotó y se redeplegó la versión existente. El catálogo
+  volvió a responder HTTP 200. No se volcaron secretos en Git.
+- Se prepararon HOLDINGS_ENCRYPTION_KEY, BFF_SIGNING_SECRET, DB_CA_PEM y
+  DB_TLS_SERVERNAME, sin publicar el nuevo código. El certificado heredado usa
+  localhost; se requiere su CA propia y la comprobación de identidad de Node.
+- Los archivos deploy/railway-*.toml requieren root directory /; la API actual
+  usa /apps/api. Cambiar la configuración sólo al promover la versión probada.
+- API/web/worker usan el lockfile de pnpm. El worker no recibe dominio público.
+- Configurar el mismo BFF_SIGNING_SECRET en web y API, WEB_ORIGIN en web y
+  WEB_ORIGINS en API con el dominio real. TRUST_RAILWAY_EDGE=true sólo detrás
+  del ingreso HTTP de Railway. No confiar en X-Forwarded-For arbitrario.
+- No ejecutar los tests de integración contra Railway: crean y borran fixtures.
+
+REGISTRO DE PENDIENTES DE LA INTEGRACIÓN (estado posterior al final)
+1. Claves Anthropic, Finnhub y CoinGecko; modelo habilitado, presupuesto y derechos
+   de uso. Probar proveedores reales antes de activar las alertas.
+2. Universo de activos por región y calendarios completos vigentes. Los archivos
+   example son fixtures ilustrativos, no configuración de cobertura mundial.
+3. Publicar API, web y worker coordinadamente después del respaldo final y las
+   migraciones. La app móvil antigua no envía consentimiento en el registro;
+   distribuir la nueva versión y comprobar la transición antes de promover API.
+4. Definir contacto/responsable de privacidad y URL pública real. El texto actual
+   es un borrador; no anunciar lanzamiento público con campos pendientes.
+5. Configurar recuperación de contraseña y verificación de correo con un servicio
+   transaccional. Ambos flujos ya están implementados y probados en una base aislada;
+   falta dominio propio verificado, RESEND_API_KEY y MAIL_FROM para entrega real.
+6. Credenciales APNs/FCM/Expo y prueba en iOS y Android físicos. PUSH_ENABLED=false
+   hasta confirmar entrega, receipts, baja y dispositivos compartidos.
+7. Completar observabilidad, alertas operativas, carga real y revisión independiente.
+   API/web sin avisos productivos conocidos en la auditoría; revisar nuevamente
+   los avisos transitivos móviles de Expo/Metro antes del release nativo.
+8. La tesis requiere entrevistas reales/transcripciones y validación con usuarios.
+   Los tests automatizados no reemplazan esa evidencia humana.
+
+CONTINUACIÓN — IA REAL, CORREO Y VERCEL — 9/10/2026
+- El deploy del usuario a las 13:11 UTC mantiene el código 37a1df3. Las tres
+  claves están configuradas y responden HTTP 200. El modelo claude-sonnet-5-5
+  aparece habilitado en la cuenta de Anthropic.
+- Dos análisis reales (AAPL y BTC) pasaron validación de citas: cada uno usa
+  24 fuentes, 6 hechos y 3 escenarios. No accedieron a carteras ni enviaron alertas.
+  Consumo de la prueba: 17048 tokens de entrada y 3514 de salida.
+- Finnhub responde 200 para GGAL ADR; SAP.DE, 7203.T, 0700.HK, BARC.L y GGAL.BA
+  responden 403. No activar cobertura regional sin resolver el acceso.
+- Recuperación y verificación: tokens aleatorios de 256 bits, hash en DB y
+  copia cifrada temporal para la cola; vencimiento 20 minutos / 24 horas,
+  un solo uso, cooldown de cinco minutos y respuestas genéricas. El reset
+  invalida sesiones y dispositivos. Resend usa idempotencia por solicitud.
+- Los enlaces llevan token en fragmento, nunca en query; la web lo retira del
+  historial. La cola borra el secreto tras la entrega y purga filas a siete días.
+- Nueva migración AccountEmail1791417602000 aplicada sólo en la base aislada.
+  La base de Railway permanece sin migrar.
+- Responsables informados: Mauricio Huentelaf y Maximo Rosso; contactos
+  mauhuentelaf@uade.edu.ar y maxrosso@uade.edu.ar. Falta domicilio, evaluación
+  normativa y conservación de respaldos. El texto sigue siendo borrador.
+- Web preparada para Vercel (apps/web/vercel.json, Root Directory apps/web).
+  API/PostgreSQL/Redis/worker permanecen previstos en Railway. No se creó ni
+  publicó un proyecto Vercel: se verificó que no existe Allocia en el equipo
+  conectado. Promover junto con la API compatible, no contra la versión antigua.
+- El usuario no dispone de dominio. Una dirección noreply necesita dominio
+  propio verificado; una URL *.vercel.app no habilita correo propio en Resend.
+  No se compró dominio ni se configuró un remitente inventado.
+- Configuración de correo necesaria en API y worker: RESEND_API_KEY, MAIL_FROM
+  y PUBLIC_WEB_URL. PUBLIC_WEB_URL es el origen HTTPS canónico sin ruta.
+- Pruebas locales: 21 servicio, 17 seguridad, 15 integración, 3 pruebas de
+  release/correo (incluyen concurrencia, propósito, expiración y reintentos),
+  7 utilidades web y 2 recorridos de navegador. Entrega de email simulada;
+  nunca se envió correo a los contactos reales.
+
+PUBLICACIÓN EN MAIN Y VERCEL — 9/10/2026
+- App fusionada en main por PR #1. La PFI, correcciones y secciones 5/6/7
+  se fusionan en su repositorio independiente mediante PR #19.
+- Vercel: proyecto allocia, equipo sistema-de-stock, raíz apps/web, URL
+  https://allocia-two.vercel.app. Compilación remota satisfactoria.
+- Configuradas API_URL, WEB_ORIGIN, BFF_SIGNING_SECRET y APP_MAINTENANCE=true
+  en producción; preview conserva mantenimiento y no recibe secretos productivos.
+  No desactivar mantenimiento hasta completar la migración y prueba integral.
+- Railway mantiene la versión publicada 37a1df3 mediante la rama temporal
+  deploy/railway-before-production-migration. El catálogo sigue respondiendo 200.
+  Cambiar fuente a main y aplicar la configuración de raíz sólo al promover
+  API y worker con respaldo fresco, migración coordinada y pruebas posteriores.
+- PUBLIC_WEB_URL y WEB_ORIGINS de API preparados para la URL de Vercel.
+- Resend: API key válida; MAIL_FROM sigue sin configurar. El usuario no autoriza
+  utilizar el dominio existente de otro proyecto. Los dominios vercel.app
+  no permiten verificar un remitente propio; no se inventan remitentes.
+- Continúan pendientes cobertura regional (403 en cinco símbolos), calendarios,
+  push físico, carga/pentest, revisión legal y evidencia humana de la tesis.
+
+ESTADO ACTUAL DE ACTIVACIÓN — 9/10/2026, posterior a los registros anteriores
+- API y PostgreSQL migrados en Railway. Restauración aislada y comparación
+  posterior confirman las 23 cantidades intactas y cifradas; 4 cuentas originales.
+- API se compila desde main, raíz /, comandos pnpm y migración preDeploy.
+  Railway retiró la selección de TOML: la configuración efectiva se aplicó
+  mediante ServiceInstanceUpdate. Los TOML quedan como referencia histórica.
+- Worker Allocia-market-worker creado y activo, sin dominio público. Calendario
+  EE.UU. Q4/2026, cripto 00:00/12:00 UTC, límite 100 informes/día, push desactivado.
+- Solicitud manual autenticada: hasta 50 posiciones propias, una por activo/hora;
+  se comparte el informe público y se deduplican las solicitudes. Las cantidades
+  y la identidad no se envían al modelo. Trabajo interrumpido se reanuda con lock.
+- Cotizaciones reales y búsqueda externa comprobadas en producción. MSFT y
+  Litecoin completan análisis en worker con Anthropic, fuentes y research.
+  Registro/edición/aislamiento/baja verificados con dos cuentas temporales,
+  eliminadas al terminar. Evidencia de primer fallo y repetición conservada.
+- Master prompt: formato de 14 apartados, indicadores diarios y fundamentales;
+  scoring, entradas/salidas, valoración intrínseca, macro cuantitativa y todos
+  los mercados del mundo NO están resueltos. No se anuncia implementación total.
+- El usuario descarta compra de dominio por ahora. Correo real deshabilitado;
+  no se usa novaerp ni remitente ficticio. APNs/FCM y validación física pendientes.
+- No ejecutar rollback a código anterior al cifrado sobre la DB migrada.
+  Un rollback de ese tipo requiere restauración coordinada del respaldo validado.
+
+CIERRE DE VERIFICACIÓN — 9/10/2026
+- API y worker SUCCESS en 3c2c1228e3ba665438bc7058aec9223a6247a295.
+- CI completo aprobado: https://github.com/MauriGuth/allocia/actions/runs/37954302179
+- Prueba final productiva: 19 comprobaciones satisfactorias, NVDA y Solana,
+  research y 14 apartados, alertas internas sólo al propietario, deduplicación
+  y eliminación de ambas cuentas temporales. Evidencia:
+  docs/evidence/activation-alerts-passed-20261009.json.
+- Vercel producción fuera de mantenimiento: https://allocia-two.vercel.app.
+  Chrome real verifica registro, búsqueda/importación Dogecoin, posición y
+  cotización CoinGecko; cookie HttpOnly/Secure, cero errores JS y cuenta eliminada.
+- Pendiente observar disparo programado de apertura/cierre en producción;
+  worker real probado por solicitud manual y calendario/reanudación en CI.
+- Gate Expo sigue bloqueado: master completo, correo real (pospuesto),
+  credenciales push y comprobación física no completados. No se generan builds.
+- La cobertura del catálogo probado no equivale a todas las bolsas del mundo
+  ni a datos tick a tick. Persisten restricciones del proveedor en mercados
+  extranjeros e históricos bursátiles. Cotizaciones muestran origen y fecha.
+
+DOMINIO, CORREO Y ROBUSTEZ — 9/10/2026, 16:30 UTC
+- allocia.com.ar delegado a Vercel y certificado emitido. HTTPS /login responde
+  200; el resolutor local puede conservar el NXDOMAIN anterior durante su TTL.
+- Resend confirma DKIM/SPF/MX/CNAME verificados. MAIL_FROM configurado como
+  Allocia <noreply@allocia.com.ar> en API y por referencia en worker.
+  PUBLIC_WEB_URL usa https://allocia.com.ar. Ambos dominios están explícitamente
+  permitidos; Vercel conserva allocia-two.vercel.app como alternativa.
+- Flujo de correo productivo aprobado con destinatario simulador de Resend:
+  verificación, recuperación, enlace de un uso y revocación de sesión/contraseña
+  anteriores. 15 comprobaciones; cuenta temporal eliminada. No equivale a
+  confirmar recepción en una casilla personal. Evidencia: mail-delivery-simulator.
+- API y worker 5509065 SUCCESS, CI 37958231579 aprobado. 21 comprobaciones
+  de seguridad/scheduler/push en DB aislada, incluidas tres nuevas regresiones.
+- Estado global excluye solicitudes privadas. Una fuente fallida no impide
+  analizar otros activos. Push interrumpido se marca ambiguo y no se duplica;
+  fallo al leer recibos no bloquea limpieza. 'accepted' significa aceptación
+  del proveedor, no prueba de recepción física.
+- Riesgo descriptivo: volatilidad anualizada de 30 retornos (252/365), caída
+  máxima de 90 muestras y extremos de 20 muestras. Sin convertirlos en stops,
+  objetivos, probabilidades ni scoring. Nulos cuando faltan datos.
+- Cartera web refresca cada 30 segundos visible, evita consultas periódicas
+  superpuestas y conserva formularios. Navegador Chrome y CI lo confirman.
+- EAS iOS: certificado/perfil existentes vigentes y dos dispositivos registrados;
+  clave APNs del mismo equipo asignada a Allocia sin revocarla ni descargarla.
+- Android tiene package com.mauriguth.allocia. Firebase no está autenticado en
+  CLI ni navegador; el usuario debe iniciar firebase-tools login para continuar.
+  Falta EXPO_ACCESS_TOKEN en worker y credenciales FCM de Allocia. PUSH_ENABLED
+  permanece false y no se generaron builds de distribución.
+
+2026-10-09 — Firebase Android
+- Firebase allocia-mobile-2026 creado con sesión autorizada del propietario; app Android com.mauriguth.allocia registrada. Sin habilitar Analytics ni facturación.
+- Cuenta de servicio allocia-expo-push con rol roles/firebasecloudmessaging.admin únicamente; clave privada fuera del repositorio, cargada y asignada a FCM v1 en EAS.
+- google-services.json es configuración pública del cliente, no una clave privada de servicio. app.json apunta a ese archivo.
+- CI de 78b4bf8 finalizado correctamente. Push continúa desactivado hasta configurar EXPO_ACCESS_TOKEN y verificar protección en Expo. Recepción en dispositivos pendiente.
+- Firma Android creada en EAS (Allocia Android). Exportación Android y TypeScript correctos. No se generó build de distribución.
+
+2026-10-09 — Activación push del servidor
+- EXPO_ACCESS_TOKEN verificado mediante acceso autenticado al proyecto Allocia. Worker vinculado por referencia a la variable de la API, sin copiar secretos al repositorio.
+- pushSecurityEnabled=true confirmado en Expo: los envíos requieren autenticación.
+- PUSH_ENABLED=true en API y worker. Ambos despliegues SUCCESS, /health OK en afcdd58 y verificación dentro del worker confirma token presente y push activo.
+- Cero dispositivos registrados y outbox vacía: no se envió notificación ni se afirma recepción física.
+- Evidencia: docs/evidence/push-configuration-20261009.json. CI afcdd58: 37961763543 SUCCESS.
+- Preview continúa bloqueado por masterPromptDataAndAnalysis, accountRecoveryDelivery y scheduledAnalysisAndAlerts. No se generaron builds.
+
+2026-10-09 — Correo real y ampliación del análisis
+- Correo real autorizado: verificación y recuperación entregados por Resend y confirmados por el titular en Recibidos. Prueba completa de un solo uso, revocación y cambio de contraseña; cuenta temporal eliminada.
+- Seguimiento descriptivo entre informes y veredicto con campos no disponibles explícitos. Nuevos indicadores diarios deterministas con pruebas de fórmulas/bases insuficientes.
+- API compila; 8 pruebas research, 3 quotes, 2 release, 1 account-email y 8 web correctas. 21 comprobaciones de seguridad/integración correctas. TypeScript móvil y web correctos.
+- Sin presupuesto para nuevos proveedores: se mantiene el universo accesible, sin afirmar cobertura global ni inventar históricos/score/niveles.
+- Recepción push física a cargo del usuario tras instalar la app; no se declara realizada. Builds pendientes.
+
+2026-10-09 — Contexto macro gratuito
+- FRED DFF/DGS2/DGS10/CPIAUCSL integrado en snapshot e informe. Parser estricto, fechas/unidades/fuentes, caducidad y caché6h; no interpolación.
+- Anthropic real sobre BTC: status analysis, cuatro fuentes macro, cuatro hechos y tres escenarios validados (docs/evidence/analysis-macro-live-20261009.json).
+- 12 pruebas research/quotes correctas, TypeScript web y móvil correctos. Fuentes y atribuciones enlazadas en Ajustes.
+- No se generaron builds; estrategia completa con score/entradas/stops y universo global sigue dependiendo de datos y validación cuantitativa no disponibles.
+
+2026-10-09 — Verificación del despliegue 8768e53
+- CI 37966053840 SUCCESS. Railway API 2a14569e-e6ef-4786-a24e-e03d9291504f y worker 81db31c5-92dc-46ef-bcdc-8af5c59473c1 SUCCESS. /health confirma 8768e5300051fcb43767d65540758239753771c2.
+- Consulta FRED desde la API desplegada obtiene las cuatro series, sin fuentes faltantes.
+- Correo confirmado en Recibidos por el usuario; no requiere más acciones sobre los enlaces de prueba.
+- Permanecen pendientes estrategia/cobertura completa y observación de disparo programado real. No se generaron builds de distribución.
+
+2026-10-09 — Cuenta compartida y paridad web/móvil
+- Confirmada una sola API/PostgreSQL: BFF de allocia.com.ar y cliente HTTP móvil real. 18 comprobaciones en producción correctas; cuentas temporales eliminadas.
+- Prueba cruzada de navegador local: alta móvil, edición web, refresco al recuperar foco sin perder formularios, preferencias compartidas, aislamiento y baja. Incorporada a CI.
+- Refresco de informes/alertas web corregido; resumen/riesgo/señales/cartera móvil actualizan al volver al primer plano. Exportación de datos personales agregada al menú móvil.
+- docs/WEB_PARITY.md actualizado contra RF/RNF de la tesis y diferencias pendientes explícitas. No se declara paridad completa ni se generaron builds.

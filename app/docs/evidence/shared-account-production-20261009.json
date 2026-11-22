@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-09T17:55:19.561Z",
+  "apiURL": "https://uadepfi-production.up.railway.app",
+  "webURL": "https://allocia.com.ar",
+  "scope": "Real deployed web BFF and actual mobile HTTP client; not physical phone UI",
+  "checks": [
+    "web_register",
+    "secure_web_session",
+    "same_account_identifier",
+    "mobile_create_visible_on_web",
+    "web_update",
+    "web_update_visible_on_mobile",
+    "mobile_preferences_visible_on_web",
+    "web_preferences_update",
+    "web_preferences_visible_on_mobile",
+    "other_account_isolated",
+    "other_account_update_denied",
+    "other_account_delete_denied",
+    "owner_data_unchanged",
+    "same_report_ids",
+    "export_uses_shared_positions",
+    "mobile_delete_visible_on_web",
+    "web_account_deletion",
+    "mobile_session_invalid_after_account_deletion"
+  ],
+  "temporaryAccountsDeleted": true
+}

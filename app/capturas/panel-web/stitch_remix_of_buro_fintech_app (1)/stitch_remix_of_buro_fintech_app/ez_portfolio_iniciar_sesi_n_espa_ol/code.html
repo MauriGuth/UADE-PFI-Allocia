@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Inicio de Sesión</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#7f82ff",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#bcc7de",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#07006c",
+                        "tertiary-container": "#0d0093",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-container": "#fffbff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#45474c",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#e1e0ff",
+                        "surface-tint": "#545f73",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "tertiary": "#040057",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-primary-container": "#8590a6",
+                        "outline": "#75777d",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#111c2d",
+                        "secondary-fixed": "#e2dfff",
+                        "secondary-container": "#645efb",
+                        "primary": "#091426",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#4b41e1",
+                        "on-surface": "#191c1e",
+                        "primary-container": "#1e293b",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "primary-fixed": "#d8e3fb",
+                        "primary-fixed-dim": "#bcc7de",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1440px",
+                        "card-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Geist"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "data-mono": ["Geist"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "data-mono": ["14px", { "lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e0e3e5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c5c6cd; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Left Pane: Branding & Imagery (Hidden on Mobile) -->
+<div class="hidden md:flex w-1/2 relative bg-surface-container-low border-r border-outline-variant/30 flex-col justify-between overflow-hidden">
+<!-- Abstract Architectural Background -->
+<div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-multiply" data-alt="A premium, abstract architectural photograph featuring clean lines and smooth geometric surfaces in soft, light-mode neutral tones. The composition is minimal and orderly, conveying a sense of composed authority, stability, and institutional calm. Subtle, diffused natural lighting creates soft gradients and deep, elegant shadows. The color palette relies on pristine whites, cool slate grays, and very faint hints of indigo to match a high-end financial technology aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrhtWosk3l_grjH9zB0MUkZGZGgRXnqEjaho7pzHIdeD7dxv0HjLHdw6fUdDilqJcdbLW8YydEnSwj_ZDyL4qrVyX7PZRvRk-pRCaGdBTgFi6tpg57jw6IjXJhOnTbAte-mNyJ3zL-7thIukmY8YopsQ6morlQd5uxGImrmHNZDk1K0ty1i2NhNA0BPwGkuFkDB30oTAqAAzMRak3ribq9CSCrF48xNFTVg4Rpamk7o-1z57uzuta8')"></div>
+<!-- Subtle Gradient Overlay to ensure text readability if needed -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/20 via-transparent to-surface-container-low/90"></div>
+<!-- Top Logo Anchor -->
+<div class="relative z-10 p-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-headline-md text-headline-md font-extrabold tracking-tight">Ez Portfolio</span>
+</div>
+</div>
+<!-- Bottom Text Anchor -->
+<div class="relative z-10 p-12 max-w-lg">
+<p class="font-headline-md text-headline-md text-primary mb-4">Inteligencia de Cartera</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Plataforma institucional diseñada para la toma de decisiones financieras con precisión y claridad ejecutiva.</p>
+</div>
+</div>
+<!-- Right Pane: Login Form -->
+<div class="w-full md:w-1/2 flex items-center justify-center p-8 sm:p-12 lg:p-24 bg-surface relative">
+<!-- Mobile Logo (Visible only on small screens) -->
+<div class="absolute top-8 left-8 md:hidden flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-headline-md text-headline-md font-extrabold tracking-tight">Ez Portfolio</span>
+</div>
+<div class="w-full max-w-md space-y-10 mt-12 md:mt-0">
+<!-- Header -->
+<div class="space-y-3">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary tracking-tight">
+                    Bienvenido a Ez Portfolio
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Ingrese sus credenciales para acceder a su análisis de cartera.
+                </p>
+</div>
+<!-- Form -->
+<form class="space-y-6" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="email">
+                        Correo electrónico
+                    </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT font-body-md text-body-md text-on-background placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-200" id="email" name="email" placeholder="ejemplo@institucion.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="password">
+                            Contraseña
+                        </label>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">
+                            Recuperar contraseña
+                        </a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT font-body-md text-body-md text-on-background placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-[48px] mt-8 bg-primary-container text-on-primary font-label-caps text-label-caps uppercase tracking-wider rounded-DEFAULT hover:bg-primary transition-colors flex items-center justify-center gap-2 group" type="submit">
+                    Iniciar Sesión
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Link -->
+<div class="pt-6 text-center border-t border-surface-variant">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    ¿No tiene una cuenta? 
+                    <a class="text-secondary font-medium hover:text-primary transition-colors ml-1" href="#">
+                        Regístrese
+                    </a>
+</p>
+</div>
+</div>
+</div>
+</body></html>

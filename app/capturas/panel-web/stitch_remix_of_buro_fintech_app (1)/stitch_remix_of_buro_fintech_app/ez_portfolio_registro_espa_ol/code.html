@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Registro</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e6e8ea",
+                      "surface-container": "#eceef0",
+                      "on-tertiary-container": "#7f82ff",
+                      "on-tertiary-fixed-variant": "#2f2ebe",
+                      "on-background": "#191c1e",
+                      "inverse-primary": "#bcc7de",
+                      "surface-bright": "#f7f9fb",
+                      "on-tertiary-fixed": "#07006c",
+                      "tertiary-container": "#0d0093",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#45474c",
+                      "surface-container-low": "#f2f4f6",
+                      "surface-variant": "#e0e3e5",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#c3c0ff",
+                      "tertiary-fixed": "#e1e0ff",
+                      "surface-tint": "#545f73",
+                      "on-secondary-fixed-variant": "#3323cc",
+                      "tertiary": "#040057",
+                      "inverse-on-surface": "#eff1f3",
+                      "background": "#f7f9fb",
+                      "surface": "#f7f9fb",
+                      "on-secondary-fixed": "#0f0069",
+                      "on-primary-container": "#8590a6",
+                      "outline": "#75777d",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#111c2d",
+                      "secondary-fixed": "#e2dfff",
+                      "secondary-container": "#645efb",
+                      "primary": "#091426",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d8dadc",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary": "#4b41e1",
+                      "on-surface": "#191c1e",
+                      "primary-container": "#1e293b",
+                      "outline-variant": "#c5c6cd",
+                      "on-primary-fixed-variant": "#3c475a",
+                      "primary-fixed": "#d8e3fb",
+                      "primary-fixed-dim": "#bcc7de",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#c0c1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-desktop": "40px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1440px",
+                      "card-padding": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Geist"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "data-mono": ["Geist"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "data-mono": ["14px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex antialiased">
+<div class="flex-1 flex items-center justify-center p-gutter relative z-10">
+<div class="w-full max-w-[440px] bg-surface-container-lowest rounded-xl shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] border border-surface-container overflow-hidden flex flex-col p-card-padding">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary text-headline-md font-headline-md" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-headline-md font-headline-md font-extrabold text-primary tracking-tight">Ez Portfolio</span>
+</div>
+<div class="mb-8">
+<h1 class="text-headline-lg font-headline-lg text-primary mb-2">Crear una Cuenta</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Únase a Ez Portfolio para obtener inteligencia profunda sobre sus inversiones.</p>
+</div>
+<form class="space-y-6 flex-1 flex flex-col">
+<div class="space-y-4">
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" for="fullName">NOMBRE COMPLETO</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">person</span>
+<input class="w-full h-12 bg-surface-bright border border-surface-variant rounded focus:border-secondary focus:ring-2 focus:ring-secondary/20 focus:ring-offset-0 transition-colors pl-10 pr-3 text-body-md font-body-md text-on-surface placeholder:text-outline" id="fullName" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" for="email">CORREO ELECTRÓNICO</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">mail</span>
+<input class="w-full h-12 bg-surface-bright border border-surface-variant rounded focus:border-secondary focus:ring-2 focus:ring-secondary/20 focus:ring-offset-0 transition-colors pl-10 pr-3 text-body-md font-body-md text-on-surface placeholder:text-outline" id="email" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" for="password">CONTRASEÑA</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full h-12 bg-surface-bright border border-surface-variant rounded focus:border-secondary focus:ring-2 focus:ring-secondary/20 focus:ring-offset-0 transition-colors pl-10 pr-10 text-body-md font-body-md text-on-surface placeholder:text-outline" id="password" placeholder="••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" for="confirmPassword">CONFIRMAR CONTRASEÑA</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full h-12 bg-surface-bright border border-surface-variant rounded focus:border-secondary focus:ring-2 focus:ring-secondary/20 focus:ring-offset-0 transition-colors pl-10 pr-10 text-body-md font-body-md text-on-surface placeholder:text-outline" id="confirmPassword" placeholder="••••••••" type="password"/>
+<button aria-label="Toggle confirm password visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full h-12 bg-primary-container text-on-primary rounded font-body-md text-body-md font-semibold flex items-center justify-center gap-2 hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2" type="submit">
+                        Crear Cuenta
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-6 text-center">
+<p class="text-body-md font-body-md text-on-surface-variant">
+                    ¿Ya tiene una cuenta? 
+                    <a class="text-secondary font-medium hover:text-primary transition-colors focus:outline-none focus:underline" href="#">Inicie sesión</a>
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-variant">
+<p class="text-[12px] leading-tight text-outline text-center">
+                    Al registrarse, acepta nuestros 
+                    <a class="underline hover:text-on-surface-variant transition-colors" href="#">Términos de Servicio</a> y 
+                    <a class="underline hover:text-on-surface-variant transition-colors" href="#">Política de Privacidad</a>.
+                </p>
+</div>
+</div>
+</div>
+<div class="hidden lg:flex w-1/2 bg-surface-container-low border-l border-surface-variant relative overflow-hidden flex-col justify-end p-margin-desktop">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-high opacity-50"></div>
+<div class="absolute inset-0 opacity-10">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#091426" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-lg mb-12">
+<h2 class="text-display-lg font-display-lg text-primary mb-4">Inteligencia Financiera Avanzada.</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8">Acceda a herramientas de análisis de riesgo de nivel institucional, señales de mercado en tiempo real y una visión integral de su cartera.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm p-4 rounded-lg border border-surface-variant shadow-sm flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-semibold text-primary">Análisis de Riesgo</h3>
+<p class="text-[13px] text-on-surface-variant mt-1 leading-snug">Métricas avanzadas para optimizar su exposición.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm p-4 rounded-lg border border-surface-variant shadow-sm flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-semibold text-primary">Señales de Mercado</h3>
+<p class="text-[13px] text-on-surface-variant mt-1 leading-snug">Indicadores predictivos en tiempo real.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

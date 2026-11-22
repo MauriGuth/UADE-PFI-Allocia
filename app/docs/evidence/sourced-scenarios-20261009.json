@@ -1,0 +1,40 @@
+{
+  "api": {
+    "date": "2026-10-09T20:21:39.005Z",
+    "legacyScenarios": 0,
+    "evidenceScenarios": 5,
+    "checks": [
+      "No fabricated fixed returns",
+      "Only held assets",
+      "HTTPS sources with timestamps within 48h"
+    ]
+  },
+  "browser": {
+    "date": "2026-10-09T20:23:31.885Z",
+    "checks": [
+      "sourced_scenarios_no_fixed_returns",
+      "conditional_scenarios_and_sources_visible",
+      "exportable_report_uses_sourced_scenarios",
+      "no_browser_errors"
+    ],
+    "scenarios": 2
+  },
+  "ci": {
+    "run": 37986979036,
+    "status": "success"
+  },
+  "builds": [
+    {
+      "id": "d4a2ffe3-3ef3-4985-811d-11dda21e2d7a",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "gitCommitHash": "8a75087473deaba53362f422f89cf45e2b7c903c"
+    },
+    {
+      "id": "760616d4-840e-4882-8633-04ca5e5bcdc9",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "gitCommitHash": "8a75087473deaba53362f422f89cf45e2b7c903c"
+    }
+  ]
+}

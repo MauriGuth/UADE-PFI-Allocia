@@ -1,0 +1,129 @@
+{
+ "checkedAt": "2026-10-24T04:48:25.615536Z",
+ "api": "https://uadepfi-production.up.railway.app",
+ "account": "cuenta de demostración documentada en el README",
+ "results": {
+  "health": {
+   "status": 200,
+   "body": {
+    "status": "ok",
+    "commit": "7c1f98903d73fa70675be2f1d80944fc4ba4a130"
+   }
+  },
+  "login": {
+   "status": 201,
+   "tokenIssued": true,
+   "user": "demo@allocia.app"
+  },
+  "catalog": {
+   "status": 200,
+   "count": 36
+  },
+  "portfolio": {
+   "status": 200,
+   "positions": 13,
+   "totalValue": 38032.57639999999,
+   "pricesWithDate": 13,
+   "priceStatuses": [
+    "recent",
+    "reference"
+   ]
+  },
+  "analysis": {
+   "status": 200,
+   "hhi": 1235,
+   "level": "baja",
+   "effectiveN": 8.1
+  },
+  "observations": {
+   "status": 200,
+   "count": 3,
+   "ids": [
+    "conc-top",
+    "exp-cripto",
+    "ctx-gpr"
+   ],
+   "ctxGprPresent": true,
+   "allHaveRule": true,
+   "ctxGprEvidence": [
+    {
+     "tipo": "señal externa",
+     "descripcion": "Geopolitical Risk Index (Caldara-Iacoviello)",
+     "valor": "176 (tendencia estable)",
+     "fuente": "Caldara e Iacoviello, índice GPR diario (media móvil de 30 días); Finnhub (noticias) (externo; fecha del dato: 2026-10-19T00:00:00.000Z; consultado: 2026-10-24T04:47:35.833Z)"
+    },
+    {
+     "tipo": "regla",
+     "descripcion": "Umbral aplicado",
+     "valor": "GPR > 120 se considera elevado",
+     "fuente": "Motor de observaciones"
+    }
+   ]
+  },
+  "signals": {
+   "status": 200,
+   "origen": "fuentes externas",
+   "gprIndex": 176,
+   "gprLevel": "elevado",
+   "tendencia": "estable",
+   "provenance": {
+    "geo": {
+     "origin": "externo",
+     "dataDate": "2026-10-19T00:00:00.000Z",
+     "source": "Caldara e Iacoviello, índice GPR diario (media móvil de 30 días); Finnhub (noticias)"
+    },
+    "fearGreed": {
+     "origin": "externo",
+     "dataDate": "2026-10-24T00:00:00.000Z",
+     "source": "Alternative.me"
+    },
+    "btcDominance": {
+     "origin": "externo",
+     "dataDate": "2026-10-24T04:27:18.000Z",
+     "source": "CoinGecko"
+    },
+    "defi": {
+     "origin": "externo",
+     "dataDate": "2026-10-24T00:00:00.000Z",
+     "source": "DefiLlama"
+    },
+    "predictionMarkets": {
+     "origin": "externo",
+     "dataDate": "2026-10-24T04:30:37.990Z",
+     "source": "Polymarket"
+    }
+   },
+   "fearGreed": 51,
+   "btcDominance": 59.5,
+   "tvl": 89735620840,
+   "predictionMarkets": 5
+  },
+  "marketStatus": {
+   "status": 200,
+   "configured": true,
+   "calendarConfigured": true,
+   "pushEnabled": true,
+   "coverage": 34,
+   "lastRun": {
+    "slot": "CRYPTO:2026-10-24T00:00:00.000Z",
+    "status": "complete",
+    "finishedAt": "2026-10-24T00:02:04.330Z",
+    "error": null
+   }
+  },
+  "catalogQuotes": {
+   "withRefPrice": 0,
+   "fields": [
+    "assetClass",
+    "currency",
+    "marketMapping",
+    "name",
+    "refPrice",
+    "region",
+    "sector",
+    "ticker"
+   ]
+  }
+ },
+ "note": "Segunda consulta tras el despliegue 7c1f989: las reglas de contexto se activan con señales externas en producción."
+}

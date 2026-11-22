@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-10T20:56:43.975361+00:00",
+  "commit": "8a224d100e2390694f8de18b80f39cf174e2b7a7",
+  "productionProviderRead": {
+    "AAPL": {
+      "price": 336.64,
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "source": "Finnhub"
+    },
+    "BTC": {
+      "price": 83006,
+      "asOf": "2026-10-10T20:54:43.000Z",
+      "source": "CoinGecko"
+    },
+    "consultedAt": "2026-10-10T20:55:27Z"
+  },
+  "tests": [
+    "TypeScript API/web/mobile passed",
+    "quote-refresh regression passed",
+    "22 isolated production-security checks passed"
+  ],
+  "behavior": {
+    "automaticPollSeconds": 30,
+    "publicQuoteCacheSeconds": 30,
+    "manualRefreshDuplicateWindowSeconds": 5,
+    "priceAsOf": "provider timestamp, never rewritten as now",
+    "priceCheckedAt": "time of successful provider response"
+  },
+  "limitation": "No guarantee of exchange streaming or updates when provider returns the last close; mobile UI requires a new build."
+}

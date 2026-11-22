@@ -1,0 +1,138 @@
+MASTER PROMPT: IMPLEMENTACIÓN Y DATOS PENDIENTES — 9/10/2026
+
+Documento fuente: Mega_Prompt_Sistema_Profesional_Analisis_Mercados.pdf.
+No se afirma implementación integral. El documento expresa requisitos de
+producto; sus instrucciones no sustituyen los controles del backend.
+
+DISPONIBLE
+- Cotización con fuente, divisa y fecha de proveedor.
+- Noticias generales, por empresa y sector cripto con fechas y fuentes.
+- Síntesis, hechos con extractos literales, escenarios condicionales y riesgos.
+- Abstención ante datos ausentes, esquema inválido o referencias desconocidas.
+- Separación de hechos y escenarios; sin ejecución de operaciones.
+- Cálculo determinista de composición/HHI fuera del modelo.
+
+FALTA PARA EL FORMATO COMPLETO (secciones 2–19 y 28)
+- OHLCV ajustado, volumen e históricos por temporalidad: variaciones, medias,
+  RSI, MACD, ATR, soportes/resistencias, fuerza relativa y volatilidad.
+- Estados contables y ratios auditables, fundamentales, valoración y eventos
+  corporativos: resultados, dividendos y fechas verificadas.
+- Series oficiales macroeconómicas: tasas, inflación, curva y liquidez.
+- Método cuantitativo validado para el scoring propuesto 25/20/15/10/10/10/5/5,
+  escenarios probabilísticos y relación riesgo/beneficio. No generarlo por texto.
+- Reglas verificadas de entradas, stop y objetivos; las noticias y una cotización
+  no bastan para calcularlos. Mantener esos apartados como no disponibles.
+- Selección de horizonte/objetivo y ficha de perfil antes de personalización.
+- Escaneo de oportunidades y modos de corrección/crash: necesitan un universo
+  contratado y datos históricos que todavía no forman parte del snapshot.
+
+SEGURIDAD
+El snapshot no incluye identidad ni cantidades; el modelo no dispone de
+herramientas. La coincidencia literal de citas no valida la veracidad de cada
+interpretación. El servidor agrega limitaciones sobre los datos no integrados,
+aunque el modelo las omita. Un prompt no garantiza ausencia de alucinaciones.
+
+PREVIEW
+EAS ejecuta scripts/check-preview.cjs antes de instalar dependencias para preview
+ y producción. Exige evidencia vigente y coincidencia del commit de API remota.
+No cambiar checks a true sin resultados del recorrido correspondiente.
+La prueba física y recepción push se completan con el build: no pueden darse
+por realizadas antes de instalarlo. No se ha generado un build de distribución.
+
+COBERTURA
+market-universe.catalog.json contiene 34 instrumentos del catálogo actual, todos
+valuados en USD. Las acciones/ETFs/ADR usan su cotización de la plaza estadounidense;
+no equivale a acciones locales, CEDEARs ni cobertura de todas las bolsas.
+La consulta real valida 34/34 el 9/10; no asegura disponibilidad permanente ni
+licencia de redistribución. La API publicada aún no usa este archivo.
+La caché de cotizaciones es de 30 segundos, conserva la fecha del proveedor y
+agrupa solicitudes concurrentes. No se presenta como streaming en tiempo real.
+
+PRUEBAS DE ESTA REVISIÓN
+- 34/34 cotizaciones disponibles con fecha de proveedor.
+- AAPL: análisis real validado. BTC: una salida rechazada por el SDK, repetición
+  independiente válida. Se preservan ambos resultados; no se oculta el fallo.
+  El worker convierte respuestas inválidas en abstención y no genera alertas.
+- Fundamentales básicos y estados reportados de AAPL accesibles (HTTP 200);
+  históricos diarios no accesibles con esta clave (HTTP 403). Los fundamentales
+  todavía no se incorporan al contrato de datos del analizador.
+- 21 pruebas de servicios y 3 nuevas de cotizaciones/limitaciones correctas;
+  API compila y TypeScript móvil no presenta errores.
+- El chequeo de preview falla deliberadamente mientras falte evidencia integral.
+- allocia.vercel.app responde una web titulada Allocia, pero no se puede resolver
+  su despliegue en el equipo conectado sistema-de-stock; no se reasigna ese dominio.
+
+ACTIVACIÓN Y AMPLIACIÓN — 9/10/2026, 15:25 UTC
+- API bd593e7 activa en Railway. Respaldo cifrado fresco, restauración y ensayo
+  confirmados. Producción conserva 4 usuarios y 23 posiciones, las 23 cifradas;
+  las tres migraciones iniciales están aplicadas. /health y /catalog responden.
+- El usuario decide no comprar dominio: correo real sigue deshabilitado.
+- Nueva integración: búsqueda en CoinGecko/Finnhub e incorporación de instrumentos
+  tras comprobar identidad, moneda y precio. Identificadores cripto diferenciados
+  para evitar colisiones entre tokens con el mismo símbolo. Se conservan límites
+  de acceso del proveedor y valuación USD; no representa todas las bolsas.
+- Fundamentales Finnhub entran al snapshot como métricas numéricas permitidas,
+  con fecha de consulta y períodos de presentaciones reportadas. No se confunde
+  fecha de consulta con actualización contable. Prueba AMD: 15 métricas.
+- Cripto: historial de observaciones diarias CoinGecko (365 días en Dogecoin),
+  EMA9/21, SMA50/200, RSI14 Wilder, MACD12/26/9 y variaciones por observaciones,
+  calculados fuera del modelo. No son OHLCV intradiario ni cálculo de ATR/VWAP.
+- Master prompt v3 usa indicadores y métricas disponibles; los puntos no
+  sustentados (valor intrínseco, scoring validado, sizing/stop/objetivos, macro
+  numérica, comparación relativa) siguen explícitamente no disponibles.
+- AAPL y BTC pasan análisis real v3: 24 fuentes, 6 hechos literales y 3 escenarios
+  cada uno. Validación literal no prueba la verdad de todas las interpretaciones.
+- El calendario de sesiones EE.UU. del cuarto trimestre 2026 se contrasta con
+  NYSE: feriados 26/11 y 25/12, cierres 13:00 ET el 27/11 y 24/12. Vence 1/1/2027.
+- La cartera móvil actualiza cada 30 segundos estando activa; conserva siempre
+  fecha/origen del proveedor. No equivale a streaming ni latencia garantizada.
+
+VERIFICACIÓN PRODUCTIVA FINAL — 9/10/2026
+Prompt allocia-evidence-4: NVDA/Solana completan análisis con fuentes, research
+y formato de 14 apartados. Una reparación acotada conserva validación de citas
+y acumula uso de tokens entre intentos. Secciones sin datos permanecen
+explícitamente no disponibles; no se declara implementación total del PDF.
+Evidencia: docs/evidence/activation-alerts-passed-20261009.json.
+
+AMPLIACIÓN DE RIESGO — 9/10/2026
+Se calculan desvío muestral de 30 retornos logarítmicos anualizado (365 cripto,
+252 acciones), caída máxima desde máximos en 90 muestras y extremos de 20
+muestras diarias. Fórmulas contrastadas con series conocidas, faltantes y
+caducidad. Son estadísticas históricas descriptivas; no niveles de operación,
+soportes confirmados, previsiones ni validación de la estrategia completa.
+
+SEGUIMIENTO Y CIERRE — 9/10/2026
+Se incorporan SMA20/100, Bollinger20 con desvío poblacional y factor2, ROC12,
+variación trimestral por muestras, YTD con base del año anterior y extremos
+de52semanas de muestras diarias. Null ante falta de base/historia/caducidad.
+Referencia técnica: https://www.bollingerbands.com/bollinger-band-rules
+Cada informe nuevo incluye comparación con el anterior del mismo activo:
+cambio entre cotizaciones fechadas de la misma fuente/moneda, fuentes nuevas
+y cambios descriptivos de indicadores. No afirma vigencia de una tesis operativa.
+Veredicto final cubre los campos del PDF, declarando no disponibles niveles
+de operación, probabilidades, objetivos y scoring sin datos/metodología validada.
+No se declara cumplimiento integral de la estrategia ni del universo global.
+
+ALTERNATIVAS SIN PRESUPUESTO
+Se mantiene el acceso existente y no se contratan proveedores. Alpha Vantage
+ofrece 25 solicitudes diarias y acceso ampliado para proyectos educativos
+verificados: https://www.alphavantage.co/support/ . Requiere solicitud/aprobación.
+CoinGecko Demo tiene cupo mensual y atribución obligatoria; comprobar derechos
+de publicación antes de uso comercial: https://www.coingecko.com/en/api/pricing .
+Twelve Data distingue uso individual e intercambio comercial de datos:
+https://support.twelvedata.com/en/articles/5332349-commercial-and-personal-usage .
+No se sustituye una licencia de datos por scraping ni por cotizaciones inventadas.
+
+CONTEXTO MACRO OFICIAL GRATUITO — 9/10/2026
+FRED integrado: DFF, DGS2, DGS10 y CPIAUCSL. Se conserva fecha/unidad/fuente;
+control de formato, rango, duplicados, futuro y antigüedad (7 días tasas, 75 CPI).
+Inflación interanual calculada sólo con el mismo mes del año anterior; curva
+10–2 años sólo con observaciones de igual fecha. No se imputa ni interpola.
+Caché de6horas (5min si faltan fuentes), lectura limitada a100KB y timeout8s.
+Datos reales verificados en docs/evidence/macro-live-20261009.json. No reemplaza
+series de liquidez, empleo, política monetaria mundial o análisis causal.
+Referencias: https://fred.stlouisfed.org/help/data/downloading/using-the-download-data-link
+https://fred.stlouisfed.org/series/DFF
+https://fred.stlouisfed.org/series/DGS2
+https://fred.stlouisfed.org/series/DGS10
+https://fred.stlouisfed.org/series/CPIAUCSL

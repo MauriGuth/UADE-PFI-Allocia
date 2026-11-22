@@ -1,0 +1,6 @@
+[
+  { "ticker": "AAPL", "name": "Apple Inc.", "region": "North America", "exchange": "XNYS_XNAS", "providerSymbol": "AAPL", "currency": "USD", "kind": "equity" },
+  { "ticker": "GGAL", "name": "Grupo Financiero Galicia ADR", "region": "Latin America", "exchange": "XNYS_XNAS", "providerSymbol": "GGAL", "currency": "USD", "kind": "equity" },
+  { "ticker": "BTC", "name": "Bitcoin", "region": "Global", "exchange": "CRYPTO", "providerSymbol": "bitcoin", "currency": "USD", "kind": "crypto" },
+  { "ticker": "ETH", "name": "Ethereum", "region": "Global", "exchange": "CRYPTO", "providerSymbol": "ethereum", "currency": "USD", "kind": "crypto" }
+]

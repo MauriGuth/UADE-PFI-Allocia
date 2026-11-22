@@ -1,0 +1,51 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main.js",
+    "seed": "ts-node -r tsconfig-paths/register src/seed.ts",
+    "test:pfi": "node -r ts-node/register tests/pfi-validation.cjs",
+    "test:integration": "node tests/pfi-integration.cjs",
+    "test:browser": "node tests/pfi-browser.cjs",
+    "migrate": "typeorm-ts-node-commonjs migration:run -d src/database.ts",
+    "migrate:production": "typeorm migration:run -d dist/database.js",
+    "worker": "node dist/market/worker.js",
+    "worker:once": "node dist/market/worker.js --once",
+    "production:check": "node scripts/production-check.cjs"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.78",
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/jwt": "^11.0.2",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/typeorm": "^11.0.0",
+    "ai": "^7.0.135",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.6",
+    "helmet": "^8.3.0",
+    "ioredis": "^5.4.1",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.20",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "^22.10.0",
+    "playwright": "1.62.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  }
+}

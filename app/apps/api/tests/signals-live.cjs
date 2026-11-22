@@ -1,0 +1,30 @@
+require('reflect-metadata');
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const {buildLiveSignals}=require('../src/signals/signals.live');
+const {parseGprDaily,gprLevel,gprTrend,resetGprCache}=require('../src/signals/gpr');
+const XLSX=require('xlsx');
+const noBinary=async()=>{throw Error('sin red')};
+const gprBook=(rows)=>{const ws=XLSX.utils.json_to_sheet(rows);const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Sheet1');return XLSX.write(wb,{type:'buffer',bookType:'xls'});};
+const {ObservationsService}=require('../src/observations/observations.service');
+const now=Date.now(),stamp=Math.floor(now/1000),iso=new Date(now).toISOString();
+const good=async u=>u.host==='api.alternative.me'?{data:[{value:'40',value_classification:'Fear',timestamp:stamp}]}:u.host==='api.coingecko.com'?{data:{updated_at:stamp,market_cap_percentage:{btc:55}}}:u.host==='api.llama.fi'?[{date:stamp,tvl:123e9}]:u.host==='gamma-api.polymarket.com'?[{active:true,closed:false,endDate:new Date(now+86400000).toISOString(),updatedAt:iso,question:'Will the Fed cut interest rates?',slug:'fed',outcomes:'["No","Yes"]',outcomePrices:'["0.3","0.7"]'}]:[];
+test('Fuentes independientes; Yes no depende del índice cero; ningún GPR inventado',async()=>{const s=await buildLiveSignals(good,now,noBinary);assert.equal(s.geo.gprIndex,null);assert.equal(s.emerging.fearGreedIndex,40);assert.equal(s.emerging.btcDominance,55);assert.equal(s.emerging.defiTvlUsd,123e9);assert.equal(s.emerging.predictionMarkets[0].probabilidad,.7);assert.ok(!JSON.stringify(s).includes('demostración'));});
+test('Caída total conserva ausencia explícita, nunca semilla ni cero',async()=>{const s=await buildLiveSignals(async()=>{throw Error()},now,noBinary);assert.equal(s.emerging.defiTvlUsd,null);assert.equal(s.emerging.fearGreedIndex,null);assert.deepEqual(s.emerging.predictionMarkets,[]);assert.ok(Object.values(s.provenance).every(p=>p.origin==='no disponible'));});
+test('Caída parcial conserva proveedores disponibles',async()=>{const s=await buildLiveSignals(async u=>{if(u.host==='api.coingecko.com')throw Error();return good(u)},now,noBinary);assert.equal(s.emerging.btcDominance,null);assert.equal(s.emerging.fearGreedIndex,40);});
+test('Rechaza antiguos, futuros, nulos y mercados cerrados',async()=>{const s=await buildLiveSignals(async u=>u.host==='api.alternative.me'?{data:[{value:20,timestamp:stamp-72*3600}]}:u.host==='api.coingecko.com'?{data:{updated_at:stamp+3600,market_cap_percentage:{btc:50}}}:u.host==='api.llama.fi'?[{date:stamp,tvl:null}]:[{active:true,closed:true}],now,noBinary);assert.equal(s.emerging.fearGreedIndex,null);assert.equal(s.emerging.btcDominance,null);assert.equal(s.emerging.defiTvlUsd,null);assert.equal(s.emerging.predictionMarkets.length,0);});
+test('Producción no devuelve shocks supuestos y filtra informes por usuario',async()=>{const previous=process.env.NODE_ENV;process.env.NODE_ENV='production';try{const a={positionCount:2,concentration:{hhiLevel:'baja',topPosition:null,top3Weight:.5},composition:{byClass:[],bySector:[],byRegion:[],byCurrency:[]}};let params;const live={origen:'fuentes externas',geo:{gprIndex:176,gprLevel:'elevado',tendencia:'estable',eventos:[]},emerging:{fearGreedIndex:null,fearGreedLabel:'No disponible',btcDominance:null,defiTvlUsd:null,tendenciaCripto:'no disponible',predictionMarkets:[]},provenance:{geo:{source:'Caldara e Iacoviello',origin:'externo',dataDate:'2026-10-19T00:00:00.000Z'},fearGreed:{source:'Alternative.me',origin:'no disponible',dataDate:null},btcDominance:{source:'CoinGecko',origin:'no disponible',dataDate:null},defi:{source:'DefiLlama',origin:'no disponible',dataDate:null},predictionMarkets:{source:'Polymarket',origin:'no disponible',dataDate:null}}};const service=new ObservationsService({analyze:async()=>a},{getSignals:async()=>live},{query:async(sql,p)=>{assert.match(sql,/p\."userId"=\$1/);params=p;return []}});const d=await service.generate(7);assert.deepEqual(d.escenarios,[]);assert.deepEqual(d.escenariosConFuentes,[]);assert.deepEqual(params,[7]);assert.ok(d.observaciones.some(o=>o.id==='ctx-gpr'),'la regla GPR debe activarse con señal externa');assert.ok(d.observaciones.every(o=>!o.evidencia.some(e=>/demostración|no disponible/.test(e.fuente))),'sin evidencia de demostración en producción');const demo={...live,origen:'snapshot local'};const s2=new ObservationsService({analyze:async()=>a},{getSignals:async()=>demo},{query:async()=>[]});const d2=await s2.generate(7);assert.ok(d2.observaciones.every(o=>o.categoria==='concentración'||o.categoria==='diversificación'),'con señales locales solo reglas de cartera');}finally{process.env.NODE_ENV=previous;}});
+
+test('GPR en vivo: toma la última fila válida, media de 30 días, nivel y tendencia; rechaza planillas viejas',async()=>{
+  resetGprCache();
+  const day=new Date(now-3*24*3600_000);const DAY=day.toISOString().slice(0,10).replace(/-/g,'');
+  const buf=gprBook([{DAY:'20200101',GPRD:90,GPRD_MA7:90,GPRD_MA30:90},{DAY,GPRD:248.66,GPRD_MA7:177.9,GPRD_MA30:176.0},{DAY:String(Number(DAY)+1),GPRD:null,GPRD_MA7:null,GPRD_MA30:null}]);
+  const r=parseGprDaily(buf);assert.equal(r.ma30,176);assert.equal(r.day,day.toISOString().slice(0,10));
+  assert.equal(gprLevel(176),'elevado');assert.equal(gprLevel(100),'moderado');assert.equal(gprLevel(70),'bajo');
+  assert.equal(gprTrend(177.9,176),'estable');assert.equal(gprTrend(200,150),'ascendente');assert.equal(gprTrend(100,150),'descendente');
+  const s=await buildLiveSignals(good,now,async()=>buf);
+  assert.equal(s.geo.gprIndex,176);assert.equal(s.geo.gprLevel,'elevado');assert.equal(s.provenance.geo.origin,'externo');assert.match(s.provenance.geo.source,/Caldara/);assert.equal(s.provenance.geo.dataDate,`${r.day}T00:00:00.000Z`);
+  resetGprCache();
+  const old=gprBook([{DAY:'20200101',GPRD:90,GPRD_MA7:90,GPRD_MA30:90}]);
+  const s2=await buildLiveSignals(good,now,async()=>old);assert.equal(s2.geo.gprIndex,null);assert.equal(s2.geo.gprLevel,'no disponible');
+  resetGprCache();
+});

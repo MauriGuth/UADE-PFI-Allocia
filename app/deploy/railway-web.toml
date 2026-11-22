@@ -1,0 +1,7 @@
+[build]
+builder = "RAILPACK"
+buildCommand = "corepack enable && pnpm install --frozen-lockfile && pnpm --filter web build"
+[deploy]
+startCommand = "pnpm --filter web exec next start --hostname 0.0.0.0 --port ${PORT}"
+healthcheckPath = "/login"
+restartPolicyType = "ON_FAILURE"

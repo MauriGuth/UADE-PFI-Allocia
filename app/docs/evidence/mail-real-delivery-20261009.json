@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-09T17:16:22.196Z",
+  "recipientAuthorized": true,
+  "providerEvents": [
+    {
+      "id": "01a121a9-32da-7c28-8abb-505afa300eab",
+      "last_event": "delivered",
+      "created_at": "2026-10-09 17:14:59.334000+00",
+      "subject": "Recuperá tu acceso a Allocia"
+    },
+    {
+      "id": "01a121a8-bc42-7648-b6f4-bae4536d02e8",
+      "last_event": "delivered",
+      "created_at": "2026-10-09 17:14:29.017000+00",
+      "subject": "Confirmá tu correo de Allocia"
+    }
+  ],
+  "flow": {
+    "at": "2026-10-09T17:15:08.435Z",
+    "origin": "https://allocia.com.ar",
+    "scope": "Destinatario real autorizado; flujo probado por API y Resend. Confirmación visual de casilla pendiente.",
+    "results": [
+      {
+        "label": "Cuenta temporal de simulación creada",
+        "pass": true
+      },
+      {
+        "label": "Solicitud de verificación aceptada",
+        "pass": true
+      },
+      {
+        "label": "Enlace /verify-email usa dominio propio y token en fragmento",
+        "pass": true
+      },
+      {
+        "label": "Remitente verificado de Allocia",
+        "pass": true
+      },
+      {
+        "label": "Verificación consume enlace",
+        "pass": true
+      },
+      {
+        "label": "Enlace de verificación no reutilizable",
+        "pass": true
+      },
+      {
+        "label": "Solicitud de recuperación aceptada",
+        "pass": true
+      },
+      {
+        "label": "Enlace /reset-password usa dominio propio y token en fragmento",
+        "pass": true
+      },
+      {
+        "label": "Remitente verificado de Allocia",
+        "pass": true
+      },
+      {
+        "label": "Cambio de contraseña válido",
+        "pass": true
+      },
+      {
+        "label": "Sesión anterior revocada",
+        "pass": true
+      },
+      {
+        "label": "Contraseña anterior rechazada",
+        "pass": true
+      },
+      {
+        "label": "Nueva contraseña permite acceso",
+        "pass": true
+      },
+      {
+        "label": "Enlace de recuperación no reutilizable",
+        "pass": true
+      },
+      {
+        "label": "Cuenta temporal eliminada",
+        "pass": true
+      }
+    ]
+  },
+  "inboxVisuallyConfirmed": true,
+  "confirmation": "El titular confirma ambos correos en Recibidos."
+}

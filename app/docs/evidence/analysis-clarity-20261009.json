@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-09T19:29:28.712Z",
+  "checks": [
+    "three_finite_scenarios",
+    "scenario_visible_browser",
+    "plain_summary_and_expandable_metrics",
+    "plain_risk_heading",
+    "alert_preference_accessible_in_details",
+    "signals_visible_browser_no_demo_or_nan",
+    "external_sources_and_explicit_missing_gpr",
+    "no_browser_errors"
+  ],
+  "provenance": {
+    "geo": {
+      "source": "Finnhub; GPR no disponible",
+      "origin": "externo",
+      "dataDate": "2026-10-09T18:50:21.000Z",
+      "fetchedAt": "2026-10-09T19:29:19.847Z"
+    },
+    "fearGreed": {
+      "source": "Alternative.me",
+      "origin": "externo",
+      "dataDate": "2026-10-09T00:00:00.000Z",
+      "fetchedAt": "2026-10-09T19:29:19.847Z"
+    },
+    "btcDominance": {
+      "source": "CoinGecko",
+      "origin": "externo",
+      "dataDate": "2026-10-09T19:24:06.000Z",
+      "fetchedAt": "2026-10-09T19:29:19.847Z"
+    },
+    "defi": {
+      "source": "DefiLlama",
+      "origin": "externo",
+      "dataDate": "2026-10-09T00:00:00.000Z",
+      "fetchedAt": "2026-10-09T19:29:19.847Z"
+    },
+    "predictionMarkets": {
+      "source": "Polymarket",
+      "origin": "externo",
+      "dataDate": "2026-10-09T19:27:51.441Z",
+      "fetchedAt": "2026-10-09T19:29:19.847Z"
+    }
+  },
+  "scenarios": 3,
+  "ci": {
+    "run": 37980505978,
+    "result": "success"
+  },
+  "limitations": [
+    "La redacción de informes existentes no se modifica; las instrucciones de claridad se aplican a nuevos análisis.",
+    "La experiencia en dispositivos físicos con esta presentación requiere instalar el nuevo preview."
+  ],
+  "builds": [
+    {
+      "id": "28c7df6c-36dd-4dca-925a-b82058ffa15c",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "commit": "3ad78b8c1f0b2d6f0dbb09aafb1fd8950aa384d5"
+    },
+    {
+      "id": "7f8117a7-0b37-4e89-8154-2b8e499eb0ee",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "commit": "3ad78b8c1f0b2d6f0dbb09aafb1fd8950aa384d5"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "verifiedAt": "2026-10-09T20:56:41.519499+00:00",
+  "sourceCommit": "dc28dcd",
+  "functionalCommit": "41e1541",
+  "checks": {
+    "typeScript": "passed",
+    "metroAndroidExport": "passed",
+    "metroIosExport": "passed",
+    "githubCI": "success: 37988654335",
+    "androidEmulator": "API 35; login, navigation, add AAPL=1, success confirmation and persisted holding verified. Navigation remains usable with animator_duration_scale=0; setting restored.",
+    "physicalDevices": "Not tested in this turn",
+    "readAlertAnimation": "Code reviewed; not exercised against a real unread report in this turn"
+  },
+  "builds": {
+    "android": {
+      "id": "8a580f3a-2579-43d5-94a2-e1ef63b1df28",
+      "status": "FINISHED"
+    },
+    "ios": {
+      "id": "16a497eb-afe1-405c-9055-57486b3c7fd7",
+      "status": "FINISHED"
+    }
+  },
+  "cleanup": "Synthetic test account deleted; app data cleared; emulator stopped."
+}

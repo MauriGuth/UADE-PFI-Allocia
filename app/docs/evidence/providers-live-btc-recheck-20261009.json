@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-09T14:40:58.482Z",
+  "databaseAccess": false,
+  "notificationsSent": false,
+  "results": [
+    {
+      "ticker": "BTC",
+      "quoteAvailable": true,
+      "quoteAsOf": "2026-10-09T14:39:50.000Z",
+      "sourceCount": 24,
+      "sourceScopes": [
+        "global",
+        "crypto"
+      ],
+      "missing": [],
+      "generation": "analysis",
+      "model": "claude-sonnet-5-5",
+      "usage": {
+        "inputTokens": 8567,
+        "outputTokens": 1535
+      },
+      "groundedFactCount": 6,
+      "scenarioCount": 3
+    }
+  ]
+}

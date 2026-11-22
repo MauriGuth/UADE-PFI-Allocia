@@ -1,0 +1,308 @@
+[
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "AAPL",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "ADA",
+    "name": "Cardano",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "cardano",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon.com Inc.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "AMZN",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "BTC",
+    "name": "Bitcoin",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "bitcoin",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "DAI",
+    "name": "Dai",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "dai",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "EEM",
+    "name": "iShares MSCI Emerging Markets",
+    "region": "Emergentes",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "EEM",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "EFA",
+    "name": "iShares MSCI EAFE (Europa/Asia)",
+    "region": "Europa/Asia",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "EFA",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "ETH",
+    "name": "Ethereum",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "ethereum",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "GGAL",
+    "name": "Grupo Financiero Galicia (ADR)",
+    "region": "Argentina",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "GGAL",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "GLD",
+    "name": "SPDR Gold Shares",
+    "region": "Global",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "GLD",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "GOOGL",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "IWM",
+    "name": "iShares Russell 2000 ETF",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "IWM",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "JNJ",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "JPM",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "KO",
+    "name": "The Coca-Cola Company",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "KO",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "LINK",
+    "name": "Chainlink",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "chainlink",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "MELI",
+    "name": "MercadoLibre Inc.",
+    "region": "Latinoamérica",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "MELI",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms Inc.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "META",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corp.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "MSFT",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corp.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "NVDA",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "PAM",
+    "name": "Pampa Energía (ADR)",
+    "region": "Argentina",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "PAM",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "PG",
+    "name": "Procter & Gamble Co.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "PG",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "POL",
+    "name": "Polygon",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "polygon-ecosystem-token",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "QQQ",
+    "name": "Invesco QQQ (Nasdaq 100)",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "QQQ",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "SOL",
+    "name": "Solana",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "solana",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "SPY",
+    "name": "SPDR S&P 500 ETF",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "SPY",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla Inc.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "TSLA",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "USDC",
+    "name": "USD Coin",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "usd-coin",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "USDT",
+    "name": "Tether USD",
+    "region": "Global",
+    "exchange": "CRYPTO",
+    "providerSymbol": "tether",
+    "currency": "USD",
+    "kind": "crypto"
+  },
+  {
+    "ticker": "VOO",
+    "name": "Vanguard S&P 500 ETF",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "VOO",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "XLE",
+    "name": "Energy Select Sector SPDR",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "XLE",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "XLF",
+    "name": "Financial Select Sector SPDR",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "XLF",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "XOM",
+    "name": "Exxon Mobil Corp.",
+    "region": "EE.UU.",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "XOM",
+    "currency": "USD",
+    "kind": "equity"
+  },
+  {
+    "ticker": "YPF",
+    "name": "YPF S.A. (ADR)",
+    "region": "Argentina",
+    "exchange": "XNYS_XNAS",
+    "providerSymbol": "YPF",
+    "currency": "USD",
+    "kind": "equity"
+  }
+]

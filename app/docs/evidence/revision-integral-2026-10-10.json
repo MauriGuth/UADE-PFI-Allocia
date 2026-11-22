@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-10",
+  "scope": "pre-build regression review",
+  "results": {
+    "isolated_security_integration": {
+      "passed": 22
+    },
+    "controlled_source_analysis_email": {
+      "passed": 20
+    },
+    "web_unit": {
+      "passed": 8
+    },
+    "browser_e2e": {
+      "passed": 3
+    },
+    "api_build": "passed",
+    "web_build": "passed",
+    "mobile_typecheck": "passed",
+    "session_restore_logic": "passed",
+    "biometric_gate_logic": "passed",
+    "quote_refresh_logic": "passed"
+  },
+  "physical_biometrics": "pending",
+  "android_push_receipt": "pending user confirmation",
+  "ios_push_receipt": "previously confirmed by user",
+  "new_mobile_build_created": false,
+  "limitations": [
+    "No global code coverage percentage measured",
+    "Provider responses mocked in controlled tests",
+    "No live email or push sent by regression suites",
+    "Not a complete independent security audit"
+  ]
+}

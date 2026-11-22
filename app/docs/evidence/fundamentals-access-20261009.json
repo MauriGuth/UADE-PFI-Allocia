@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-09T14:39:43Z",
+  "symbol": "AAPL",
+  "results": [
+    {
+      "capability": "daily_candles",
+      "http": 403
+    },
+    {
+      "capability": "basic_financials",
+      "http": 200,
+      "nonempty": true
+    },
+    {
+      "capability": "reported_financials",
+      "http": 200,
+      "nonempty": true
+    }
+  ]
+}

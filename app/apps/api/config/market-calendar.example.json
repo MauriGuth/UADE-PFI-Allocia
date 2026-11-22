@@ -1,0 +1,13 @@
+{
+  "source": "https://www.nyse.com/trade/trading-information",
+  "verifiedAt": "2026-10-08T00:00:00Z",
+  "validUntil": "2026-12-31T23:59:59Z",
+  "sessions": [
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-09T09:30:00-04:00",
+      "close": "2026-10-09T16:00:00-04:00"
+    }
+  ]
+}

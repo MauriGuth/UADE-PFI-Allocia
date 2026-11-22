@@ -1,0 +1,83 @@
+name: Verify release
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_PASSWORD: isolated-test-only
+          POSTGRES_DB: allocia_ci
+        ports: [5432:5432]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
+      redis:
+        image: redis:7
+        ports: [6379:6379]
+    env:
+      NODE_ENV: test
+      DB_USER: postgres
+      DB_PASS: isolated-test-only
+      DB_NAME: allocia_ci
+      TEST_DB_NAME: allocia_ci
+      JWT_SECRET: isolated-ci-only-signing-key-at-least-32-characters
+      REDIS_URL: redis://127.0.0.1:6379/2
+      TEST_REDIS_URL: redis://127.0.0.1:6379/2
+      API_TEST_URL: http://127.0.0.1:41873
+      API_URL: http://127.0.0.1:41873
+      WEB_ORIGINS: http://localhost:3010
+      WEB_ORIGIN: http://localhost:3010
+      E2E_BASE_URL: http://localhost:3010
+      RESEND_API_KEY: synthetic-test-key
+      MAIL_FROM: test@example.invalid
+      PUBLIC_WEB_URL: http://localhost:3010
+      HOLDINGS_ENCRYPTION_KEY: BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: mkdir -p apps/api/evidence && pnpm --filter api build && pnpm --filter api migrate:production && pnpm --filter api seed
+      - run: pnpm --filter api test:pfi && pnpm --filter api exec node --test tests/release-unit.cjs tests/account-email.cjs tests/market-quotes.cjs tests/research-discovery.cjs && pnpm --filter web test
+      - run: |
+          MARKET_UNIVERSE_FILE=apps/api/config/market-universe.catalog.json HOST=127.0.0.1 PORT=41873 node apps/api/dist/main.js > /tmp/api.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:41873/health && break; sleep 1; done
+          pnpm --filter api exec node tests/production-security.cjs
+          pnpm --filter api test:integration
+      - run: pnpm --filter api exec node -r ts-node/register --test tests/signals-live.cjs tests/signals-spanish.cjs tests/scenarios-evidence.cjs tests/opportunities.cjs
+      - run: pnpm --filter api exec node tests/quote-refresh.cjs && pnpm --filter api exec node tests/valuation-snapshot.cjs && pnpm --filter api exec node tests/asset-logos.cjs
+      - run: pnpm --filter api exec node tests/opportunities-integration.cjs
+      - run: NODE_ENV=production pnpm --filter web build
+      - run: |
+          pnpm --filter web exec playwright install --with-deps chromium
+          NODE_ENV=development pnpm --filter web exec next dev -p 3010 > /tmp/web.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://localhost:3010/login > /dev/null && break; sleep 1; done
+          # La API limita la autenticación a 20 intentos por ventana fija de 15 min y por IP.
+          # Los pasos de API previos y los propios e2e (registros/logins) pueden superarlo y dar 429
+          # según el instante del reloj. Redis es el servicio efímero de este job: se vacían los
+          # contadores `rate:*` antes de cada spec para que ningún spec dependa de los anteriores.
+          clear_rate_limits() {
+            pnpm --filter api exec node -e "const Redis=require('ioredis');const r=new Redis(process.env.REDIS_URL);r.keys('rate:*').then(k=>k.length?r.del(...k):0).then(()=>r.quit())"
+          }
+          status=0
+          for spec in e2e/release.spec.ts e2e/account-email.spec.ts e2e/shared-account.spec.ts e2e/visual-clarity.spec.ts e2e/opportunities.spec.ts e2e/account-wrong-password.spec.ts e2e/extra-checks.spec.ts e2e/public-redesign.spec.ts e2e/web-notifications.spec.ts e2e/app.spec.ts e2e/console.spec.ts; do
+            clear_rate_limits
+            # app.spec y console.spec se agregaron después. Corren contra `next dev` (como el resto), que compila cada
+            # ruta al vuelo y a veces tarda más que los plazos de las pruebas; la prueba de alta/edición/baja de
+            # console.spec falla al azar (~30 %) incluso con el código anterior. Se reintentan hasta 2 veces: un error
+            # real falla en los 3 intentos y Playwright marca como «flaky» lo que pasó solo al reintentar.
+            retries=0
+            case "$spec" in e2e/app.spec.ts|e2e/console.spec.ts) retries=2 ;; esac
+            pnpm --filter web exec playwright test "$spec" --workers=1 --retries=$retries || status=1
+          done
+          exit $status
+      - run: npm ci --ignore-scripts --no-audit && npx tsc --noEmit && node tests/biometric-gate.cjs && node tests/session-restore.cjs && node tests/alert-view.cjs && node tests/wrong-password.cjs
+        working-directory: apps/mobile

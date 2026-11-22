@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09T19:47:28.690Z",
+  "checks": [
+    "live_spanish_translation_available",
+    "unread_report_rendered_once_with_summary_and_read_action",
+    "read_action_preserves_latest_report"
+  ],
+  "fixtureNote": "Card association/read action exercised with synthetic intercepted reports; translation checked against live API.",
+  "ci": {
+    "run": 37982157467,
+    "status": "success"
+  },
+  "builds": [
+    {
+      "id": "ebd69eca-c202-449f-b812-9ba188740017",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "gitCommitHash": "c878366126c1efc9a88a4b148243e055c59ff1db"
+    },
+    {
+      "id": "3d7baae7-e650-4848-a085-2d0928c20aa7",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "gitCommitHash": "c878366126c1efc9a88a4b148243e055c59ff1db"
+    }
+  ]
+}

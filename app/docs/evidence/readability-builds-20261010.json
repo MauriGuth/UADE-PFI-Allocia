@@ -1,0 +1,34 @@
+{
+  "purpose": "logos and readability preview installers",
+  "builds": [
+    {
+      "id": "a38311fb-b7f3-4b99-a812-3c80e67ed626",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "gitCommitHash": "e068febc966718f7fecf7d248c2567a1566bcb0c",
+      "createdAt": "2026-10-10T22:45:50.797Z",
+      "completedAt": "2026-10-10T22:53:44.394Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/a38311fb-b7f3-4b99-a812-3c80e67ed626",
+      "artifactUrl": "https://expo.dev/artifacts/eas/Gi5oBGb8TvfCgO0AiJzjR4NZV0zIzETG4ZsrWeZp_iE.apk",
+      "artifactHttpStatus": 200
+    },
+    {
+      "id": "d5537a7d-ac60-4841-8d77-416e7ff809e1",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "gitCommitHash": "e068febc966718f7fecf7d248c2567a1566bcb0c",
+      "createdAt": "2026-10-10T22:46:12.544Z",
+      "completedAt": "2026-10-10T22:50:04.491Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/d5537a7d-ac60-4841-8d77-416e7ff809e1",
+      "artifactUrl": "https://expo.dev/artifacts/eas/ETh3h4VVCedKKqzErfqCWl1l8RfhDYUZm8GISaHWmps.ipa",
+      "artifactHttpStatus": 200
+    }
+  ],
+  "physicalAcceptance": "passed, reported by Mauricio Huentelaf for the new Android and iOS builds; all newly tested functions and implementations work correctly",
+  "preflightCorrection": "Updated verifiedApiCommit to 94a36f6 using existing authenticated production checks; gate retained. Initial Android c22042d8 and iOS 2b30e8c4 failed before install due to stale API evidence.",
+  "physicalAcceptanceEvidence": {
+    "source": "User confirmation in project conversation after delivery of these builds",
+    "scope": "New features and implementations in revision e068feb, including logos and readability improvements",
+    "method": "Author-reported physical verification; no independent usability study or per-case measurements supplied"
+  }
+}

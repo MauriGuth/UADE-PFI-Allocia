@@ -1,0 +1,5 @@
+packages:
+  - "apps/api"
+  - "apps/web"
+# apps/mobile (Expo) se gestiona con npm por separado para evitar conflictos
+# entre Metro y los symlinks de pnpm.

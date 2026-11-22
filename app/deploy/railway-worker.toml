@@ -1,0 +1,7 @@
+[build]
+builder = "RAILPACK"
+buildCommand = "corepack enable && pnpm install --frozen-lockfile && pnpm --filter api build"
+[deploy]
+startCommand = "node apps/api/dist/market/worker.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-10T23:36:29.812Z",
+  "apiCommit": "2174898611fefa93a048635d512a3199627375da",
+  "coverage": 34,
+  "checks": [
+    "API health and commit",
+    "unauthenticated access rejected",
+    "opt-in disabled by default",
+    "TSLA follow without portfolio position",
+    "independent preferences",
+    "personal export includes watchlist",
+    "web and mobile API share account and watchlist",
+    "disable and unfollow"
+  ],
+  "scope": "Live production with temporary account; no model call, no real push sent; provider search and signal generation separately covered by isolated tests"
+}

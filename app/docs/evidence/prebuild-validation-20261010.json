@@ -1,0 +1,26 @@
+{
+  "apiCommit": "e9545158ae45a0c7b2d44f42fea97e262c1ce0ff",
+  "mobileSourceCommit": "94d5850bad65c211e2a032e28abce111863c8aad",
+  "apiProduction": "verified healthy and authenticated valuation/status smoke passed; temporary account deleted",
+  "worker": "deployed successfully",
+  "web": "Vercel production READY, allocia.com.ar, 94d5850",
+  "ci": "https://github.com/MauriGuth/allocia/actions/runs/38088295862",
+  "ciConclusion": "success",
+  "isolatedSecurityIntegration": 23,
+  "browserJourneys": 3,
+  "snapshotRegression": "passed",
+  "quoteRefreshRegression": "passed",
+  "mobileTypecheck": "passed",
+  "biometricMockRegression": "passed",
+  "offlineSessionRegression": "passed",
+  "catalogQuotes": {
+    "available": 34,
+    "tested": 34
+  },
+  "pending": [
+    "pre-open automatic run observation",
+    "physical validation Android/iOS",
+    "additional market/provider coverage",
+    "remaining platform parity items in WEB_PARITY.md"
+  ]
+}

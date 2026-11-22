@@ -1,0 +1,24 @@
+{
+  "verifiedApiCommit": "7c1f98903d73fa70675be2f1d80944fc4ba4a130",
+  "verifiedAt": "2026-10-24T04:40:53.790661Z",
+  "checks": {
+    "deployedApiAndDatabase": true,
+    "allCatalogQuotes": true,
+    "masterPromptDataAndAnalysis": false,
+    "accountRecoveryDelivery": true,
+    "scheduledAnalysisAndAlerts": false,
+    "nativeCredentialsConfigured": true
+  },
+  "evidence": {
+    "deployedApiAndDatabase": "docs/evidence/api-production-20261024.json: API en Railway con /health, autenticación, catálogo, cartera con cotizaciones fechadas, análisis, observaciones y seis señales en vivo (GPR incluido) sobre la cuenta de demostración.",
+    "allCatalogQuotes": "docs/evidence/catalog-coverage-20261024.json: 34/34 cotizaciones accesibles con las credenciales productivas (Finnhub y CoinGecko). No implica cobertura mundial ni streaming.",
+    "accountRecoveryDelivery": "docs/evidence/mail-real-delivery-20261009.json: flujo de recuperación y verificación con entrega real por Resend confirmada por el titular el 9/10. El código de correo no cambió desde entonces; no se reejecutó en esta verificación.",
+    "scheduledAnalysisAndAlerts": "Último corte de cripto completado el 24/10 00:02 UTC según /market/status; el disparo previo a la apertura y la recepción física de cada aviso siguen pendientes.",
+    "nativeCredentialsConfigured": "EAS informa credenciales de distribución iOS (perfil ad hoc con dos dispositivos, vigente hasta abril de 2027) y Android listas el 24/10."
+  },
+  "previewAuthorization": {
+    "date": "2026-10-24",
+    "purpose": "physical-device-validation",
+    "request": "Instaladores internos con los ocho cambios derivados de las sesiones con usuarios (21 a 23/10), el índice GPR en vivo y las reglas de contexto activas en producción, para la segunda ronda de evaluación con participantes."
+  }
+}

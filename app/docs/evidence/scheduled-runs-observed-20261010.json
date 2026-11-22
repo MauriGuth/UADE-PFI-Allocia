@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-10-10",
+  "method": "read-only query of production market_runs and report counts from Railway worker",
+  "runs": [
+    {
+      "slot": "XNYS_XNAS:2026-10-09T16:00:00-04:00:pre-close",
+      "createdAt": "2026-10-09T19:45:19.152Z",
+      "finishedAt": "2026-10-09T19:49:19.853Z",
+      "status": "complete",
+      "reports": 25
+    },
+    {
+      "slot": "CRYPTO:2026-10-10T00:00:00.000Z",
+      "createdAt": "2026-10-10T00:00:01.038Z",
+      "finishedAt": "2026-10-10T00:01:33.799Z",
+      "status": "complete",
+      "reports": 9
+    },
+    {
+      "slot": "CRYPTO:2026-10-10T12:00:00.000Z",
+      "createdAt": "2026-10-10T12:00:04.351Z",
+      "finishedAt": "2026-10-10T12:01:35.303Z",
+      "status": "complete",
+      "reports": 9
+    }
+  ],
+  "limits": [
+    "No pre-open run found in inspected records",
+    "Does not establish physical receipt of each push",
+    "Does not establish support for other exchanges"
+  ]
+}

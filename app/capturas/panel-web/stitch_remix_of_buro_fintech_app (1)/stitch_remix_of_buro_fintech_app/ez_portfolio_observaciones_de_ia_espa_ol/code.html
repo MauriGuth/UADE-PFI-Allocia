@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Observaciones de IA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1e293b",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed": "#e1e0ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#111c2d",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-error": "#ffffff",
+                        "tertiary": "#040057",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-primary-container": "#8590a6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "primary": "#091426",
+                        "outline-variant": "#c5c6cd",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#0f0069",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777d",
+                        "surface-container-highest": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d8e3fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#7f82ff",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#645efb",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed-dim": "#bcc7de",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "secondary": "#4b41e1",
+                        "tertiary-container": "#0d0093",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#545f73",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "card-padding": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Geist"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "data-mono": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Ambient Background */
+        body {
+            background-color: #F8FAFC;
+            background-image: 
+                radial-gradient(at 100% 0%, rgba(79, 70, 229, 0.03) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(79, 70, 229, 0.02) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Soft Shadows */
+        .shadow-ambient {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.03), 0 2px 4px -2px rgb(0 0 0 / 0.03);
+        }
+
+        /* Micro-interactions */
+        .observation-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .observation-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+
+        .expand-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+        .expand-content.open {
+            grid-template-rows: 1fr;
+        }
+        .expand-inner {
+            overflow: hidden;
+        }
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+        .expand-btn[aria-expanded="true"] .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Severity Tags */
+        .severity-high { background-color: #FEF2F2; color: #991B1B; border: 1px solid #FEE2E2; }
+        .severity-medium { background-color: #FFFBEB; color: #92400E; border: 1px solid #FEF3C7; }
+        .severity-low { background-color: #F0FDF4; color: #166534; border: 1px solid #DCFCE7; }
+    </style>
+</head>
+<body class="font-body-md text-body-md text-on-surface bg-background min-h-screen antialiased flex flex-col md:flex-row">
+<!-- Mobile Top App Bar (Hidden on Desktop) -->
+<header class="md:hidden bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center w-full h-16 px-margin-mobile z-50 sticky top-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="psychology">psychology</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-primary dark:text-primary-fixed-dim">Ez Portfolio</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-highest p-2 rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="Executive User Profile" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of an executive user in a modern, well-lit corporate environment. The lighting is soft and professional, emphasizing a clean, light-mode aesthetic with neutral grays and subtle blue tones. The subject is calm and authoritative, fitting a premium financial application context. The background is slightly blurred." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3OmI_wCSaMc5Ky6EnwaGcGNbowesifn1ejE4WGR5fdoUWGTukVIl0Wrx-I4dfQFJyL_USBWYnwHfuKZ43syW0AuuVx4OItfiuylOc3xlNcZFZPqBzmQ_kar58HyJ9nd8HVY6tYldjm9e5KPkP0PAq4FuMktNX7i55j7RCq5XEA9xj3RgEr3pM4lzpRPy541tBFDmRBlDX8__9c76Zaq1v1cuum2tVYIPG1h-lyJ5pomAsBcomeqR"/>
+</div>
+</div>
+</header>
+<!-- Desktop SideNavBar -->
+<nav class="hidden md:flex flex-col fixed left-0 top-0 h-full w-64 bg-surface-container-low dark:bg-surface-container-lowest border-r border-outline-variant dark:border-outline py-margin-desktop gap-unit z-40">
+<!-- Brand Header -->
+<div class="px-6 pb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[20px]" data-icon="psychology">psychology</span>
+</div>
+<span class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed-dim tracking-tight">Ez Portfolio</span>
+</div>
+<div class="text-on-surface-variant text-sm font-medium">Portfolio Risk Suite</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 overflow-y-auto">
+<ul class="flex flex-col gap-1">
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="dashboard">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="settings_suggest">settings_suggest</span>
+                        Portfolio Setup
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="pie_chart">pie_chart</span>
+                        Breakdown
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="security">security</span>
+                        Risk Analysis
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="trending_up">trending_up</span>
+                        Prediction Signals
+                    </a>
+</li>
+<li>
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary-container/10 dark:bg-secondary-container/20 border-r-2 border-secondary flex items-center px-6 py-3 scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-secondary" data-icon="psychology" data-weight="fill">psychology</span>
+                        Observaciones de IA
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant" data-icon="description">description</span>
+                        Reports
+                    </a>
+</li>
+</ul>
+</div>
+<!-- User Profile -->
+<div class="px-6 pt-4 border-t border-outline-variant mt-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="Executive User Profile" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of an executive user in a modern, well-lit corporate environment. The lighting is soft and professional, emphasizing a clean, light-mode aesthetic with neutral grays and subtle blue tones. The subject is calm and authoritative, fitting a premium financial application context. The background is slightly blurred." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBII9inbxe9uHQZwALQ87mQDj6Jk4C9S70X28F_LzVbFGXDrENJPveIv6-XAyKOYQzPY-Pd2TtxgMy2IGvVWOzfErvJwazUFRiiGccqjg5s9Pq8grRJ6s9Z52Hv7qazLRzRSAv0lGBJtp5P6MJMbzRXYZ34FxQe2y2Q9xBpntx4VrOT8GfddNfp9wOOitmuDSbaWy-H7HJxZ7e8hsZvu4hmJXCfY6EAp-l5IgevL5kU2_esl5H88DQ1"/>
+</div>
+<div>
+<div class="font-body-md font-medium text-on-surface">E. Thompson</div>
+<div class="text-xs text-on-surface-variant">Exec. Director</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop w-full max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="mb-12">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Observaciones de IA</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Perspectivas transparentes generadas por el motor de inteligencia de Ez Portfolio. Revise las anomalías estructurales activas y los factores de riesgo contextuales detectados dentro de su configuración de cartera actual.
+            </p>
+</div>
+<!-- Observations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Observation 1: High Severity -->
+<div class="col-span-1 lg:col-span-12 bg-surface rounded-lg border border-outline-variant shadow-ambient observation-card overflow-hidden">
+<div class="p-card-padding">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps px-2 py-1 rounded severity-high">PRIORIDAD ALTA</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> Detectado hace 2h</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Riesgo de Concentración Sectorial: Tecnología</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                                La ponderación de la cartera en Tecnología (XLK) ha superado el umbral del 35%, aumentando significativamente la exposición a la próxima volatilidad de la cadena de suministro de semiconductores.
+                            </p>
+</div>
+<div class="md:text-right shrink-0">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-1">AFFECTED ASSETS</div>
+<div class="font-data-mono text-data-mono text-on-surface">AAPL, MSFT, NVDA, AMD</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+<button aria-expanded="false" class="expand-btn flex items-center gap-2 text-secondary font-medium hover:text-secondary-container transition-colors" onclick="toggleExpand(this, 'details-1')">
+<span class="material-symbols-outlined text-[20px]" data-icon="troubleshoot">troubleshoot</span>
+                            ¿Por qué veo esto?
+                            <span class="material-symbols-outlined text-[20px] expand-icon" data-icon="expand_more">expand_more</span>
+</button>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded font-medium hover:bg-primary transition-colors duration-200">
+                            Revisar Estrategia de Reequilibrio
+                        </button>
+</div>
+</div>
+<!-- Expandable Details -->
+<div class="expand-content bg-surface-bright border-t border-outline-variant" id="details-1">
+<div class="expand-inner p-card-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-3">EXPLICACIÓN</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    El motor analizó matrices de correlación históricas y el sentimiento geopolítico actual. El reciente aumento del 12% en NVDA y AMD ha empujado orgánicamente el peso del sector más allá de los límites de la política. Al mismo tiempo, nuestros modelos de PNL detectaron un aumento del 40% en el sentimiento negativo con respecto a la estabilidad de la cadena de suministro de Taiwán en las últimas 72 horas.
+                                </p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-3">FUENTES DE DATOS UTILIZADAS</h3>
+<ul class="text-sm text-on-surface-variant space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5" data-icon="database">database</span>
+                                        Tenencias de cartera en tiempo real (Interno)
+                                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5" data-icon="article">article</span>
+                                        Índice global de sentimiento de noticias financieras (Bloomberg/Reuters API)
+                                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5" data-icon="show_chart">show_chart</span>
+                                        Datos de superficie de volatilidad histórica
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Observation 2: Medium Severity -->
+<div class="col-span-1 lg:col-span-12 bg-surface rounded-lg border border-outline-variant shadow-ambient observation-card overflow-hidden">
+<div class="p-card-padding">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps px-2 py-1 rounded severity-medium">OBSERVACIÓN MODERADA</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> Detectado hace 5h</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Sensibilidad de Criptomonedas a Regulación Inminente</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                                Las tenencias de activos digitales muestran una alta correlación beta con los fallos anticipados de la SEC sobre los protocolos de staking. El riesgo de caída potencial se estima en 15-20% en escenarios adversos.
+                            </p>
+</div>
+<div class="md:text-right shrink-0">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-1">AFFECTED ASSETS</div>
+<div class="font-data-mono text-data-mono text-on-surface">ETH, SOL, CBAS</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+<button aria-expanded="false" class="expand-btn flex items-center gap-2 text-secondary font-medium hover:text-secondary-container transition-colors" onclick="toggleExpand(this, 'details-2')">
+<span class="material-symbols-outlined text-[20px]" data-icon="troubleshoot">troubleshoot</span>
+                            ¿Por qué veo esto?
+                            <span class="material-symbols-outlined text-[20px] expand-icon" data-icon="expand_more">expand_more</span>
+</button>
+<button class="bg-transparent border border-outline-variant text-primary px-4 py-2 rounded font-medium hover:bg-surface-container-low transition-colors duration-200">
+                            Simular Prueba de Estrés
+                        </button>
+</div>
+</div>
+<!-- Expandable Details -->
+<div class="expand-content bg-surface-bright border-t border-outline-variant" id="details-2">
+<div class="expand-inner p-card-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-3">EXPLICACIÓN</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    El modelo identificó un patrón de reducción de riesgo institucional en activos de prueba de participación (proof-of-stake) durante las últimas 48 horas. Esto se alinea con calendarios regulatorios predictivos que indican una decisión pendiente de la SEC. La puntuación de riesgo se elevó porque su cartera carece de mecanismos de cobertura suficientes (por ejemplo, futuros cortos o refugios seguros no correlacionados) contra este riesgo de evento específico.
+                                </p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-3">FUENTES DE DATOS UTILIZADAS</h3>
+<ul class="text-sm text-on-surface-variant space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5" data-icon="gavel">gavel</span>
+                                        Pronósticos de calendario regulatorio
+                                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5" data-icon="monitoring">monitoring</span>
+                                        Análisis de flujo institucional on-chain
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline flex justify-around items-center h-16 px-2 pb-safe z-50">
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-label-caps text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="security">security</span>
+<span class="font-label-caps text-[10px]">Risk</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-primary font-bold" href="#">
+<div class="bg-secondary-container/20 px-4 py-1 rounded-full mb-1">
+<span class="material-symbols-outlined text-[24px] text-secondary" data-icon="psychology" data-weight="fill">psychology</span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary">AI Obs.</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="pie_chart">pie_chart</span>
+<span class="font-label-caps text-[10px]">Breakdown</span>
+</a>
+</nav>
+<script>
+        function toggleExpand(button, targetId) {
+            const target = document.getElementById(targetId);
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                target.classList.remove('open');
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                target.classList.add('open');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+</body></html>

@@ -1,0 +1,117 @@
+{
+  "at": "2026-10-09T17:23:30.783Z",
+  "promptVersion": "allocia-evidence-5",
+  "status": "analysis",
+  "macro": {
+    "retrievedAt": "2026-10-09T17:23:21.390Z",
+    "observations": [
+      {
+        "date": "2026-10-07",
+        "value": 3.88,
+        "series": "DFF",
+        "unit": "porcentaje anual",
+        "source": "https://fred.stlouisfed.org/series/DFF"
+      },
+      {
+        "date": "2026-10-07",
+        "value": 4.77,
+        "series": "DGS2",
+        "unit": "porcentaje anual",
+        "source": "https://fred.stlouisfed.org/series/DGS2"
+      },
+      {
+        "date": "2026-10-07",
+        "value": 5.28,
+        "series": "DGS10",
+        "unit": "porcentaje anual",
+        "source": "https://fred.stlouisfed.org/series/DGS10"
+      },
+      {
+        "date": "2026-08-01",
+        "value": 334.131,
+        "series": "CPIAUCSL",
+        "unit": "índice 1982–1984=100, desestacionalizado",
+        "source": "https://fred.stlouisfed.org/series/CPIAUCSL"
+      }
+    ],
+    "missing": [],
+    "inflationYoyPct": 3.353016322755642,
+    "yieldSpread10y2yPp": 0.5100000000000007,
+    "notice": "Contexto de EE. UU. publicado por FRED (Federal Reserve/BLS). Fechas de observación, no cotizaciones en tiempo real. Series revisables; inflación interanual calculada sobre CPI desestacionalizado. Diferencial 10–2 años en puntos porcentuales sólo con la misma fecha. No representa toda la macroeconomía mundial."
+  },
+  "technicalStatus": "available",
+  "factCount": 4,
+  "scenarioCount": 3,
+  "sections": [
+    {
+      "section": "1. Resumen ejecutivo",
+      "status": "conditional",
+      "detail": "BTC cotiza cerca de USD 82.599 (09/10/2026). Tras una caída bajo USD 81.000 con liquidaciones, rebotó. El RSI14 ronda 46,9 y el MACD está por debajo de su señal; el precio queda bajo la SMA20 y sobre SMA50/200. Salidas de ETF y rendimientos altos pesan; la zona 81.517–82.833 es clave."
+    },
+    {
+      "section": "2. Precio actual",
+      "status": "available",
+      "detail": "82599 USD; CoinGecko; 2026-10-09T17:22:35.000Z. Cotización fechada, sin garantía de latencia en tiempo real."
+    },
+    {
+      "section": "3. Análisis técnico",
+      "status": "partial",
+      "detail": "Indicadores diarios, volatilidad y drawdown calculados por el servidor cuando hay muestras suficientes. Faltan análisis intradiario, volumen por vela, ATR/VWAP y confirmación de patrones."
+    },
+    {
+      "section": "4. Análisis fundamental",
+      "status": "unavailable",
+      "detail": "Fundamentales societarios no disponibles o no aplicables."
+    },
+    {
+      "section": "5. Análisis macro",
+      "status": "partial",
+      "detail": "DFF: 3.88 porcentaje anual; 2026-10-07; https://fred.stlouisfed.org/series/DFF\nDGS2: 4.77 porcentaje anual; 2026-10-07; https://fred.stlouisfed.org/series/DGS2\nDGS10: 5.28 porcentaje anual; 2026-10-07; https://fred.stlouisfed.org/series/DGS10\nCPIAUCSL: 334.131 índice 1982–1984=100, desestacionalizado; 2026-08-01; https://fred.stlouisfed.org/series/CPIAUCSL\nInflación interanual: 3.35 %. Diferencial 10–2 años: 0.51 puntos porcentuales.\nContexto de EE. UU. publicado por FRED (Federal Reserve/BLS). Fechas de observación, no cotizaciones en tiempo real. Series revisables; inflación interanual calculada sobre CPI desestacionalizado. Diferencial 10–2 años en puntos porcentuales sólo con la misma fecha. No representa toda la macroeconomía mundial.\nFaltan liquidez, empleo y cobertura macro global completa."
+    },
+    {
+      "section": "6. Escenarios",
+      "status": "conditional",
+      "detail": "Alcista: Que BTC se sostenga sobre USD 82.833 y supere las medias horarias de USD 83.963 y 84.522. Según la fuente, eso reforzaría el sesgo alcista y abriría un retorno hacia máximos recientes (USD 87.374). Dependería de que cesen las salidas de ETF.\nBajista: Que BTC pierda USD 81.517 y los rendimientos de bonos sigan subiendo con ETF en salida. Reabriría el riesgo de más liquidaciones hacia USD 80.000–80.106. Tasas altas y el MACD bajo su señal añaden presión; no es predicción.\nBase: Que BTC siga oscilando dentro de la zona USD 81.517–82.833 sin seguimiento claro. Un rebote sin continuidad y flujos mixtos (ETF vs. interés de inversores adinerados) sostendrían la consolidación descrita."
+    },
+    {
+      "section": "7. Puntos de entrada",
+      "status": "unavailable",
+      "detail": "No se calculan entradas agresivas, confirmadas o conservadoras sin estrategia y datos suficientes."
+    },
+    {
+      "section": "8. Plan de salida",
+      "status": "unavailable",
+      "detail": "Stop, TP1, TP2 y TP3 no disponibles: faltan metodología y validación."
+    },
+    {
+      "section": "9. Relación riesgo/beneficio",
+      "status": "unavailable",
+      "detail": "No calculable sin entrada, stop y objetivo respaldados."
+    },
+    {
+      "section": "10. Scoring 0–100",
+      "status": "unavailable",
+      "detail": "No calculado: falta calibrar y validar los componentes y sus pesos fuera de muestra."
+    },
+    {
+      "section": "11. Plan de acción",
+      "status": "unavailable",
+      "detail": "No se emite una recomendación operativa personalizada sin perfil, horizonte, liquidez y metodología validados."
+    },
+    {
+      "section": "12. Nivel de confianza",
+      "status": "limited",
+      "detail": "Limitada por cobertura y actualidad de datos. No expresa una probabilidad de suba o baja."
+    },
+    {
+      "section": "13. Principales riesgos",
+      "status": "partial",
+      "detail": "Indicadores diarios calculados, sin OHLCV intradiario, ATR, VWAP ni niveles de entrada/salida validados.\nSin estados contables, ratios y calendario corporativo verificados no se determina valor intrínseco ni si el activo está caro o barato.\nLas noticias no sustituyen series oficiales de tasas, inflación, liquidez o correlaciones. No se calculan probabilidades, scoring 0–100 ni una relación riesgo/beneficio calibrada.\nSeries diarias de CoinGecko, no velas OHLC; los niveles horarios provienen de un solo artículo técnico.\nMacro es solo EE. UU. y con fechas distintas (tasas 07/10, CPI agosto); no refleja tiempo real ni lo global.\nFundamentales no aplican a cripto; noticias mezclan fuentes generales y no hay datos on-chain propios."
+    },
+    {
+      "section": "14. Catalizadores",
+      "status": "conditional",
+      "detail": "Sólo los acontecimientos de las fuentes citadas y las condiciones de los escenarios. No hay calendario corporativo completo verificado."
+    }
+  ]
+}

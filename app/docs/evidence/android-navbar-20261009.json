@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-09T20:12:53.349939+00:00",
+  "ci": 37983968738,
+  "ciResult": "success",
+  "device": "Android API 35 emulator, 1080x2400",
+  "checks": [
+    "All six tabs visible and above system controls with gesture navigation",
+    "All six tabs visible and above system controls with three-button navigation",
+    "Native preview installed and authenticated using a temporary account",
+    "Temporary account deleted and emulator app data cleared"
+  ],
+  "limitations": [
+    "Not verified on the user physical Android model",
+    "iOS build finished; no new physical iOS check"
+  ],
+  "builds": [
+    {
+      "id": "7baf3444-5a88-4fe4-a87b-c71366fd10f4",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "gitCommitHash": "49c17ed00f85a740e22ba14863948aab581cd110"
+    },
+    {
+      "id": "5c4c0a0b-c477-4656-ab90-00df98d1b72b",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "gitCommitHash": "49c17ed00f85a740e22ba14863948aab581cd110"
+    }
+  ]
+}

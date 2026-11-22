@@ -1,0 +1,27 @@
+{
+  "purpose": "physical-device-validation",
+  "builds": [
+    {
+      "id": "5197fba7-6bdf-4fa9-acc5-0ec166c23dca",
+      "platform": "ANDROID",
+      "status": "FINISHED",
+      "gitCommitHash": "94d5850bad65c211e2a032e28abce111863c8aad",
+      "createdAt": "2026-10-10T21:40:21.247Z",
+      "completedAt": "2026-10-10T21:48:58.635Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/5197fba7-6bdf-4fa9-acc5-0ec166c23dca",
+      "artifactUrl": "https://expo.dev/artifacts/eas/SIQBMahbKkLmsnMSkhZUkIzE8QaNaTfP9wR5fUmAeEc.apk"
+    },
+    {
+      "id": "a1f76f64-6dcf-4835-a278-ecc829ca4bcc",
+      "platform": "IOS",
+      "status": "FINISHED",
+      "gitCommitHash": "94d5850bad65c211e2a032e28abce111863c8aad",
+      "createdAt": "2026-10-10T21:40:51.231Z",
+      "completedAt": "2026-10-10T21:44:51.584Z",
+      "installationUrl": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/a1f76f64-6dcf-4835-a278-ecc829ca4bcc",
+      "artifactUrl": "https://expo.dev/artifacts/eas/IoNzhFslhpLJhgjKZCatn6yLEHoeJ_azPfGBNf3tNF8.ipa"
+    }
+  ],
+  "physicalTests": "pending user execution",
+  "checklist": "docs/PRUEBA_FISICA_2026-10-10.md"
+}

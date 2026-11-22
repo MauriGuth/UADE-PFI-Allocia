@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-10",
+  "scope": "Presentation, readability and loading/error states in web and mobile; no financial calculation changes",
+  "checks": {
+    "webProductionBuild": "passed",
+    "webUnitTests": {
+      "passed": 8,
+      "failed": 0
+    },
+    "browserJourneys": {
+      "passed": 3,
+      "failed": 0,
+      "files": [
+        "release.spec.ts",
+        "shared-account.spec.ts",
+        "visual-clarity.spec.ts"
+      ]
+    },
+    "webWidthsPx": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "webTextScale": "200% at 390px; no horizontal document overflow in tested portfolio",
+    "mobileTypeScript": "passed",
+    "mobileJavaScriptExport": [
+      "iOS passed",
+      "Android passed"
+    ],
+    "visualReview": "portfolio and report screenshots reviewed"
+  },
+  "environment": {
+    "database": "local PostgreSQL rehearsal database; existing catalog migration applied locally",
+    "api": "http://127.0.0.1:41873",
+    "web": "http://localhost:3101",
+    "browser": "installed Google Chrome via Playwright",
+    "reportsAndFailures": "controlled responses in visual test; not real financial analysis",
+    "positionsAndAccounts": "local API operations; visual test account deleted"
+  },
+  "limitations": [
+    "No new EAS builds generated in this revision",
+    "Physical acceptance from the user applies to the prior installers",
+    "Responsive checks do not certify accessibility or usability across all age groups",
+    "Provider coverage and financial methodology remain unchanged"
+  ],
+  "production": {
+    "commit": "a8d333fa70385903ce1374d2176c272bb019d5db",
+    "web": "https://allocia.com.ar",
+    "deployment": "dpl_9T2WQbt8RjfJYk2Z8FE1g7nSSB97",
+    "state": "READY",
+    "browserSmoke": "PASS: portfolio metrics, quote source disclosure, 390px overflow, market report rendering, no page errors",
+    "temporaryAccountDeleted": true,
+    "analysisRequested": false,
+    "pushSent": false
+  },
+  "ci": {
+    "run": "https://github.com/MauriGuth/allocia/actions/runs/38091517919",
+    "conclusion": "success"
+  }
+}

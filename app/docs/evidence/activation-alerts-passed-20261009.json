@@ -1,0 +1,82 @@
+{
+  "at": "2026-10-09T15:51:11.024Z",
+  "commit": "3c2c1228e3ba665438bc7058aec9223a6247a295",
+  "results": [
+    {
+      "label": "API activa con commit verificado",
+      "pass": true
+    },
+    {
+      "label": "Registro y autenticación de dos cuentas temporales",
+      "pass": true
+    },
+    {
+      "label": "Alta de posición",
+      "pass": true
+    },
+    {
+      "label": "Búsqueda externa CoinGecko",
+      "pass": true
+    },
+    {
+      "label": "Importación respaldada por cotización real",
+      "pass": true
+    },
+    {
+      "label": "Alta de cripto importada",
+      "pass": true
+    },
+    {
+      "label": "Valuación real acciones y cripto",
+      "pass": true
+    },
+    {
+      "label": "Aislamiento de lectura",
+      "pass": true
+    },
+    {
+      "label": "Aislamiento de escritura",
+      "pass": true
+    },
+    {
+      "label": "Edición propia",
+      "pass": true
+    },
+    {
+      "label": "Consentimiento de alertas dentro de la app",
+      "pass": true
+    },
+    {
+      "label": "Cola de análisis propia",
+      "pass": true
+    },
+    {
+      "label": "Solicitud repetida deduplicada",
+      "pass": true
+    },
+    {
+      "label": "Worker procesa informes de las dos posiciones",
+      "pass": true
+    },
+    {
+      "label": "IA con escenarios y fuentes verificadas",
+      "pass": true
+    },
+    {
+      "label": "Investigación y formato de catorce apartados incluidos",
+      "pass": true
+    },
+    {
+      "label": "Alertas dentro de la app entregadas sólo al propietario",
+      "pass": true
+    },
+    {
+      "label": "Eliminación de cuenta temporal",
+      "pass": true
+    },
+    {
+      "label": "Eliminación de cuenta temporal",
+      "pass": true
+    }
+  ]
+}

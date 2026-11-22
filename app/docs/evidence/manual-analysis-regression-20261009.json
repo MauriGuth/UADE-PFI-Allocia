@@ -1,0 +1,138 @@
+{
+  "executedAt": "2026-10-09T21:44:52.131Z",
+  "scope": "HTTP/PostgreSQL/Redis reales aislados; fuentes y modelo simulados para scheduler y grounding; sin envíos push ni llamadas Anthropic reales",
+  "total": 22,
+  "passed": 22,
+  "results": [
+    {
+      "id": "SEC01",
+      "title": "Contraseña breve y falta de consentimiento rechazadas; dos cuentas registradas",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC02",
+      "title": "Cookie HttpOnly SameSite sin token en JSON para navegador",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC03",
+      "title": "CSRF: mutaciones sin Origin y con origen ajeno rechazadas",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC04",
+      "title": "Cantidades cifradas y autenticadas en PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC05",
+      "title": "Aislamiento de propietario: cartera, edición y baja",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC06",
+      "title": "Acumulaciones concurrentes no pierden actualizaciones",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC07",
+      "title": "Campos extra, precisión y cantidades enormes rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC08",
+      "title": "Logout revoca Bearer y cookie emitidos anteriormente",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC09",
+      "title": "Cabeceras de seguridad y privacidad presentes",
+      "status": "PASS"
+    },
+    {
+      "id": "AI01",
+      "title": "Citas inexistentes, inventadas y análisis incompletos rechazados",
+      "status": "PASS"
+    },
+    {
+      "id": "AI02",
+      "title": "Fuentes viejas, futuras, URL insegura y HTML se filtran",
+      "status": "PASS"
+    },
+    {
+      "id": "AI03",
+      "title": "Sin cotización no se invoca Anthropic ni se generan escenarios",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH01",
+      "title": "Calendario respeta DST, sesiones, cierres anticipados y cripto",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH02",
+      "title": "Job idempotente guarda informe y alerta una sola vez",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH03",
+      "title": "Lectura de alerta aislada y baja del consentimiento",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH04",
+      "title": "Solicitud manual requiere sesión, sólo usa tenencias propias y deduplica por hora",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH07",
+      "title": "Último informe visible y push manual sólo omite el silencio para quien lo pidió",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC12",
+      "title": "Estado global no revela símbolos de solicitudes privadas",
+      "status": "PASS"
+    },
+    {
+      "id": "SCH05",
+      "title": "Fallo de una fuente no bloquea otros activos y se reintenta sin duplicar",
+      "status": "PASS"
+    },
+    {
+      "id": "PUSH01",
+      "title": "Reinicio ambiguo no reenvía; fallo de recibos no interrumpe limpieza",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC10",
+      "title": "Exportación legible y baja de posiciones, alertas y dispositivos",
+      "status": "PASS"
+    },
+    {
+      "id": "SEC11",
+      "title": "Límite de autenticación aplica 429 con Retry-After",
+      "status": "PASS"
+    }
+  ],
+  "deploymentVerification": {
+    "checkedAt": "2026-10-09T21:56:10.721447+00:00",
+    "commit": "916eeaff860c95742eee6381316fd5db56c19f13",
+    "api": {
+      "status": "SUCCESS",
+      "deploymentId": "9d6df493-7c78-4429-bdfc-0aa9e45ec263",
+      "health": "ok"
+    },
+    "worker": {
+      "status": "SUCCESS",
+      "deploymentId": "80aa1262-3899-4e83-9f17-fc890e056c21"
+    },
+    "productionSmoke": {
+      "status": "PASS",
+      "scope": "Temporary authenticated empty portfolio: new request status fields, idempotent repeated request, reports and alerts endpoints, account deleted",
+      "externalAnalysisRequested": false,
+      "physicalPushDeliveryTested": false
+    },
+    "mobile": "Server correction applies to installed clients; updated toast and client-side ordering require a subsequent mobile release."
+  }
+}

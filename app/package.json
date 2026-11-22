@@ -1,0 +1,22 @@
+{
+  "name": "pfi-demo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Prototipo PFI: an\u00e1lisis de portafolios multiactivo con riesgo geopol\u00edtico y recomendaciones explicables",
+  "scripts": {
+    "dev": "pnpm --parallel --filter ./apps/* dev",
+    "build": "pnpm --filter ./apps/* build"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "pnpm": {
+    "overrides": {
+      "postcss": "^8.5.26",
+      "source-map-js": "^1.2.2",
+      "proxy-addr": "^2.0.8",
+      "qs": "^6.16.0",
+      "multer": "^2.4.0",
+      "sharp": "^0.35.5",
+      "brace-expansion@>=2.0.0 <2.1.7": "^2.1.7"
+    }
+  }
+}

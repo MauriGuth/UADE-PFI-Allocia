@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Report Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1e293b",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed": "#e1e0ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#111c2d",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-error": "#ffffff",
+                        "tertiary": "#040057",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-primary-container": "#8590a6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "primary": "#091426",
+                        "outline-variant": "#c5c6cd",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#0f0069",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777d",
+                        "surface-container-highest": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d8e3fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#7f82ff",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#645efb",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed-dim": "#bcc7de",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "secondary": "#4b41e1",
+                        "tertiary-container": "#0d0093",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#545f73",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "card-padding": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Geist"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "data-mono": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "data-mono": ["14px", { "lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F8FAFC; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col bg-surface-container-low dark:bg-surface-container-lowest border-r border-outline-variant dark:border-outline fixed left-0 top-0 h-full w-64 py-margin-desktop gap-unit z-40">
+<div class="px-6 mb-8">
+<h1 class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed-dim">Ez Portfolio</h1>
+<p class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim mt-1">Portfolio Risk Suite</p>
+</div>
+<div class="flex-1 overflow-y-auto">
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-body-md text-body-md">Panel</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">settings_suggest</span>
+<span class="font-body-md text-body-md">Configuración de Portafolio</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">pie_chart</span>
+<span class="font-body-md text-body-md">Desglose</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">security</span>
+<span class="font-body-md text-body-md">Análisis de Riesgo</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">trending_up</span>
+<span class="font-body-md text-body-md">Señales de Predicción</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">psychology</span>
+<span class="font-body-md text-body-md">Observaciones de IA</span>
+</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary-container/10 dark:bg-secondary-container/20 border-r-2 border-secondary flex items-center px-4 py-3 opacity-80 transition-opacity scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-body-md text-body-md">Informes</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-64 h-full overflow-hidden">
+<!-- TopAppBar (Mobile Only - Simplified for destination rule) -->
+<header class="md:hidden flex justify-between items-center w-full h-16 px-margin-mobile z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant shadow-sm top-0 sticky">
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed-dim">Ez Portfolio</h1>
+<div class="flex gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Page Canvas -->
+<div class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop bg-background">
+<div class="max-w-[1024px] mx-auto">
+<!-- Action Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg hidden md:block text-primary">Informe Integral de Riesgo</h2>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:hidden text-primary">Informe de Riesgo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Generado: 24 de Octubre de 2023 - Proyección Q4</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded bg-surface text-primary font-body-md text-body-md hover:bg-surface-container-low transition-colors h-[40px]">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+                            Exportar CSV
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary rounded font-body-md text-body-md hover:bg-primary-container/90 transition-colors h-[40px]">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                            Exportar PDF
+                        </button>
+</div>
+</div>
+<!-- Document Preview Container (The "Paper") -->
+<div class="bg-surface rounded-lg shadow-sm border border-outline-variant p-card-padding">
+<!-- Report Header -->
+<div class="border-b border-surface-container-highest pb-6 mb-8 text-center">
+<h3 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Asesoría de Ez Portfolio</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Análisis de Portafolio Institucional</p>
+</div>
+<!-- Bento Grid Layout for Report Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Portfolio Summary (Full Width) -->
+<div class="col-span-1 md:col-span-12">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4 border-b border-surface-container-highest pb-2">Resumen del Portafolio</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-low p-4 rounded border border-outline-variant/50">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">AUM Total</p>
+<p class="font-headline-md text-headline-md text-primary">$1.42B</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded border border-outline-variant/50">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Rendimiento YTD</p>
+<p class="font-headline-md text-headline-md text-primary text-[#10B981]">+8.4%</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded border border-outline-variant/50">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Volatilidad (30d)</p>
+<p class="font-headline-md text-headline-md text-primary">12.1%</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded border border-outline-variant/50">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Ratio de Sharpe</p>
+<p class="font-headline-md text-headline-md text-primary">1.64</p>
+</div>
+</div>
+</div>
+<!-- Key Risks (Half Width) -->
+<div class="col-span-1 md:col-span-6">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4 border-b border-surface-container-highest pb-2">Vectores de Riesgo Clave</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error mt-0.5" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="font-body-md text-body-md font-medium text-primary">Sobreexposición al Sector Tecnológico</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">La concentración en tecnología de gran capitalización excede la política objetivo en un 4.2%.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-0.5">info</span>
+<div>
+<p class="font-body-md text-body-md font-medium text-primary">Sensibilidad a las Tasas de Interés</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Ampliación de la brecha de duración en la asignación de renta fija.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Diversification Analysis (Half Width) -->
+<div class="col-span-1 md:col-span-6">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4 border-b border-surface-container-highest pb-2">Salud de la Diversificación</h4>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Acciones</span>
+<span class="font-data-mono text-data-mono text-primary">60%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 60%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Renta Fija</span>
+<span class="font-data-mono text-data-mono text-primary">30%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Alternativas</span>
+<span class="font-data-mono text-data-mono text-primary">10%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-full" style="width: 10%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- External Signals (Full Width, Table format) -->
+<div class="col-span-1 md:col-span-12 mt-4">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4 border-b border-surface-container-highest pb-2">Señales de Mercado Externas</h4>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-caps text-label-caps text-on-surface-variant">
+<th class="p-3 font-medium border-b border-surface-container-highest">Indicador</th>
+<th class="p-3 font-medium border-b border-surface-container-highest">Estado Actual</th>
+<th class="p-3 font-medium border-b border-surface-container-highest">Perspectiva de Impacto</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-primary">
+<tr class="border-b border-surface-container-low hover:bg-surface-container-low/50">
+<td class="p-3">Índice Global de Cadena de Suministro</td>
+<td class="p-3">Normalizando</td>
+<td class="p-3 text-[#10B981]">Positivo</td>
+</tr>
+<tr class="border-b border-surface-container-low hover:bg-surface-container-low/50">
+<td class="p-3">Volatilidad del Precio de la Energía</td>
+<td class="p-3">Elevada</td>
+<td class="p-3 text-error">Negativo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- AI Observations (Full Width, emphasized) -->
+<div class="col-span-1 md:col-span-12 mt-4">
+<div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-secondary relative overflow-hidden">
+<span class="material-symbols-outlined absolute right-[-20px] top-[-20px] text-[120px] text-surface-variant opacity-20 pointer-events-none">psychology</span>
+<h4 class="font-label-caps text-label-caps text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+                                    Observaciones Sintetizadas de IA
+                                </h4>
+<p class="font-body-lg text-body-lg text-primary leading-relaxed max-w-3xl">
+                                    Basado en el entorno macroeconómico actual y las dependencias estructurales del portafolio, el motor de Ez Portfolio sugiere un giro defensivo en el cuarto trimestre. Reequilibrar las acciones tecnológicas de alta beta hacia bonos del tesoro de corta duración podría mitigar la volatilidad anticipada del ciclo electoral mientras se preserva el rendimiento.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Report Footer -->
+<div class="mt-12 pt-6 border-t border-surface-container-highest flex justify-between items-center text-on-surface-variant">
+<span class="font-data-mono text-data-mono text-xs">ID: EZ-REP-8992-A</span>
+<span class="font-data-mono text-data-mono text-xs">Página 1 de 1</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

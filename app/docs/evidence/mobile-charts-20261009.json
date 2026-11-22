@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-10-09T21:20:50.972736+00:00",
+  "commit": "be6177c",
+  "checks": {
+    "typescript": "passed",
+    "metroAndroidIos": "passed",
+    "androidApi35": "Real APK login; portfolio bars AAPL/BTC/MSFT, historical BTC changes and RSI, Bitcoin dominance and sourced prediction-market ring visually verified. Missing equity history omits historical chart.",
+    "github": "37990764575, two attempts blocked before tests by Docker Hub unauthenticated pull rate limit.",
+    "physicalDevices": "Not verified this turn"
+  },
+  "builds": {
+    "android": "7403e74a-c2cd-44a3-aaee-7ba9003a56da",
+    "ios": "ebd2d7ce-b1dd-4ed8-8017-a8f03b6d193a",
+    "status": "FINISHED"
+  },
+  "cleanup": "Temporary test account deleted, credentials removed, emulator app data cleared and emulator stopped."
+}

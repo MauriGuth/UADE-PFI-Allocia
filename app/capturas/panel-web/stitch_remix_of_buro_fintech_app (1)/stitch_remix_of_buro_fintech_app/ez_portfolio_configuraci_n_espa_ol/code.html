@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Configuración y Fuentes de Datos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#191c1e",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#1e293b",
+                      "surface-dim": "#d8dadc",
+                      "surface-container-high": "#e6e8ea",
+                      "tertiary-fixed": "#e1e0ff",
+                      "inverse-on-surface": "#eff1f3",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#111c2d",
+                      "on-secondary-container": "#fffbff",
+                      "on-secondary-fixed-variant": "#3323cc",
+                      "on-tertiary-fixed-variant": "#2f2ebe",
+                      "on-error": "#ffffff",
+                      "tertiary": "#040057",
+                      "on-primary-fixed-variant": "#3c475a",
+                      "on-tertiary-fixed": "#07006c",
+                      "on-primary-container": "#8590a6",
+                      "secondary-fixed-dim": "#c3c0ff",
+                      "primary": "#091426",
+                      "outline-variant": "#c5c6cd",
+                      "surface-bright": "#f7f9fb",
+                      "on-secondary-fixed": "#0f0069",
+                      "surface-container": "#eceef0",
+                      "tertiary-fixed-dim": "#c0c1ff",
+                      "inverse-primary": "#bcc7de",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary": "#ffffff",
+                      "outline": "#75777d",
+                      "surface-container-highest": "#e0e3e5",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#d8e3fb",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#e2dfff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary-container": "#7f82ff",
+                      "surface": "#f7f9fb",
+                      "secondary-container": "#645efb",
+                      "on-surface-variant": "#45474c",
+                      "primary-fixed-dim": "#bcc7de",
+                      "background": "#f7f9fb",
+                      "surface-variant": "#e0e3e5",
+                      "secondary": "#4b41e1",
+                      "tertiary-container": "#0d0093",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#545f73",
+                      "on-surface": "#191c1e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "card-padding": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "40px",
+                      "container-max": "1440px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "data-mono": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #F8FAFC; /* Base neutral */
+        }
+        .luxury-shadow {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+        /* Custom Toggle Styles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #4F46E5;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #4F46E5;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Side Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest text-secondary dark:text-secondary-fixed-dim docked left-0 h-screen w-64 border-r border-outline-variant dark:border-outline flat no shadows fixed left-0 top-0 h-full flex flex-col py-margin-desktop gap-unit z-40">
+<div class="px-6 mb-8">
+<h1 class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed-dim">Ez Portfolio</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Suite de Riesgo de Cartera</p>
+</div>
+<div class="flex-1 flex flex-col gap-2 px-4 overflow-y-auto">
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">dashboard</span>
+<span class="font-body-md text-body-md">Panel de Control</span>
+</a>
+<!-- Active State: Portfolio Setup is closest to Settings/Preferences in this context -->
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary-container/10 dark:bg-secondary-container/20 border-r-2 border-secondary flex items-center px-4 py-3 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+<span class="font-body-md text-body-md">Configuración de Cartera</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">pie_chart</span>
+<span class="font-body-md text-body-md">Desglose</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">security</span>
+<span class="font-body-md text-body-md">Análisis de Riesgo</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">trending_up</span>
+<span class="font-body-md text-body-md">Señales de Predicción</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">psychology</span>
+<span class="font-body-md text-body-md">Observaciones de IA</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">description</span>
+<span class="font-body-md text-body-md">Informes</span>
+</a>
+</div>
+<div class="px-6 mt-auto">
+<div class="flex items-center gap-3 py-4 border-t border-outline-variant">
+<img alt="Ez Portfolio Logo" class="w-8 h-8 rounded-full bg-surface-container-highest" data-alt="A small circular avatar placeholder image showing a sophisticated, minimalist executive portrait against a bright, modern light-mode background, consistent with institutional minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDONe2hHyauw8OCW9Kp8YaxDm9_-7M1uymOYHI63q5oC6s8b1Wx-6vOQSOu6unLWelHXbPTzY0ttATxucugGQUVoFMIW9oHVzu6RVK_K_MV2N9OsA7tGIjsiawVU33yvPoV013DRIMq2ZPWUFidaddR5VBw0eN_Fk8hhOOHn_VjnzzpXJ6Vk0ACuO-ilbaA11bBfkR150PkYKI3XFI4eyXKnHi7TVnz0HjQC9sbh_e2AwT69Fm-0W3D"/>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">Usuario Ejecutivo</span>
+<span class="text-xs text-on-surface-variant">Nivel Estándar</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- Top App Bar (Mobile & Desktop) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center w-full h-16 px-margin-desktop z-50 sticky top-0">
+<!-- Mobile Brand (Hidden on Desktop usually, but keeping context if nav collapses) -->
+<div class="md:hidden flex items-center">
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed-dim">Ez Portfolio</h1>
+</div>
+<!-- Desktop Header Context -->
+<div class="hidden md:flex items-center">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-medium">Ajustes y Fuentes de Datos</h2>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="Perfil de Usuario Ejecutivo" class="w-8 h-8 rounded-full bg-surface-container-highest hidden md:block" data-alt="A small circular avatar placeholder image showing a sophisticated, minimalist executive portrait against a bright, modern light-mode background, consistent with institutional minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxB7UbOJzU1orSYtSDfW3iKtPphhIWHbWGg0zZr-YmsIHgcpXgGtf1Yyd0Ax-O10kc-6WY17LRlwp-b4H_ZQUrRWWHT5O_PiqMS9MKp1_CNlbcUWzIuf6yLaT0TlPfbdZ1EQ94V6Ay44oY-L2gWORDt2GzkltRpCvhmEQKvQk204QDbyiVt205pZKzj_hSN-_Em803oGmGMgCOh2WrNqEgBqNihrkbhBj8t62Lk34zLYTb8rmauWma"/>
+</div>
+</header>
+<!-- Canvas -->
+<div class="flex-1 p-margin-mobile md:p-margin-desktop overflow-y-auto">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Header Section -->
+<div class="col-span-1 md:col-span-12 mb-6">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-primary text-headline-lg-mobile md:text-headline-lg mb-2">Configuración</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Gestione los objetivos de su cartera, las preferencias de notificación y las señales de datos que impulsan sus modelos de análisis de riesgo.</p>
+</div>
+<!-- Left Column: Preferences (Spans 4 columns on desktop) -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-6">
+<!-- Portfolio Goals Card -->
+<div class="bg-surface rounded-xl luxury-shadow border border-outline-variant p-card-padding flex flex-col">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">target</span>
+<h3 class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Objetivos de Cartera</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div>
+<label class="block font-body-md text-body-md text-on-surface-variant mb-1">Objetivo Principal</label>
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg p-2.5 font-body-md text-body-md text-primary focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-shadow">
+<option>Preservación de Capital</option>
+<option>Crecimiento Equilibrado</option>
+<option>Acumulación Agresiva</option>
+<option>Generación de Ingresos</option>
+</select>
+</div>
+<div>
+<label class="block font-body-md text-body-md text-on-surface-variant mb-1">Tolerancia al Riesgo</label>
+<div class="flex items-center gap-4 mt-2">
+<input class="w-full h-1 bg-surface-container-high rounded-full appearance-none cursor-pointer accent-secondary" max="100" min="1" type="range" value="45"/>
+<span class="font-data-mono text-data-mono text-primary bg-surface-container p-1 rounded min-w-[3ch] text-center">45</span>
+</div>
+<div class="flex justify-between mt-1 text-xs text-outline">
+<span>Conservador</span>
+<span>Agresivo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Settings Card -->
+<div class="bg-surface rounded-xl luxury-shadow border border-outline-variant p-card-padding flex flex-col">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<h3 class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Notificaciones</h3>
+</div>
+<div class="flex flex-col gap-4">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="font-body-md text-body-md text-primary">Umbrales de Alerta Crítica</span>
+<div class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-container-high z-10 top-0 transition-all right-0" id="toggle1" name="toggle" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-high cursor-pointer transition-colors bg-secondary" for="toggle1" style="background-color: #4F46E5;"></label>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="font-body-md text-body-md text-primary">Informe Resumen Diario</span>
+<div class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-container-high z-10 top-0 transition-all left-0" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-high cursor-pointer transition-colors" for="toggle2"></label>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="font-body-md text-body-md text-primary">Detecciones de Anomalías de Mercado</span>
+<div class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-container-high z-10 top-0 transition-all right-0" id="toggle3" name="toggle" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-high cursor-pointer transition-colors bg-secondary" for="toggle3" style="background-color: #4F46E5;"></label>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Right Column: Data Sources (Spans 8 columns on desktop) -->
+<div class="col-span-1 md:col-span-8 flex flex-col gap-6">
+<div class="bg-surface rounded-xl luxury-shadow border border-outline-variant overflow-hidden flex flex-col h-full">
+<div class="p-card-padding border-b border-surface-container-high bg-surface-bright flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">hub</span>
+<h3 class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Fuentes de Datos Activas</h3>
+</div>
+<span class="font-data-mono text-data-mono text-secondary bg-secondary-container/10 px-2 py-1 rounded">4/4 ACTIVAS</span>
+</div>
+<!-- Data Source Grid / List inside Card -->
+<div class="p-card-padding grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Financial Data Source -->
+<div class="border border-outline-variant rounded-lg p-4 hover:bg-surface-container-low transition-colors duration-200 flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">account_balance</span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Finanzas Tradicionales</h4>
+</div>
+<div class="relative inline-block w-8 h-4 align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer z-10 top-0 right-0" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-4 rounded-full cursor-pointer" style="background-color: #4F46E5;"></label>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 flex-1">Indicadores macroeconómicos agregados, acciones, bonos y flujos de datos bancarios institucionales.</p>
+<div class="flex items-center justify-between text-xs font-data-mono text-outline">
+<span>Sinc: EN VIVO</span>
+<span>Latencia: &lt;10ms</span>
+</div>
+</div>
+<!-- Geopolitical Context Source -->
+<div class="border border-outline-variant rounded-lg p-4 hover:bg-surface-container-low transition-colors duration-200 flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">public</span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Contexto Geopolítico</h4>
+</div>
+<div class="relative inline-block w-8 h-4 align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer z-10 top-0 right-0" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-4 rounded-full cursor-pointer" style="background-color: #4F46E5;"></label>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 flex-1">Análisis de sentimiento de noticias globales, presentaciones regulatorias y métricas de inestabilidad regional.</p>
+<div class="flex items-center justify-between text-xs font-data-mono text-outline">
+<span>Sinc: 5m</span>
+<span>Fuentes: 120+</span>
+</div>
+</div>
+<!-- Crypto/Web3 Signals -->
+<div class="border border-outline-variant rounded-lg p-4 hover:bg-surface-container-low transition-colors duration-200 flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">currency_bitcoin</span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Señales Cripto/Web3</h4>
+</div>
+<div class="relative inline-block w-8 h-4 align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer z-10 top-0 right-0" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-4 rounded-full cursor-pointer" style="background-color: #4F46E5;"></label>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 flex-1">Análisis en cadena, seguimiento de volumen de DEX y amplias métricas de liquidez de finanzas descentralizadas.</p>
+<div class="flex items-center justify-between text-xs font-data-mono text-outline">
+<span>Sinc: EN VIVO</span>
+<span>Nodos: Activos</span>
+</div>
+</div>
+<!-- Prediction Market Signals -->
+<div class="border border-outline-variant rounded-lg p-4 hover:bg-surface-container-low transition-colors duration-200 flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">query_stats</span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Mercados de Predicción</h4>
+</div>
+<div class="relative inline-block w-8 h-4 align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer z-10 top-0 right-0" style="right: 0; border-color: #4F46E5;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-4 rounded-full cursor-pointer" style="background-color: #4F46E5;"></label>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 flex-1">Probabilidades de la sabiduría de la multitud derivadas de las principales plataformas de predicción descentralizadas y centralizadas.</p>
+<div class="flex items-center justify-between text-xs font-data-mono text-outline">
+<span>Sinc: 1m</span>
+<span>Mercados: 50+</span>
+</div>
+</div>
+</div>
+<!-- Action Footer for Card -->
+<div class="p-4 border-t border-surface-container-high bg-surface-bright flex justify-end">
+<button class="bg-primary-container text-on-primary h-10 px-6 rounded font-body-md text-body-md hover:opacity-90 transition-opacity">Aplicar Configuración</button>
+</div>
+</div>
+<!-- Legal Disclaimer Section -->
+<div class="mt-4 p-6 bg-surface-container-low rounded-xl border border-surface-container-high">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline">info</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-2">Aviso Legal</h4>
+<p class="font-body-md text-body-md text-outline text-sm leading-relaxed">
+                                    Ez Portfolio proporciona herramientas solo para soporte analítico. Los datos, señales y observaciones presentadas en esta plataforma no constituyen asesoramiento financiero, recomendaciones de inversión ni una oferta de compra o venta de valores. Todas las decisiones tomadas en base a este software son responsabilidad exclusiva del usuario. Las métricas de rendimiento pasado indicadas por fuentes de datos seleccionadas no son indicativas de resultados futuros.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

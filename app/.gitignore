@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.next/
+.env
+.env.*
+!.env.example
+apps/api/evidence/
+*.log
+.DS_Store
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Configuración de Firebase para Android (se descarga desde la consola de Firebase)
+apps/mobile/google-services.json

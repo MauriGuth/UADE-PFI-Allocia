@@ -1,0 +1,355 @@
+{
+  "source": "https://www.nyse.com/trade/hours-calendars",
+  "verifiedAt": "2026-10-09T15:23:22.579574Z",
+  "validUntil": "2027-01-01T00:00:00Z",
+  "sessions": [
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-09T09:30:00-04:00",
+      "close": "2026-10-09T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-12T09:30:00-04:00",
+      "close": "2026-10-12T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-13T09:30:00-04:00",
+      "close": "2026-10-13T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-14T09:30:00-04:00",
+      "close": "2026-10-14T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-15T09:30:00-04:00",
+      "close": "2026-10-15T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-16T09:30:00-04:00",
+      "close": "2026-10-16T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-19T09:30:00-04:00",
+      "close": "2026-10-19T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-20T09:30:00-04:00",
+      "close": "2026-10-20T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-21T09:30:00-04:00",
+      "close": "2026-10-21T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-22T09:30:00-04:00",
+      "close": "2026-10-22T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-23T09:30:00-04:00",
+      "close": "2026-10-23T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-26T09:30:00-04:00",
+      "close": "2026-10-26T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-27T09:30:00-04:00",
+      "close": "2026-10-27T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-28T09:30:00-04:00",
+      "close": "2026-10-28T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-29T09:30:00-04:00",
+      "close": "2026-10-29T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-10-30T09:30:00-04:00",
+      "close": "2026-10-30T16:00:00-04:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-02T09:30:00-05:00",
+      "close": "2026-11-02T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-03T09:30:00-05:00",
+      "close": "2026-11-03T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-04T09:30:00-05:00",
+      "close": "2026-11-04T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-05T09:30:00-05:00",
+      "close": "2026-11-05T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-06T09:30:00-05:00",
+      "close": "2026-11-06T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-09T09:30:00-05:00",
+      "close": "2026-11-09T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-10T09:30:00-05:00",
+      "close": "2026-11-10T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-11T09:30:00-05:00",
+      "close": "2026-11-11T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-12T09:30:00-05:00",
+      "close": "2026-11-12T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-13T09:30:00-05:00",
+      "close": "2026-11-13T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-16T09:30:00-05:00",
+      "close": "2026-11-16T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-17T09:30:00-05:00",
+      "close": "2026-11-17T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-18T09:30:00-05:00",
+      "close": "2026-11-18T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-19T09:30:00-05:00",
+      "close": "2026-11-19T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-20T09:30:00-05:00",
+      "close": "2026-11-20T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-23T09:30:00-05:00",
+      "close": "2026-11-23T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-24T09:30:00-05:00",
+      "close": "2026-11-24T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-25T09:30:00-05:00",
+      "close": "2026-11-25T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-27T09:30:00-05:00",
+      "close": "2026-11-27T13:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-11-30T09:30:00-05:00",
+      "close": "2026-11-30T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-01T09:30:00-05:00",
+      "close": "2026-12-01T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-02T09:30:00-05:00",
+      "close": "2026-12-02T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-03T09:30:00-05:00",
+      "close": "2026-12-03T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-04T09:30:00-05:00",
+      "close": "2026-12-04T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-07T09:30:00-05:00",
+      "close": "2026-12-07T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-08T09:30:00-05:00",
+      "close": "2026-12-08T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-09T09:30:00-05:00",
+      "close": "2026-12-09T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-10T09:30:00-05:00",
+      "close": "2026-12-10T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-11T09:30:00-05:00",
+      "close": "2026-12-11T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-14T09:30:00-05:00",
+      "close": "2026-12-14T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-15T09:30:00-05:00",
+      "close": "2026-12-15T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-16T09:30:00-05:00",
+      "close": "2026-12-16T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-17T09:30:00-05:00",
+      "close": "2026-12-17T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-18T09:30:00-05:00",
+      "close": "2026-12-18T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-21T09:30:00-05:00",
+      "close": "2026-12-21T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-22T09:30:00-05:00",
+      "close": "2026-12-22T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-23T09:30:00-05:00",
+      "close": "2026-12-23T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-24T09:30:00-05:00",
+      "close": "2026-12-24T13:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-28T09:30:00-05:00",
+      "close": "2026-12-28T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-29T09:30:00-05:00",
+      "close": "2026-12-29T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-30T09:30:00-05:00",
+      "close": "2026-12-30T16:00:00-05:00"
+    },
+    {
+      "exchange": "XNYS_XNAS",
+      "timezone": "America/New_York",
+      "open": "2026-12-31T09:30:00-05:00",
+      "close": "2026-12-31T16:00:00-05:00"
+    }
+  ]
+}

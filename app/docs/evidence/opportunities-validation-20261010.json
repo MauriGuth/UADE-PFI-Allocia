@@ -1,0 +1,38 @@
+{
+  "feature": "Opportunities outside portfolio",
+  "apiCommit": "2174898611fefa93a048635d512a3199627375da",
+  "checks": {
+    "evidenceUnitTests": {
+      "passed": 4,
+      "scope": "freshness, grounding, conditional upside, no numeric probability, crypto specificity and ambiguous names"
+    },
+    "postgresIntegration": {
+      "status": "passed",
+      "scope": "isolated temporary database, migrations, watchlist ownership, deduplication, opt-in, push transport stub, contrary report supersession, cascading account deletion"
+    },
+    "existingSecurityAndSchedulerRegression": {
+      "passed": 23,
+      "failed": 0
+    },
+    "webUnitTests": {
+      "passed": 8
+    },
+    "browserJourney": {
+      "status": "passed",
+      "widths": [
+        320,
+        390,
+        1280
+      ],
+      "scope": "real local account/preferences/watchlist API; synthetic provider search/import and opportunity report for UI review"
+    },
+    "webBuild": "passed",
+    "mobileTypeScript": "passed",
+    "mobileJavaScriptExports": [
+      "android",
+      "ios"
+    ]
+  },
+  "physicalAcceptance": "Pending for this newly introduced opportunity feature; previous confirmations preserved",
+  "realPushSentDuringValidation": false
+}

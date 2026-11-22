@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-09T18:59:54.670Z",
+  "checks": [
+    "three_finite_scenarios",
+    "scenario_visible_browser",
+    "signals_visible_browser_no_demo_or_nan",
+    "external_sources_and_explicit_missing_gpr",
+    "no_browser_errors"
+  ],
+  "provenance": {
+    "geo": {
+      "source": "Finnhub; GPR no disponible",
+      "origin": "externo",
+      "dataDate": "2026-10-09T18:20:57.000Z",
+      "fetchedAt": "2026-10-09T18:59:52.059Z"
+    },
+    "fearGreed": {
+      "source": "Alternative.me",
+      "origin": "externo",
+      "dataDate": "2026-10-09T00:00:00.000Z",
+      "fetchedAt": "2026-10-09T18:59:52.059Z"
+    },
+    "btcDominance": {
+      "source": "CoinGecko",
+      "origin": "externo",
+      "dataDate": "2026-10-09T18:54:03.000Z",
+      "fetchedAt": "2026-10-09T18:59:52.059Z"
+    },
+    "defi": {
+      "source": "DefiLlama",
+      "origin": "externo",
+      "dataDate": "2026-10-09T00:00:00.000Z",
+      "fetchedAt": "2026-10-09T18:59:52.059Z"
+    },
+    "predictionMarkets": {
+      "source": "Polymarket",
+      "origin": "externo",
+      "dataDate": "2026-10-09T18:56:36.477Z",
+      "fetchedAt": "2026-10-09T18:59:52.059Z"
+    }
+  },
+  "scenarios": 3,
+  "temporaryAccountDeleted": true,
+  "apiCommit": "ea4ac82ae50b053bf64684f6275d0316859c107b",
+  "ci": "https://github.com/MauriGuth/allocia/actions/runs/37976742768"
+}

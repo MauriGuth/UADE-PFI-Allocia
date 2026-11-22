@@ -1,0 +1,280 @@
+{
+  "checkedAt": "2026-10-10T21:38:24.123Z",
+  "catalogCount": 34,
+  "available": 34,
+  "databaseAccess": false,
+  "results": [
+    {
+      "ticker": "AAPL",
+      "providerSymbol": "AAPL",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "ADA",
+      "providerSymbol": "cardano",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:38:05.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "AMZN",
+      "providerSymbol": "AMZN",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "BTC",
+      "providerSymbol": "bitcoin",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:37:45.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "DAI",
+      "providerSymbol": "dai",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:38:05.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "EEM",
+      "providerSymbol": "EEM",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "EFA",
+      "providerSymbol": "EFA",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "ETH",
+      "providerSymbol": "ethereum",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:38:05.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "GGAL",
+      "providerSymbol": "GGAL",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "GLD",
+      "providerSymbol": "GLD",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "providerSymbol": "GOOGL",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "IWM",
+      "providerSymbol": "IWM",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "JNJ",
+      "providerSymbol": "JNJ",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "JPM",
+      "providerSymbol": "JPM",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "KO",
+      "providerSymbol": "KO",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "LINK",
+      "providerSymbol": "chainlink",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:37:57.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "MELI",
+      "providerSymbol": "MELI",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "META",
+      "providerSymbol": "META",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "MSFT",
+      "providerSymbol": "MSFT",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "NVDA",
+      "providerSymbol": "NVDA",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "PAM",
+      "providerSymbol": "PAM",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "PG",
+      "providerSymbol": "PG",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "POL",
+      "providerSymbol": "polygon-ecosystem-token",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:38:22.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "QQQ",
+      "providerSymbol": "QQQ",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "SOL",
+      "providerSymbol": "solana",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:37:25.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "SPY",
+      "providerSymbol": "SPY",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "TSLA",
+      "providerSymbol": "TSLA",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "USDC",
+      "providerSymbol": "usd-coin",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:37:35.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "USDT",
+      "providerSymbol": "tether",
+      "available": true,
+      "source": "CoinGecko",
+      "asOf": "2026-10-10T21:37:25.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "VOO",
+      "providerSymbol": "VOO",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "XLE",
+      "providerSymbol": "XLE",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "XLF",
+      "providerSymbol": "XLF",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "XOM",
+      "providerSymbol": "XOM",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    },
+    {
+      "ticker": "YPF",
+      "providerSymbol": "YPF",
+      "available": true,
+      "source": "Finnhub",
+      "asOf": "2026-10-09T20:00:00.000Z",
+      "currency": "USD"
+    }
+  ]
+}

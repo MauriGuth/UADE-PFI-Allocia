@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Desglose de Cartera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#1e293b",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-fixed": "#e1e0ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#111c2d",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#2f2ebe",
+                    "on-error": "#ffffff",
+                    "tertiary": "#040057",
+                    "on-primary-fixed-variant": "#3c475a",
+                    "on-tertiary-fixed": "#07006c",
+                    "on-primary-container": "#8590a6",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "primary": "#091426",
+                    "outline-variant": "#c5c6cd",
+                    "surface-bright": "#f7f9fb",
+                    "on-secondary-fixed": "#0f0069",
+                    "surface-container": "#eceef0",
+                    "tertiary-fixed-dim": "#c0c1ff",
+                    "inverse-primary": "#bcc7de",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary": "#ffffff",
+                    "outline": "#75777d",
+                    "surface-container-highest": "#e0e3e5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d8e3fb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#e2dfff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#7f82ff",
+                    "surface": "#f7f9fb",
+                    "secondary-container": "#645efb",
+                    "on-surface-variant": "#45474c",
+                    "primary-fixed-dim": "#bcc7de",
+                    "background": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#4b41e1",
+                    "tertiary-container": "#0d0093",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#545f73",
+                    "on-surface": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "card-padding": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "container-max": "1440px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Geist"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "data-mono": [
+                            "Geist"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "data-mono": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest border-r border-outline-variant dark:border-outline fixed left-0 top-0 h-full flex-col py-margin-desktop gap-unit w-64 z-40">
+<div class="px-6 mb-8 flex items-center gap-3">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A minimalist, geometric logo for a financial intelligence suite named Kpoe. The logo is sharp, abstract, and uses deep slate and indigo colors, conveying a sense of institutional authority and high-stakes data analysis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnG3R8l8607A3vEYf4rir1Xa8NVv9GVMTrxxN2XwS0UMX3T9j_vfaim6tX0NnaKaERErhv0pwqevcxlFN28hKupGTSQ7whSAlMBCVjUvspwtokhOuo3WUrOghJLEGmb0IH4yCVnRU77wkWy4BIfqXu9xXd6u93FdBhAnfxN95PG0B-Z2OPGUnSXqz0PhOoCKsA-q2yVCD7rvq9aUJ-jXrNEGuuJb99sfrEqE7VhtfUSK6VUgEEXPj7"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed-dim">Ez Portfolio</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Portfolio Risk Suite</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-body-md text-body-md">Portfolio Setup</span>
+</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary-container/10 dark:bg-secondary-container/20 border-r-2 border-secondary flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="pie_chart">pie_chart</span>
+<span class="font-body-md text-body-md">Desglose</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="security">security</span>
+<span class="font-body-md text-body-md">Risk Analysis</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="trending_up">trending_up</span>
+<span class="font-body-md text-body-md">Prediction Signals</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="psychology">psychology</span>
+<span class="font-body-md text-body-md">AI Observations</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant flex items-center px-6 py-3 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="description">description</span>
+<span class="font-body-md text-body-md">Reports</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface flex justify-between items-center w-full h-16 px-margin-desktop z-50 border-b border-outline-variant dark:border-outline shadow-sm sticky top-0">
+<div class="flex items-center gap-4">
+<span class="md:hidden font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed-dim">Ez Portfolio</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-md font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none w-64 placeholder-on-surface-variant text-on-surface transition-colors" placeholder="Buscar activos, sectores..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img class="w-8 h-8 rounded-full border border-outline-variant object-cover ml-2" data-alt="A professional headshot of an executive user, neutral expression, subtle lighting, wearing a dark blazer, set against a pristine white background. High resolution, conveying institutional trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBamCd4ZLiPTG14oMhlHxNb-CHM9DNMcLMkfd4CqrrNG2hffEl5yuOlOdTUqtE_5xiZ4Ubd3UJnSqAJHE74vh2OqbQ1wUmj7EYBmTxtry7x8peqS49AMipurZJX2xyee2si3ez2p9kC5GiJG4NPWvuSiw1p7ONZktZykoi1GvlpdiYL-w-cHGzTZpadYt3Jg0IIKAsYJ8V_wJc3HF2nSjAQV21a01ikcXqeWCaAuiSD-tcR0ErOFWH"/>
+</div>
+</header>
+<!-- Canvas -->
+<div class="p-margin-mobile md:p-card-padding max-w-container-max mx-auto w-full flex-1 flex flex-col gap-8">
+<!-- Header & Warnings -->
+<div class="flex flex-col gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Desglose de Cartera</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Análisis detallado de asignación y contribución al riesgo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Warning Card 1 -->
+<div class="bg-surface rounded-lg p-card-padding border border-error-container shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Alta exposición a tecnología de EE. UU.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sector allocation exceeds target threshold by 12.4%. Consider rebalancing to mitigate concentrated risk.</p>
+</div>
+</div>
+<!-- Warning Card 2 -->
+<div class="bg-surface rounded-lg p-card-padding border border-tertiary-fixed shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="info">info</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Asignación de cripto por encima del objetivo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Digital asset exposure is currently 4.2% (Target: 2.0%). Volatility impact noted.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Filters -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant flex flex-wrap items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant mr-2">Filtros:</span>
+<select class="bg-surface-bright border border-outline-variant rounded px-3 py-2 text-body-md font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-on-surface">
+<option>Tipo de Activo (Todos)</option>
+<option>Equities</option>
+<option>Fixed Income</option>
+<option>Alternatives</option>
+</select>
+<select class="bg-surface-bright border border-outline-variant rounded px-3 py-2 text-body-md font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-on-surface">
+<option>Sector (Todos)</option>
+<option>Technology</option>
+<option>Financials</option>
+<option>Healthcare</option>
+</select>
+<select class="bg-surface-bright border border-outline-variant rounded px-3 py-2 text-body-md font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-on-surface">
+<option>Región (Todas)</option>
+<option>North America</option>
+<option>Europe</option>
+<option>Asia Pacific</option>
+</select>
+<button class="ml-auto text-secondary hover:text-primary font-label-caps text-label-caps transition-colors">Limpiar Filtros</button>
+</div>
+<!-- Asset Table -->
+<div class="bg-surface rounded-lg border border-outline-variant shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-container-high">
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Símbolo</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Nombre</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Tipo</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Sector</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Región</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap">Moneda</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant text-right whitespace-nowrap">Peso</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant text-right whitespace-nowrap">Contrib. de Riesgo</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-on-surface-variant text-center whitespace-nowrap">Señales</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="border-b border-surface-container-high hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 font-data-mono text-data-mono font-semibold">AAPL</td>
+<td class="px-6 py-4 text-on-surface">Apple Inc.</td>
+<td class="px-6 py-4 text-on-surface-variant">Acciones</td>
+<td class="px-6 py-4 text-on-surface-variant">Tecnología</td>
+<td class="px-6 py-4 text-on-surface-variant">Norteamérica</td>
+<td class="px-6 py-4 text-on-surface-variant">USD</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">8.5%</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">12.2%</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-caps text-[10px]">MANTENER</span>
+</td>
+</tr>
+<tr class="border-b border-surface-container-high hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 font-data-mono text-data-mono font-semibold">MSFT</td>
+<td class="px-6 py-4 text-on-surface">Microsoft Corp.</td>
+<td class="px-6 py-4 text-on-surface-variant">Acciones</td>
+<td class="px-6 py-4 text-on-surface-variant">Tecnología</td>
+<td class="px-6 py-4 text-on-surface-variant">Norteamérica</td>
+<td class="px-6 py-4 text-on-surface-variant">USD</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">7.2%</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">10.5%</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-fixed/50 text-on-secondary-fixed font-label-caps text-[10px]">COMPRAR</span>
+</td>
+</tr>
+<tr class="border-b border-surface-container-high hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 font-data-mono text-data-mono font-semibold">BTC</td>
+<td class="px-6 py-4 text-on-surface">Bitcoin</td>
+<td class="px-6 py-4 text-on-surface-variant">Activo Digital</td>
+<td class="px-6 py-4 text-on-surface-variant">N/D</td>
+<td class="px-6 py-4 text-on-surface-variant">Global</td>
+<td class="px-6 py-4 text-on-surface-variant">USD</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">4.2%</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right text-error">15.8%</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2 py-1 rounded bg-error-container/50 text-error font-label-caps text-[10px]">REDUCIR</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 font-data-mono text-data-mono font-semibold">TLT</td>
+<td class="px-6 py-4 text-on-surface">iShares 20+ Year Treasury</td>
+<td class="px-6 py-4 text-on-surface-variant">Renta Fija</td>
+<td class="px-6 py-4 text-on-surface-variant">Gobierno</td>
+<td class="px-6 py-4 text-on-surface-variant">Norteamérica</td>
+<td class="px-6 py-4 text-on-surface-variant">USD</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">15.0%</td>
+<td class="px-6 py-4 font-data-mono text-data-mono text-right">4.1%</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-caps text-[10px]">MANTENER</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>

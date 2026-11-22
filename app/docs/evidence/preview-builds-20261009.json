@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-09",
+  "sourceCommit": "05ad8a800e318d9db221906a362abaa853ffa286",
+  "profile": "preview",
+  "iosPushEntitlement": "production",
+  "iosProvisionedDeviceCount": 2,
+  "androidArchiveIntegrity": "passed",
+  "physicalDeviceExecution": "pending",
+  "builds": [
+    {
+      "platform": "IOS",
+      "id": "a66912ad-585f-4c72-bfdd-af4f989dfc75",
+      "status": "FINISHED",
+      "completedAt": "2026-10-09T18:34:34.309Z",
+      "installURL": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/a66912ad-585f-4c72-bfdd-af4f989dfc75"
+    },
+    {
+      "platform": "ANDROID",
+      "id": "0e5f67c0-efeb-4d5a-841f-3e5a94206b86",
+      "status": "FINISHED",
+      "completedAt": "2026-10-09T18:32:43.094Z",
+      "installURL": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/0e5f67c0-efeb-4d5a-841f-3e5a94206b86"
+    }
+  ]
+}

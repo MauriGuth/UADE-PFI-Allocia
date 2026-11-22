@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ez Portfolio - Panel de Control Principal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1e293b",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed": "#e1e0ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#111c2d",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-error": "#ffffff",
+                        "tertiary": "#040057",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-primary-container": "#8590a6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "primary": "#091426",
+                        "outline-variant": "#c5c6cd",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#0f0069",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777d",
+                        "surface-container-highest": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d8e3fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#7f82ff",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#645efb",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed-dim": "#bcc7de",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "secondary": "#4b41e1",
+                        "tertiary-container": "#0d0093",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#545f73",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "card-padding": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "label-caps": ["Geist", "monospace"],
+                        "display-lg": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "data-mono": ["Geist", "monospace"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "data-mono": ["14px", { "lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .card-shadow { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex font-body-md text-body-md">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col bg-surface-container-low border-r border-outline-variant h-screen w-64 fixed left-0 top-0 py-margin-desktop gap-unit z-40">
+<div class="px-6 mb-8">
+<h1 class="font-headline-md text-headline-md font-black text-primary">Ez Portfolio</h1>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80 mt-1">Suite de Riesgo de Cartera</p>
+</div>
+<div class="flex flex-col flex-1 px-4 gap-2 overflow-y-auto">
+<a class="text-secondary font-bold bg-secondary-container/10 border-r-2 border-secondary flex items-center px-4 py-3 rounded-l-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-body-md text-body-md">Panel de Control</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">settings_suggest</span>
+<span class="font-body-md text-body-md">Configuración de Cartera</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">pie_chart</span>
+<span class="font-body-md text-body-md">Desglose</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">security</span>
+<span class="font-body-md text-body-md">Análisis de Riesgo</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">trending_up</span>
+<span class="font-body-md text-body-md">Señales de Predicción</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">psychology</span>
+<span class="font-body-md text-body-md">Observaciones de IA</span>
+</a>
+<a class="text-on-surface-variant flex items-center px-4 py-3 hover:bg-surface-container-high rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3">description</span>
+<span class="font-body-md text-body-md">Reportes</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-outline-variant shadow-sm flex justify-between items-center w-full h-16 px-margin-desktop z-50 sticky top-0">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md font-bold tracking-tight text-primary md:hidden">Ez Portfolio</h2>
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-2 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md text-primary placeholder-on-surface-variant/70 w-64 p-0 outline-none" placeholder="Buscar cartera..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant ml-2">
+<img alt="Executive User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a financial executive in a modern office setting. The lighting is bright and clean, emphasizing a crisp, trustworthy appearance. The background is a slightly blurred, minimalist architectural interior with subtle gray and white tones, matching a refined corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-20ldRMj4jMLRKfxjQRqV0lT4JhbRcfF2GqCwtO9ZjUHFg72-w_wtMXieB_QbyMl0P_XbHwPrejbc1mXmgwaoeSfScA1jMIUjayCDTF-NuN8a6sg8NbG9ad2FFX8ZIgnWZ71e07sUG3NYp3FvJqZLuPPnc4Ckx1GcnLXNE-1h1BXYeTDq_f8uOHYv4-8cvmH4IHWo8Yn8pNwht4RUikAuJXmzUVGku6ZkAAUec7qUVbLZNyiUbMs-"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-margin-mobile md:p-margin-desktop max-w-container-max mx-auto w-full flex-1 pb-24 md:pb-margin-desktop">
+<!-- Header -->
+<div class="mb-8">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Panel de Control de Cartera</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Resumen de asignación y riesgo institucional.</p>
+</div>
+<!-- Key Metrics Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-unit md:gap-gutter mb-8">
+<!-- Total Value -->
+<div class="bg-surface rounded-xl p-4 card-shadow border border-outline-variant flex flex-col justify-between col-span-2 md:col-span-1 lg:col-span-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Valor Total de Cartera</span>
+<div class="mt-4">
+<span class="font-display-lg text-display-lg text-primary block">$14.2M</span>
+<span class="font-data-mono text-data-mono text-emerald-600 flex items-center mt-2"><span class="material-symbols-outlined text-sm mr-1">arrow_upward</span> 2.4% (YTD)</span>
+</div>
+</div>
+<!-- Diversification Score -->
+<div class="bg-surface rounded-xl p-4 card-shadow border border-outline-variant flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Puntuación de Diversificación</span>
+<div class="mt-4 flex items-end justify-between">
+<span class="font-headline-lg text-headline-lg text-primary">82/100</span>
+<div class="w-8 h-8 rounded-full border-4 border-secondary border-t-outline-variant"></div>
+</div>
+</div>
+<!-- Concentration Risk -->
+<div class="bg-surface rounded-xl p-4 card-shadow border border-outline-variant flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Riesgo de Concentración</span>
+<div class="mt-4 flex items-end justify-between">
+<span class="font-headline-lg text-headline-lg text-primary">Bajo</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Geopolitical Exposure -->
+<div class="bg-surface rounded-xl p-4 card-shadow border border-outline-variant flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Exposición Geopol.</span>
+<div class="mt-4 flex items-end justify-between">
+<span class="font-headline-lg text-headline-lg text-error">Elevado</span>
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<!-- Prediction Signals -->
+<div class="bg-surface rounded-xl p-4 card-shadow border border-outline-variant flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Señales Activas</span>
+<div class="mt-4 flex items-end justify-between">
+<span class="font-headline-lg text-headline-lg text-primary">14</span>
+<span class="material-symbols-outlined text-secondary">insights</span>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-8">
+<!-- Allocation Chart -->
+<div class="bg-surface rounded-xl p-card-padding card-shadow border border-outline-variant flex flex-col lg:col-span-1">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6">Asignación de Activos</h3>
+<div class="flex-1 flex items-center justify-center relative min-h-[200px]">
+<!-- Placeholder for a Donut Chart -->
+<div class="w-48 h-48 rounded-full border-[16px] border-surface-container-high relative flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-[16px] border-secondary" style="clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 50%); transform: rotate(45deg);"></div>
+<div class="absolute inset-0 rounded-full border-[16px] border-primary-container" style="clip-path: polygon(50% 50%, 0 50%, 0 0, 50% 0);"></div>
+<span class="font-headline-md text-headline-md text-primary">Acciones</span>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-2 font-data-mono text-data-mono">
+<div class="flex justify-between items-center"><div class="flex items-center"><div class="w-3 h-3 rounded bg-secondary mr-2"></div>Acciones</div><span>65%</span></div>
+<div class="flex justify-between items-center"><div class="flex items-center"><div class="w-3 h-3 rounded bg-primary-container mr-2"></div>ETFs</div><span>25%</span></div>
+<div class="flex justify-between items-center"><div class="flex items-center"><div class="w-3 h-3 rounded bg-surface-container-high mr-2"></div>Cripto</div><span>10%</span></div>
+</div>
+</div>
+<!-- Sector Exposure -->
+<div class="bg-surface rounded-xl p-card-padding card-shadow border border-outline-variant flex flex-col lg:col-span-2">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6">Exposición por Sector</h3>
+<div class="flex-1 flex items-end gap-4 min-h-[200px] pb-6 border-b border-surface-container-high">
+<!-- Bar Chart Placeholders -->
+<div class="flex-1 flex flex-col justify-end items-center group relative">
+<div class="w-full bg-secondary rounded-t-sm h-[80%] transition-all opacity-90 group-hover:opacity-100"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-2 absolute -bottom-6">Tec.</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center group relative">
+<div class="w-full bg-primary-container rounded-t-sm h-[40%] transition-all opacity-90 group-hover:opacity-100"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-2 absolute -bottom-6">Salud</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center group relative">
+<div class="w-full bg-primary-container rounded-t-sm h-[60%] transition-all opacity-90 group-hover:opacity-100"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-2 absolute -bottom-6">Finanzas</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center group relative">
+<div class="w-full bg-surface-tint rounded-t-sm h-[30%] transition-all opacity-90 group-hover:opacity-100"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-2 absolute -bottom-6">Energía</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center group relative">
+<div class="w-full bg-surface-tint rounded-t-sm h-[20%] transition-all opacity-90 group-hover:opacity-100"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-2 absolute -bottom-6">Cons.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Insights Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Top Risks -->
+<div class="bg-surface rounded-xl p-card-padding card-shadow border border-outline-variant">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Principales Riesgos de la Cartera</h3>
+<span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-2 bg-error-container text-on-error-container rounded-md">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Cambio Regulatorio en EMEA</h4>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">Las regulaciones tecnológicas pendientes en la UE podrían afectar el 15% de las tenencias tecnológicas.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-md">
+<span class="material-symbols-outlined text-sm">water_drop</span>
+</div>
+<div>
+<h4 class="font-body-md text-body-md font-medium text-primary">Volatilidad del Sector Energético</h4>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">Las interrupciones en la cadena de suministro aumentan la presión sobre los márgenes en empresas energéticas de mediana capitalización.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- AI Observations -->
+<div class="bg-primary rounded-xl p-card-padding card-shadow border border-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl text-primary-fixed">psychology</span>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-label-caps text-label-caps text-primary-fixed-dim uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> Observaciones Clave de IA
+                            </h3>
+</div>
+<div class="space-y-4 text-on-primary">
+<p class="font-body-lg text-body-lg leading-relaxed">
+                                "La cartera muestra una alta correlación con los próximos cambios de política del banco central. Se sugiere reequilibrar los sectores defensivos antes de los informes de ganancias del tercer trimestre para mitigar el riesgo a la baja observado."
+                            </p>
+<div class="pt-4 border-t border-primary-container flex justify-between items-center text-sm font-data-mono text-primary-fixed-dim">
+<span>Confianza: Alta (89%)</span>
+<span>Generado: hace 2h</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

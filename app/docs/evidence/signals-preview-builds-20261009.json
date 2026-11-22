@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "reason": "Corrección de Señales y Escenarios reportada en prueba física",
+  "sourceCommit": "d06cbf76f62af21883536043e31a6096f77d239e",
+  "iosPushEntitlement": "production",
+  "iosProvisionedDeviceCount": 2,
+  "builds": [
+    {
+      "platform": "IOS",
+      "id": "fcbed7a8-3319-4a9e-930c-509d5f14362f",
+      "status": "FINISHED",
+      "completedAt": "2026-10-09T19:06:15.362Z",
+      "installURL": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/fcbed7a8-3319-4a9e-930c-509d5f14362f"
+    },
+    {
+      "platform": "ANDROID",
+      "id": "0a9e125e-f303-4255-b9a0-63db3bca0517",
+      "status": "FINISHED",
+      "completedAt": "2026-10-09T19:08:52.681Z",
+      "installURL": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/0a9e125e-f303-4255-b9a0-63db3bca0517"
+    }
+  ]
+}

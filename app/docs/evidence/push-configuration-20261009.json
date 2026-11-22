@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-09T16:58:34.987803+00:00",
+  "projectId": "59505bf7-81ee-4cf2-8698-88d67f83c9c0",
+  "expoTokenProjectAccess": true,
+  "expoPushSecurityEnabled": true,
+  "androidFirebaseProject": "allocia-mobile-2026",
+  "androidFcmV1Assigned": true,
+  "androidSigningConfigured": true,
+  "iosApnsAssigned": true,
+  "apiPushEnabledConfigured": true,
+  "workerPushEnabledConfigured": true,
+  "workerTokenReference": "${{UADE_PFI.EXPO_ACCESS_TOKEN}}",
+  "physicalDeliveryVerified": false,
+  "distributionBuildGenerated": false,
+  "workerRuntime": {
+    "pushEnabled": true,
+    "tokenPresent": true,
+    "devices": 0,
+    "outbox": []
+  },
+  "apiDeployment": "6ae88cfb-686a-4937-8034-6b6657730768",
+  "workerDeployment": "3e5538a5-f21b-4f0e-85a3-0c2d7220b399"
+}

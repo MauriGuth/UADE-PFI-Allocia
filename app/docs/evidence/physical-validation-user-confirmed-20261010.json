@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10",
+  "evidenceType": "user-reported physical acceptance",
+  "reporter": "Mauricio Huentelaf",
+  "statement": "Bien, ya hice todas las comprobaciones físicas y funcionan todas.",
+  "platforms": [
+    "Android",
+    "iOS",
+    "Web"
+  ],
+  "builds": {
+    "android": "5197fba7-6bdf-4fa9-acc5-0ec166c23dca",
+    "ios": "a1f76f64-6dcf-4835-a278-ecc829ca4bcc"
+  },
+  "scope": "All checks in docs/PRUEBA_FISICA_2026-10-10.md confirmed by user",
+  "limitations": [
+    "No independent observation by assistant",
+    "No new per-case screenshots or timings provided; Android base version and browser version not specified",
+    "Does not establish independent usability study or new logo UI acceptance"
+  ],
+  "devices": [
+    {
+      "model": "iPhone 17 Pro Max",
+      "os": "iOS 27",
+      "source": "user report"
+    },
+    {
+      "model": "iPhone 14",
+      "os": "iOS 27",
+      "source": "user report"
+    },
+    {
+      "model": "Samsung Galaxy A16",
+      "interfaceVersion": "One UI 8.5",
+      "androidVersion": null,
+      "source": "user report"
+    },
+    {
+      "model": "MacBook Pro",
+      "os": "macOS 27.2",
+      "osBuild": "26B5101f",
+      "source": "model and web acceptance reported by user; OS verified on current local host using sw_vers",
+      "browserVersion": null
+    }
+  ]
+}

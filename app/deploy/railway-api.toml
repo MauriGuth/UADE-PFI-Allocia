@@ -1,0 +1,11 @@
+# Railway service root directory: /. Select this file as its config path.
+[build]
+builder = "RAILPACK"
+buildCommand = "corepack enable && pnpm install --frozen-lockfile && pnpm --filter api build"
+[deploy]
+preDeployCommand = "pnpm --filter api production:check --api-only && pnpm --filter api migrate:production"
+startCommand = "node apps/api/dist/main.js"
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

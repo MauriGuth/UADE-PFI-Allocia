@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-09",
+  "platform": "iOS",
+  "evidence": "Usuario confirma recepción; captura de pantalla de bloqueo con dos notificaciones Allocia a las 15:46.",
+  "verified": "Recepción visible en el iPhone del usuario.",
+  "notVerified": [
+    "Recepción en Android",
+    "Apertura de una notificación",
+    "Cada notificación corresponde a un informe distinto"
+  ]
+}

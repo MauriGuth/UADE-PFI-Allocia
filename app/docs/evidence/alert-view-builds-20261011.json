@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-11T00:08:19.763Z",
+  "purpose": "Persist selected alerts view per account across navigation and relaunch",
+  "physicalValidation": "pending",
+  "builds": [
+    {
+      "platform": "android",
+      "id": "f70cea00-82e4-424f-b282-c850d2907083",
+      "status": "FINISHED",
+      "commit": "4c01cf56340a787b2df654b2c4728e2aed6baff7",
+      "downloadStatus": 200,
+      "url": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/f70cea00-82e4-424f-b282-c850d2907083"
+    },
+    {
+      "platform": "ios",
+      "id": "1588de96-b4f2-42a4-9058-bf6942245913",
+      "status": "FINISHED",
+      "commit": "4c01cf56340a787b2df654b2c4728e2aed6baff7",
+      "downloadStatus": 200,
+      "url": "https://expo.dev/accounts/mauri-guth/projects/allocia/builds/1588de96-b4f2-42a4-9058-bf6942245913"
+    }
+  ]
+}

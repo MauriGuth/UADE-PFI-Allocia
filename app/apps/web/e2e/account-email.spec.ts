@@ -1,0 +1,61 @@
+import {test,expect} from '@playwright/test';
+import {createRequire} from 'node:module';
+import path from 'node:path';
+const apiRequire=createRequire(path.resolve(process.cwd(),'../api/package.json'));
+
+test('correo: verificación y recuperación desde navegador hasta base de datos',async({page,context,request})=>{
+  test.setTimeout(60000);
+  if(process.env.DATABASE_URL || !process.env.TEST_DB_NAME || process.env.DB_NAME!==process.env.TEST_DB_NAME || !/(test|validation|ci)/.test(process.env.DB_NAME!)) throw new Error('Requires isolated test database');
+  process.env.NODE_ENV='test';
+  process.env.RESEND_API_KEY='synthetic-test-key';process.env.MAIL_FROM='test@example.invalid';
+  process.env.PUBLIC_WEB_URL=process.env.E2E_BASE_URL??'http://localhost:3010';
+  process.env.HOLDINGS_ENCRYPTION_KEY=Buffer.alloc(32,7).toString('base64');
+  const db=apiRequire('./dist/database').default;
+  const {dispatchAccountEmails}=apiRequire('./dist/auth/account-email');
+  await db.initialize();
+  const email=`email-e2e-${Date.now()}@example.invalid`;
+  let link='';
+  const drain=()=>dispatchAccountEmails(db,async(_url:string,options:RequestInit)=>{
+    const body=JSON.parse(String(options.body));
+    if(body.to[0]===email) link=body.text.match(/https?:\/\/[^\s]+/)[0];
+    return Response.json({id:'synthetic-resend-id'});
+  });
+  try {
+    await page.goto('/register');
+    await page.getByLabel('Nombre',{exact:true}).fill('Email test');
+    await page.getByLabel('Email',{exact:true}).fill(email);
+    await page.getByLabel('Contraseña',{exact:true}).fill('Original-password-123');
+    await page.getByRole('checkbox').check();
+    await page.getByRole('button',{name:'Crear cuenta'}).click();
+    await expect(page).toHaveURL(/\/resumen/);
+    const originalCookie=(await context.cookies()).find(c=>c.name==='allocia_token')!;
+    await page.goto('/account');
+    await page.getByRole('button',{name:'Enviar enlace de confirmación'}).click();
+    await expect(page.getByRole('status')).toContainText('recibirás un enlace');
+    await drain();expect(link).toContain('/verify-email#token=');
+    await page.goto(link);
+    await page.getByRole('button',{name:'Confirmar correo',exact:true}).click();
+    await expect(page.getByRole('status')).toContainText('Correo confirmado');
+    expect(page.url()).not.toContain('token=');
+    expect((await db.query('SELECT "emailVerifiedAt" FROM users WHERE email=$1',[email]))[0].emailVerifiedAt).toBeTruthy();
+    await page.goto('/forgot-password');
+    await page.getByLabel('Email',{exact:true}).fill(email);
+    await page.getByRole('button',{name:'Enviar enlace'}).click();
+    await expect(page.getByRole('status')).toContainText('Si existe una cuenta');
+    await drain();expect(link).toContain('/reset-password#token=');
+    await page.goto(link);
+    await page.getByLabel('Nueva contraseña',{exact:true}).fill('Replacement-password-123');
+    await page.getByLabel('Repetí la contraseña').fill('Replacement-password-123');
+    await page.screenshot({path:path.resolve(process.cwd(),'../api/evidence/password-reset.png'),fullPage:true});
+    await page.getByRole('button',{name:'Guardar contraseña'}).click();
+    await expect(page.getByRole('status')).toContainText('Contraseña actualizada');
+    expect((await context.cookies()).some(c=>c.name==='allocia_token')).toBe(false);
+    const revoked=await request.get('/api/proxy/portfolio/holdings',{headers:{Cookie:`allocia_token=${originalCookie.value}`}});
+    expect(revoked.status()).toBe(401);
+    await page.goto('/login');
+    await page.getByLabel('Email',{exact:true}).fill(email);
+    await page.getByLabel('Contraseña',{exact:true}).fill('Replacement-password-123');
+    await page.getByRole('button',{name:'Iniciar sesión'}).click();
+    await expect(page).toHaveURL(/\/resumen/);
+  } finally {await db.query('DELETE FROM users WHERE email=$1',[email]);await db.destroy();}
+});

@@ -1,0 +1,60 @@
+ALLOCIA: WEB EN VERCEL, API Y WORKER EN RAILWAY
+
+Vercel
+- Repositorio: MauriGuth/allocia. Root Directory: apps/web. Framework: Next.js.
+- Instalar con pnpm y lockfile congelado; apps/web/vercel.json fija los comandos.
+- Variables sólo del servidor: API_URL (API de Railway), WEB_ORIGIN (origen
+  HTTPS exacto de la web) y BFF_SIGNING_SECRET (mismo secreto de la API).
+- Mantener Deployment Protection en previews. No conectar previews de una rama
+  sin revisar a la base de producción. Usar API y base aisladas para pruebas.
+- No cargar DATABASE_URL, HOLDINGS_ENCRYPTION_KEY ni claves de proveedores en
+  el frontend. Nunca usar NEXT_PUBLIC_ para secretos.
+- Coordinar la promoción con la migración de API: la web nueva consume endpoints
+  que no existen en el commit 37a1df3 actualmente publicado en Railway.
+
+Resend, configurado en API y worker de Railway
+- RESEND_API_KEY: clave con permiso de envío para el dominio verificado.
+- MAIL_FROM: Allocia <noreply@DOMINIO_PROPIO_VERIFICADO>.
+- PUBLIC_WEB_URL: origen canónico HTTPS de la web, sin ruta ni barra final.
+- No usar uade.edu.ar como remitente: los correos universitarios informados son
+  contactos de privacidad, no prueban control de los DNS del dominio.
+- La dirección *.vercel.app sirve para abrir enlaces, pero no se puede usar
+  para verificar un dominio de remitente propio en Resend.
+- Verificar SPF/DKIM con los registros que entregue Resend y desactivar click
+  tracking para los enlaces de autenticación. Probar entrega, spam y rebotes
+  antes de anunciar recuperación de cuentas como operativa.
+- El worker permanente de Railway procesa la cola. No basta con desplegar la API.
+- Migración requerida: AccountEmail1791417602000 (junto con las dos anteriores).
+- Un envío aceptado por la API de Resend no demuestra llegada al buzón.
+
+App móvil
+- Configurar EXPO_PUBLIC_PRIVACY_URL con la página HTTPS final de privacidad.
+- Recuperación y verificación se solicitan desde la app; el enlace del correo
+  se abre en la web. Al restablecer contraseña hay que iniciar sesión otra vez.
+- Recompilar y distribuir una versión nueva; las variables EXPO_PUBLIC_ se
+  incorporan al bundle. Probar en dispositivos físicos antes del release.
+
+Estado comprobado el 9/10/2026
+- Anthropic, Finnhub y CoinGecko Demo funcionan con las claves de Railway.
+- Dos análisis públicos reales pasan validación de fuentes; no se enviaron alertas.
+- Flujo de recuperación y verificación probado con PostgreSQL real aislado y
+  Resend simulado, incluido el navegador de producción. Entrega real pendiente
+  de dominio y credenciales. No se compró un dominio ni se creó un proyecto Vercel.
+
+ESTADO AL 9 DE OCTUBRE (PUBLICACIÓN EN MAIN)
+Vercel: proyecto allocia en equipo sistema-de-stock, raíz apps/web,
+URL asignada https://allocia-two.vercel.app. La web entra en mantenimiento
+si falta API_URL en producción o APP_MAINTENANCE=true. No conectar el backend
+antiguo a la nueva web antes de migrar el esquema y verificar compatibilidad.
+Railway: fuente temporal deploy/railway-before-production-migration, commit
+37a1df3. Main contiene la nueva versión; cambiar la fuente a main sólo durante
+la publicación coordinada descrita en el runbook.
+Resend: clave comprobada. No se habilita MAIL_FROM: el usuario no autoriza el
+dominio existente para Allocia. Una dirección de Vercel no verifica un dominio
+de correo y un remitente inventado no permite envíos.
+
+Variables Vercel configuradas con sesión local CLI 63.1.0: APP_MAINTENANCE=true
+(producción y preview); API_URL, WEB_ORIGIN y BFF_SIGNING_SECRET (producción).
+La falta de permisos de escritura del conector se resuelve mediante la sesión
+local, sin modificar permisos de terceros ni exponer claves. Mantener la
+protección del despliegue hasta completar la verificación integral.
