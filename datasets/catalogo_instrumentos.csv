@@ -1,0 +1,35 @@
+ticker,nombre,clase,sector,region,moneda,precio_referencia_usd
+AAPL,Apple Inc.,Acción,Tecnología,EE.UU.,USD,236.5
+MSFT,Microsoft Corp.,Acción,Tecnología,EE.UU.,USD,462.1
+NVDA,NVIDIA Corp.,Acción,Tecnología,EE.UU.,USD,156.3
+GOOGL,Alphabet Inc.,Acción,Comunicaciones,EE.UU.,USD,196.4
+AMZN,Amazon.com Inc.,Acción,Consumo discrecional,EE.UU.,USD,221.8
+META,Meta Platforms Inc.,Acción,Comunicaciones,EE.UU.,USD,588.2
+TSLA,Tesla Inc.,Acción,Consumo discrecional,EE.UU.,USD,249.7
+JPM,JPMorgan Chase & Co.,Acción,Financiero,EE.UU.,USD,241.3
+JNJ,Johnson & Johnson,Acción,Salud,EE.UU.,USD,154.9
+KO,The Coca-Cola Company,Acción,Consumo básico,EE.UU.,USD,68.4
+PG,Procter & Gamble Co.,Acción,Consumo básico,EE.UU.,USD,167.2
+XOM,Exxon Mobil Corp.,Acción,Energía,EE.UU.,USD,114.6
+MELI,MercadoLibre Inc.,Acción,Consumo discrecional,Latinoamérica,USD,1894.0
+GGAL,Grupo Financiero Galicia (ADR),Acción,Financiero,Argentina,USD,54.8
+YPF,YPF S.A. (ADR),Acción,Energía,Argentina,USD,37.9
+PAM,Pampa Energía (ADR),Acción,Energía,Argentina,USD,76.2
+SPY,SPDR S&P 500 ETF,ETF,Diversificado,EE.UU.,USD,611.4
+QQQ,Invesco QQQ (Nasdaq 100),ETF,Tecnología,EE.UU.,USD,541.7
+VOO,Vanguard S&P 500 ETF,ETF,Diversificado,EE.UU.,USD,562.3
+IWM,iShares Russell 2000 ETF,ETF,Diversificado,EE.UU.,USD,228.6
+EEM,iShares MSCI Emerging Markets,ETF,Diversificado,Emergentes,USD,44.8
+EFA,iShares MSCI EAFE (Europa/Asia),ETF,Diversificado,Europa/Asia,USD,84.1
+GLD,SPDR Gold Shares,ETF,Oro,Global,USD,251.2
+XLE,Energy Select Sector SPDR,ETF,Energía,EE.UU.,USD,91.8
+XLF,Financial Select Sector SPDR,ETF,Financiero,EE.UU.,USD,48.3
+BTC,Bitcoin,Criptomoneda,Infraestructura cripto,Global,USD,104800
+ETH,Ethereum,Criptomoneda,Infraestructura cripto,Global,USD,3815
+SOL,Solana,Criptomoneda,Infraestructura cripto,Global,USD,178.4
+ADA,Cardano,Criptomoneda,Infraestructura cripto,Global,USD,0.92
+LINK,Chainlink,Criptomoneda,Infraestructura cripto,Global,USD,18.2
+POL,Polygon,Criptomoneda,Infraestructura cripto,Global,USD,0.48
+USDT,Tether USD,Stablecoin,Stablecoin,Global,USD,1
+USDC,USD Coin,Stablecoin,Stablecoin,Global,USD,1
+DAI,Dai,Stablecoin,Stablecoin,Global,USD,1

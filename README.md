@@ -131,3 +131,7 @@ El índice debe mostrar hasta **4 niveles de profundidad** (configurado en el te
 ## Código de la aplicación
 
 La carpeta `app/` contiene el código de Allocia: la API (`app/apps/api`, NestJS), el cliente web (`app/apps/web`, Next.js) y la aplicación móvil (`app/apps/mobile`, React Native con Expo). Las instrucciones de instalación están en `app/README.md`. Las variables de entorno se documentan en los archivos `.env.example`; el archivo `google-services.json` de Firebase no se incluye.
+
+## Datasets
+
+Los datasets y las fuentes de datos del Proyecto, con sus enlaces, están en [DATASETS.md](DATASETS.md).
